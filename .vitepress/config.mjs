@@ -37,7 +37,7 @@ const vitePressConfigs = {
     },
     nav: [
       { text: '<strong>常用技术</strong>', link: '/skill/1.SQL语句（基础理论篇）' },
-      { text: '<strong>日穿八股</strong>', link: '/basic/' },
+      { text: '<strong>日穿八股</strong>', link: '/basic/basic' },
       { text: '<strong>干翻100</strong>', link: '/hot100/1-50' },
       { text: '<strong>算竟败犬</strong>', link: '/algorithm/1.前言' },
       { text: '<strong>主页</strong>', link: '/' },
