@@ -2,9 +2,10 @@ import { defineConfig } from 'vitepress'
 import timeline from "vitepress-markdown-timeline";
 import {generateSidebar, withSidebar} from 'vitepress-sidebar';
 
-
+const base='/blog/'
 
 const vitePressConfigs = {
+  base,
   lastUpdated:true,
   title: "CoteNite的咖啡屋",
   description: "我的想学习小站",
