@@ -40,6 +40,7 @@ const vitePressConfigs = {
       { text: '<strong>日穿八股</strong>', link: '/basic/basic' },
       { text: '<strong>干翻100</strong>', link: '/hot100/1-50' },
       { text: '<strong>算竟败犬</strong>', link: '/algorithm/1.前言' },
+      { text: '<strong>寥寥几笔</strong>', link: '/story/前言.md' },
       { text: '<strong>主页</strong>', link: '/' },
     ],
     socialLinks: [
@@ -90,7 +91,6 @@ export default defineConfig(withSidebar(vitePressConfigs,[
     prefixSeparator: '.', //删除前缀的符号
   },
   {
-
     documentRootPath: '',
     scanStartPath: 'basic',
     basePath: '/basic/',
@@ -105,6 +105,15 @@ export default defineConfig(withSidebar(vitePressConfigs,[
     basePath: '/algorithm/',
     resolvePath: '/algorithm/',
     rootGroupText:'算竟败犬の故事',
+    removePrefixAfterOrdering: true, //删除前缀，必须与prefixSeparator一起使用
+    prefixSeparator: '.', //删除前缀的符号
+  },
+  {
+    documentRootPath: '',
+    scanStartPath: 'story',
+    basePath: '/story/',
+    resolvePath: '/story/',
+    rootGroupText:'随笔几则',
     removePrefixAfterOrdering: true, //删除前缀，必须与prefixSeparator一起使用
     prefixSeparator: '.', //删除前缀的符号
   },
