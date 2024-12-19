@@ -5,7 +5,6 @@ import {generateSidebar, withSidebar} from 'vitepress-sidebar';
 
 
 const vitePressConfigs = {
-
   lastUpdated:true,
   title: "CoteNite的咖啡屋",
   description: "我的想学习小站",
