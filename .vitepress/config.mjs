@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import timeline from "vitepress-markdown-timeline";
 import {generateSidebar, withSidebar} from 'vitepress-sidebar';
 
-const base='/blog/'
+const base='/blog/blog/'
 
 const vitePressConfigs = {
   base,
