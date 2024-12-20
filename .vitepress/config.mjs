@@ -36,11 +36,13 @@ const vitePressConfigs = {
       }
     },
     nav: [
-      { text: '<strong>常用技术</strong>', link: '/skill/1.SQL语句（基础理论篇）' },
-      { text: '<strong>日穿八股</strong>', link: '/basic/basic' },
-      { text: '<strong>干翻100</strong>', link: '/hot100/1-50' },
+      { text: '<strong>苦逼后端</strong>', link: '/back-end/0.前言' },
+      { text: '<strong>快乐前端</strong>', link: '/front-end/1.前言' },
+      { text: '<strong>红温运维</strong>', link: '/om/1.前言' },
+      { text: '<strong>日穿八股</strong>', link: '/basic/1.前言' },
+      { text: '<strong>干翻100</strong>', link: '/hot100/1.前言' },
       { text: '<strong>算竟败犬</strong>', link: '/algorithm/1.前言' },
-      { text: '<strong>寥寥几笔</strong>', link: '/story/前言.md' },
+      { text: '<strong>寥寥几笔</strong>', link: '/story/1.前言.md' },
       { text: '<strong>主页</strong>', link: '/' },
     ],
     socialLinks: [
@@ -83,10 +85,28 @@ export default defineConfig(withSidebar(vitePressConfigs,[
     },
   {
     documentRootPath: '',
-    scanStartPath: 'skill',
-    basePath: '/skill/',
-    resolvePath: '/skill/',
-    rootGroupText:'Java常用技术栈',
+    scanStartPath: 'front-end',
+    basePath: '/front-end/',
+    resolvePath: '/front-end/',
+    rootGroupText:'快乐前端',
+    removePrefixAfterOrdering: true, //删除前缀，必须与prefixSeparator一起使用
+    prefixSeparator: '.', //删除前缀的符号
+  },
+  {
+    documentRootPath: '',
+    scanStartPath: 'back-end',
+    basePath: '/back-end/',
+    resolvePath: '/back-end/',
+    rootGroupText:'苦逼后端',
+    removePrefixAfterOrdering: true, //删除前缀，必须与prefixSeparator一起使用
+    prefixSeparator: '.', //删除前缀的符号
+  },
+  {
+    documentRootPath: '',
+    scanStartPath: 'om',
+    basePath: '/om/',
+    resolvePath: '/om/',
+    rootGroupText:'红温运维',
     removePrefixAfterOrdering: true, //删除前缀，必须与prefixSeparator一起使用
     prefixSeparator: '.', //删除前缀的符号
   },

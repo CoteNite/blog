@@ -11,13 +11,13 @@ hero:
   actions:
     - theme: brand
       text: 来杯冰美式
-      link: /skill/Java微服务相关技术栈.md
+      link: /back-end/0.前言.md
     - theme: alt
       text: 来杯热美式
-      link: /api-examples
+      link: /front-end/1.前言.md
     - theme: alt
       text: 来杯热可可
-      link: /timeline.md
+      link: /om/1.前言.md
  
 
 features:
