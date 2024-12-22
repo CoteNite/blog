@@ -12,7 +12,7 @@
 
 nginx配置文件为conf文件下的nginx.conf
 
-```conf
+```text
     server {
         listen       80;   #监听端口
         server_name  localhost; #ip地址  
@@ -21,7 +21,7 @@ nginx配置文件为conf文件下的nginx.conf
 
 **启动nginx**
 
-```shsh
+```sh
 移动到sbin目录下
 ./nginx
 ```
