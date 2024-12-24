@@ -134,6 +134,7 @@ const vitePressConfigs = {
       { text: '<strong>干翻100</strong>', link: '/hot100/1.前言' },
       { text: '<strong>算竟败犬</strong>', link: '/algorithm/1.前言' },
       { text: '<strong>寥寥几笔</strong>', link: '/story/1.前言.md' },
+      { text: '<strong>圣诞快乐</strong>', link: '/圣诞.md' },
       { text: '<strong>主页</strong>', link: '/' },
     ],
     socialLinks: [
