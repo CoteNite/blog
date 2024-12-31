@@ -166,7 +166,7 @@ const vitePressConfigs = {
   },
   sidebar: generateSidebar({
     useTitleFromFileHeading: true,
-    collapsed: false, //折叠组关闭
+    collapsed: true, //折叠组关闭
     collapseDepth: 2, //折叠组2级菜单
   })
 };
