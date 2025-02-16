@@ -166,11 +166,13 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "workspaces:管理工作区布局": false
     }
   },
-  "active": "bf2247c846494366",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
+    "basic/JavaIO.md",
     "圣诞.md",
     "index.md",
     "back-end/3.设计模式相关/4.创建型设计模式.md"
