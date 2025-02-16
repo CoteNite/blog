@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/Java多线程2.md",
+                "file": "basic/Java基础3——重点知识.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java多线程2"
+              "title": "Java基础3——重点知识"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "basic/Java多线程2.md",
+                "file": "basic/Java基础3——重点知识.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Java多线程2 的反向链接列表"
+              "title": "Java基础3——重点知识 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "basic/Java多线程2.md",
+                "file": "basic/Java基础3——重点知识.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Java多线程2 的出链列表"
+              "title": "Java基础3——重点知识 的出链列表"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/Java多线程2.md",
+                "file": "basic/Java基础3——重点知识.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java多线程2 的大纲"
+              "title": "Java基础3——重点知识 的大纲"
             }
           }
         ]
@@ -172,15 +172,15 @@
   },
   "active": "bf2247c846494366",
   "lastOpenFiles": [
-    "basic/Java集合类.md",
     "basic/Java重点知识.md",
-    "basic/1.前言.md",
     "basic/Java基础3——重点知识.md",
+    "basic/Java基础——String.md",
+    "basic/Java多线程2.md",
+    "basic/Java集合类.md",
+    "basic/1.前言.md",
     "basic/JVM虚拟机：内存——Java的尝试.md",
     "basic/Java多线程3.md",
-    "basic/Java多线程2.md",
     "basic/Java多线程.md",
-    "basic/Java基础——String.md",
     "basic/JavaNIO——零基础学习NIO前必须要了解的事.md",
     "index.md",
     "basic/JavaIO.md",
