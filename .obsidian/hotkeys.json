@@ -17,7 +17,7 @@
       "key": "ArrowDown"
     }
   ],
-  "obsidian-git:commit": [
+  "obsidian-git:commit-specified-message": [
     {
       "modifiers": [
         "Alt",
