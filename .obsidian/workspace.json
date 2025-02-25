@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/高并发相关/未命名.md",
+                "file": "back-end/4.Netty/1.常用的东西.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "1.常用的东西"
             }
           }
         ]
@@ -172,8 +172,11 @@
   },
   "active": "bf2247c846494366",
   "lastOpenFiles": [
-    "basic/高并发相关/2.高并发的出现情景.md",
+    "back-end/4.Netty/0.前言.md",
+    "back-end/4.Netty/1.常用的东西.md",
     "basic/高并发相关/未命名.md",
+    "back-end/4.Netty",
+    "basic/高并发相关/2.高并发的出现情景.md",
     "basic/高并发相关/1.前言.md",
     "basic/3.Java基础之何为Java.md",
     "basic/高并发相关",
