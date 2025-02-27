@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/杂文？/精神病.md",
+                "file": "story/未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "精神病"
+              "title": "未命名"
             }
           }
         ]
@@ -173,6 +173,7 @@
   "active": "bf2247c846494366",
   "lastOpenFiles": [
     "story/杂文？/0.前言.md",
+    "story/未命名.md",
     "story/杂文？/精神病.md",
     "story/小说？/1.前言.md",
     "story/zhawen.md",
@@ -200,7 +201,6 @@
     "basic/JavaNIO——零基础学习NIO前必须要了解的事.md",
     "index.md",
     "basic/JavaIO.md",
-    "圣诞.md",
-    "back-end/3.设计模式相关/4.创建型设计模式.md"
+    "圣诞.md"
   ]
 }
