@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "51d65e57d4ba00eb",
+        "id": "d5135b6dca123a1a",
         "type": "tabs",
         "children": [
           {
-            "id": "bf2247c846494366",
+            "id": "8b8ce4775aa9f214",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "back-end/IM——即时通信系统在Java中的实践.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "IM——即时通信系统在Java中的实践"
+              "title": "新标签页"
             }
           }
         ]
@@ -169,6 +165,45 @@
       "obsidian-git:Open Git source control": false,
       "workspaces:管理工作区布局": false
     }
+  },
+  "floating": {
+    "id": "be13472b77316b62",
+    "type": "floating",
+    "children": [
+      {
+        "id": "2c9b8f64ff7ea971",
+        "type": "window",
+        "children": [
+          {
+            "id": "cf79abfa40f6289e",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "bf2247c846494366",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "back-end/IM——即时通信系统在Java中的实践.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "IM——即时通信系统在Java中的实践"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 740,
+        "y": 56,
+        "width": 742,
+        "height": 776,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
   },
   "active": "bf2247c846494366",
   "lastOpenFiles": [
