@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "73c1f3a8c3f709a0",
+        "id": "7615a72c208b8a1e",
         "type": "tabs",
         "children": [
           {
-            "id": "bf2247c846494366",
+            "id": "b189dca899f812ad",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "back-end/2.多线程相关/6.认知并发问题出现.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "6.认知并发问题出现"
+              "title": "新标签页"
             }
           }
         ]
@@ -170,10 +166,10 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "bf2247c846494366",
+  "active": "b189dca899f812ad",
   "lastOpenFiles": [
-    "back-end/2.多线程相关/7.保护性暂挂模式.md",
     "back-end/2.多线程相关/6.认知并发问题出现.md",
+    "back-end/2.多线程相关/7.保护性暂挂模式.md",
     "back-end/IM——即时通信系统在Java中的实践.md",
     "story/杂文？/愿每个人都被善待.md",
     "story/1.前言.md",
