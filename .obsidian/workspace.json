@@ -172,8 +172,12 @@
   },
   "active": "b189dca899f812ad",
   "lastOpenFiles": [
-    "basic/Java基础——String.md",
+    "basic/高并发相关/未命名.md",
+    "basic/高并发相关/2.高并发的出现情景.md",
     "basic/JVM相关/1.Java内存机制.md",
+    "basic/高并发相关/1.前言.md",
+    "basic/5.Java基础——String.md",
+    "basic/Java基础——String.md",
     "basic/JVM相关/0.JVM虚拟机.md",
     "public/pictures/explain-1.png",
     "public/pictures/nilu.gif",
@@ -201,11 +205,7 @@
     "back-end/4.Netty/0.前言.md",
     "story/小说？",
     "back-end/4.Netty/1.常用的东西.md",
-    "basic/高并发相关/未命名.md",
     "back-end/4.Netty",
-    "basic/高并发相关/2.高并发的出现情景.md",
-    "basic/高并发相关/1.前言.md",
-    "basic/3.Java基础之何为Java.md",
     "basic/高并发相关"
   ]
 }
