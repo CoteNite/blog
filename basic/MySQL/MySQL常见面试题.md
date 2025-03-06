@@ -41,6 +41,17 @@ char类适合存储固定长度的数据（因为相对varchar少使用了半个
  
 所以如果真的有大文本的存储需求，或许换一种数据库会是更好的选择（Cassandra或是MongoDB）
 
+## DATETIME和TIMESTAMP的区别
 
+TIMESTAMP与时区有关，DATETIME与时区无关
 
+TIMESTAMP占用四个字节，DATETIME占用八字节，进而导致DATETIME可以存储1000-01-01 00:00:00 ~ 9999-12-31 23:59:59而TIMESTAMP只能存储1970-01-01 00:00:01 ~ 2037-12-31 23:59:59的时间
+
+不能发现其实已经快到TIMESTAMP的上限了。
+
+因此我们一律推荐使用DATETIME
+
+## NULL和 ‘’（空字符串）的区别
+
+核心区别其实只有一个，就是在My
 
