@@ -172,8 +172,9 @@
   },
   "active": "b189dca899f812ad",
   "lastOpenFiles": [
-    "basic/JVM相关/1.Java内存机制.md",
+    "basic/Java多线程2.md",
     "basic/MySQL/MySQL常见面试题.md",
+    "basic/JVM相关/1.Java内存机制.md",
     "basic/MySQL",
     "basic/MYSQ.md",
     "basic/高并发相关/未命名.md",
@@ -204,7 +205,6 @@
     "story/zhawen.md",
     "story/杂文？",
     "story/小说？/钟时悟.md",
-    "story/小说？/牵丝戏.md",
     "story/小说？",
     "back-end/4.Netty",
     "basic/高并发相关"
