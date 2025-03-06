@@ -1,4 +1,4 @@
-# MySQL常见面试题
+# MySQL常见面试题——字段相关
 
 ## 整数类型的unsigned的作用
 
@@ -62,6 +62,6 @@ TIMESTAMP占用四个字节，DATETIME占用八字节，进而导致DATETIME可�
 
 ## BOOLEAN的显示方式
 
-MySQL数据库中无BOOLEAN，用tinyint(1)的0和1来分别存储/表示false和true。
+MySQL数据库中无专门的BOOLEAN，而是用tinyint(1)的0和1来分别存储/表示false和true。
 
 
