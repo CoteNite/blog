@@ -55,6 +55,13 @@ TIMESTAMP占用四个字节，DATETIME占用八字节，进而导致DATETIME可�
 
 在MySQL中NULL的含义其实不是空，而是不确定值，而空字符串是一个确定的值（就是空），因此才会延伸出了以下区别：
 
-* 两个NULL在等于判断中为不同，yin'c
+* 两个NULL在等于判断中为不同，因此单独使用 is null 和 is not null来判断，而空字符串可以比较
 * `DISTINCT`,`GROUP BY`,`ORDER BY`时,`NULL`又被认为是相等的，因为均被划分为同一组（总不能一个NULL一组，那就失去了分组的意义）
 * 空字符串长度为0，但NULL会占用空间
+* 计算类（AVG，MAX.......）的聚合函数会忽略NULL（因为不确定，所以无法算），如果参数是 (`COUNT(*)`)，则会统计所有的记录数，包括 `NULL` 值；如果参数是某个字段名(`COUNT(列名)`)，则会忽略 `NULL` 值，只统计非空值的个数。
+
+## BOOLEAN的显示方式
+
+MySQL数据库中无BOOLEAN，用tinyint(1)的0和1来分别存储/表示false和true。
+
+
