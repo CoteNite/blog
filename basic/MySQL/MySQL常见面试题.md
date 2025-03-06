@@ -7,3 +7,5 @@ unsigned即无符号形，最大的意义在于可以让那些没有负数的字
 ## CHAR和VARCHAR的区别
 
 char是定长字段，varchar是变长字段
+
+所谓变长字段即指在设定好长度后，char会
