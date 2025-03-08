@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/z.工作之外，技术之内/你是否适合计算机？.md",
+                "file": "story/工作之外，技术之内/你是否适合计算机？.md",
                 "mode": "source",
                 "source": false
               },
@@ -170,12 +170,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "b189dca899f812ad",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
-    "story/z.工作之外，技术之内/0.前言.md",
-    "story/z.工作之外，技术之内/你是否适合计算机？.md",
+    "story/工作之外，技术之内/0.前言.md",
+    "story/工作之外，技术之内/你是否适合计算机？.md",
     "back-end/5.Kotlin/3.对象.md",
-    "story/z.工作之外，技术之内",
+    "story/工作之外，技术之内",
     "story/未命名.md",
     "back-end/5.Kotlin/1.数据类型.md",
     "back-end/5.Kotlin/0.前言.md",
