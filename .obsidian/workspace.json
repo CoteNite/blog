@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/MySQL/MySQL常见面试题——架构相关.md",
+                "file": "back-end/5.Kotlin/0.前言.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL常见面试题——架构相关"
+              "title": "0.前言"
             }
           }
         ]
@@ -172,8 +172,11 @@
   },
   "active": "b189dca899f812ad",
   "lastOpenFiles": [
-    "basic/MySQL/MySQL常见面试题——字段相关.md",
     "basic/MySQL/MySQL常见面试题——架构相关.md",
+    "back-end/5.Kotlin/0.前言.md",
+    "back-end/5.Kotlin",
+    "back-end/未命名.md",
+    "basic/MySQL/MySQL常见面试题——字段相关.md",
     "basic/Java多线程2.md",
     "basic/JVM相关/1.Java内存机制.md",
     "basic/MySQL",
@@ -202,8 +205,6 @@
     "story/小说/来世.md",
     "story/小说/1.前言.md",
     "story/小说",
-    "story/小说？/1.前言.md",
-    "story/zhawen.md",
     "story/杂文？",
     "story/小说？",
     "back-end/4.Netty",
