@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/工作之外，技术之内/你是否适合计算机？.md",
+                "file": "story/杂文？/但行好事，莫问前程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "你是否适合计算机？"
+              "title": "但行好事，莫问前程"
             }
           }
         ]
@@ -170,10 +170,11 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "9884943ad5bd65e9",
+  "active": "b189dca899f812ad",
   "lastOpenFiles": [
-    "story/工作之外，技术之内/0.前言.md",
     "story/工作之外，技术之内/你是否适合计算机？.md",
+    "story/杂文？/但行好事，莫问前程.md",
+    "story/工作之外，技术之内/0.前言.md",
     "back-end/5.Kotlin/3.对象.md",
     "story/工作之外，技术之内",
     "story/未命名.md",
@@ -204,7 +205,6 @@
     "story/1.前言.md",
     "story/杂文？/0.前言.md",
     "story/未命名.md~",
-    "story/0.前言.md",
     "story/小说",
     "story/杂文？",
     "story/小说？",
