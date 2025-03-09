@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/杂文？/但行好事，莫问前程.md",
+                "file": "story/杂文？/0.前言.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "但行好事，莫问前程"
+              "title": "0.前言"
             }
           }
         ]
@@ -172,8 +172,8 @@
   },
   "active": "b189dca899f812ad",
   "lastOpenFiles": [
-    "story/杂文？/愿每个人都被善待.md",
     "story/杂文？/但行好事，莫问前程.md",
+    "story/杂文？/愿每个人都被善待.md",
     "story/杂文？/0.前言.md",
     "story/工作之外，技术之内/你是否适合计算机？.md",
     "story/工作之外，技术之内/0.前言.md",
