@@ -20,8 +20,19 @@
               "icon": "lucide-file",
               "title": "4.聚合"
             }
+          },
+          {
+            "id": "93af74729685927f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -170,13 +181,13 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "b189dca899f812ad",
+  "active": "93af74729685927f",
   "lastOpenFiles": [
+    "back-end/7.DDD/4.聚合.md",
     "back-end/7.DDD/2.DDD与CQRS.md",
     "back-end/6.系统设计与技术选型/Java微服务相关技术栈.md",
     "back-end/6.系统设计与技术选型/RocketMQ——来自Alibaba的消息队列.md",
     "back-end/6.系统设计与技术选型/0.前言.md",
-    "back-end/7.DDD/4.聚合.md",
     "back-end/5.Kotlin/3.对象.md",
     "back-end/5.Kotlin/1.数据类型.md",
     "back-end/7.DDD/3.一些概念与实践.md",
