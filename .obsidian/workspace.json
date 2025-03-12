@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/工作之外，技术之内/你是否适合计算机？.md",
+                "file": "back-end/7.DDD/9.事件溯源——时间回溯魔法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "你是否适合计算机？"
+              "title": "9.事件溯源——时间回溯魔法"
             }
           }
         ]
@@ -172,6 +172,7 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
+    "story/工作之外，技术之内/你是否适合计算机？.md",
     "back-end/5.Kotlin/0.前言.md",
     "back-end/7.DDD/9.事件溯源——时间回溯魔法.md",
     "back-end/7.DDD/8.限界上下文.md",
@@ -200,7 +201,6 @@
     "back-end/6.系统设计与技术选型",
     "story/杂文？/但行好事，莫问前程.md",
     "story/杂文？/愿每个人都被善待.md",
-    "story/工作之外，技术之内/你是否适合计算机？.md",
     "story/工作之外，技术之内",
     "back-end/5.Kotlin",
     "basic/MySQL",
