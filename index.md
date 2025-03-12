@@ -1,13 +1,9 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
-
 hero:
-  name: "CoteNite的咖啡屋"
-  text: "前排出售各类咖啡☕"
+  name: CoteNite的咖啡屋
+  text: 前排出售各类咖啡☕
   tagline: CoteNite个人的学习&生活站点
-#  image: public/header1.png
   actions:
     - theme: brand
       text: 来杯冰美式
@@ -18,8 +14,6 @@ hero:
     - theme: alt
       text: 来杯热可可
       link: /om/1.前言.md
- 
-
 features:
   - title: 日常学习
     icon: 📝
