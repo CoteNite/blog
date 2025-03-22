@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/8.分布式/13.限流——Sentinel.md",
+                "file": "back-end/0.前言.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13.限流——Sentinel"
+              "title": "0.前言"
             }
           }
         ]
@@ -172,15 +172,15 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
-    "back-end/8.分布式/0.前言.md",
     "back-end/8.分布式/13.限流——Sentinel.md",
+    "back-end/0.前言.md",
+    "back-end/8.分布式/0.前言.md",
     "back-end/8.分布式/12.网关.md",
     "back-end/8.分布式/11.注册中心.md",
     "back-end/8.分布式/未命名 1.md",
     "back-end/0.前言.md",
     "story/工作之外，技术之内/Mybatis真的好吗.md",
     "back-end/8.分布式",
-    "back-end/未命名.md",
     "back-end/7.DDD/20.DDD在项目中的应用与结构的划分.md",
     "Pasted image 20250310081329.png",
     "back-end/7.DDD/0.前言.md",
