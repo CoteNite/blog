@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/9.系统设计/0.前言.md",
+                "file": "back-end/7.DDD/20.DDD在项目中的应用与结构的划分.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.前言"
+              "title": "20.DDD在项目中的应用与结构的划分"
             }
           }
         ]
@@ -172,8 +172,8 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
-    "back-end/6.技术选型/0.前言.md",
     "back-end/9.系统设计/0.前言.md",
+    "back-end/6.技术选型/0.前言.md",
     "back-end/未命名.md",
     "back-end/9.系统设计",
     "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
