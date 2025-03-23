@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/7.DDD/20.DDD在项目中的应用与结构的划分.md",
+                "file": "back-end/9.系统设计/11.服务雪崩与容错.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20.DDD在项目中的应用与结构的划分"
+              "title": "11.服务雪崩与容错"
             }
           }
         ]
@@ -172,14 +172,18 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
+    "back-end/0.前言.md",
+    "node_modules/@algolia/autocomplete-preset-algolia/README.md",
+    "back-end/8.分布式/14.流量网关.md",
+    "back-end/6.技术选型/Java微服务相关技术栈.md",
+    "back-end/9.系统设计/11.服务雪崩与容错.md",
+    "back-end/7.DDD/20.DDD在项目中的应用与结构的划分.md",
     "back-end/9.系统设计/0.前言.md",
     "back-end/6.技术选型/0.前言.md",
     "back-end/未命名.md",
     "back-end/9.系统设计",
     "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
     "back-end/6.系统设计/未命名.md",
-    "back-end/8.分布式/14.流量网关.md",
-    "back-end/0.前言.md",
     "back-end/8.分布式/13.限流——Sentinel.md",
     "front-end/Nginx——前端必备反向代理服务器.md",
     "back-end/8.分布式/0.前言.md",
@@ -188,7 +192,6 @@
     "back-end/8.分布式/未命名 1.md",
     "story/工作之外，技术之内/Mybatis真的好吗.md",
     "back-end/8.分布式",
-    "back-end/7.DDD/20.DDD在项目中的应用与结构的划分.md",
     "Pasted image 20250310081329.png",
     "back-end/7.DDD/0.前言.md",
     "back-end/7.DDD/19.事件溯源——时间回溯魔法.md",
@@ -198,9 +201,6 @@
     "back-end/7.DDD/15.工具推荐.md",
     "back-end/7.DDD/14.聚合.md",
     "back-end/7.DDD/13.一些概念与实践.md",
-    "back-end/7.DDD/12.DDD与六边形架构.md",
-    "back-end/7.DDD/11.DDD与CQRS.md",
-    "back-end/7.DDD/10.DDD，MVC，大泥鳅，微服务.md",
     "back-end/7.DDD",
     "back-end/6.技术选型",
     "story/工作之外，技术之内",
