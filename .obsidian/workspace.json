@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/8.分布式/14.流量网关.md",
+                "file": "back-end/9.系统设计/0.前言.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "14.流量网关"
+              "title": "0.前言"
             }
           }
         ]
@@ -172,9 +172,15 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
+    "back-end/6.技术选型/0.前言.md",
+    "back-end/9.系统设计/0.前言.md",
+    "back-end/未命名.md",
+    "back-end/9.系统设计",
+    "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
+    "back-end/6.系统设计/未命名.md",
+    "back-end/8.分布式/14.流量网关.md",
     "back-end/0.前言.md",
     "back-end/8.分布式/13.限流——Sentinel.md",
-    "back-end/8.分布式/14.流量网关.md",
     "front-end/Nginx——前端必备反向代理服务器.md",
     "back-end/8.分布式/0.前言.md",
     "back-end/8.分布式/12.网关.md",
@@ -195,13 +201,8 @@
     "back-end/7.DDD/12.DDD与六边形架构.md",
     "back-end/7.DDD/11.DDD与CQRS.md",
     "back-end/7.DDD/10.DDD，MVC，大泥鳅，微服务.md",
-    "story/工作之外，技术之内/你是否适合计算机？.md",
-    "back-end/5.Kotlin/0.前言.md",
-    "back-end/1.MySQL相关/1.SQL语句（基础理论篇）.md",
-    "index.md",
-    "back-end/6.系统设计与技术选型/Java微服务相关技术栈.md",
     "back-end/7.DDD",
-    "back-end/6.系统设计与技术选型",
+    "back-end/6.技术选型",
     "story/工作之外，技术之内",
     "back-end/5.Kotlin",
     "basic/MySQL",
@@ -209,7 +210,6 @@
     "public/pictures/nilu.gif",
     "basic/JVM相关",
     "story/未命名.md~",
-    "story/小说",
-    "story/杂文？"
+    "story/小说"
   ]
 }
