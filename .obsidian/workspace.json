@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/工作之外，工作之内/0.前言.md",
+                "file": "story/工作之外，工作之内/Work Or Life.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.前言"
+              "title": "Work Or Life"
             }
           }
         ]
@@ -172,8 +172,11 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
-    "story/小说/钟时悟.md",
+    "story/工作之外，工作之内/你是否适合计算机？.md",
+    "story/工作之外，工作之内/Work Or Life.md",
     "story/工作之外，工作之内/0.前言.md",
+    "story/工作之外，工作之内/Mybatis真的好吗.md",
+    "story/小说/钟时悟.md",
     "om/3. 部署个人博客.md",
     "om/1.前言.md",
     "back-end/9.系统设计/11.服务雪崩与容错.md",
@@ -194,13 +197,10 @@
     "back-end/8.分布式/12.网关.md",
     "back-end/8.分布式/11.注册中心.md",
     "back-end/8.分布式/未命名 1.md",
-    "story/工作之外，工作之内/Mybatis真的好吗.md",
     "back-end/8.分布式",
     "Pasted image 20250310081329.png",
     "back-end/7.DDD/0.前言.md",
     "back-end/7.DDD/19.事件溯源——时间回溯魔法.md",
-    "back-end/7.DDD/18.限界上下文.md",
-    "back-end/7.DDD/17.读模型的设计.md",
     "back-end/7.DDD",
     "back-end/6.技术选型",
     "story/工作之外，工作之内",
