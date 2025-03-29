@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/小说/钟时悟.md",
+                "file": "story/工作之外，工作之内/0.前言.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "钟时悟"
+              "title": "0.前言"
             }
           }
         ]
@@ -172,6 +172,7 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
+    "story/小说/钟时悟.md",
     "story/工作之外，工作之内/0.前言.md",
     "om/3. 部署个人博客.md",
     "om/1.前言.md",
@@ -200,7 +201,6 @@
     "back-end/7.DDD/19.事件溯源——时间回溯魔法.md",
     "back-end/7.DDD/18.限界上下文.md",
     "back-end/7.DDD/17.读模型的设计.md",
-    "back-end/7.DDD/16.风暴建模.md",
     "back-end/7.DDD",
     "back-end/6.技术选型",
     "story/工作之外，工作之内",
