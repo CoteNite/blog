@@ -35,4 +35,6 @@ Cassandra的整体存储结构与关系型数据库相似（虽然只是长得�
 
 ![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20250422033941.png)
 
-**静态列：** 可以chu'lue
+对于列还有一个静态列的特殊情况，这个我们先按下不表
+
+**主键：** 列的唯一标识，可以由一个或多个列组成
