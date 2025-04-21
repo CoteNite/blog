@@ -75,5 +75,5 @@ PRIMARY KEY((key_part_one,key_part_two), key_clust_one, key_clust_two, key_clust
 
 **Java 操作 Cassandra**
 
-SpringBoot为我们提供了SpringDataCassandra
+SpringBoot为我们提供了Spring Data For Apache Cassandra包，让我们可以使用SpringData的形式去在Java中操作Cassandra
 
