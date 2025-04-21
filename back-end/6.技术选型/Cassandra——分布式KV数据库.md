@@ -68,7 +68,7 @@ PRIMARY KEY((key_part_one,key_part_two), key_clust_one, key_clust_two, key_clust
 
 **支持的操作：**
 
-* `order by` : 
+* `order by` : 要使用分区键查询后才可以使用（因为数据存在一个分区上），`order by` 只能针对集群列进行排序
 
 
 
