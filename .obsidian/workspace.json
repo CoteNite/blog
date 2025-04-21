@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/小说/钟时悟.md",
+                "file": "back-end/6.技术选型/Cassandra——分布式KV数据库.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "钟时悟"
+              "title": "Cassandra——分布式KV数据库"
             }
           }
         ]
@@ -172,6 +172,11 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
+    "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
+    "back-end/6.技术选型/Cassandra——分布式KV数据库.md",
+    "back-end/6.技术选型/Guava——Google工具包.md",
+    "om/3. 部署个人博客.md",
+    "story/小说/钟时悟.md",
     "story/工作之外，工作之内/Work Or Life.md",
     "story/杂文？/0.前言.md",
     "story/杂文？/但行好事，莫问前程.md",
@@ -179,8 +184,6 @@
     "story/工作之外，工作之内/你是否适合计算机？.md",
     "story/工作之外，工作之内/0.前言.md",
     "story/工作之外，工作之内/Mybatis真的好吗.md",
-    "story/小说/钟时悟.md",
-    "om/3. 部署个人博客.md",
     "om/1.前言.md",
     "back-end/9.系统设计/11.服务雪崩与容错.md",
     "back-end/0.前言.md",
@@ -192,13 +195,10 @@
     "back-end/6.技术选型/0.前言.md",
     "back-end/未命名.md",
     "back-end/9.系统设计",
-    "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
     "back-end/6.系统设计/未命名.md",
     "back-end/8.分布式/13.限流——Sentinel.md",
     "front-end/Nginx——前端必备反向代理服务器.md",
     "back-end/8.分布式/0.前言.md",
-    "back-end/8.分布式/12.网关.md",
-    "back-end/8.分布式/11.注册中心.md",
     "back-end/8.分布式",
     "Pasted image 20250310081329.png",
     "back-end/7.DDD",
