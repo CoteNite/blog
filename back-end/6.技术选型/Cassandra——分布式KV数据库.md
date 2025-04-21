@@ -59,10 +59,16 @@ PRIMARY KEY((key_part_one,key_part_two), key_clust_one, key_clust_two, key_clust
 
 **由于分布式情景的性能问题，Cassandra的更加希望我们使用索引（甚至是只用分区键）去查询数据，因此我们在定义表结构的时候应该先考虑好查询的情景**
 
-* 分区键只支持 = 或 in 来查询
-* 集群列支持范围与比较查询，但where若对集群列进行查询需要加上ALLOW FILTERING（提示你性能会受损）
-* 索引列只支持 = 查询
-* 非索引的部分查询须在末尾加上ALLOW FILTERING
+**要求：**
+
+* 分区键只支持 `=` 或 `in` 来查询
+* 集群列支持范围与比较查询，但`where`若对集群列进行查询需要加上`ALLOW FILTERING`（提示你性能会受损）
+* 索引列只支持 `=` 查询
+* 其他情况查询须加上`ALLOW FILTERING`
+
+**支持的操作：**
+
+* `order by` : 
 
 
 
