@@ -55,3 +55,6 @@ PRIMARY KEY((key_part_one,key_part_two), key_clust_one, key_clust_two, key_clust
 
 **索引：** 用于查询的数据结构
 
+### 查询
+
+**Cassandra的最佳实践是使用主键查数据，因此我们在**
