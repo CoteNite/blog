@@ -29,11 +29,10 @@ Cassandra是Apache基金会维护的一个分布式KV数据库，其优点在于
 
 ### 数据模型
 
-Cassandra的chu
+Cassandra的整体存储结构与关系型数据库相似（虽然只是长得像），这就很方便我们理解
 
-#### 列
-Cassandra的
+**列：** Cassandra的基本数据单元，与MySQL的列类似
 
+![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20250422033941.png)
 
-
-
+**静态列：** 可以chu'lue
