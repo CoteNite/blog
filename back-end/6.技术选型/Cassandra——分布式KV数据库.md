@@ -1,1 +1,1 @@
-# Cassandra
+# Cassandra——分布式KV数据库
