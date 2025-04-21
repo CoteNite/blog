@@ -43,4 +43,12 @@ Cassandra的整体存储结构与关系型数据库相似（虽然只是长得�
 
 **主键：** 列的唯一标识，可以由一个或多个列组成
 
-**分区键：** 由于Cassandra的天生分布式设计，因此必须要考虑数据如何分布在不同的节点上，我们一遍会使用
+**分区键：** 由于Cassandra的天生分布式设计，因此必须要考虑数据如何分布在不同的节点上，一般会使用分区键的Hash值来决定，分区键是主键的第一部分
+
+```cql
+PRIMARY KEY((key_part_one,key_part_two), key_clust_one, key_clust_two, key_clust_three) 
+```
+
+上面代码中的(key_part_one,key_part_two)就是分区键（没有小括号则认为是主键的第一个列为分区键）
+
+**静态列：** 一种固定的列，认为一个分区键对应一
