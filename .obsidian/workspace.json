@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/杂文？/夜晚，童年，梦.md",
+                "file": "story/杂文？/夜晚，童年，梦与二次元.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "夜晚，童年，梦"
+              "title": "夜晚，童年，梦与二次元"
             }
           }
         ]
@@ -173,7 +173,7 @@
   "active": "93af74729685927f",
   "lastOpenFiles": [
     "back-end/6.技术选型/Cassandra——分布式KV数据库.md",
-    "story/杂文？/夜晚，童年，梦.md",
+    "story/杂文？/夜晚，童年，梦与二次元.md",
     "back-end/5.Kotlin/Kotlin NoteBook.md",
     "back-end/6.技术选型/Guava——Google工具包.md",
     "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
