@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/6.技术选型/Cassandra——分布式KV数据库.md",
+                "file": "story/杂文？/夜晚，童年，梦.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cassandra——分布式KV数据库"
+              "title": "夜晚，童年，梦"
             }
           }
         ]
@@ -172,8 +172,9 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
-    "back-end/5.Kotlin/Kotlin NoteBook.md",
     "back-end/6.技术选型/Cassandra——分布式KV数据库.md",
+    "story/杂文？/夜晚，童年，梦.md",
+    "back-end/5.Kotlin/Kotlin NoteBook.md",
     "back-end/6.技术选型/Guava——Google工具包.md",
     "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
     "om/3. 部署个人博客.md",
@@ -198,7 +199,6 @@
     "back-end/9.系统设计",
     "back-end/6.系统设计/未命名.md",
     "back-end/8.分布式/13.限流——Sentinel.md",
-    "front-end/Nginx——前端必备反向代理服务器.md",
     "back-end/8.分布式",
     "Pasted image 20250310081329.png",
     "back-end/7.DDD",
