@@ -57,12 +57,17 @@ PUT /note
 	"mappings":{
 		"properties":{
 			"title":{
-				
+				"type":"keyword",
+				"index":"false"
 			}
 		}
 	}
 }
-
 ```
 
 
+上面的内容我们很容易就能看明白，就是向我们的ES客户端发起一个PUT请求，请求的连接是/note，请求的内容是下面的一整个json
+
+### 创建索引
+
+mapping用来创建索引，properties是索引中含有的字段，字段含有以下shu'xin
