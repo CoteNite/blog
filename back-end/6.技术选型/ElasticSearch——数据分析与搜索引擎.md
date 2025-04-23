@@ -78,7 +78,8 @@ mapping用来创建索引，properties是索引中含有的字段，字段含有
   * 日期：date（可以含有format用来定义格式）
   * JSON 对象：object
 * index：是否创建索引，默认为true
-* analyzer：使用哪种分词器
+* analyzer：创建索引时使用哪种分词器（es设定了默认值，可不填）
+* search_analyzer：搜索时使用哪种分词器（默认与analyzer使用的保持一致）
 
 ### 请求类型
 
