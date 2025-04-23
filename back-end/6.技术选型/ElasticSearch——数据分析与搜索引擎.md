@@ -70,4 +70,17 @@ PUT /note
 
 ### 创建索引
 
-mapping用来创建索引，properties是索引中含有的字段，字段含有以下shu'xin
+mapping用来创建索引，properties是索引中含有的字段，字段含有以下属性
+* type：字段类型
+  * 字符串：text（可分词的文本）、keyword（精确值，例如：品牌、国家、ip地址）
+  * 数值：long、integer、short、byte、double、float、
+  * 布尔：boolean
+  * 日期：date（可以含有format用来定义格式）
+  * JSON 对象：object
+* index：是否创建索引，默认为true
+* analyzer：使用哪种分词器
+
+### 请求类型
+
+* 创建索引库：PUT /索引库名
+* 
