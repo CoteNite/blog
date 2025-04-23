@@ -112,7 +112,9 @@ mapping用来创建索引，properties是索引中含有的字段，字段含有
 	}, 
 	sort:[
 		{
-			"order":"字段名"
+			"字段名":{
+				"order":"desc/asc"
+			}
 	    }
 	],
 	"from": 0,
