@@ -42,4 +42,9 @@ tip：我们可以大致的认为，正向索引适合关系搜索，而倒排�
 * 文档(Document)：类似MySQL中的行，一个文档就是一条完整的数据
 * 字段(Field)：类似MySQL中的列，一个文档中含有多个列
 * 索引(Index)：类似MySQL中的表，内含许多文档
-* 
+
+## DSL 语句
+
+像SQL一样，ElasticSearch有自己的一套语句，我们称之为DSL
+
+
