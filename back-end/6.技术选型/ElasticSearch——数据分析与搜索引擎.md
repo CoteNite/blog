@@ -94,12 +94,17 @@ mapping用来创建索引，properties是索引中含有的字段，字段含有
 **针对文档**
 
 - 创建文档：POST /{索引库名}/\_doc/文档id   
-  响应体为yi'ge'wen
+  请求体为一个文档
 - 查询文档：GET /{索引库名}/\_doc/文档id
-  响应体为要查询的字段
 - 删除文档：DELETE /{索引库名}/\_doc/文档id
 - 修改文档：
-    - 全量修改：PUT /{索引库名}/\_doc/文档id
-    - 增量修改：POST /{索引库名}/\_update/文档id { "doc": {字段}}
-
-
+    - 全量修改（删除原文档，创建新文档）：PUT /{索引库名}/\_doc/文档id
+     响应体是一个文档
+    - 增量修改：POST /{索引库名}/\_update/文档id 
+      响应体类似 { "doc": {字段}}
+- 搜索文档 GET /note/\_search
+  响应体
+```json
+ { "query": { "match_all": {} }, "from": 0, "size": 2 }
+```
+其中from和size是分页搜索才会有的，from是页数，size是一页的ti
