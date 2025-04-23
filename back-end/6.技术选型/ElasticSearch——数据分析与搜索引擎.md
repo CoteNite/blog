@@ -105,6 +105,18 @@ mapping用来创建索引，properties是索引中含有的字段，字段含有
 - 搜索文档 GET /note/\_search
   响应体
 ```json
- { "query": { "match_all": {} }, "from": 0, "size": 2 }
+{ 
+	"query":{ 
+		"match_all": {},  //和match互斥，match_all就是不限定，全搜索
+		"match":{}  //里面放入部分字段以及字段中的词
+	}, 
+	sort:[
+		{
+			"order":"字段名"
+	    }
+	],
+	"from": 0,
+	"size": 2 
+}
 ```
-其中from和size是分页搜索才会有的，from是页数，size是一页的ti
+其中from和size是分页搜索才会有的，from是页数(从零开始)，size是一页的条数
