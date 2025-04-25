@@ -161,11 +161,11 @@ Canal是Alibaba的解决方案，Canal将自己伪装成数据库的从库，然
 
 ### Apache Flink Cdc
 
-Apache FlinkCdc是Apache基金会旗下的一个顶级项目，基于Apache Flink，主要用于完成数据同步功能
+Apache Flink Cdc是Apache基金会旗下的一个顶级项目，基于Apache Flink，主要用于完成数据同步功能
 
 **CDC（Change Data Capture 变更数据获取）**
 
-FlinkCdc相对Cancal提供了更高的可视化工具，可以在相对较低的代码量的情况下完成对数据的同步
+FlinkCdc相对Cancal提供了更加完善的集成，可以在相对较低的代码量的情况下完成对数据的同步
 
 ### 总结
 
