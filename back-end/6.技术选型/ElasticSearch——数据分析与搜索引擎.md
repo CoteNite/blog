@@ -130,6 +130,12 @@ ElasticSearch本身提供了优秀的Java客户端（RestHighLevelClient），�
 
 [这里放出RestHighLevelClient的文档](https://www.elastic.co/docs/reference/elasticsearch-clients/)
 
-虽然大多数的博客推荐使用RestHighLevelClient来操作Es，但我个人还是建议导入Spring Data ES，一方面是简单的操作可以直接使用Spring Data风格的代码，另一方面就是我们也可以通过Spring
+## Logstash
+
+ES本身是一种数据库，同时特化了模糊搜索的方向，我们在后端方案中时常将其与我们的SQL数据库组合使用
+
+这也就延申出一个问题，难道我每次对数据库内容进行操作时都要对ES进行相同的操作吗？
+
+答案肯定是否，ES已经为我们提供了现成的解决方案——Logstash
 
 
