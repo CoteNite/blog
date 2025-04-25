@@ -168,5 +168,4 @@ Apache FlinkCdc是Apache基金会旗下的一个顶级项目，主要用于完�
 FlinkCdc相对Cancal提供了更高的可视化工具，可以在相对较低的代码量的情况下完成对数据的同步
 
 
-
-
+得益于Alibaba在国内的Java贡献目前市面上教程最多的就是Canal
