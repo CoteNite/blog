@@ -140,7 +140,7 @@ ES本身是一种数据库，同时特化了模糊搜索的方向，我们在后
 
 对于这里的解决方案可以看这个贴子
 
-[V2EX-mysql 数据同步 elasticsearch 方案](# mysql 数据同步 elasticsearch 方案)
+[V2EX-mysql 数据同步 elasticsearch 方案](https://www.v2ex.com/t/922102)
 
 ### Logstash
 
@@ -160,6 +160,10 @@ Canal是Alibaba的解决方案，Canal将自己伪装成数据库的从库，然
 我们在配置好Canal后就可以在项目中引入CanalClient然后检测Canal获取的binlog，接着对其进行消费，从而完成构建增量索引
 
 ### Apache FlinkCdc
+
+Apache FlinkCdc是Apache基金会旗下的一个顶级项目，主要用于完成数据同步功能
+
+
 
 
 
