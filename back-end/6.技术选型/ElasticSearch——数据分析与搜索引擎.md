@@ -169,3 +169,5 @@ FlinkCdc相对Cancal提供了更高的可视化工具，可以在相对较低的
 
 
 得益于Alibaba在国内的Java贡献目前市面上教程最多的就是Canal
+
+ApacheFlinkCdc的上手难度相对Canal高一些，要求团队对ApacheFlink有一定的了解，但是ApacheFlinkCdc的解决方案也提供了更加强大的实时数据处理能力，可以让你的团队zau'tu
