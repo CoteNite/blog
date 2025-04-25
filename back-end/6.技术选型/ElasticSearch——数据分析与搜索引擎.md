@@ -126,4 +126,6 @@ mapping用来创建索引，properties是索引中含有的字段，字段含有
 
 ## SpringBoot 集成
 
-ElasticSearch本身提供了优秀的
+ElasticSearch本身提供了优秀的Java客户端（RestHighLevelClient），除此之外我们还可以使用SpringBoot为我们提供的Spring Data ElasticSearch（本事是对RestHighLevelClient的封装），让我们可以使用Spring Data的格式来操作ES客户端
+
+这里放出RestHigh
