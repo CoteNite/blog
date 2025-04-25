@@ -130,21 +130,28 @@ ElasticSearch本身提供了优秀的Java客户端（RestHighLevelClient），�
 
 [这里放出RestHighLevelClient的文档](https://www.elastic.co/docs/reference/elasticsearch-clients/)
 
-## Logstash与Canal
+## Logstash，Canal，FlinkCdc
 
 ES本身是一种数据库，同时特化了模糊搜索的方向，我们在后端方案中时常将其与我们的SQL数据库组合使用
 
 这也就延申出一个问题，难道我每次对数据库内容进行操作时都要对ES进行相同的操作吗？
 
-答案肯定是否，ES已经为我们提供了现成的解决方案——Logstash
+答案肯定是否，市面上已经有成熟的解决方案
+
+对于这里的解决方案可以看这个贴子
+
+[V2EX-mysql 数据同步 elasticsearch 方案](# mysql 数据同步 elasticsearch 方案)
 
 ### Logstash
 
-
 > Logstash 是一种开源的服务器端数据处理管道，能够从多个来源采集数据，转换数据，然后将数据发送到您喜欢的 “存储库” ，如 Elasticsearch 中。
+
+
+`Logstash` 是ES为我们提供的解决方案
 
 其中Logstash-input-jdbc插件为我们提供了构建全量索引和增量索引的操作
 
+我们可以在ES官网上通过下载Log
 
 
 
