@@ -128,4 +128,8 @@ mapping用来创建索引，properties是索引中含有的字段，字段含有
 
 ElasticSearch本身提供了优秀的Java客户端（RestHighLevelClient），除此之外我们还可以使用SpringBoot为我们提供的Spring Data ElasticSearch（本事是对RestHighLevelClient的封装），让我们可以使用Spring Data的格式来操作ES客户端
 
-这里放出RestHigh
+[这里放出RestHighLevelClient的文档](https://www.elastic.co/docs/reference/elasticsearch-clients/)
+
+虽然大多数的博客推荐使用RestHighLevelClient来操作Es，但我个人还是建议导入Spring Data ES，一方面是简单的操作可以直接使用Spring Data风格的代码，另一方面就是我们也可以通过Spring
+
+
