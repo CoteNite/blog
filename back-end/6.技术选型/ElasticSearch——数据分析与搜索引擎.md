@@ -159,15 +159,18 @@ Canal是Alibaba的解决方案，Canal将自己伪装成数据库的从库，然
 
 我们在配置好Canal后就可以在项目中引入CanalClient然后检测Canal获取的binlog，接着对其进行消费，从而完成对数据的同步
 
-### Apache FlinkCdc
+### Apache Flink Cdc
 
-Apache FlinkCdc是Apache基金会旗下的一个顶级项目，主要用于完成数据同步功能
+Apache FlinkCdc是Apache基金会旗下的一个顶级项目，基于Apache Flink，主要用于完成数据同步功能
 
 **CDC（Change Data Capture 变更数据获取）**
 
 FlinkCdc相对Cancal提供了更高的可视化工具，可以在相对较低的代码量的情况下完成对数据的同步
 
+### 总结
 
 得益于Alibaba在国内的Java贡献目前市面上教程最多的就是Canal
 
-ApacheFlinkCdc的上手难度相对Canal高一些，要求团队对ApacheFlink有一定的了解，但是ApacheFlinkCdc的解决方案也提供了更加强大的实时数据处理能力，可以让你的团队zau'tu
+ApacheFlinkCdc的上手难度相对Canal高一些，要求团队对ApacheFlink有一定的了解，但是ApacheFlinkCdc的解决方案也提供了更加强大的实时数据处理能力，可以让你的团队在Flink框架下完成整套流程
+
+而Canal需要自己实现一系列的CDC服务，但是相对来说对于更容易上手（因为相当于让你自己实现一个CDC服务，也算是客制化了），适合小项目使用
