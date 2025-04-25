@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/6.技术选型/ElasticSearch——数据分析与搜索引擎.md",
+                "file": "back-end/91.开源吐槽/Alibaba的争议？.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ElasticSearch——数据分析与搜索引擎"
+              "title": "Alibaba的争议？"
             }
           }
         ]
@@ -172,8 +172,11 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
-    "().md",
+    "back-end/0.前言.md",
+    "back-end/91.开源吐槽/Alibaba的争议？.md",
     "back-end/6.技术选型/ElasticSearch——数据分析与搜索引擎.md",
+    "back-end/91.开源吐槽",
+    "().md",
     "story/杂文，随笔/夜晚，童年，梦与二次元.md",
     "story/杂文，随笔/但行好事，莫问前程.md",
     "story/工作之外，工作之内/你是否适合计算机？.md",
@@ -190,14 +193,12 @@
     "story/工作之外，工作之内/Mybatis真的好吗.md",
     "om/1.前言.md",
     "back-end/9.系统设计/11.服务雪崩与容错.md",
-    "back-end/0.前言.md",
     "node_modules/@algolia/autocomplete-preset-algolia/README.md",
     "back-end/8.分布式/14.流量网关.md",
     "back-end/6.技术选型/Java微服务相关技术栈.md",
     "back-end/7.DDD/20.DDD在项目中的应用与结构的划分.md",
     "back-end/9.系统设计/0.前言.md",
     "back-end/6.技术选型/0.前言.md",
-    "back-end/未命名.md",
     "back-end/9.系统设计",
     "back-end/8.分布式",
     "Pasted image 20250310081329.png",
@@ -209,7 +210,6 @@
     "public/pictures/explain-1.png",
     "public/pictures/nilu.gif",
     "basic/JVM相关",
-    "story/未命名.md~",
-    "story/小说"
+    "story/未命名.md~"
   ]
 }
