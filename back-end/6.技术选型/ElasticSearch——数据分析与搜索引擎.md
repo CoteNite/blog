@@ -123,3 +123,7 @@ mapping用来创建索引，properties是索引中含有的字段，字段含有
 }
 ```
 其中from和size是分页搜索才会有的，from是页数(从零开始)，size是一页的条数
+
+## SpringBoot 集成
+
+ElasticSearch本身提供了优秀的
