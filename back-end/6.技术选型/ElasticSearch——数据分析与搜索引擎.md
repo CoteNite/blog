@@ -157,6 +157,9 @@ ES本身是一种数据库，同时特化了模糊搜索的方向，我们在后
 
 Canal是Alibaba的解决方案，Canal将自己伪装成数据库的从库，然后获取数据库发送的binlog对象
 
+我们在配置好Canal后就可以在项目中引入CanalClient然后检测Canal获取的binlog，接着对其进行消费，从而完成构建增量索引
+
+### Apache FlinkCdc
 
 
 
