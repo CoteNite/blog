@@ -130,7 +130,7 @@ ElasticSearch本身提供了优秀的Java客户端（RestHighLevelClient），�
 
 [这里放出RestHighLevelClient的文档](https://www.elastic.co/docs/reference/elasticsearch-clients/)
 
-## Logstash，Canal，FlinkCdc
+## Logstash-JDBC，Canal，FlinkCdc
 
 ES本身是一种数据库，同时特化了模糊搜索的方向，我们在后端方案中时常将其与我们的SQL数据库组合使用
 
@@ -142,7 +142,7 @@ ES本身是一种数据库，同时特化了模糊搜索的方向，我们在后
 
 [V2EX-mysql 数据同步 elasticsearch 方案](https://www.v2ex.com/t/922102)
 
-### Logstash
+### Logstash-JDBC
 
 > Logstash 是一种开源的服务器端数据处理管道，能够从多个来源采集数据，转换数据，然后将数据发送到您喜欢的 “存储库” ，如 Elasticsearch 中。
 
