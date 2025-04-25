@@ -157,12 +157,15 @@ ES本身是一种数据库，同时特化了模糊搜索的方向，我们在后
 
 Canal是Alibaba的解决方案，Canal将自己伪装成数据库的从库，然后获取数据库发送的binlog对象
 
-我们在配置好Canal后就可以在项目中引入CanalClient然后检测Canal获取的binlog，接着对其进行消费，从而完成构建增量索引
+我们在配置好Canal后就可以在项目中引入CanalClient然后检测Canal获取的binlog，接着对其进行消费，从而完成对数据的同步
 
 ### Apache FlinkCdc
 
 Apache FlinkCdc是Apache基金会旗下的一个顶级项目，主要用于完成数据同步功能
 
+**CDC（Change Data Capture 变更数据获取）**
+
+FlinkCdc相对Cancal提供了更高的可视化工具，可以在相对较低的代码量的情况下完成对数据的同步
 
 
 
