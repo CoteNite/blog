@@ -1,0 +1,10 @@
+{
+	"id": "typing-speed",
+	"name": "Typing speed",
+	"version": "1.3.0",
+	"minAppVersion": "0.12.0",
+	"description": "This is a plugin for showing the current typing speed in the status bar",
+	"author": "supercyp",
+	"repo": "supercip971/obsidian-typing-speed",
+	"isDesktopOnly": false
+}
