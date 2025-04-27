@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "basic/MySQL/MySQL常见面试题.md",
+                "file": "story/小说/钟时悟.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "MySQL常见面试题 的反向链接列表"
+              "title": "钟时悟 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "basic/JVM相关/1.Java内存机制.md",
+                "file": "story/小说/钟时悟.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "1.Java内存机制 的出链列表"
+              "title": "钟时悟 的出链列表"
             }
           },
           {
