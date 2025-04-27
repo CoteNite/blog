@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/8.分布式/20.分布式问题——事务问题.md",
+                "file": "front-end/跨平台框架.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "20.分布式问题——事务问题"
+              "title": "跨平台框架"
             }
           }
         ]
@@ -172,8 +172,9 @@
   },
   "active": "93af74729685927f",
   "lastOpenFiles": [
-    "back-end/6.技术选型/ElasticSearch——数据分析与搜索引擎.md",
     "back-end/8.分布式/20.分布式问题——事务问题.md",
+    "front-end/跨平台框架.md",
+    "back-end/6.技术选型/ElasticSearch——数据分析与搜索引擎.md",
     "back-end/0.前言.md",
     "back-end/91.开源吐槽/Alibaba的争议？.md",
     "back-end/91.开源吐槽",
@@ -198,7 +199,6 @@
     "back-end/8.分布式/14.流量网关.md",
     "back-end/6.技术选型/Java微服务相关技术栈.md",
     "back-end/7.DDD/20.DDD在项目中的应用与结构的划分.md",
-    "back-end/9.系统设计/0.前言.md",
     "back-end/9.系统设计",
     "back-end/8.分布式",
     "Pasted image 20250310081329.png",
