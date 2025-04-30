@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "7615a72c208b8a1e",
+        "id": "d8f2dd776f77ffe0",
         "type": "tabs",
         "children": [
           {
-            "id": "93af74729685927f",
+            "id": "de7b626dd4b05c76",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -170,10 +170,11 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "93af74729685927f",
+  "active": "de7b626dd4b05c76",
   "lastOpenFiles": [
-    "story/小说/钟时悟.md",
+    "back-end/9.系统设计/11.服务雪崩与容错.md",
     "back-end/9.系统设计/12.缓存设计.md",
+    "story/小说/钟时悟.md",
     "story/小说/来世.md",
     "front-end/跨平台框架.md",
     "back-end/8.分布式/20.分布式问题——事务问题.md",
@@ -196,7 +197,6 @@
     "story/工作之外，工作之内/0.前言.md",
     "story/工作之外，工作之内/Mybatis真的好吗.md",
     "om/1.前言.md",
-    "back-end/9.系统设计/11.服务雪崩与容错.md",
     "node_modules/@algolia/autocomplete-preset-algolia/README.md",
     "back-end/8.分布式/14.流量网关.md",
     "back-end/9.系统设计",
