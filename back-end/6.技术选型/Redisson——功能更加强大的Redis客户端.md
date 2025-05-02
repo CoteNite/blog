@@ -85,3 +85,16 @@ fun test2(){
 
 位图是一种用来操作二元状态（0/1，对/错等）的数据结构，底层基于字符串，利用每个bit位的0/1来存储信息，能够大规模节省内存
 
+这里来看一下Redis的原生指令（或许应该叫RQL？）
+
+```redis
+
+SETBIT key offset value  将key对应的value的第offset位设置为value（value只能为1/0）
+
+GETBIT key offset 获取key对应的value的第offset位上的数
+
+BITCOUNT key  获取key对应的value的位上1的数量
+
+```
+
+
