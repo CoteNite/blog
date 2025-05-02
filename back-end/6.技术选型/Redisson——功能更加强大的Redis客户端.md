@@ -123,4 +123,20 @@ BITCOUNT key  获取key对应的value的位上1的数量
 
 为了解决bitmap对于系数数据的大内存占用，Daniel Lemire团队于2015年提出Roaring Bitmap来解决这个问题，Roaring Bitmap通过自能分层的存储机制，在保证bitmap效率的同时，对bitmap进行了相当逆天的空间压缩（仅存储有效位）
 
+| 对比维度         | Redis Bitmap           | Roaring Bitmap       |
+| :----------- | :--------------------- | :------------------- |
+| **存储机制**     | 连续内存位数组                | 分桶三态容器               |
+| **最大基数**     | 2^32（512MB）            | 2^32（动态扩展）           |
+| **内存占用**     | 固定O(N)                 | 动态O(1)-O(N)          |
+| **稀疏数据存储**   | 严重浪费（存0也占位）            | 极致压缩（仅存有效位）          |
+| **10万随机数存储** | 1.25MB                 | 约25KB                |
+| **AND运算速度**  | O(N)                   | O(min(N,M)) + SIMD加速 |
+| **范围查询**     | BITCOUNT key start end | 原生支持批量范围检索           |
+| **持久化方式**    | RDB/AOF全量保存            | 支持内存映射文件直接加载         |
+| **分布式支持**    | 需自行分片                  | 原生支持分片聚合             |
+| **典型适用场景**   | 简单标记、布隆过滤器             | 复杂集合运算、海量数据处理        |
+
+[Github上的一个Redis的RoaringBitmap的插件](https://github.com/aviggiano/redis-roaring)
+
+
 在Redisson Pro版本中提供了对RoaringBitmap的支持
