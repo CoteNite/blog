@@ -47,3 +47,24 @@
 ## Redisson集成
 
 Redisson对bloom过滤器作了专门的集成
+
+```kotlin
+fun test(){  
+    val bloomFilter = redissonClient.getBloomFilter<String>("bloomFilter")  
+    bloomFilter.tryInit(1000000,0.09)  
+    bloomFilter.add("1")  
+    bloomFilter.add("3")  
+    bloomFilter.add("5")  
+    bloomFilter.add("7")  
+    bloomFilter.add("9")  
+}  
+  
+fun test2(){  
+    val bloomFilter = redissonClient.getBloomFilter<String>("bloomFilter")  
+    println("开始1的测试")  
+    for (i in 1..2000){  
+        println(bloomFilter.contains("2"))  
+    }  
+}
+```
+
