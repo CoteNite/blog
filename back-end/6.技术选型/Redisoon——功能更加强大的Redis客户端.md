@@ -1,4 +1,7 @@
 # Redisson——功能更加强大的Redis客户端
 
-就像MySQL是大多数开发者学习的第一个SQL一样，Redis是大多数开发者学习的第一个NoSQL，作为目前项目中最常见的技术栈，我们有必要对Redis开一个专栏来聊一聊
+就像MySQL是大多数开发者学习的第一个SQL一样，Redis是大多数开发者学习的第一个NoSQL，作为目前项目中最常见的技术栈，我们有必要聊一聊Redis的使用。恰巧最近正好最近在研究Redisson，这里就一并聊了
 
+## Redisson VS Spring Data Redis
+
+相信大家在操作redis的时候经常会用到SpringDataRedis这个包，这是Spring为我们提供的一个SpringData风格操作Redis的方案（虽然平常都是再用RedisTemplate，但你确实可以像SpringDataJpayi'yan）
