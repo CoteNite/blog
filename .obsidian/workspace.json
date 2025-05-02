@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/6.技术选型/Redisoon——功能更加强大的Redis客户端.md",
+                "file": "back-end/6.技术选型/Redisson——功能更加强大的Redis客户端.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Redisoon——功能更加强大的Redis客户端"
+              "title": "Redisson——功能更加强大的Redis客户端"
             }
           }
         ]
@@ -174,7 +174,7 @@
   "lastOpenFiles": [
     "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
     "node_modules/wicked-good-xpath/README.md",
-    "back-end/6.技术选型/Redisoon——功能更加强大的Redis客户端.md",
+    "back-end/6.技术选型/Redisson——功能更加强大的Redis客户端.md",
     "back-end/9.系统设计/12.缓存设计.md",
     "back-end/0.前言.md",
     "back-end/9.系统设计/11.服务雪崩与容错.md",
