@@ -110,4 +110,6 @@ BITCOUNT key  获取key对应的value的位上1的数量
 
 有的兄弟，有的
 
-为了解决bitmap对于系数数据的大内存占用，Daniel Lemire团队于2015年提出Roaring Bitmap来解决这个问题，Roaring Bitmap通过自能分层的存储机制，在保证bitmap效率的同时，对bitmapjin'xi
+为了解决bitmap对于系数数据的大内存占用，Daniel Lemire团队于2015年提出Roaring Bitmap来解决这个问题，Roaring Bitmap通过自能分层的存储机制，在保证bitmap效率的同时，对bitmap进行了相当逆天的空间压缩（仅存储有效位）
+
+同样基于
