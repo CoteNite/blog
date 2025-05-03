@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/杂文，随笔/少年，创伤与救世主的梦.md",
+                "file": "story/杂文，随笔/创作者与救世主的梦.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "少年，创伤与救世主的梦"
+              "title": "创作者与救世主的梦"
             }
           }
         ]
@@ -173,7 +173,7 @@
   "active": "de7b626dd4b05c76",
   "lastOpenFiles": [
     "story/杂文，随笔/0.前言.md",
-    "story/杂文，随笔/少年，创伤与救世主的梦.md",
+    "story/杂文，随笔/创作者与救世主的梦.md",
     "back-end/9.系统设计/12.缓存设计.md",
     "back-end/6.技术选型/Redisson——功能更加强大的Redis客户端.md",
     "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
