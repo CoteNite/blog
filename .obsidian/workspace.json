@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/6.技术选型/消息队列的技术选型.md",
+                "file": "back-end/6.技术选型/消息队列.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "消息队列的技术选型"
+              "title": "消息队列"
             }
           }
         ]
@@ -173,7 +173,7 @@
   "active": "de7b626dd4b05c76",
   "lastOpenFiles": [
     "back-end/8.分布式/0.前言.md",
-    "back-end/6.技术选型/消息队列的技术选型.md",
+    "back-end/6.技术选型/消息队列.md",
     "back-end/9.系统设计/11.服务雪崩与容错.md",
     "story/杂文，随笔/创作者与救世主的梦.md",
     "story/杂文，随笔/0.前言.md",
