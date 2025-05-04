@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/6.技术选型/缓存设计.md",
+                "file": "back-end/6.技术选型/消息队列.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "缓存设计"
+              "title": "消息队列"
             }
           }
         ]
@@ -172,8 +172,8 @@
   },
   "active": "10e8fae93e9cc4f0",
   "lastOpenFiles": [
-    "back-end/6.技术选型/搜索引擎.md",
     "back-end/6.技术选型/缓存设计.md",
+    "back-end/6.技术选型/搜索引擎.md",
     "back-end/6.技术选型/ElasticSearch——数据分析与搜索引擎.md",
     "back-end/6.技术选型/Guava——Google工具包.md",
     "back-end/6.技术选型/Cassandra——分布式KV数据库.md",
