@@ -1,0 +1,7 @@
+{
+  "metrics": "cpm",
+  "darken_after_pausing": "show",
+  "monkeytype_counting": true,
+  "show_minmax": false,
+  "display_first": true
+}
