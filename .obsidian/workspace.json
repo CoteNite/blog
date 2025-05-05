@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/6.技术选型/缓存设计.md",
+                "file": "back-end/6.技术选型/分库分表.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "缓存设计"
+              "title": "分库分表"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "back-end/6.技术选型/缓存设计.md",
+                "file": "back-end/6.技术选型/分库分表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "缓存设计 的反向链接列表"
+              "title": "分库分表 的反向链接列表"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/6.技术选型/缓存设计.md",
+                "file": "back-end/6.技术选型/分库分表.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "缓存设计 的大纲"
+              "title": "分库分表 的大纲"
             }
           }
         ],
@@ -172,9 +172,10 @@
   },
   "active": "10e8fae93e9cc4f0",
   "lastOpenFiles": [
+    "back-end/6.技术选型/缓存设计.md",
+    "back-end/6.技术选型/分库分表.md",
     "back-end/6.技术选型/搜索引擎.md",
     "back-end/6.技术选型/消息队列.md",
-    "back-end/6.技术选型/缓存设计.md",
     "front-end/1.前言.md",
     "story/小说/钟时悟.md",
     "back-end/6.技术选型/ElasticSearch——数据分析与搜索引擎.md",
@@ -198,7 +199,6 @@
     "story/杂文，随笔/夜晚，童年，梦与二次元.md",
     "story/杂文，随笔/但行好事，莫问前程.md",
     "story/工作之外，工作之内/你是否适合计算机？.md",
-    "story/工作之外，工作之内/Work Or Life.md",
     "back-end/9.系统设计",
     "back-end/8.分布式",
     "Pasted image 20250310081329.png",
