@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/6.技术选型/分库分表.md",
+                "file": "back-end/81.高并发/读写分离.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "分库分表"
+              "title": "读写分离"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "back-end/6.技术选型/分库分表.md",
+                "file": "back-end/81.高并发/读写分离.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "分库分表 的反向链接列表"
+              "title": "读写分离 的反向链接列表"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/6.技术选型/分库分表.md",
+                "file": "back-end/81.高并发/读写分离.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "分库分表 的大纲"
+              "title": "读写分离 的大纲"
             }
           }
         ],
@@ -172,10 +172,16 @@
   },
   "active": "10e8fae93e9cc4f0",
   "lastOpenFiles": [
-    "back-end/6.技术选型/缓存设计.md",
-    "back-end/6.技术选型/分库分表.md",
-    "back-end/6.技术选型/搜索引擎.md",
-    "back-end/6.技术选型/消息队列.md",
+    "back-end/81.高并发/分库分表.md",
+    "back-end/81.高并发/读写分离.md",
+    "back-end/81.高并发/搜索引擎.md",
+    "back-end/81.高并发/缓存设计.md",
+    "back-end/2.多线程相关/1.多线程理论.md",
+    "back-end/81.高并发",
+    "back-end/未命名.md",
+    "back-end/3.设计模式相关/1.前言.md",
+    "back-end/IM——即时通信系统在Java中的实践.md",
+    "back-end/81.高并发/消息队列.md",
     "front-end/1.前言.md",
     "story/小说/钟时悟.md",
     "back-end/6.技术选型/ElasticSearch——数据分析与搜索引擎.md",
@@ -193,12 +199,7 @@
     "story/小说/来世.md",
     "front-end/跨平台框架.md",
     "back-end/8.分布式/20.分布式问题——事务问题.md",
-    "back-end/91.开源吐槽/Alibaba的争议？.md",
     "back-end/91.开源吐槽",
-    "().md",
-    "story/杂文，随笔/夜晚，童年，梦与二次元.md",
-    "story/杂文，随笔/但行好事，莫问前程.md",
-    "story/工作之外，工作之内/你是否适合计算机？.md",
     "back-end/9.系统设计",
     "back-end/8.分布式",
     "Pasted image 20250310081329.png",
@@ -209,7 +210,6 @@
     "basic/MySQL",
     "public/pictures/explain-1.png",
     "public/pictures/nilu.gif",
-    "basic/JVM相关",
-    "story/未命名.md~"
+    "basic/JVM相关"
   ]
 }
