@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/81.高并发/1.如何实现一个高并发的系统.md",
+                "file": "basic/JVM相关/2.垃圾回收机制.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.如何实现一个高并发的系统"
+              "title": "2.垃圾回收机制"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "back-end/81.高并发/1.如何实现一个高并发的系统.md",
+                "file": "basic/JVM相关/2.垃圾回收机制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "1.如何实现一个高并发的系统 的反向链接列表"
+              "title": "2.垃圾回收机制 的反向链接列表"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/81.高并发/1.如何实现一个高并发的系统.md",
+                "file": "basic/JVM相关/2.垃圾回收机制.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.如何实现一个高并发的系统 的大纲"
+              "title": "2.垃圾回收机制 的大纲"
             }
           }
         ],
@@ -172,8 +172,10 @@
   },
   "active": "10e8fae93e9cc4f0",
   "lastOpenFiles": [
-    "back-end/81.高并发/读写分离.md",
+    "basic/JVM相关/1.Java内存机制.md",
+    "basic/JVM相关/2.垃圾回收机制.md",
     "back-end/81.高并发/1.如何实现一个高并发的系统.md",
+    "back-end/81.高并发/读写分离.md",
     "back-end/81.高并发/分库分表.md",
     "back-end/81.高并发/搜索引擎.md",
     "back-end/81.高并发/缓存设计.md",
@@ -197,8 +199,6 @@
     "back-end/9.系统设计/12.缓存设计.md",
     "node_modules/wicked-good-xpath/README.md",
     "back-end/0.前言.md",
-    "story/小说/来世.md",
-    "front-end/跨平台框架.md",
     "back-end/91.开源吐槽",
     "back-end/9.系统设计",
     "back-end/8.分布式",
