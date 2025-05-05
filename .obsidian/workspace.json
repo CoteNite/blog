@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/小说/钟时悟.md",
+                "file": "back-end/6.技术选型/缓存设计.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "钟时悟"
+              "title": "缓存设计"
             }
           }
         ]
@@ -172,9 +172,11 @@
   },
   "active": "10e8fae93e9cc4f0",
   "lastOpenFiles": [
+    "back-end/6.技术选型/搜索引擎.md",
     "back-end/6.技术选型/消息队列.md",
     "back-end/6.技术选型/缓存设计.md",
-    "back-end/6.技术选型/搜索引擎.md",
+    "front-end/1.前言.md",
+    "story/小说/钟时悟.md",
     "back-end/6.技术选型/ElasticSearch——数据分析与搜索引擎.md",
     "back-end/6.技术选型/Guava——Google工具包.md",
     "back-end/6.技术选型/Cassandra——分布式KV数据库.md",
@@ -187,7 +189,6 @@
     "back-end/9.系统设计/12.缓存设计.md",
     "node_modules/wicked-good-xpath/README.md",
     "back-end/0.前言.md",
-    "story/小说/钟时悟.md",
     "story/小说/来世.md",
     "front-end/跨平台框架.md",
     "back-end/8.分布式/20.分布式问题——事务问题.md",
@@ -198,7 +199,6 @@
     "story/杂文，随笔/但行好事，莫问前程.md",
     "story/工作之外，工作之内/你是否适合计算机？.md",
     "story/工作之外，工作之内/Work Or Life.md",
-    "story/杂文，随笔/愿每个人都被善待.md",
     "back-end/9.系统设计",
     "back-end/8.分布式",
     "Pasted image 20250310081329.png",
