@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/6.技术选型/消息队列.md",
+                "file": "story/小说/钟时悟.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "消息队列"
+              "title": "钟时悟"
             }
           }
         ]
@@ -172,12 +172,12 @@
   },
   "active": "10e8fae93e9cc4f0",
   "lastOpenFiles": [
+    "back-end/6.技术选型/消息队列.md",
     "back-end/6.技术选型/缓存设计.md",
     "back-end/6.技术选型/搜索引擎.md",
     "back-end/6.技术选型/ElasticSearch——数据分析与搜索引擎.md",
     "back-end/6.技术选型/Guava——Google工具包.md",
     "back-end/6.技术选型/Cassandra——分布式KV数据库.md",
-    "back-end/6.技术选型/消息队列.md",
     "back-end/6.技术选型/Redisson——功能更加强大的Redis客户端.md",
     "back-end/6.技术选型/RocketMQ——来自Alibaba的消息队列.md",
     "back-end/8.分布式/0.前言.md",
