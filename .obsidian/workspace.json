@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344.5
+    "width": 336.5
   },
   "right": {
     "id": "24c0fe5a82e56c4b",
@@ -170,7 +170,7 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "10e8fae93e9cc4f0",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
     "node_modules/mermaid/dist/styles.spec.d.ts",
     "node_modules/mermaid/dist/styles.d.ts",
