@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import timeline from "vitepress-markdown-timeline";
 import {generateSidebar, withSidebar} from 'vitepress-sidebar';
+import { withMermaid } from "vitepress-plugin-mermaid";
 import mathjax3 from 'markdown-it-mathjax3';
 
 const base='/blog/'
@@ -239,3 +240,15 @@ export default defineConfig(withSidebar(vitePressConfigs,[
   },
     ])
 );
+
+export default withMermaid({
+  // your existing vitepress config...
+  // optionally, you can pass MermaidConfig
+  mermaid: {
+    // refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
+  },
+  // optionally set additional config for plugin itself with MermaidPluginConfig
+  mermaidPlugin: {
+    class: "mermaid my-class", // set additional css classes for parent container
+  },
+});
