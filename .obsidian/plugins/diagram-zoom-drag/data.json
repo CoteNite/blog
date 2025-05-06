@@ -105,9 +105,9 @@
     }
   },
   "diagramsPerPage": 6,
-  "collapseByDefault": true,
-  "automaticCollapsingOnFocusChange": true,
-  "hideOnMouseOutDiagram": true,
+  "collapseByDefault": false,
+  "automaticCollapsingOnFocusChange": false,
+  "hideOnMouseOutDiagram": false,
   "diagramExpandedWidth": 400,
   "diagramExpandedHeight": 400,
   "diagramCollapsedWidth": 200,

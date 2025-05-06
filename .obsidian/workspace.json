@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a24151e41db46bdb",
+        "id": "8927fde545e6341c",
         "type": "tabs",
         "children": [
           {
-            "id": "10e8fae93e9cc4f0",
+            "id": "01c45da2ba93f2f8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/JVM相关/1.Java内存机制.md",
+                "file": "basic/JVM相关/2.垃圾回收机制.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Java内存机制"
+              "title": "2.垃圾回收机制"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/JVM相关/1.Java内存机制.md",
+                "file": "basic/JVM相关/2.垃圾回收机制.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.Java内存机制 的大纲"
+              "title": "2.垃圾回收机制 的大纲"
             }
           }
         ],
@@ -170,8 +170,10 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "9884943ad5bd65e9",
+  "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
+    "basic/JVM相关/2.垃圾回收机制.md",
+    "basic/JVM相关/1.Java内存机制.md",
     "node_modules/mermaid/dist/styles.spec.d.ts",
     "node_modules/mermaid/dist/styles.d.ts",
     "node_modules/mermaid/dist/utils/lineWithOffset.d.ts",
@@ -182,7 +184,6 @@
     "node_modules/mermaid/dist/utils/imperativeState.d.ts",
     "node_modules/mermaid/dist/utils/base64.d.ts",
     "node_modules/mermaid/dist/utils",
-    "node_modules/mermaid/dist/diagrams/xychart/chartBuilder/components/plot/linePlot.d.ts",
     "node_modules/markdown-it-mermaid/node_modules/mermaid/src/diagrams/gantt/exGantt.md",
     "node_modules/chevrotain/BREAKING_CHANGES.md",
     "node_modules/graphlibrary/README.md",
@@ -207,7 +208,6 @@
     "node_modules/globals/readme.md",
     "node_modules/mlly/node_modules/pkg-types/README.md",
     "node_modules/he/README.md",
-    "node_modules/d3-sankey/node_modules/d3-shape/README.md",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
