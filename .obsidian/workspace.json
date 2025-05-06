@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/JVM相关/3.类与类加载.md",
+                "file": "basic/Java集合类.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.类与类加载"
+              "title": "Java集合类"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/JVM相关/3.类与类加载.md",
+                "file": "basic/Java集合类.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "3.类与类加载 的大纲"
+              "title": "Java集合类 的大纲"
             }
           }
         ],
@@ -172,8 +172,10 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
-    "basic/JVM相关/2.垃圾回收机制.md",
+    "basic/Java基础3——重点知识.md",
+    "basic/Java基础——String.md",
     "basic/JVM相关/3.类与类加载.md",
+    "basic/JVM相关/2.垃圾回收机制.md",
     "basic/JVM相关/1.Java内存机制.md",
     "node_modules/mermaid/dist/styles.spec.d.ts",
     "node_modules/mermaid/dist/styles.d.ts",
@@ -206,8 +208,6 @@
     "node_modules/@antfu/utils/README.md",
     "node_modules/moment/README.md",
     "node_modules/moment/CHANGELOG.md",
-    "node_modules/globals/readme.md",
-    "node_modules/mlly/node_modules/pkg-types/README.md",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
