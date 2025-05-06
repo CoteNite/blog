@@ -1,8 +1,9 @@
 {
   "devDependencies": {
+    "markdown-it-mermaid": "^0.2.5",
+    "medium-zoom": "^1.1.0",
     "mermaid": "^11.6.0",
     "vitepress": "^1.5.0",
-    "vitepress-plugin-mermaid": "^2.0.17",
     "vitepress-sidebar": "^1.30.2"
   },
   "scripts": {
@@ -13,7 +14,6 @@
   "dependencies": {
     "busuanzi.pure.js": "^1.0.3",
     "markdown-it-mathjax3": "^4.3.2",
-    "medium-zoom": "^1.1.0",
     "vitepress-markdown-timeline": "^1.2.1",
     "vue": "^3.5.13"
   }
