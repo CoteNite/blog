@@ -108,8 +108,8 @@
   "collapseByDefault": false,
   "automaticCollapsingOnFocusChange": false,
   "hideOnMouseOutDiagram": false,
-  "diagramExpandedWidth": 400,
-  "diagramExpandedHeight": 400,
+  "diagramExpandedWidth": 650,
+  "diagramExpandedHeight": 600,
   "diagramCollapsedWidth": 200,
   "diagramCollapsedHeight": 200,
   "addHidingButton": true
