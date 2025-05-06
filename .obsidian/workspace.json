@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/JVM相关/1.Java内存机制.md",
+                "file": "basic/JVM相关/2.垃圾回收机制.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Java内存机制"
+              "title": "2.垃圾回收机制"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/JVM相关/1.Java内存机制.md",
+                "file": "basic/JVM相关/2.垃圾回收机制.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.Java内存机制 的大纲"
+              "title": "2.垃圾回收机制 的大纲"
             }
           }
         ],
@@ -172,8 +172,8 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
-    "basic/JVM相关/2.垃圾回收机制.md",
     "basic/JVM相关/1.Java内存机制.md",
+    "basic/JVM相关/2.垃圾回收机制.md",
     "node_modules/mermaid/dist/styles.spec.d.ts",
     "node_modules/mermaid/dist/styles.d.ts",
     "node_modules/mermaid/dist/utils/lineWithOffset.d.ts",
