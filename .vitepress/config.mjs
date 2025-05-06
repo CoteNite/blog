@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import timeline from "vitepress-markdown-timeline";
 import {generateSidebar, withSidebar} from 'vitepress-sidebar';
-import markdownItMermaid from 'markdown-it-mermaid'
+import plugin from 'markdown-it-mermaid'
 import mathjax3 from 'markdown-it-mathjax3';
 
 const base='/blog/'
@@ -156,7 +156,7 @@ const vitePressConfigs = {
   },
   markdown:{
     config: (md) => {
-      md.use(markdownItMermaid)
+      md.use(plugin)
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
         md.use(timeline);
         md.use(mathjax3);

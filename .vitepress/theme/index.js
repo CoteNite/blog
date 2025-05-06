@@ -14,11 +14,21 @@ import mediumZoom from 'medium-zoom';
 import { onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import {h} from "vue";
+import mermaid from "mermaid";
 
 
 export default {
     extends: DefaultTheme,
     setup() {
+        onMounted(() => {
+            // 初始化 Mermaid
+            mermaid.initialize({ startOnLoad: false })
+
+            // 初始化 medium-zoom，尝试对 Mermaid SVG 进行缩放
+            // 注意：这可能需要根据 Mermaid 生成的具体 SVG 结构进行调整
+            // Mermaid 生成的 SVG 可能会被包裹在 <div class="mermaid"> 中
+            mediumZoom('.mermaid svg', { background: 'var(--vp-c-bg)' });
+        })
         const route = useRoute();
         const initZoom = () => {
             // mediumZoom('[data-zoomable]', { background: 'var(--vp-c-bg)' }); // 默认
