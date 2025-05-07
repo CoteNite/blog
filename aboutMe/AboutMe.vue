@@ -187,7 +187,7 @@ import {
 
   .info-container {
     flex: none;
-    width: 100%; /
+    width: 100%;
     align-self: center;
     text-align: center;
     padding: 10px;
