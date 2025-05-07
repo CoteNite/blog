@@ -22,31 +22,31 @@ import {
         />
       </div>
       <div class="info-container">
-        <strong style="font-size: 45px">CoteNite</strong>
-        <span style="margin-top: 25px">大学在读/全栈开发</span>
-        <strong>主要使用的框架：SpringBoot/Quasar</strong>
-        <span style="margin-top: 20px">趁着还有热情赶紧多做点喜欢的事情....</span>
-        <span>想要做出来写能够被人喜欢的东西....</span>
-        <s style="font-size: 13px">每天都是想要睡死过去的一天....</s>
+        <strong class="name">CoteNite</strong>
+        <span class="role">大学在读/全栈开发</span>
+        <strong class="frameworks">主要使用的框架：SpringBoot/Quasar</strong>
+        <span class="motto">趁着还有热情赶紧多做点喜欢的事情....</span>
+        <span class="goal">想要做出来写能够被人喜欢的东西....</span>
+        <s class="sleepy">每天都是想要睡死过去的一天....</s>
       </div>
     </div>
 
-    <div class=docs>
+    <div class="docs skills-section">
       <span>
         <strong>一部分学过的技术</strong>
-        <s style="font-size: 13px">(有种点技能树的感觉,顺便占点位置...)</s>
+        <s class="sub-note">(有种点技能树的感觉,顺便占点位置...)</s>
       </span>
-      <div style="display: flex">
+      <div class="skill-category">
         <strong>常用语言：</strong>
-        <div style="display: flex;gap: 15px">
+        <div class="skill-icons">
           <KotlinIcon/>
           <JavaScriptIcon/>
           <TypeScriptIcon/>
         </div>
       </div>
-      <div style="display: flex">
+      <div class="skill-category">
         <strong>后端技术：</strong>
-        <div style="display: flex;gap: 15px">
+        <div class="skill-icons backend-icons">
           <SpringIcon/>
           <MySqlIcon/>
           <RedisIcon/>
@@ -58,9 +58,9 @@ import {
           <MinIoIcon/>
         </div>
       </div>
-      <div style="display: flex">
+      <div class="skill-category">
         <strong>前端技术：</strong>
-        <div style="display: flex;gap: 15px">
+        <div class="skill-icons frontend-icons">
           <VueDotjsIcon/>
           <QuasarIcon/>
           <ElectronIcon/>
@@ -69,9 +69,9 @@ import {
       </div>
     </div>
 
-    <div class="docs">
+    <div class="docs recent-work-section">
       <strong>最近主要在干的事：</strong>
-      <div style="display: flex">
+      <div>
         <span>孩子也想有一份实习工作QwQ</span>
       </div>
     </div>
@@ -86,7 +86,6 @@ import {
   text-align: center;
 }
 
-
 .personal-info-card {
   display: flex;
   align-items: center;
@@ -94,6 +93,7 @@ import {
   height: 300px;
   box-shadow: 0 10px 30px 0 rgb(0 0 0 / 25%);
   background-color: transparent;
+  border-radius: 8px;
 }
 
 .avatar-container {
@@ -101,6 +101,7 @@ import {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .avatar {
@@ -123,15 +124,126 @@ import {
   align-self: flex-start;
   text-align: left;
   padding-top: 3%;
+  padding-right: 20px;
 }
 
-.docs{
+.name {
+  font-size: 45px;
+}
+
+.role {
+  margin-top: 25px;
+}
+
+.sleepy {
+  font-size: 13px;
+}
+
+.docs {
   display: flex;
   flex-direction: column;
   gap: 35px;
   width: 100%;
   margin-top: 40px;
+  text-align: left;
+}
+
+.skills-section .skill-category {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skills-section .skill-icons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 
+@media (max-width: 768px) {
+  .main {
+    padding: 5% 5% 0 5%;
+  }
+
+  .personal-info-card {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    align-items: center;
+  }
+
+  .avatar-container {
+    flex: none;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .info-container {
+    flex: none;
+    width: 100%; /
+    align-self: center;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+
+  .role {
+    margin-top: 10px;
+  }
+
+  .frameworks {
+    font-size: 1em;
+  }
+
+  .motto, .goal, .sleepy {
+    font-size: 0.9em;
+  }
+
+
+  .docs {
+    margin-top: 30px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .skills-section .skill-category {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .skills-section .skill-icons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .skills-section .skill-icons svg {
+    width: 24px;
+    height: 24px;
+  }
+
+
+  .sub-note {
+    font-size: 11px;
+  }
+
+  .recent-work-section strong {
+    text-align: center;
+    display: block;
+  }
+  .recent-work-section div {
+    text-align: center;
+  }
+}
 </style>
