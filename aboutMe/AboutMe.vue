@@ -72,7 +72,7 @@ import {
     <div class="docs recent-work-section">
       <strong>最近主要在干的事：</strong>
       <div>
-        <span>孩子也想有一份实习工作QwQ</span>
+        <span>正在为实习而努力，孩子也想有一份实习工作QwQ</span>
       </div>
     </div>
   </div>
