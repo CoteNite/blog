@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/Java集合类.md",
+                "file": "story/杂文，随笔/内裂.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java集合类"
+              "title": "内裂"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/Java集合类.md",
+                "file": "story/杂文，随笔/内裂.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java集合类 的大纲"
+              "title": "内裂 的大纲"
             }
           }
         ],
@@ -172,9 +172,12 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
+    "story/杂文，随笔/创作者与救世主的梦.md",
+    "story/杂文，随笔/内裂.md",
+    "story/小说/钟时悟.md",
+    "basic/Java集合类.md",
     "basic/JVM相关/3.类与类加载.md",
     "basic/JVM相关/2.垃圾回收机制.md",
-    "basic/Java集合类.md",
     "basic/Java基础3——重点知识.md",
     "basic/Java基础——String.md",
     "basic/JVM相关/1.Java内存机制.md",
@@ -205,9 +208,6 @@
     "node_modules/vscode-languageserver-types/README.md",
     "node_modules/quansync/LICENSE.md",
     "node_modules/mlly/README.md",
-    "node_modules/vscode-languageserver-textdocument/README.md",
-    "node_modules/@antfu/utils/README.md",
-    "node_modules/moment/README.md",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
