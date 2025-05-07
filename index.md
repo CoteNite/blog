@@ -8,6 +8,9 @@ hero:
     - theme: brand
       text: 来杯冰美式
       link: /back-end/0.前言.md
+    - theme: brand
+      text: 看看老板
+      link: /aboutMe/aboutMe.md
     - theme: alt
       text: 来杯热美式
       link: /front-end/1.前言.md

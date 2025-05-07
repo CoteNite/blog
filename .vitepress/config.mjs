@@ -50,18 +50,14 @@ const baseVitePressConfig = {
       { text: '<strong>日穿八股</strong>', link: '/basic/1.前言' },
       { text: '<strong>干翻100</strong>', link: '/hot100/1.前言' },
       { text: '<strong>算竟败犬</strong>', link: '/algorithm/1.前言' },
-      // 注意：VitePress 的内部链接通常不需要 .md 扩展名
       { text: '<strong>寥寥几笔</strong>', link: '/story/1.前言' },
-      { text: '<strong>圣诞快乐</strong>', link: '/圣诞' },
+      // { text: '<strong>圣诞快乐</strong>', link: '/圣诞' },
+      { text: '<strong>关于我</strong>', link: '/aboutMe/aboutMe' },
       { text: '<strong>主页</strong>', link: '/' },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/CoteNite' }
     ],
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024-present CoteNite'
-    }
     // themeConfig.sidebar 将由 withSidebar 生成和添加
   },
   vue: {
