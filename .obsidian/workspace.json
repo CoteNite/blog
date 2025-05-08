@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aboutMe/aboutMe.md",
+                "file": "basic/1.前言.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aboutMe"
+              "title": "1.前言"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aboutMe/aboutMe.md",
+                "file": "basic/1.前言.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "aboutMe 的大纲"
+              "title": "1.前言 的大纲"
             }
           }
         ],
@@ -170,13 +170,17 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "9884943ad5bd65e9",
+  "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
+    "basic/Java集合/Java集合.md",
+    "basic/Java集合类.md",
+    "basic/Java集合",
+    "basic/未命名.md",
+    "basic/JVM相关/3.类与类加载.md",
+    "aboutMe/aboutMe.md",
     "story/杂文，随笔/内裂.md",
     "story/杂文，随笔/创作者与救世主的梦.md",
     "story/小说/钟时悟.md",
-    "basic/Java集合类.md",
-    "basic/JVM相关/3.类与类加载.md",
     "basic/JVM相关/2.垃圾回收机制.md",
     "basic/Java基础3——重点知识.md",
     "basic/Java基础——String.md",
@@ -190,7 +194,6 @@
     "node_modules/mermaid/dist/utils/imperativeState.spec.d.ts",
     "node_modules/mermaid/dist/utils/imperativeState.d.ts",
     "node_modules/mermaid/dist/utils/base64.d.ts",
-    "node_modules/mermaid/dist/utils",
     "node_modules/markdown-it-mermaid/node_modules/mermaid/src/diagrams/gantt/exGantt.md",
     "node_modules/chevrotain/BREAKING_CHANGES.md",
     "node_modules/graphlibrary/README.md",
@@ -205,9 +208,6 @@
     "node_modules/@braintree/sanitize-url/README.md",
     "node_modules/@braintree/sanitize-url/CHANGELOG.md",
     "node_modules/@mermaid-js/parser/README.md",
-    "node_modules/vscode-languageserver-types/README.md",
-    "node_modules/quansync/LICENSE.md",
-    "node_modules/mlly/README.md",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
