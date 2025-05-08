@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/2.八股之外.md",
+                "file": "basic/Java集合/Java集合.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.八股之外"
+              "title": "Java集合"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/2.八股之外.md",
+                "file": "basic/Java集合/Java集合.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2.八股之外 的大纲"
+              "title": "Java集合 的大纲"
             }
           }
         ],
@@ -172,8 +172,8 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
-    "basic/1.前言.md",
     "basic/2.八股之外.md",
+    "basic/1.前言.md",
     "basic/Java集合/Java集合.md",
     "basic/Java集合类.md",
     "basic/Java集合",
