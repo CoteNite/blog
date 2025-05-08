@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/Java集合/Java集合.md",
+                "file": "basic/Java集合类.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java集合"
+              "title": "Java集合类"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/Java集合/Java集合.md",
+                "file": "basic/Java集合类.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java集合 的大纲"
+              "title": "Java集合类 的大纲"
             }
           }
         ],
@@ -172,9 +172,10 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
+    "basic/Java集合/Java集合.md",
+    "fc699a5c92e90a21116a4e7869b630ec.mp4",
     "basic/2.八股之外.md",
     "basic/1.前言.md",
-    "basic/Java集合/Java集合.md",
     "basic/Java集合类.md",
     "basic/Java集合",
     "basic/未命名.md",
@@ -195,7 +196,6 @@
     "node_modules/mermaid/dist/utils/sanitizeDirective.d.ts",
     "node_modules/mermaid/dist/utils/imperativeState.spec.d.ts",
     "node_modules/mermaid/dist/utils/imperativeState.d.ts",
-    "node_modules/mermaid/dist/utils/base64.d.ts",
     "node_modules/markdown-it-mermaid/node_modules/mermaid/src/diagrams/gantt/exGantt.md",
     "node_modules/chevrotain/BREAKING_CHANGES.md",
     "node_modules/graphlibrary/README.md",
@@ -207,7 +207,6 @@
     "node_modules/graphlib/README.md",
     "node_modules/acorn/CHANGELOG.md",
     "node_modules/@mermaid-js/mermaid-mindmap/node_modules/@braintree/sanitize-url/CHANGELOG.md",
-    "node_modules/@braintree/sanitize-url/README.md",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
