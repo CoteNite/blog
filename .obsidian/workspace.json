@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/1.前言.md",
+                "file": "basic/2.八股之外.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.前言"
+              "title": "2.八股之外"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/1.前言.md",
+                "file": "basic/2.八股之外.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.前言 的大纲"
+              "title": "2.八股之外 的大纲"
             }
           }
         ],
@@ -172,6 +172,8 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
+    "basic/1.前言.md",
+    "basic/2.八股之外.md",
     "basic/Java集合/Java集合.md",
     "basic/Java集合类.md",
     "basic/Java集合",
@@ -206,8 +208,6 @@
     "node_modules/acorn/CHANGELOG.md",
     "node_modules/@mermaid-js/mermaid-mindmap/node_modules/@braintree/sanitize-url/CHANGELOG.md",
     "node_modules/@braintree/sanitize-url/README.md",
-    "node_modules/@braintree/sanitize-url/CHANGELOG.md",
-    "node_modules/@mermaid-js/parser/README.md",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
