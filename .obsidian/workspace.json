@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/81.高并发/消息队列.md",
+                "file": "basic/MySQL/MySQL索引.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "消息队列"
+              "title": "MySQL索引"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/81.高并发/消息队列.md",
+                "file": "basic/MySQL/MySQL索引.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "消息队列 的大纲"
+              "title": "MySQL索引 的大纲"
             }
           }
         ],
@@ -172,8 +172,10 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
-    "basic/MySQL/MySQL索引.md",
+    "basic/1.前言.md",
     "back-end/1.MySQL相关/5.MySQL——索引.md",
+    "back-end/81.高并发/消息队列.md",
+    "basic/MySQL/MySQL索引.md",
     "back-end/1.MySQL相关/4.MySQL——Explain.md",
     "basic/MySQL/MySQL常见面试题——架构相关.md",
     "basic/MySQL/MySQL常见面试题——字段相关.md",
@@ -191,7 +193,6 @@
     "basic/Java集合/未命名",
     "basic/Java集合/Java集合.md",
     "fc699a5c92e90a21116a4e7869b630ec.mp4",
-    "basic/1.前言.md",
     "basic/Java集合",
     "basic/JVM相关/3.类与类加载.md",
     "aboutMe/aboutMe.md",
@@ -207,7 +208,6 @@
     "node_modules/mermaid/dist/utils/subGraphTitleMargins.d.ts",
     "node_modules/markdown-it-mermaid/node_modules/mermaid/src/diagrams/gantt/exGantt.md",
     "node_modules/chevrotain/BREAKING_CHANGES.md",
-    "node_modules/graphlibrary/README.md",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
