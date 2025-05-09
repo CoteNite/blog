@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/MySQL/MySQL索引.md",
+                "file": "back-end/81.高并发/消息队列.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL索引"
+              "title": "消息队列"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/MySQL/MySQL索引.md",
+                "file": "back-end/81.高并发/消息队列.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "MySQL索引 的大纲"
+              "title": "消息队列 的大纲"
             }
           }
         ],
@@ -172,8 +172,8 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
-    "back-end/1.MySQL相关/5.MySQL——索引.md",
     "basic/MySQL/MySQL索引.md",
+    "back-end/1.MySQL相关/5.MySQL——索引.md",
     "back-end/1.MySQL相关/4.MySQL——Explain.md",
     "basic/MySQL/MySQL常见面试题——架构相关.md",
     "basic/MySQL/MySQL常见面试题——字段相关.md",
