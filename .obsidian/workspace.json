@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/MySQL/MySQL常见面试题——事务相关.md",
+                "file": "basic/MySQL/未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL常见面试题——事务相关"
+              "title": "未命名"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/MySQL/MySQL常见面试题——事务相关.md",
+                "file": "basic/MySQL/未命名.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "MySQL常见面试题——事务相关 的大纲"
+              "title": "未命名 的大纲"
             }
           }
         ],
@@ -172,8 +172,9 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
-    "basic/MySQL/MySQL常见面试题——索引相关.md",
     "basic/MySQL/MySQL常见面试题——事务相关.md",
+    "basic/MySQL/未命名.md",
+    "basic/MySQL/MySQL常见面试题——索引相关.md",
     "fc699a5c92e90a21116a4e7869b630ec.mp4",
     "basic/1.前言.md",
     "back-end/1.MySQL相关/5.MySQL——索引.md",
@@ -207,7 +208,6 @@
     "node_modules/mermaid/dist/styles.d.ts",
     "node_modules/mermaid/dist/utils/lineWithOffset.d.ts",
     "node_modules/mermaid/dist/utils/subGraphTitleMargins.d.ts",
-    "node_modules/markdown-it-mermaid/node_modules/mermaid/src/diagrams/gantt/exGantt.md",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
