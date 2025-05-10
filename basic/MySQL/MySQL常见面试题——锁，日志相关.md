@@ -36,4 +36,12 @@ binlog用于主从复制与数据备份，因此仅记录增改删操作，不�
 
 ## undo log的具体操作
 
-undo log实现原子性
+undo log实现原子性，会将更新前的数据记录在undo log中，若事务回滚则使用undo log来恢复数据
+
+## 为什么有了bin log还需要redo log
+
+bin log不会记录脏页和刷盘，而redo log记录了，因此redo log可以恢复未刷盘的脏页数据
+
+## bin log的两次提交
+
+MySQL内部实现了一个XA事务ji
