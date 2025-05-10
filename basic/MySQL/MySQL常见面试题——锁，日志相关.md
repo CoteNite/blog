@@ -48,7 +48,7 @@ bin log 和 redo log 是两段不同的逻辑，但都要在事务commit后写�
 
 MySQL内部实现了一个XA事务，整个两段提交就是基于这个XA事务来完成的
 
-- **Prepare阶段**：先将XId（XA事务的Id）写入redo log，让变换将内部事务状态转变为prepare，然后持久化redo log
-- **Commit阶段**：将XId写入bin log，然后持久化bin log，接着将redo log
+- **Prepare阶段**：先将XId（XA事务的Id）写入redo log，将redo log状态转变为prepare，然后持久化redo log
+- **Commit阶段**：将XId写入bin log，然后持久化bin log，接着将redo log状态设置为Commit
 
 
