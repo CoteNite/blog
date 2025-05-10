@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/Spring/Spring常见问题.md",
+                "file": "basic/MySQL/MySQL常见面试题——架构,SQL相关.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spring常见问题"
+              "title": "MySQL常见面试题——架构,SQL相关"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/Spring/Spring常见问题.md",
+                "file": "basic/MySQL/MySQL常见面试题——架构,SQL相关.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Spring常见问题 的大纲"
+              "title": "MySQL常见面试题——架构,SQL相关 的大纲"
             }
           }
         ],
@@ -172,8 +172,10 @@
   },
   "active": "01c45da2ba93f2f8",
   "lastOpenFiles": [
-    "basic/MySQL/MySQL常见面试题——锁，日志相关.md",
+    "basic/MySQL/MySQL常见面试题——字段相关.md",
+    "basic/MySQL/MySQL常见面试题——架构,SQL相关.md",
     "basic/Spring/Spring常见问题.md",
+    "basic/MySQL/MySQL常见面试题——锁，日志相关.md",
     "basic/Spring",
     "basic/MySQL/MySQL常见面试题——事务相关.md",
     "basic/MySQL/MySQL常见面试题——索引相关.md",
@@ -182,8 +184,6 @@
     "back-end/1.MySQL相关/5.MySQL——索引.md",
     "back-end/81.高并发/消息队列.md",
     "back-end/1.MySQL相关/4.MySQL——Explain.md",
-    "basic/MySQL/MySQL常见面试题——架构相关.md",
-    "basic/MySQL/MySQL常见面试题——字段相关.md",
     "basic/JavaIO/JavaIO.md",
     "basic/Java基础/Java基础——String.md",
     "basic/JavaIO",
