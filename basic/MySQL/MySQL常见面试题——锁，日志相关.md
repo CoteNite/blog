@@ -42,6 +42,13 @@ undo log实现原子性，会将更新前的数据记录在undo log中，若事�
 
 bin log不会记录脏页和刷盘，而redo log记录了，因此redo log可以恢复未刷盘的脏页数据
 
-## bin log的两次提交
+## 日志的两次提交/bin log和redo log的一致性
 
-MySQL内部实现了一个XA事务ji
+bin log 和 redo log 是两段不同的逻辑，但都要在事务commit后写入各自的日志，这个过程要保证二者一致，因此就引入了两段提交的机制
+
+MySQL内部实现了一个XA事务，整个两段提交就是基于这个XA事务来完成的
+
+- **Prepare阶段**：先将XId（XA事务的Id）写入redo log，让变换将内部事务状态转变为prepare，然后持久化redo log
+- **Commit阶段**：将XId写入bin log，然后持久化bin log，接着将redo log
+
+
