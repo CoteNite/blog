@@ -24,4 +24,16 @@ where = 锁条数，where 范围锁范围，没有命中索引锁全表
 
 ## 日志类型
 
-- redo l
+- redo log：用于持久化与数据恢复
+- undo log：用于事务回滚与MVCC
+- bin log：用于数据备份与主从复制
+
+## bin log的具体操作
+
+binlog用于主从复制与数据备份，因此仅记录增改删操作，不记录查询操作
+
+当一条操作产生后，Server层线生成一条bin log，等数据提交后再写入bin log文件
+
+## undo log的具体操作
+
+undo log实现原子性
