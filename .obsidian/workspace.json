@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/计算机网络/计网相关面试题.md",
+                "file": "basic/Java多线程/Java多线程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "计网相关面试题"
+              "title": "Java多线程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/计算机网络/计网相关面试题.md",
+                "file": "basic/Java多线程/Java多线程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "计网相关面试题 的大纲"
+              "title": "Java多线程 的大纲"
             }
           }
         ],
