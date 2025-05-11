@@ -38,6 +38,12 @@ Java的反射机制允许通过反射类在运行时获取一个类的所有信�
 
 ## Spring Bean的生命周期
 
-在Spring启动时会自动搜索包下的Bean并进行实例化，这个过程Spring会自行的控制实例化的顺序，保证每一个类都能成功的实例化，Bean准备就绪后就会一直的保存在应用上下文中，除非实现了DisposableBean接口，Spring才可能调用他的destory方法，lai
+在Spring启动时会自动搜索包下的Bean并进行实例化，这个过程Spring会自行的控制实例化的顺序，保证每一个类都能成功的实例化，Bean准备就绪后就会一直的保存在应用上下文中，除非实现了DisposableBean接口，Spring才可能调用他的destory方法，来对其进行销毁
+
+## Bean单例吗
+
+默认单例，只会被创建一次，但是可以通过将Bean的scope修改为”prototype“来实现多例
+
+
 
 
