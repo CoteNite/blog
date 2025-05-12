@@ -13,5 +13,8 @@
 
 Jdk1.8的CurrentHashMap底层是基于了数组+链表/红黑树的形式实现，优化了原本的HashMap的实现，使得速度加快
 
-其安全性依赖volatile+CAS或Synchronized来实现
-
+其安全性依赖volatile+CAS或Synchronized来实现，在添加元素的时候会先判断容器是否为空：
+- 若为空则使用volatile加CAS进行初始化
+- 若不为空，则根据储存的元素判断该位置是否为空
+	- 若为空，使用CAS设置该节点
+	- 若不为空，使用synchronized，然后遍历桶中数据进行替换或新增到桶中
