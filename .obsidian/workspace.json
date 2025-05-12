@@ -173,7 +173,9 @@
   "active": "4fc51cd611dbdd99",
   "lastOpenFiles": [
     "basic/Java集合/Java集合类.md",
+    "index.md",
     "basic/Java集合/Java集合.md",
+    "hot100/1.前言.md",
     "basic/Java基础/3.Java基础之何为Java.md",
     "basic/Java多线程/Java多线程.md",
     "basic/计算机网络/计网相关面试题.md",
@@ -204,8 +206,6 @@
     "aboutMe/aboutMe.md",
     "story/杂文，随笔/内裂.md",
     "story/杂文，随笔/创作者与救世主的梦.md",
-    "story/小说/钟时悟.md",
-    "basic/JVM相关/2.垃圾回收机制.md",
     "node_modules/mermaid/dist/styles.spec.d.ts",
     "node_modules/mermaid/dist/styles.d.ts",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
