@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/Java多线程/Java多线程.md",
+                "file": "basic/Java集合/Java集合.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java多线程"
+              "title": "Java集合"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/Java多线程/Java多线程.md",
+                "file": "basic/Java集合/Java集合.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java多线程 的大纲"
+              "title": "Java集合 的大纲"
             }
           }
         ],
@@ -172,6 +172,10 @@
   },
   "active": "4fc51cd611dbdd99",
   "lastOpenFiles": [
+    "basic/Java集合/Java集合类.md",
+    "basic/Java集合/Java集合.md",
+    "basic/Java基础/3.Java基础之何为Java.md",
+    "basic/Java多线程/Java多线程.md",
     "basic/计算机网络/计网相关面试题.md",
     "basic/2.八股之外.md",
     "basic/Spring/Spring常见问题.md",
@@ -191,14 +195,10 @@
     "basic/Java基础/Java基础——String.md",
     "basic/JavaIO",
     "basic/Java基础/Java重点知识.md",
-    "basic/Java多线程/Java多线程.md",
-    "basic/Java基础/3.Java基础之何为Java.md",
     "basic/Java多线程",
-    "basic/Java集合/Java集合类.md",
     "basic/Java基础",
     "basic/未命名.md",
     "basic/Java集合/未命名",
-    "basic/Java集合/Java集合.md",
     "basic/Java集合",
     "basic/JVM相关/3.类与类加载.md",
     "aboutMe/aboutMe.md",
