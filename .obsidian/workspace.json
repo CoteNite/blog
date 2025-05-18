@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/81.高并发/缓存设计.md",
+                "file": "back-end/2.多线程相关/8.Virtual Thread.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "缓存设计"
+              "title": "8.Virtual Thread"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/81.高并发/缓存设计.md",
+                "file": "back-end/2.多线程相关/8.Virtual Thread.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "缓存设计 的大纲"
+              "title": "8.Virtual Thread 的大纲"
             }
           }
         ],
@@ -172,6 +172,9 @@
   },
   "active": "4fc51cd611dbdd99",
   "lastOpenFiles": [
+    "back-end/81.高并发/缓存设计.md",
+    "back-end/2.多线程相关/8.Virtual Thread.md",
+    "back-end/未命名.md",
     "basic/Java集合/Java集合.md",
     "basic/Java集合/Java集合类.md",
     "index.md",
@@ -203,9 +206,6 @@
     "basic/Java集合/未命名",
     "basic/Java集合",
     "basic/JVM相关/3.类与类加载.md",
-    "aboutMe/aboutMe.md",
-    "story/杂文，随笔/内裂.md",
-    "story/杂文，随笔/创作者与救世主的梦.md",
     "node_modules/mermaid/dist/styles.spec.d.ts",
     "node_modules/mermaid/dist/styles.d.ts",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
