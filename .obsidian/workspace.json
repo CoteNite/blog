@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/2.多线程相关/8.Virtual Thread.md",
+                "file": "back-end/2.多线程相关/8.协程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "8.Virtual Thread"
+              "title": "8.协程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/2.多线程相关/8.Virtual Thread.md",
+                "file": "back-end/2.多线程相关/8.协程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "8.Virtual Thread 的大纲"
+              "title": "8.协程 的大纲"
             }
           }
         ],
@@ -185,7 +185,7 @@
     "basic/计算机网络/计网相关面试题.md",
     "basic/Java集合/Java集合类.md",
     "basic/Java集合/Java集合.md",
-    "back-end/2.多线程相关/8.Virtual Thread.md",
+    "back-end/2.多线程相关/8.协程.md",
     "story/小说/钟时悟.md",
     "front-end/跨平台框架.md",
     "back-end/5.Kotlin/0.前言.md",
