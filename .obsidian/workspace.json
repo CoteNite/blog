@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "front-end/跨平台框架.md",
+                "file": "back-end/2.多线程相关/8.Virtual Thread.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "跨平台框架"
+              "title": "8.Virtual Thread"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "front-end/跨平台框架.md",
+                "file": "back-end/2.多线程相关/8.Virtual Thread.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "跨平台框架 的大纲"
+              "title": "8.Virtual Thread 的大纲"
             }
           }
         ],
@@ -172,6 +172,7 @@
   },
   "active": "4fc51cd611dbdd99",
   "lastOpenFiles": [
+    "front-end/跨平台框架.md",
     "back-end/5.Kotlin/0.前言.md",
     "back-end/2.多线程相关/8.Virtual Thread.md",
     "back-end/81.高并发/缓存设计.md",
@@ -203,7 +204,6 @@
     "basic/Java基础/Java重点知识.md",
     "basic/Java多线程",
     "basic/Java基础",
-    "basic/未命名.md",
     "basic/Java集合/未命名",
     "basic/Java集合",
     "node_modules/mermaid/dist/styles.spec.d.ts",
