@@ -1,4 +1,7 @@
 {
   "showRibbon": false,
-  "enabledCssSnippets": []
+  "enabledCssSnippets": [],
+  "cssTheme": "Zen",
+  "textFontFamily": "Andale Mono",
+  "interfaceFontFamily": "Andale Mono"
 }
