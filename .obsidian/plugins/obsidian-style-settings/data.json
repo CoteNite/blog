@@ -1,1 +1,13 @@
-{}
+{
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-monochrome-topaz",
+  "blue-topaz-theme@@background-settings-workplace-background-image": true,
+  "blue-topaz-theme@@background-image-settings-switch": false,
+  "blue-topaz-theme@@background-image-settings-markdown-page-options": "background-image-settings-markdown-page-custom",
+  "blue-topaz-theme@@background-markdown-page-theme-dark-custom": "url(\"https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/17353498191255897132.png\")",
+  "blue-topaz-theme@@background-settings-workplace-theme-light": "background-settings-workplace-theme-light-custom-option",
+  "blue-topaz-theme@@background-settings-workplace-theme-light-custom": "url(\"https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/17353498191255897132.png\")",
+  "blue-topaz-theme@@background-settings-workplace-theme-dark": "background-settings-workplace-theme-dark-custom-option",
+  "blue-topaz-theme@@background-settings-workplace-theme-dark-custom": "url(\"https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/17353498191255897132.png\")",
+  "blue-topaz-theme@@blur-depth": 7,
+  "blue-topaz-theme@@brightness-4-bg": 1.2
+}
