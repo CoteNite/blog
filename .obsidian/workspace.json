@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/JVM相关/2.垃圾回收机制.md",
+                "file": "aboutMe/aboutMe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.垃圾回收机制"
+              "title": "aboutMe"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/JVM相关/2.垃圾回收机制.md",
+                "file": "aboutMe/aboutMe.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2.垃圾回收机制 的大纲"
+              "title": "aboutMe 的大纲"
             }
           }
         ],
@@ -172,8 +172,11 @@
   },
   "active": "049435f7b4bd3957",
   "lastOpenFiles": [
-    "front-end/Kotlin MutiPlatform.md",
-    "front-end/跨平台框架.md",
+    "front-end/KMP/3.KMP简单教程.md",
+    "front-end/KMP/1.Kotlin MutiPlatform.md",
+    "front-end/KMP/0.跨平台框架.md",
+    "basic/JVM相关/2.垃圾回收机制.md",
+    "front-end/KMP",
     "story/奇怪的东西/Obsidian 快捷键.md",
     "back-end/2.多线程相关/8.协程.md",
     "story/奇怪的东西",
@@ -183,7 +186,6 @@
     "front-end/1.前言.md",
     "story/小说/钟时悟.md",
     "basic/JVM相关/1.Java内存机制.md",
-    "basic/JVM相关/2.垃圾回收机制.md",
     "basic/MySQL/MySQL常见面试题——架构,SQL相关.md",
     "basic/MySQL/MySQL常见面试题——事务相关.md",
     "basic/MySQL/MySQL常见面试题——索引相关.md",
@@ -199,7 +201,6 @@
     "back-end/81.高并发/缓存设计.md",
     "back-end/未命名.md",
     "index.md",
-    "hot100/1.前言.md",
     "basic/计算机网络",
     "basic/Spring",
     "fc699a5c92e90a21116a4e7869b630ec.mp4",
@@ -207,7 +208,6 @@
     "basic/Java多线程",
     "basic/Java基础",
     "basic/Java集合/未命名",
-    "basic/Java集合",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
