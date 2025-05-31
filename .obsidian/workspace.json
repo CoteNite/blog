@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aboutMe/aboutMe.md",
+                "file": "front-end/KMP/3.KMP简单教程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aboutMe"
+              "title": "3.KMP简单教程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aboutMe/aboutMe.md",
+                "file": "front-end/KMP/3.KMP简单教程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "aboutMe 的大纲"
+              "title": "3.KMP简单教程 的大纲"
             }
           }
         ],
@@ -172,8 +172,9 @@
   },
   "active": "049435f7b4bd3957",
   "lastOpenFiles": [
-    "front-end/KMP/3.KMP简单教程.md",
     "front-end/KMP/1.Kotlin MutiPlatform.md",
+    "aboutMe/aboutMe.md",
+    "front-end/KMP/3.KMP简单教程.md",
     "front-end/KMP/0.跨平台框架.md",
     "basic/JVM相关/2.垃圾回收机制.md",
     "front-end/KMP",
@@ -200,7 +201,6 @@
     "back-end/5.Kotlin/0.前言.md",
     "back-end/81.高并发/缓存设计.md",
     "back-end/未命名.md",
-    "index.md",
     "basic/计算机网络",
     "basic/Spring",
     "fc699a5c92e90a21116a4e7869b630ec.mp4",
