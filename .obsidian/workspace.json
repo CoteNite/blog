@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
+                "file": "front-end/KMP/0.跨平台框架.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.Kotlin Multiplatform Compose简单教程"
+              "title": "0.跨平台框架"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
+                "file": "front-end/KMP/0.跨平台框架.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "3.Kotlin Multiplatform Compose简单教程 的大纲"
+              "title": "0.跨平台框架 的大纲"
             }
           }
         ],
@@ -172,9 +172,9 @@
   },
   "active": "049435f7b4bd3957",
   "lastOpenFiles": [
+    "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
     "front-end/KMP/1.Kotlin MutiPlatform.md",
     "aboutMe/aboutMe.md",
-    "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
     "front-end/KMP/0.跨平台框架.md",
     "basic/JVM相关/2.垃圾回收机制.md",
     "front-end/KMP",
