@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
+                "file": "basic/MySQL/数据库（大学期末）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.Kotlin Multiplatform Compose简单教程"
+              "title": "数据库（大学期末）"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
+                "file": "basic/MySQL/数据库（大学期末）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "3.Kotlin Multiplatform Compose简单教程 的大纲"
+              "title": "数据库（大学期末） 的大纲"
             }
           }
         ],
@@ -172,9 +172,10 @@
   },
   "active": "049435f7b4bd3957",
   "lastOpenFiles": [
+    "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
+    "basic/MySQL/数据库（大学期末）.md",
     "AndroidDatabaseBuilder.kt",
     "front-end/KMP/0.跨平台框架.md",
-    "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
     "front-end/KMP/1.Kotlin MutiPlatform.md",
     "aboutMe/aboutMe.md",
     "basic/JVM相关/2.垃圾回收机制.md",
@@ -207,7 +208,6 @@
     "basic/JavaIO",
     "basic/Java多线程",
     "basic/Java基础",
-    "basic/Java集合/未命名",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
