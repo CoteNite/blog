@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/MySQL/数据库（大学期末）.md",
+                "file": "basic/MySQL/数据库（大学期末应试）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "数据库（大学期末）"
+              "title": "数据库（大学期末应试）"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/MySQL/数据库（大学期末）.md",
+                "file": "basic/MySQL/数据库（大学期末应试）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "数据库（大学期末） 的大纲"
+              "title": "数据库（大学期末应试） 的大纲"
             }
           }
         ],
@@ -173,7 +173,7 @@
   "active": "049435f7b4bd3957",
   "lastOpenFiles": [
     "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
-    "basic/MySQL/数据库（大学期末）.md",
+    "basic/MySQL/数据库（大学期末应试）.md",
     "AndroidDatabaseBuilder.kt",
     "front-end/KMP/0.跨平台框架.md",
     "front-end/KMP/1.Kotlin MutiPlatform.md",
