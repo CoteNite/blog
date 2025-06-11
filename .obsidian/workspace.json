@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/MySQL/数据库（大学期末应试）.md",
+                "file": "story/杂文，随笔/性压抑与自卑.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "数据库（大学期末应试）"
+              "title": "性压抑与自卑"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/MySQL/数据库（大学期末应试）.md",
+                "file": "story/杂文，随笔/性压抑与自卑.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "数据库（大学期末应试） 的大纲"
+              "title": "性压抑与自卑 的大纲"
             }
           }
         ],
@@ -172,15 +172,19 @@
   },
   "active": "049435f7b4bd3957",
   "lastOpenFiles": [
-    "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
+    "story/杂文，随笔/夜晚，童年，梦与二次元.md",
+    "story/杂文，随笔/性压抑与自卑.md",
+    "story/杂文，随笔/创作者与救世主的梦.md",
+    "story/奇怪的东西/Obsidian 快捷键.md",
+    "story/工作之外，工作之内/Work Or Life.md",
     "basic/MySQL/数据库（大学期末应试）.md",
+    "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
     "AndroidDatabaseBuilder.kt",
     "front-end/KMP/0.跨平台框架.md",
     "front-end/KMP/1.Kotlin MutiPlatform.md",
     "aboutMe/aboutMe.md",
     "basic/JVM相关/2.垃圾回收机制.md",
     "front-end/KMP",
-    "story/奇怪的东西/Obsidian 快捷键.md",
     "back-end/2.多线程相关/8.协程.md",
     "story/奇怪的东西",
     "story/未命名.md",
@@ -198,10 +202,6 @@
     "basic/Java多线程/Java多线程.md",
     "basic/Java多线程/Java多线程3.md",
     "basic/计算机网络/计网相关面试题.md",
-    "basic/Java集合/Java集合类.md",
-    "basic/Java集合/Java集合.md",
-    "back-end/5.Kotlin/0.前言.md",
-    "back-end/81.高并发/缓存设计.md",
     "basic/计算机网络",
     "basic/Spring",
     "fc699a5c92e90a21116a4e7869b630ec.mp4",
