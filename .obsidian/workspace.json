@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/82.响应式编程/0.前言.md",
+                "file": "back-end/82.响应式编程/1.Kotlinの协程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.前言"
+              "title": "1.Kotlinの协程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/82.响应式编程/0.前言.md",
+                "file": "back-end/82.响应式编程/1.Kotlinの协程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "0.前言 的大纲"
+              "title": "1.Kotlinの协程 的大纲"
             }
           }
         ],
@@ -172,9 +172,10 @@
   },
   "active": "049435f7b4bd3957",
   "lastOpenFiles": [
+    "back-end/82.响应式编程/0.前言.md",
+    "back-end/82.响应式编程/1.Kotlinの协程.md",
     "back-end/0.前言.md",
     "back-end/7.DDD/0.前言.md",
-    "back-end/82.响应式编程/0.前言.md",
     "back-end/8.分布式/0.前言.md",
     "back-end/82.响应式编程",
     "back-end/未命名.md",
@@ -202,7 +203,6 @@
     "basic/MySQL/MySQL常见面试题——架构,SQL相关.md",
     "basic/MySQL/MySQL常见面试题——事务相关.md",
     "basic/MySQL/MySQL常见面试题——索引相关.md",
-    "basic/MySQL/MySQL常见面试题——锁，日志相关.md",
     "basic/计算机网络",
     "basic/Spring",
     "fc699a5c92e90a21116a4e7869b630ec.mp4",
