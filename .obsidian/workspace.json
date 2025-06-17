@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
+                "file": "back-end/82.协程与响应式编程/2.Channel.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Kotlinの协程"
+              "title": "2.Channel"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
+                "file": "back-end/82.协程与响应式编程/2.Channel.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.Kotlinの协程 的大纲"
+              "title": "2.Channel 的大纲"
             }
           }
         ],
@@ -172,9 +172,10 @@
   },
   "active": "049435f7b4bd3957",
   "lastOpenFiles": [
+    "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
+    "back-end/82.协程与响应式编程/2.Channel.md",
     "back-end/0.前言.md",
     "back-end/2.多线程相关/8.协程.md",
-    "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
     "back-end/82.协程与响应式编程/0.前言.md",
     "back-end/5.Kotlin/3.对象.md",
     "back-end/5.Kotlin/1.数据类型.md",
@@ -202,7 +203,6 @@
     "front-end/1.前言.md",
     "story/小说/钟时悟.md",
     "basic/JVM相关/1.Java内存机制.md",
-    "basic/MySQL/MySQL常见面试题——架构,SQL相关.md",
     "basic/计算机网络",
     "basic/Spring",
     "fc699a5c92e90a21116a4e7869b630ec.mp4",
