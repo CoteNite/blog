@@ -170,10 +170,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "049435f7b4bd3957",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
-    "back-end/5.Kotlin/0.前言.md",
+    "story/小说/未命名",
+    "story/小说/未命名.md",
     "back-end/5.Kotlin/1.基本语法 or 与Java的基本区别.md",
+    "back-end/5.Kotlin/0.前言.md",
     "back-end/5.Kotlin/2.对象.md",
     "back-end/5.Kotlin/未命名.md",
     "back-end/82.协程与响应式编程/2.Channel.md",
@@ -201,8 +203,6 @@
     "story/奇怪的东西",
     "story/未命名.md",
     "om/未命名",
-    "back-end/9.系统设计/IM——即时通信系统在Java中的实践.md",
-    "front-end/1.前言.md",
     "basic/计算机网络",
     "basic/Spring",
     "fc699a5c92e90a21116a4e7869b630ec.mp4",
