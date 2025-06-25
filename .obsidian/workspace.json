@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/5.Kotlin/2.类与对象.md",
+                "file": "back-end/面试相关/个人面试.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.类与对象"
+              "title": "个人面试"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/5.Kotlin/2.类与对象.md",
+                "file": "back-end/面试相关/个人面试.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2.类与对象 的大纲"
+              "title": "个人面试 的大纲"
             }
           }
         ],
@@ -172,8 +172,10 @@
   },
   "active": "049435f7b4bd3957",
   "lastOpenFiles": [
-    "back-end/未命名.md",
     "back-end/5.Kotlin/2.类与对象.md",
+    "back-end/面试相关/个人面试.md",
+    "back-end/面试相关",
+    "back-end/未命名.md",
     "back-end/5.Kotlin/1.基本语法 or 与Java的基本区别.md",
     "back-end/81.高并发/搜索引擎.md",
     "story/小说/李代桃僵/Tmp.md",
@@ -200,14 +202,12 @@
     "basic/MySQL/数据库（大学期末应试）.md",
     "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
     "AndroidDatabaseBuilder.kt",
-    "front-end/KMP/0.跨平台框架.md",
     "front-end/KMP",
     "story/奇怪的东西",
     "om/未命名",
     "basic/计算机网络",
     "basic/Spring",
     "fc699a5c92e90a21116a4e7869b630ec.mp4",
-    "basic/JavaIO",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
