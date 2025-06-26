@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/JVM相关/2.垃圾回收机制.md",
+                "file": "basic/JVM相关/1.Java内存机制.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.垃圾回收机制"
+              "title": "1.Java内存机制"
             }
           }
         ],
@@ -157,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/JVM相关/2.垃圾回收机制.md",
+                "file": "basic/JVM相关/1.Java内存机制.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2.垃圾回收机制 的大纲"
+              "title": "1.Java内存机制 的大纲"
             }
           }
         ],
@@ -187,8 +187,8 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "basic/JVM相关/1.Java内存机制.md",
     "basic/JVM相关/2.垃圾回收机制.md",
+    "basic/JVM相关/1.Java内存机制.md",
     "basic/JVM相关/0.JVM虚拟机.md",
     "back-end/面试相关/个人面试.md",
     "back-end/81.高并发/分库分表.md",
