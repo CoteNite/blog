@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/5.Kotlin/1.基本语法 or 与Java的基本区别.md",
+                "file": "back-end/5.Kotlin/2.类与对象.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.基本语法 or 与Java的基本区别"
+              "title": "2.类与对象"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/5.Kotlin/1.基本语法 or 与Java的基本区别.md",
+                "file": "back-end/5.Kotlin/2.类与对象.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.基本语法 or 与Java的基本区别 的大纲"
+              "title": "2.类与对象 的大纲"
             }
           }
         ],
@@ -172,6 +172,7 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "back-end/5.Kotlin/1.基本语法 or 与Java的基本区别.md",
     "back-end/5.Kotlin/2.类与对象.md",
     "basic/面试相关/面经-1.md",
     "basic/面试相关/个人面试.md",
@@ -197,7 +198,6 @@
     "basic/MySQL/MySQL常见面试题——事务相关.md",
     "basic/MySQL/数据库（大学期末应试）.md",
     "basic/JVM相关/2.垃圾回收机制.md",
-    "basic/JVM相关/1.Java内存机制.md",
     "basic/面试相关",
     "story/小说/李代桃僵",
     "back-end/82.协程与响应式编程",
