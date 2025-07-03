@@ -173,6 +173,7 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "aboutMe/AboutMe.vue~",
     "basic/面试相关/面经-1.md",
     "node_modules/mermaid/README.md",
     "node_modules/katex/node_modules/commander/Readme.md",
@@ -201,7 +202,6 @@
     "basic/Java多线程/Java多线程3.md",
     "basic/Java多线程/Java多线程2.md",
     "basic/Java多线程/Java多线程.md",
-    "basic/Java集合/Java集合类.md",
     "basic/面试相关",
     "story/小说/李代桃僵",
     "back-end/82.协程与响应式编程",

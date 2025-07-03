@@ -72,7 +72,7 @@ import {
     <div class="docs recent-work-section">
       <strong>最近主要在干的事：</strong>
       <div>
-        <span>正在为实习而努力，孩子也想有一份实习工作QwQ</span>
+        <span>研究SpringAI如何配合Agent生成前端样式</span>
       </div>
     </div>
   </div>
