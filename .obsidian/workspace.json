@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/MySQL/数据库（大学期末应试）.md",
+                "file": "story/生活记/第一次实习.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "数据库（大学期末应试）"
+              "title": "第一次实习"
             }
           }
         ]
@@ -171,8 +171,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "9884943ad5bd65e9",
+  "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "basic/MySQL/数据库（大学期末应试）.md",
+    "story/生活记/第一次实习.md",
+    "story/生活记",
+    "story/未命名.md",
     "basic/MySQL/MySQL常见面试题——锁，日志相关.md",
     "aboutMe/AboutMe.vue~",
     "basic/面试相关/面经-1.md",
@@ -200,9 +204,6 @@
     "back-end/81.高并发/缓存设计.md",
     "basic/2.八股之外.md",
     "story/小说/李代桃僵/Tmp.md",
-    "basic/Java多线程/Java多线程3.md",
-    "basic/Java多线程/Java多线程2.md",
-    "basic/Java多线程/Java多线程.md",
     "basic/面试相关",
     "story/小说/李代桃僵",
     "back-end/82.协程与响应式编程",
@@ -211,7 +212,6 @@
     "story/奇怪的东西",
     "om/未命名",
     "basic/计算机网络",
-    "basic/Spring",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
