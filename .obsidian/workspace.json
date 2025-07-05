@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "front-end/从零开始的js学习/0.前言.md",
+                "file": "front-end/从零开始的js学习/数据类型.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.前言"
+              "title": "数据类型"
             }
           }
         ]
@@ -173,8 +173,8 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "front-end/从零开始的js学习/数据类型.md",
     "front-end/从零开始的js学习/0.前言.md",
+    "front-end/从零开始的js学习/数据类型.md",
     "front-end/Nginx——前端必备反向代理服务器.md",
     "front-end/从零开始的js学习",
     "front-end/1.前言.md",
