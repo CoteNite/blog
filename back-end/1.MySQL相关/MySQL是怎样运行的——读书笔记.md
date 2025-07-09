@@ -20,4 +20,6 @@ MySQL中的utf8指的是utf8mb3这个字符集只用到了3个字节，若要使
 | `_cs`  |   `case sensitive`   |  区分大小写   |
 | `_bin` |       `binary`       | 以二进制方式比较 |
 
-特别注意的是，每种zi'fu'ji
+特别注意的是，每种字符集都有自己默认的比较规则`utf8`字符集默认的比较规则就是`utf8_general_ci`。
+
+
