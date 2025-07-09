@@ -33,5 +33,6 @@ MySQL中的utf8指的是utf8mb3这个字符集只用到了3个字节，若要使
 |  `character_set_results`   |                         服务器向客户端返回数据时使用的字符集                         |
 
 1. 客户端会以自己的字符集形式发送一段字节给服务端
-2. 服务端收到后以character_set_client的格式对字节进行编码
-3. 
+2. 服务端收到后将客户端的数据认为为`character_set_client`类型，然后转换为`character_set_connection`用于操作
+3. 服务端将查询到的数据将其由其自身的字符集转换为`character_set_results`，然后再返回给客户端
+4. 客户端接收到服务端返回的数据，再以自身字符集进行解码
