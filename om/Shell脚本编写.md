@@ -5,7 +5,21 @@
 ## 创建一个Shell脚本
 
 在你的Linux文件夹下使用vim编辑器创建一个文件，输入
+
 ```shell
-#!/bin/bash
+#!/bin/bash  [这个是Linux一般存放shell执行程序的位置]
 ```
-然后:wq 文件名.sh就可以创建一个
+
+然后:wq 文件名.sh就可以创建一个shell脚本，接着使用
+
+```shell
+chmod +x yourfilename
+```
+
+将其转换为可执行文件，再使用
+
+```shell
+./youfilename
+```
+
+就可以执行这个脚本
