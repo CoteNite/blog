@@ -23,3 +23,6 @@ chmod +x yourfilename
 ```
 
 就可以执行这个脚本
+
+## shell变量
+
