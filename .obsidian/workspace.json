@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "om/常用命令行.md",
+                "file": "back-end/bug记录/Spring事务与多线程的先后结束问题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "常用命令行"
+              "title": "Spring事务与多线程的先后结束问题"
             }
           }
         ]
@@ -173,9 +173,14 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "back-end/bug记录/0.前言.md",
+    "back-end/bug记录/Spring事务与多线程的先后结束问题.md",
+    "back-end/1.MySQL相关/1.SQL语句（基础理论篇）.md",
+    "back-end/bug记录",
+    "back-end/未命名.md",
+    "om/常用命令行.md",
     "om/Shell脚本编写.md",
     "back-end/1.MySQL相关/MySQL是怎样运行的——读书笔记.md",
-    "om/常用命令行.md",
     "back-end/1.MySQL相关/mysql如何运行的——笔记",
     "om/Nginx——必备代理服务器.md",
     "om/2.git提交规范.md",
@@ -203,16 +208,11 @@
     "front-end/KMP/0.跨平台框架.md",
     "public/header1.png",
     "public/pictures/explain-1.png",
-    "back-end/5.Kotlin/2.类与对象.md",
-    "back-end/5.Kotlin/1.基本语法 or 与Java的基本区别.md",
-    "basic/面试相关/个人面试.md",
-    "back-end/8.分布式/20.分布式问题——事务问题.md",
     "basic/面试相关",
     "story/小说/李代桃僵",
     "back-end/82.协程与响应式编程",
     "AndroidDatabaseBuilder.kt",
     "front-end/KMP",
-    "story/奇怪的东西",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
