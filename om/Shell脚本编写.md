@@ -66,4 +66,44 @@ sum=$((a+b)
 
 ## 判断
 
-与运算想用，shell中也不可以直接的书写判断语句，判断需要依赖于使用\[\[]] 运算符，用来进行判断
+与运算想用，shell中也不可以直接的书写判断语句，判断需要依赖于使用\[] 运算符，用来进行判断
+
+- **字符串比较：**
+    
+    - `[ "string1" = "string2" ]`：如果字符串相等，则为真。
+        
+    - `[ "string1" != "string2" ]`：如果字符串不相等，则为真。
+        
+    - `[ -z "string" ]`：如果字符串为空，则为真 (zero length)。
+        
+    - `[ -n "string" ]`：如果字符串不为空，则为真 (non-zero length)。
+        
+- **数字比较：**
+    
+    - `[ num1 -eq num2 ]`：如果数字相等 (equal)。
+        
+    - `[ num1 -ne num2 ]`：如果数字不相等 (not equal)。
+        
+    - `[ num1 -gt num2 ]`：如果 num1 大于 num2 (greater than)。
+        
+    - `[ num1 -ge num2 ]`：如果 num1 大于或等于 num2 (greater than or equal)。
+        
+    - `[ num1 -lt num2 ]`：如果 num1 小于 num2 (less than)。
+        
+    - `[ num1 -le num2 ]`：如果 num1 小于或等于 num2 (less than or equal)。
+        
+- **文件测试：**
+    
+    - `[ -e file ]`：如果文件存在 (exists)。
+        
+    - `[ -f file ]`：如果文件存在且是普通文件 (file)。
+        
+    - `[ -d directory ]`：如果目录存在 (directory)。
+        
+    - `[ -r file ]`：如果文件可读 (readable)。
+        
+    - `[ -w file ]`：如果文件可写 (writable)。
+        
+    - `[ -x file ]`：如果文件可执行 (executable)。
+        
+    - `[ -s file ]`：如果文件存在且不为空 (size is greater than zero)。
