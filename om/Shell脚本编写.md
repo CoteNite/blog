@@ -53,8 +53,16 @@ chmod +x yourfilename
 在Shell中简单的运算并不能像C/Java这种语言一样直接写
 
 ```c
-int a=1+2 //
+int a=1+2 //Shell中不允许
 ```
 
+如果想要进行运算需要使用$(())的方式
 
+```sh
+a=1
+b=2
+sum=$((a+b)
+```
+
+## 判断
 
