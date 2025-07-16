@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/1.MySQL相关/MySQL是怎样运行的——读书笔记.md",
+                "file": "back-end/51.Spring/Spring常见错误.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MySQL是怎样运行的——读书笔记"
+              "title": "Spring常见错误"
             }
           }
         ]
@@ -173,15 +173,17 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "back-end/1.MySQL相关/MySQL是怎样运行的——读书笔记.md",
+    "back-end/51.Spring/Spring常见错误.md",
+    "back-end/51.Spring",
+    "back-end/未命名.md",
     "om/Shell脚本编写.md",
     "om/Nginx——必备代理服务器.md",
     "back-end/bug记录/Spring事务与多线程的先后结束问题.md",
     "back-end/bug记录/0.前言.md",
     "back-end/1.MySQL相关/1.SQL语句（基础理论篇）.md",
     "back-end/bug记录",
-    "back-end/未命名.md",
     "om/常用命令行.md",
-    "back-end/1.MySQL相关/MySQL是怎样运行的——读书笔记.md",
     "back-end/1.MySQL相关/mysql如何运行的——笔记",
     "om/2.git提交规范.md",
     "front-end/从零开始的js学习/2.面向对象.md",
@@ -205,14 +207,12 @@
     "node_modules/speech-rule-engine/node_modules/commander/Readme.md",
     "aboutMe/aboutMe.md",
     "front-end/KMP/1.Kotlin MutiPlatform.md",
-    "front-end/KMP/0.跨平台框架.md",
     "public/header1.png",
     "public/pictures/explain-1.png",
     "basic/面试相关",
     "story/小说/李代桃僵",
     "back-end/82.协程与响应式编程",
     "AndroidDatabaseBuilder.kt",
-    "front-end/KMP",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
