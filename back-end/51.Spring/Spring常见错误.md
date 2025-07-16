@@ -50,4 +50,14 @@ public class ServiceImpl {
 
 上面的代码很简答，就是定义了一个Service，然后内部有一个serviceName作为必要的参数
 
-在SpringBoot创造Bean实例的时候，会要求
+在SpringBoot创造Bean实例的时候，会通过构造器来寻找必要的参数，因此如果要创造这个ServiceBean，那么必须要有一个名字叫做serviceName的Bean。
+
+因此还必须要有这样的代码
+
+```java
+@Bean
+public String serviceName(){
+    return "MyServiceName";
+}
+```
+
