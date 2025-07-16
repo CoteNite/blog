@@ -85,6 +85,22 @@ InnoDB中的索引是通过B+Tree的形式建立的，大致是以`索引键->�
 
 对于like（模糊匹配），因为是通过字符串的排序形式，所以只用前缀固定的情况才可以触发索引
 
+## 匹配范围值
+
+```sql
+SELECT * FROM person_info WHERE name > 'Asa' AND name < 'Barlow' AND birthday > '1980-01-01';
+```
+
+对于这样的一个索引，其实使用不到birthday的索引的，因为name的值是不固定的，而我们的联合索引只有name相同的时候才会对birthday进行排序
+
+```sql
+SELECT * FROM person_info WHERE name = 'Ashburn' AND birthday = '1980-01-01' AND phone_number > '15100000000';
+```
+
+如果是上面这种就可以了，因为前方的已经固定了
+
+
+
 
 
 
