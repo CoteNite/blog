@@ -142,3 +142,57 @@ public class HelloWorldController {
 
 当我们注入Bean的时候可能时长会遇到这样的问题
 
+```java
+@Repository
+@Slf4j
+public class OracleDataService implements DataService{
+   
+}
+```
+
+```java
+@Repository
+@Slf4j
+public class CassandraDataService implements DataService{
+    
+}
+```
+
+出于某些原因，我们的项目里同时存在下面两个DataSerivce的具体实现，其中一个是基于Oracle，另一个是基于Cassandra。
+
+然后我们要在一个类中注入DataService类
+
+```java
+@RestController
+@Slf4j
+@Validated
+public class StudentController {
+    @Autowired
+    DataService dataService;
+
+    @RequestMapping(path = "students/{id}", method = RequestMethod.DELETE)
+    public void deleteStudent(@PathVariable("id") @Range(min = 1,max = 100) int id){
+        dataService.deleteStudent(id);
+    };
+}
+```
+
+然后就会报错
+
+```text
+required a single bean, but 2 were found
+```
+
+原因很简单，有两个DataService的类，SpringBoot不知道选择哪个去注入
+
+解决方法也有很多
+
+**方法一：标注优先级**
+
+```java
+@Repository
+@Slf4j
+public class CassandraDataService implements DataService{
+    
+}
+```
