@@ -138,3 +138,7 @@ public class HelloWorldController {
 
 这里的Lookup注解会走CGLIB代理产生的代码，因此我们这里方法内部具体写什么不重要，因为都不会执行
 
+## Bean重复问题
+
+当我们注入Bean的时候可能时长会遇到这样的问题
+
