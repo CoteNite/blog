@@ -70,20 +70,27 @@ SpringBoot也为我们提供了每次取都重新new的获取方式，这就是�
 要创建原型Bean，你只需要在Bean上添加一个注解即可
 
 ```java
-@Component
-@Scope(value = BeanDefinition.SCOPE_PROTOTYPE)  //这里
-public class User {
-
-    private int id;
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
+@Service
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+public class ServiceImpl {
 }
 ```
 
-但是需要注意的是，如果你注入Bean用的是@Autowired注解，那么ta'hu
+但是需要注意的是，如果你注入Bean用的是@Autowired注解，那么他会在一个Bean生成时固定住注入的Bean
+
+```java
+@RestController
+public class HelloWorldController {
+
+    @Autowired
+    private ServiceImpl serviceImpl;
+
+    @RequestMapping(path = "hi", method = RequestMethod.GET)
+    public String hi(){
+         return "helloworld, service is : " + serviceImpl;
+    };
+}
+```
+
+也就是说这个Controller每次拿到的ServiceImpl都是同一个
+
