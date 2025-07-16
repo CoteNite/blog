@@ -30,3 +30,24 @@ String[] basePackages() default {};
 //省略其他非关键代码
 }
 ```
+
+basePackages的值就是我们要扫描的目录，当basePackages为空时，会使用和SpringBoot启动类所在的包
+
+## Bean缺少问题
+
+```java
+@Service
+public class ServiceImpl {
+
+    private String serviceName;
+
+    public ServiceImpl(String serviceName){
+        this.serviceName = serviceName;
+    }
+
+}
+```
+
+上面的代码很简答，就是定义了一个Service，然后内部有一个serviceName作为必要的参数
+
+在SpringBoot创造Bean实例的时候，会要求
