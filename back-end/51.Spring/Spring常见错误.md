@@ -15,4 +15,18 @@
 
 这里我们会发现SpringBootApplication上有一个@ComponentScan注解，这个注解就是决定SpringBoot扫描的包的范围的
 
+```java
+public @interface ComponentScan {
 
+/**
+ * Base packages to scan for annotated components.
+ * <p>{@link #value} is an alias for (and mutually exclusive with) this
+ * attribute.
+ * <p>Use {@link #basePackageClasses} for a type-safe alternative to
+ * String-based package names.
+ */
+@AliasFor("value")
+String[] basePackages() default {};
+//省略其他非关键代码
+}
+```
