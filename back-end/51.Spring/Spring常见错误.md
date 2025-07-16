@@ -61,3 +61,29 @@ public String serviceName(){
 }
 ```
 
+## 原型Bean
+
+SpringBoot默认的创建Bean的方式是单例的，也就是说你不管怎么取，全局用到的同一个名称的Bean都是同一个。
+
+SpringBoot也为我们提供了每次取都重新new的获取方式，这就是原型Bean。
+
+要创建原型Bean，你只需要在Bean上添加一个注解即可
+
+```java
+@Component
+@Scope(value = BeanDefinition.SCOPE_PROTOTYPE)  //这里
+public class User {
+
+    private int id;
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+}
+```
+
+但是需要注意的是，如果你注入Bean用的是@Autowired注解，那么ta'hu
