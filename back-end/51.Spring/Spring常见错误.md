@@ -183,7 +183,10 @@ public class StudentController {
 required a single bean, but 2 were found
 ```
 
-原因很简单，有两个DataService的类，SpringBoot不知道选择哪个去注入
+原因很简单，有两个DataService的类，此时SpringBoot会根据两个方面选择注入哪个类
+
+1. 调用determineAutowireCandidate方法来选出优先级最高的依赖。
+2. 被注解类可以不用选择，比如是Map一类
 
 解决方法也有很多
 
@@ -191,6 +194,7 @@ required a single bean, but 2 were found
 
 ```java
 @Repository
+@Primary
 @Slf4j
 public class CassandraDataService implements DataService{
     
