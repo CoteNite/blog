@@ -65,7 +65,7 @@ public String serviceName(){
 
 SpringBoot默认的创建Bean的方式是单例的，也就是说你不管怎么取，全局用到的同一个名称的Bean都是同一个。
 
-SpringBoot也为我们提供了每次取都重新new的获取方式，这就是原型Bean。
+SpringBoot也为我们提供了每次请求都重新new的获取方式，这就是原型Bean。
 
 要创建原型Bean，你只需要在Bean上添加一个注解即可
 
@@ -93,4 +93,48 @@ public class HelloWorldController {
 ```
 
 也就是说这个Controller每次拿到的ServiceImpl都是同一个
+
+对此我们有两种解决方案
+
+**从SpringBoot上下文中获取**
+
+```java
+@RestController
+public class HelloWorldController {
+
+    @Autowired
+    private ApplicationContext applicationContext;
+
+    @RequestMapping(path = "hi", method = RequestMethod.GET)
+    public String hi(){
+         return "helloworld, service is : " + getServiceImpl();
+    };
+ 
+    public ServiceImpl getServiceImpl(){
+        return applicationContext.getBean(ServiceImpl.class);
+    }
+
+}
+```
+
+**使用@Lookup注解**
+
+```java
+@RestController
+public class HelloWorldController {
+ 
+    @RequestMapping(path = "hi", method = RequestMethod.GET)
+    public String hi(){
+         return "helloworld, service is : " + getServiceImpl();
+    };
+
+    @Lookup
+    public ServiceImpl getServiceImpl(){
+        return null;
+    }  
+
+}
+```
+
+这里的Lookup注解会走CGLIB代理产生的代码，因此我们这里方法内部具体写什么不重要，因为都不会执行
 
