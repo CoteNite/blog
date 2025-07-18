@@ -311,5 +311,20 @@ public class LightMgrService {
 也是因此**Spring推荐我们使用构造参数进行实例化**
 
 ```java
+@Component
+public class LightMgrService {
 
+    private LightService lightService;
+
+    public LightMgrService(LightService lightService) {
+        this.lightService = lightService;
+        lightService.check();
+    }
+}
 ```
+
+这是Spring的最佳实践
+
+除此之外，我们观察Spring的源码会发现Spring其实在注入完后会统一applyBeanPostProcessorsBeforeInitialization和invokeInitMethods这两个方法，这其实是Spring为我们提供的一个在注入完成后自动调用方法的方式。两个方法分别对应了两种实现的方式
+
+### 
