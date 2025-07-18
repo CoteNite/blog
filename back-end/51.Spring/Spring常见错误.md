@@ -276,4 +276,11 @@ MapPropertySource {name='devtools'}]
 
 可以看到系统变量是在我们的配置文件之前的，因此@Value会先读入系统变量的值
 
-## 
+## 集合类Bean装载问题
+
+在Spring中你可以定义多个同类型的Bean，然后将其统一注入到一个List中，具体可以有两种写法
+
+1. 定义多个Bean，然后让Spring自动的去将其装载到你需要的List中
+2. 定义一个List类型的Bean，然后提前装载好，等待注入
+
+这是两个非此即彼的方法，
