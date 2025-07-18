@@ -244,3 +244,9 @@ private String name;
 ```
 
 可以发现@Value在某种程度上功能甚至比@Autowired还要强大，只是由于其部分功能我们用不到而且还强制要输入Value才使用@Autowired而已
+
+## @Value的注入顺序问题
+
+如果我们在yml文件里顶一个了一个username的变量，那么使用@Value能否顺利拿到呢？
+
+大概率是不能的，因为@Value的范围并不仅限于yml文件中的变量
