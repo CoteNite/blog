@@ -200,3 +200,10 @@ public class CassandraDataService implements DataService{
     
 }
 ```
+
+**方法二：指定名称**
+
+```java
+@Autowired
+DataService oracleDataService; //这里精确到了具体的类
+```
