@@ -338,3 +338,5 @@ applyBeanPostProcessorsBeforeInitialization会自动扫描@PostConstruct方法�
 ## shutdown方法
 
 在你的Spring关闭的过程中，Spring会销毁所有的SpringBean，这个销毁的过程中，Spring会扫描我们的类，看其中是否含有shutdown方法或close方法，如果有的话Spring会在销毁时自动的执行这些方法
+
+值得一提的是，如果我们的Bean是通过@Service注解产生的，那么在销毁是不会调用他的close或shutdown方法
