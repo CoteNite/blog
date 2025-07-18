@@ -250,3 +250,30 @@ private String name;
 如果我们在yml文件里顶一个了一个username的变量，那么使用@Value能否顺利拿到呢？
 
 大概率是不能的，因为@Value的范围并不仅限于yml文件中的变量
+
+```java
+[ConfigurationPropertySourcesPropertySource {name='configurationProperties'}, 
+StubPropertySource {name='servletConfigInitParams'}, ServletContextPropertySource {name='servletContextInitParams'}, PropertiesPropertySource {name='systemProperties'}, OriginAwareSystemEnvironmentPropertySource {name='systemEnvironment'}, RandomValuePropertySource {name='random'},
+OriginTrackedMapPropertySource {name='applicationConfig: classpath:/application.properties]'},
+MapPropertySource {name='devtools'}]
+```
+
+- **`configurationProperties`**: 这通常是指通过 `@ConfigurationProperties` 注解绑定的属性，它们在应用启动时被处理。
+    
+- **`servletConfigInitParams`**: 从 Servlet 配置的初始化参数中加载的属性。
+    
+- **`servletContextInitParams`**: 从 Servlet 上下文的初始化参数中加载的属性。
+    
+- **`systemProperties`**: Java 系统属性（例如，通过 `-D` 参数传递的属性）。
+    
+- **`systemEnvironment`**: 操作系统环境变量。
+    
+- **`random`**: 这是一个特殊的 `PropertySource`，允许您注入随机值（例如 `${random.uuid}`）。
+    
+- **`applicationConfig: classpath:/application.properties`**: 这是您应用程序中 `application.properties`（或 `application.yml`）文件的位置。这也是最常用的配置来源。
+    
+- **`devtools`**: 如果您使用了 Spring Boot DevTools，它会提供一个额外的 `PropertySource`，通常用于一些开发时的特性，例如自动重启。
+
+可以看到系统变量是在我们的配置文件之前的，因此@Value会先读入系统变量的值
+
+## 
