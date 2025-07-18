@@ -327,4 +327,11 @@ public class LightMgrService {
 
 除此之外，我们观察Spring的源码会发现Spring其实在注入完后会统一applyBeanPostProcessorsBeforeInitialization和invokeInitMethods这两个方法，这其实是Spring为我们提供的一个在注入完成后自动调用方法的方式。两个方法分别对应了两种实现的方式
 
-### 
+**@PostConstruct**
+
+applyBeanPostProcessorsBeforeInitialization会自动扫描@PostConstruct方法进行执行，所以如果我们有注入完后需要自动执行的方法的话，可以给他加上一个@PostConstruct注解告诉Spring这个方法要在**注入完后**被执行一次
+
+**InitializingBean接口**
+
+将你的类基层**InitializingBean**接口，他会要求你实现一个afterPropertiesSet的方法，这个功能的方法就和他的名字一样，在**注入完后**执行的方法
+
