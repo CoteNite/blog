@@ -335,3 +335,6 @@ applyBeanPostProcessorsBeforeInitialization会自动扫描@PostConstruct方法�
 
 将你的类基层**InitializingBean**接口，他会要求你实现一个afterPropertiesSet的方法，这个功能的方法就和他的名字一样，在**注入完后**执行的方法
 
+## shutdown方法
+
+在你的Spring关闭的过程中，Spring会销毁所有的SpringBean，这个销毁的过程中，Spring会扫描我们的类，看其中是否含有shutdown方法或close方法，如果有的话Spring会在销毁时自动的执行这些方法
