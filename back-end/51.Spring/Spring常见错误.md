@@ -285,4 +285,31 @@ MapPropertySource {name='devtools'}]
 
 这是两个非此即彼的方法，也就是这两个方法并不能共存，当同时存在时Spring会装配第一种进入List中
 
-## 
+## Bean声明周期问题
+
+```java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+@Component
+public class LightMgrService {
+  @Autowired
+  private LightService lightService;
+  public LightMgrService() {
+    lightService.check();
+  }
+}
+```
+
+上面的代码在Spring启动的时候lightService.check()会执行成功吗？
+
+答案是不会（不然也不会有这个问题了XD）
+
+原因是Spring在自动装配的时候，实例化往往在装配之前完成（如果构造参数是上面这种无参的）
+
+那么此时内部的lightService肯定还没有注入，但是构造方法已经被调用用来创建实例了，所以自然会报错（空指针异常）
+
+也是因此**Spring推荐我们使用构造参数进行实例化**
+
+```java
+
+```
