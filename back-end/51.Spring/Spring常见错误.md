@@ -230,6 +230,10 @@ Spring源码中如果Bean未指定名字，则会对一个Bean生成一个默认
 @Value("我是字符串")
 private String text; 
 
+//注入Bean
+@Value("#{student}")
+private Student student;
+
 //注入系统参数、环境变量或者配置文件中的值
 @Value("${ip}")
 private String ip
@@ -238,3 +242,5 @@ private String ip
 @Value("#{student.name}")
 private String name;
 ```
+
+可以发现@Value在某种程度上功能甚至比@Autowired还要强大，只是由于其部分功能我们用不到而且还强制要输入Value才使用@Autowired而已
