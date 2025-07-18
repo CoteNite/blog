@@ -221,4 +221,20 @@ Spring源码中如果Bean未指定名字，则会对一个Bean生成一个默认
 
 ## @Value的使用
 
-对于@Value我们都不陌生，wo'men'chang'chan
+对于@Value我们都不陌生，我们常常会用他向我们的代码中注入我们再配置文件中声明的内容，但是@Value的功能仅限于此吗？
+
+肯定不是，@Value本身实际也能完成Bean的注入
+
+```java
+//注册正常字符串
+@Value("我是字符串")
+private String text; 
+
+//注入系统参数、环境变量或者配置文件中的值
+@Value("${ip}")
+private String ip
+
+//注入其他Bean属性，其中student为bean的ID，name为其属性
+@Value("#{student.name}")
+private String name;
+```
