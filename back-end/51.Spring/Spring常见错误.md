@@ -208,3 +208,9 @@ public class CassandraDataService implements DataService{
 DataService oracleDataService; //这里精确到了具体的类
 ```
 
+## @Qualifie的名字问题
+
+Spring源码中会对一个Bean生成一个默认的名字，这个名字一般和类名一致，但是会有一个大小写的问题，其中值得注意的是：
+
+1. 如果类名以一个大写字母开头，那么默认名称会使用小写字母开头
+2. 如果
