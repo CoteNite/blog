@@ -283,4 +283,6 @@ MapPropertySource {name='devtools'}]
 1. 定义多个Bean，然后让Spring自动的去将其装载到你需要的List中
 2. 定义一个List类型的Bean，然后提前装载好，等待注入
 
-这是两个非此即彼的方法，
+这是两个非此即彼的方法，也就是这两个方法并不能共存，当同时存在时Spring会装配第一种进入List中
+
+## 
