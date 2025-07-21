@@ -42,9 +42,13 @@ SAA Graph目前支持mcp，多节点并行执行，流式输出功能
 ### 使用SAA Graph创建工作流的简单流程
 
 1. 定义节点和条件边（如果需要）
+ 
 2. 通过KeyStrategyFactory类定义上下文中所有要用到的kv数据
+ 
 3. 通过StateGraph类创建边和节点，进而整体构建图
+ 
 4. 使用 stateGraph.compile(....)将图转化（编译）为可运行的图CompiledGraph
+
 5. 在Controller将前端传入数据转换为map并给到图的CompiledGraph的stream方法
 
 ### 使用用户中断的案例及教程
@@ -113,13 +117,19 @@ public class GraphConfig {
 - translatecontent：翻译的内容
 
 **注意点**：
-6. StateGraph.START\/StateGraph.END：官方设定的Graph的起点与终点
-7. keyStrategyFactory：用来创建上下文，内部是kv的结构，对应上下文中的多组kv关系
-8. new ReplaceStrategy()：每次写入会覆盖调原本的旧值
-9. node_async()：将每个 NodeAction 包装为异步节点执行（提高吞吐或防止阻塞，具体实现框架已封装）
-10. addEdge()：添加一条边，两个参数是前一个节点的名和后续节点名
-11. addNode()：添加一个节点，两个参数是节点名和节点类
-12. addConditionalEdges()：用来添加一个条件边，这里传入的三个参数分别为前一个节点的名字，条件边的类，边接下来走向的map（k：边返回的String，v：节点对应的String，进而形成接下来走向的映射）
+1. StateGraph.START\/StateGraph.END：官方设定的Graph的起点与终点
+
+2. keyStrategyFactory：用来创建上下文，内部是kv的结构，对应上下文中的多组kv关系
+
+3. new ReplaceStrategy()：每次写入会覆盖调原本的旧值
+
+4. node_async()：将每个 NodeAction 包装为异步节点执行（提高吞吐或防止阻塞，具体实现框架已封装）
+
+5. addEdge()：添加一条边，两个参数是前一个节点的名和后续节点名
+
+6. addNode()：添加一个节点，两个参数是节点名和节点类
+
+7. addConditionalEdges()：用来添加一个条件边，这里传入的三个参数分别为前一个节点的名字，条件边的类，边接下来走向的map（k：边返回的String，v：节点对应的String，进而形成接下来走向的映射）
 
 #### **HumanFeedbackDispatcher**
 
@@ -133,9 +143,11 @@ public class HumanFeedbackDispatcher implements EdgeAction {
 ```
 
 **注意点：**
-13. EdgeAction：所有的条件边必须实现该接口
-14. public String apply(OverAllState state) throws Exception：EdegAction中唯一的方法，返回值为上述addConditionalEdges中第三个参数的map中的k，用来与节点名对应，入参OverAllState为上下文
-15. state.value()：从state中取出第一个参数对应的值，若为null则返回第二个参数
+1. EdgeAction：所有的条件边必须实现该接口
+
+2. public String apply(OverAllState state) throws Exception：EdegAction中唯一的方法，返回值为上述addConditionalEdges中第三个参数的map中的k，用来与节点名对应，入参OverAllState为上下文
+
+3. state.value()：从state中取出第一个参数对应的值，若为null则返回第二个参数
 
 #### **ExpanderNode**
 
@@ -178,12 +190,16 @@ public class ExpanderNode implements NodeAction {
 ```
 
 **注意点：**
-16. NodeAction：所有的节点必须实现该接口
-17. public Map<String, Object> apply(OverAllState state) ：NodeAction中唯一的方法，返回值为最初定义的工厂类中OverAllState中的kv对应的Map，入参OverAllState为上下文
-18. StreamingChatGenerator：用于构建流式输出（文档中没有这一块的解释，根据测试推测大概含义）
+1. NodeAction：所有的节点必须实现该接口
+
+2. public Map<String, Object> apply(OverAllState state) ：NodeAction中唯一的方法，返回值为最初定义的工厂类中OverAllState中的kv对应的Map，入参OverAllState为上下文
+
+3. StreamingChatGenerator：用于构建流式输出（文档中没有这一块的解释，根据测试推测大概含义）
 	![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20250721164358.png)
 	1. startingNode：流式输出中data的k
+	
 	2. startingState：上下文
+	
 	3. mapResult：用于构建流式输出结束后的返回值
 
 #### **HumanFeedbackNode**
@@ -214,7 +230,8 @@ public class HumanFeedbackNode implements NodeAction {
 ```
 
 **注意点**
-19. Map<String, Object> feedBackData = state.humanFeedback().data()：这里是前端传过来后经过controller处理的数据，具体在下面controller中进行解释
+
+1. Map<String, Object> feedBackData = state.humanFeedback().data()：这里是前端传过来后经过controller处理的数据，具体在下面controller中进行解释
 
 #### **TranslateNode**
 
@@ -303,7 +320,8 @@ public class GraphProcess {
 辅助类，主要用于将结果写道Sink中
 
 **注意点：**
-20. ExecutorService executor：配置线程池，获取 stream 流
+
+1. ExecutorService executor：配置线程池，获取 stream 流
 
 #### **GraphHumanController**
 
@@ -368,13 +386,20 @@ public class GraphHumanController {
 ```
 
 **注意点：**
-21. SaverConfig：用来配置如何保存状态
-22. CompileConfig.builder().saverConfig(saverConfig).interruptBefore(“humanfeedback”）：在humanfeedback节点前断流
-23. Sinks.Many\<ServerSentEvent> sink：接收 Stream 数据
-24. expand方法中的expanderNumber参数：将提出的问题扩展为 n 条（上述代码中用的默认值为3）相似问题
-25. resume方法中的this.compiledGraph.getState(runnableConfig)：获取上次截断的状态、
-26. resume方法中的state.withResume()：表示恢复
-27. resume方法中的state.withHumanFeedback(new OverAllState.HumanFeedback(objectMap, ""))：在state中放入HumanFeedback，也就是上述**HumanFeedbackNode**中的 state.humanFeedback().data();
+
+1. SaverConfig：用来配置如何保存状态
+
+2. CompileConfig.builder().saverConfig(saverConfig).interruptBefore(“humanfeedback”）：在humanfeedback节点前断流
+
+3. Sinks.Many\<ServerSentEvent> sink：接收 Stream 数据
+
+4. expand方法中的expanderNumber参数：将提出的问题扩展为 n 条（上述代码中用的默认值为3）相似问题
+
+5. resume方法中的this.compiledGraph.getState(runnableConfig)：获取上次截断的状态、
+
+6. resume方法中的state.withResume()：表示恢复
+
+7. resume方法中的state.withHumanFeedback(new OverAllState.HumanFeedback(objectMap, ""))：在state中放入HumanFeedback，也就是上述**HumanFeedbackNode**中的 state.humanFeedback().data();
 
 #### 简单解释上述代码逻辑
 
