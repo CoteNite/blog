@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "front-end/从零开始的js学习/4.DOM.md",
+                "file": "story/小说/李代桃僵/钟时悟.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4.DOM"
+              "title": "钟时悟"
             }
           }
         ]
@@ -172,8 +172,8 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "front-end/从零开始的js学习/3.JS多线程.md",
     "front-end/从零开始的js学习/4.DOM.md",
+    "front-end/从零开始的js学习/3.JS多线程.md",
     "back-end/6.技术选型/SAA/SpringAiAlibaba——工作流.md",
     "back-end/6.技术选型/SAA/官方成品项目.md",
     "front-end/从零开始的js学习/2.面向对象.md",
