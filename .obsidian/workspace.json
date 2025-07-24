@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "front-end/从零开始的js学习/0.前言.md",
+                "file": "front-end/ES6语法指北/未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.前言"
+              "title": "未命名"
             }
           }
         ]
@@ -172,6 +172,12 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "front-end/ES6语法指北/0.前言.md",
+    "front-end/ES6语法指北/未命名.md",
+    "front-end/从零开始的js学习/0.前言.md",
+    "front-end/ES6语法指北",
+    "front-end/未命名.md",
+    "front-end/从零开始的js学习/ES6",
     "story/小说/李代桃僵/钟时悟.md",
     "front-end/从零开始的js学习/4.DOM.md",
     "front-end/从零开始的js学习/3.JS多线程.md",
@@ -179,7 +185,6 @@
     "back-end/6.技术选型/SAA/官方成品项目.md",
     "front-end/从零开始的js学习/2.面向对象.md",
     "front-end/从零开始的js学习/1.数据类型与基本语法.md",
-    "front-end/从零开始的js学习/0.前言.md",
     "back-end/51.Spring/Spring常见错误.md",
     "back-end/6.技术选型/SAA/开源自然语言转SQL——nl2sql.md",
     "back-end/6.技术选型/未命名/未命名.md",
@@ -202,16 +207,11 @@
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "front-end/从零开始的js学习",
-    "story/生活记/第一次实习.md",
-    "basic/MySQL/数据库（大学期末应试）.md",
     "story/生活记",
-    "story/未命名.md",
     "aboutMe/AboutMe.vue~",
     "public/header1.png",
     "public/pictures/explain-1.png",
     "basic/面试相关",
-    "story/小说/李代桃僵",
-    "back-end/82.协程与响应式编程",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
