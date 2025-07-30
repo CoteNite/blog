@@ -142,16 +142,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "node_modules/speech-rule-engine/node_modules/commander/Readme.md",
+                "file": "front-end/ts/基础语法.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Readme 的大纲"
+              "title": "基础语法 的大纲"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -169,7 +170,7 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "e3e2d012b0c325c7",
+  "active": "2bb3882304465ad5",
   "lastOpenFiles": [
     "front-end/ES6语法指北/1.基本语法.md",
     "front-end/ts/基础语法.md",
