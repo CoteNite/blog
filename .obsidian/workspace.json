@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "front-end/ES6语法指北/1.基本语法.md",
+                "file": "front-end/ts/基础语法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.基本语法"
+              "title": "基础语法"
             }
           }
         ]
@@ -172,8 +172,10 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "front-end/ES6语法指北/0.前言.md",
     "front-end/ES6语法指北/1.基本语法.md",
+    "front-end/ts/基础语法.md",
+    "front-end/ts",
+    "front-end/ES6语法指北/0.前言.md",
     "front-end/从零开始的js学习/0.前言.md",
     "front-end/ES6语法指北",
     "front-end/未命名.md",
@@ -203,7 +205,6 @@
     "back-end/1.MySQL相关/mysql如何运行的——笔记",
     "om/2.git提交规范.md",
     "front-end/1.前言.md",
-    "back-end/2.多线程相关/8.协程.md",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "front-end/从零开始的js学习",
@@ -211,7 +212,6 @@
     "aboutMe/AboutMe.vue~",
     "public/header1.png",
     "public/pictures/explain-1.png",
-    "basic/面试相关",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
     "node_modules/cytoscape-fcose/demo/incrementalConstraints.gif",
     "node_modules/cytoscape-fcose/demo/demo.gif",
