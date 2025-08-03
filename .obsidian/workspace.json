@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "om/常用命令行.md",
+                "file": "aboutMe/aboutMe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "常用命令行"
+              "title": "aboutMe"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "om/常用命令行.md",
+                "file": "aboutMe/aboutMe.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "常用命令行 的大纲"
+              "title": "aboutMe 的大纲"
             }
           }
         ],
@@ -172,6 +172,7 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "om/常用命令行.md",
     "om/Shell脚本编写.md",
     "om/Nginx——必备代理服务器.md",
     "story/小说/李代桃僵/钟时悟.md",
@@ -202,7 +203,6 @@
     "back-end/bug记录/0.前言.md",
     "back-end/1.MySQL相关/1.SQL语句（基础理论篇）.md",
     "back-end/bug记录",
-    "om/常用命令行.md",
     "back-end/1.MySQL相关/mysql如何运行的——笔记",
     "om/2.git提交规范.md",
     "public/pictures/nilu.gif",
