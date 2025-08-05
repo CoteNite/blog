@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aboutMe/aboutMe.md",
+                "file": "back-end/83.功能设计/分片，分点，秒传.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aboutMe"
+              "title": "分片，分点，秒传"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aboutMe/aboutMe.md",
+                "file": "back-end/83.功能设计/分片，分点，秒传.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "aboutMe 的大纲"
+              "title": "分片，分点，秒传 的大纲"
             }
           }
         ],
@@ -172,6 +172,9 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "aboutMe/aboutMe.md",
+    "back-end/83.功能设计/分片，分点，秒传.md",
+    "back-end/83.功能设计",
     "om/常用命令行.md",
     "om/Shell脚本编写.md",
     "om/Nginx——必备代理服务器.md",
@@ -201,15 +204,12 @@
     "back-end/未命名.md",
     "back-end/bug记录/Spring事务与多线程的先后结束问题.md",
     "back-end/bug记录/0.前言.md",
-    "back-end/1.MySQL相关/1.SQL语句（基础理论篇）.md",
     "back-end/bug记录",
     "back-end/1.MySQL相关/mysql如何运行的——笔记",
-    "om/2.git提交规范.md",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "front-end/从零开始的js学习",
     "story/生活记",
-    "aboutMe/AboutMe.vue~",
     "public/header1.png",
     "public/pictures/explain-1.png",
     "node_modules/non-layered-tidy-tree-layout/screenshots/1.png",
