@@ -3,6 +3,7 @@ import timeline from "vitepress-markdown-timeline";
 import {generateSidebar, withSidebar} from 'vitepress-sidebar';
 import { withMermaid } from 'vitepress-plugin-mermaid';
 import mathjax3 from 'markdown-it-mathjax3';
+import {RssPlugin} from "vitepress-plugin-rss";
 
 const base = '/blog/';
 
@@ -10,6 +11,14 @@ const base = '/blog/';
 const customElements = [
   'mjx-container', 'mjx-assistive-mml', 'math', 'maction', 'maligngroup', 'malignmark', 'menclose', 'merror', 'mfenced', 'mfrac', 'mi', 'mlongdiv', 'mmultiscripts', 'mn', 'mo', 'mover', 'mpadded', 'mphantom', 'mroot', 'mrow', 'ms', 'mscarries', 'mscarry', 'mscarries', 'msgroup', 'mstack', 'mlongdiv', 'msline', 'mstack', 'mspace', 'msqrt', 'msrow', 'mstack', 'mstack', 'mstyle', 'msub', 'msup', 'msubsup', 'mtable', 'mtd', 'mtext', 'mtr', 'munder', 'munderover', 'semantics', 'math', 'mi', 'mn', 'mo', 'ms', 'mspace', 'mtext', 'menclose', 'merror', 'mfenced', 'mfrac', 'mpadded', 'mphantom', 'mroot', 'mrow', 'msqrt', 'mstyle', 'mmultiscripts', 'mover', 'mprescripts', 'msub', 'msubsup', 'msup', 'munder', 'munderover', 'none', 'maligngroup', 'malignmark', 'mtable', 'mtd', 'mtr', 'mlongdiv', 'mscarries', 'mscarry', 'msgroup', 'msline', 'msrow', 'mstack', 'maction', 'semantics', 'annotation', 'annotation-xml',
 ];
+
+const baseUrl='https://cotenite.github.io/blog/'
+
+const RSS = {
+  title: 'CoteNite的咖啡屋',
+  baseUrl,
+  copyright: 'Copyright (c) 2025-present, 粥里有勺糖',
+}
 
 // 你的基础 VitePress 配置对象，不包含由 withSidebar 生成的 sidebar
 const baseVitePressConfig = {
@@ -20,6 +29,9 @@ const baseVitePressConfig = {
   head: [
     ['link', { rel: 'icon', href: `${base}/header1.png` }]
   ],
+  vite:{
+    plugins: [RssPlugin(RSS)]
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     siteTitle: "今天也要来杯咖啡吗☕",
