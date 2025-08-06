@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/83.功能设计/分片，分点，秒传.md",
+                "file": "back-end/83.功能设计/网络请求.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "分片，分点，秒传"
+              "title": "网络请求"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/83.功能设计/分片，分点，秒传.md",
+                "file": "back-end/83.功能设计/网络请求.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "分片，分点，秒传 的大纲"
+              "title": "网络请求 的大纲"
             }
           }
         ],
@@ -172,6 +172,8 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "back-end/83.功能设计/分片，分点，秒传.md",
+    "back-end/83.功能设计/网络请求.md",
     "node_modules/@sugarat/theme-shared/dist/index.mjs",
     "node_modules/@sugarat/theme-shared/dist/index.js",
     "node_modules/@sugarat/theme-shared/dist/index.d.ts",
@@ -184,7 +186,6 @@
     "node_modules/@sugarat",
     "node_modules/sax/lib/sax.js",
     "node_modules/sax/README.md",
-    "node_modules/sax/package.json",
     "node_modules/xml-js/README.md",
     "node_modules/feed/README.md",
     "node_modules/feed/CONTRIBUTORS.md",
@@ -193,7 +194,6 @@
     "node_modules/feed/CHANGELOG.md",
     "node_modules/vitepress-plugin-rss/README.md",
     "aboutMe/aboutMe.md",
-    "back-end/83.功能设计/分片，分点，秒传.md",
     "om/常用命令行.md",
     "om/Shell脚本编写.md",
     "om/Nginx——必备代理服务器.md",
