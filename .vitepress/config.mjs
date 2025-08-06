@@ -29,9 +29,9 @@ const baseVitePressConfig = {
   head: [
     ['link', { rel: 'icon', href: `${base}/header1.png` }]
   ],
-  vite:{
-    plugins: [RssPlugin(RSS)]
-  },
+  // vite:{
+  //   plugins: [RssPlugin(RSS)]
+  // },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     siteTitle: "今天也要来杯咖啡吗☕",
