@@ -12,7 +12,13 @@
 
 4. [淘宝——技术人的大模型应用初学指南](https://mp.weixin.qq.com/s/NeR1yPdmK6Z1hZVLRSgxrQ)
 
-5. [Bolt.diy 开源前端生成项目](https://github.com/stackblitz-labs/bolt.diy) 
+5. [探索 Trae 技术 实现-codebase 介绍](https://juejin.cn/post/7495199832749244425)
+
+6. [腾讯云 AI 代码助手：Codebase 本地工程检索](https://www.cnblogs.com/txycsig/p/18752163)
+
+7. [AI 辅助理解现有代码：自然语言搜索的 RAG 策略设计与 IDE 插件的落地](https://www.phodal.com/blog/ai-assistant-understanding-codebase/)
+
+8. [Bolt.diy 开源前端生成项目](https://github.com/stackblitz-labs/bolt.diy) 
 
 ## 最初的尝试
 
@@ -62,3 +68,4 @@
 
 ### 上下文输入
 
+根据阿里对Cursor的研究，我们可以发现Cursor的代码检索是基于codebase_search_tool实现的
