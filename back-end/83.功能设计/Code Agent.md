@@ -4,11 +4,15 @@
 
 ## 参考文献
 
-- [淘宝——一位Cursor深度用户的原理探析与实验验证（也是阅读了这篇文章促使了我写本文）](https://mp.weixin.qq.com/s/bT-R9oXvfO5wqRT8I2u_sQ)
-- [淘宝——淘宝交易前端AI生码技术的创新实践](https://mp.weixin.qq.com/s/RBIlsqdkN7CNDuGWxhoxGQ)
-- [淘宝——万字长文解码如何玩转Prompt（附实践应用）](https://mp.weixin.qq.com/s/ad6y-pCe1_PV7iNA7Uh1bg)
-- [淘宝——技术人的大模型应用初学指南](https://mp.weixin.qq.com/s/NeR1yPdmK6Z1hZVLRSgxrQ)
-- [Bolt.diy 开源前端生成项目](https://github.com/stackblitz-labs/bolt.diy) 
+1. [淘宝——一位Cursor深度用户的原理探析与实验验证（也是阅读了这篇文章促使了我写本文）](https://mp.weixin.qq.com/s/bT-R9oXvfO5wqRT8I2u_sQ)
+
+2. [淘宝——淘宝交易前端AI生码技术的创新实践](https://mp.weixin.qq.com/s/RBIlsqdkN7CNDuGWxhoxGQ)
+
+3. [淘宝——万字长文解码如何玩转Prompt（附实践应用）](https://mp.weixin.qq.com/s/ad6y-pCe1_PV7iNA7Uh1bg)
+
+4. [淘宝——技术人的大模型应用初学指南](https://mp.weixin.qq.com/s/NeR1yPdmK6Z1hZVLRSgxrQ)
+
+5. [Bolt.diy 开源前端生成项目](https://github.com/stackblitz-labs/bolt.diy) 
 
 ## 最初的尝试
 
@@ -44,4 +48,10 @@
 
 ## 又一次学习
 
-想归想
+玩归玩，闹归闹，该干还是得干，问题是死的人是活的，世界上的代码都是人写的，图灵完备的语言理论上啥都能干，别人能实现的我为啥不能实现。
+
+抱着这样的信念，又开始了新一轮的学习。
+
+这一次正巧看到了阿里的一篇技术文档\[1]，这篇文档解答了我心中的一个疑惑：为什么原本的开源项目逻辑这么简单却能有这么好的效果
+
+
