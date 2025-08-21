@@ -4,5 +4,9 @@
 
 ## 参考文献
 
-- []()
+- [淘宝——一位Cursor深度用户的原理探析与实验验证（也是阅读了这篇文章促使了我写本文）](https://mp.weixin.qq.com/s/bT-R9oXvfO5wqRT8I2u_sQ)
+- [Bolt.diy 开源前端生成项目](https://github.com/stackblitz-labs/bolt.diy) 
 
+## 流程
+
+最开始我使用了Bolt作为参考对象，不过由于我平日使用的代码主要是Java，因此对
