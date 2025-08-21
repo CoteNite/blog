@@ -6,7 +6,7 @@
 
 - [淘宝——一位Cursor深度用户的原理探析与实验验证（也是阅读了这篇文章促使了我写本文）](https://mp.weixin.qq.com/s/bT-R9oXvfO5wqRT8I2u_sQ)
 - [淘宝——淘宝交易前端AI生码技术的创新实践](https://mp.weixin.qq.com/s/RBIlsqdkN7CNDuGWxhoxGQ)
-- []()
+- [淘宝——万字长文解码如何玩转Prompt（附实践应用）](https://mp.weixin.qq.com/s/ad6y-pCe1_PV7iNA7Uh1bg)
 - [Bolt.diy 开源前端生成项目](https://github.com/stackblitz-labs/bolt.diy) 
 
 ## 最初的尝试
