@@ -7,6 +7,7 @@
 - [淘宝——一位Cursor深度用户的原理探析与实验验证（也是阅读了这篇文章促使了我写本文）](https://mp.weixin.qq.com/s/bT-R9oXvfO5wqRT8I2u_sQ)
 - [淘宝——淘宝交易前端AI生码技术的创新实践](https://mp.weixin.qq.com/s/RBIlsqdkN7CNDuGWxhoxGQ)
 - [淘宝——万字长文解码如何玩转Prompt（附实践应用）](https://mp.weixin.qq.com/s/ad6y-pCe1_PV7iNA7Uh1bg)
+- [淘宝——技术人的大模型应用初学指南](https://mp.weixin.qq.com/s/NeR1yPdmK6Z1hZVLRSgxrQ)
 - [Bolt.diy 开源前端生成项目](https://github.com/stackblitz-labs/bolt.diy) 
 
 ## 最初的尝试
@@ -23,5 +24,6 @@
 
 首先肯定是找到Prompt了，这一找直接吓我一跳，我测，上百行，说出来不怕大家笑话，这是我第一次见这么长的Prompt，给了当时的我一定的震撼。
 
-不过事情总是要干的，我将这个Prompt复制到了我们的项目中，然后一行行的将他翻译成中文（为了项目后续维护的方便），试图理解这个Prompt
+不过事情总是要干的，我将这个Prompt复制到了我们的项目中，然后一行行的将他翻译成中文（为了项目后续维护的方便），试图理解这个Prompt（由于理解不能又去专门学了一些Prompt相关的知识）
 
+这个项目的Prompt可以说是十分详尽了，我对他做出了针对我们项目需求的修改，最后也是实现了Pr
