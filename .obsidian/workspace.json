@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/84.后端杂谈/未命名.md",
+                "file": "back-end/83.功能设计/Code Agent.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "Code Agent"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/84.后端杂谈/未命名.md",
+                "file": "back-end/83.功能设计/Code Agent.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "Code Agent 的大纲"
             }
           }
         ],
@@ -174,8 +174,10 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "back-end/83.功能设计/网络请求.md",
+    "back-end/82.协程与响应式编程/2.Channel.md",
+    "back-end/83.功能设计/Code Agent.md",
     "back-end/84.后端杂谈/未命名.md",
+    "back-end/83.功能设计/网络请求.md",
     "back-end/84.后端杂谈",
     "back-end/83.功能设计/分片，分点，秒传.md",
     "node_modules/@sugarat/theme-shared/dist/index.mjs",
@@ -208,8 +210,6 @@
     "front-end/从零开始的js学习/0.前言.md",
     "front-end/未命名.md",
     "front-end/从零开始的js学习/4.DOM.md",
-    "front-end/从零开始的js学习/3.JS多线程.md",
-    "back-end/6.技术选型/SAA/SpringAiAlibaba——工作流.md",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
