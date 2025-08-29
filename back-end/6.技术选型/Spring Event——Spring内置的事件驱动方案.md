@@ -171,8 +171,53 @@ public class ConcurrencyConfig {
 例子
 
 ```java
+@Service  
+public class EventService {  
+  
+    @Resource  
+    private ApplicationEventPublisher publisher;  
+  
+    @Resource  
+    private ItemRepository itemRepository;  
+  
+    @Transactional(rollbackFor = Exception.class)  
+    public void goHome() {  
+        itemRepository.save(new Item(10010, "打开门", "打开门", LocalDateTime.now(), LocalDateTime.now()));  
+        publisher.publishEvent(new OpenDoorEvent("open door", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)));  
+    }  
+  
+}
+
+@Component
+@Slf4j
+public class HomeEventListener {
+
+    @Resource
+    private ApplicationEventPublisher publisher;
+
+
+    @Resource
+    private ItemRepository itemRepository;
+
+
+    @EventListener
+    @Transactional(readOnly = true)
+    public void listenOpenDoorEvent(OpenDoorEvent event) {
+        log.info("已经接收到事件————{}: {}", event.getTime(), event.getEvent());
+        log.info("查询到事件——{}",itemRepository.findById(10010));
+        publisher.publishEvent(new TurnOnLightsEvent("turn on light", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)));
+    }
+
+    @EventListener
+    public void listenOpenDoorEvent(TurnOnLightsEvent event) {
+        log.info("链式成功————{} {}", event.getEvent(), event.getTime());
+    }
+
+}
 
 ```
+
+上面的代码就是查询不到的，因为此时代码尚未返回结果，也就没有提交，同步代码的后半部分自然无法查询到结果
 
 为了解决这个问题，Spring提供了另一个注解`@TransactionalEventListener`
 
@@ -202,4 +247,21 @@ public @interface TransactionalEventListener {
 	
 	String condition() default "";
 }
+```
+
+```java
+public enum TransactionPhase {
+   // 指定目标方法在事务commit之前执行
+   BEFORE_COMMIT,
+
+   // 指定目标方法在事务commit之后执行
+    AFTER_COMMIT,
+
+    // 指定目标方法在事务rollback之后执行
+    AFTER_ROLLBACK,
+
+   // 指定目标方法在事务完成时执行，这里的完成是指无论事务是成功提交还是事务回滚了
+   AFTER_COMPLETION
+  }
+
 ```
