@@ -166,4 +166,16 @@ public class ConcurrencyConfig {
 
 ## 事务机制
 
-我们在发布了一个事件后，在同一个方法内去查询这个刚刚发送的方法，会发现查询不到
+我们在发布了一个事件后，在同一个方法内去查询这个刚刚发送的方法，会发现会出现报错
+
+```java
+@EventListener(condition = "true")
+    public TurnOnLightsEvent listenOpenDoorEvent(OpenDoorEvent event) {
+        log.info("已经接收到事件————{}: {}", event.getTime(), event.getEvent());
+        itemRepository.save(new Item(1000, "打开门", "打开门", LocalDateTime.now(), LocalDateTime.now()));
+        log.info(String.valueOf(itemRepository.findById(1000)));
+
+        return new TurnOnLightsEvent("turn on light", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+    }
+```
+
