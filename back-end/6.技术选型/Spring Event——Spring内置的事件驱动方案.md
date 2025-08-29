@@ -121,4 +121,4 @@ public void listenMultiEvent(Object object) {
 
 ## 监听的条件
 
-EventListener中存在一个condition
+EventListener中存在一个condition，内部填充的是SpEL表达式（相关内容我会再写一篇文章，这里可以理解成就是一个可解析的string），只有当填充SpEL为`true` `on` `yes` `1` 中的一个时才能接收到
