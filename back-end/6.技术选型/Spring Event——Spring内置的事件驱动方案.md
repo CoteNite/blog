@@ -168,6 +168,12 @@ public class ConcurrencyConfig {
 
 如果你在一个 **事务尚未提交** 的方法里发布事件（`@EventListener`），而监听器又在 **同一个事务上下文中执行**，那么此时事务还没提交，此时其他事务（包括监听器新开启的事务）是看不到未提交的数据的，所以「查不到刚刚 insert 的数据」。
 
+例子
+
+```java
+
+```
+
 为了解决这个问题，Spring提供了另一个注解`@TransactionalEventListener`
 
 ```java
