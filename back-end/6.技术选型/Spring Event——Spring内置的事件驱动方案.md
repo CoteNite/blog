@@ -266,4 +266,5 @@ public enum TransactionPhase {
 
 ```
 
-TransactionPhase
+TransactionPhase指定了监听者在什么时候执行方法，其中AFTER_COMMIT是事务在提交后执行，也是TransactionalEventListener的默认方法，因此可以解决这个问题
+
