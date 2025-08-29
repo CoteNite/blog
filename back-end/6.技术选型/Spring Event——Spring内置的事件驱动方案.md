@@ -121,4 +121,19 @@ public void listenMultiEvent(Object object) {
 
 ## 监听的条件
 
-EventListener中存在一个condition，内部填充的是SpEL表达式（相关内容我会再写一篇文章，这里可以理解成就是一个可解析的string），只有当填充SpEL为`true` `on` `yes` `1` 中的一个时才能接收到
+EventListener中存在一个condition，内部填充的是SpEL表达式（相关内容我会再写一篇文章，这里可以理解成就是一个可解析的string），只有当填充SpEL为`true` 时才能接收到
+
+```java
+public @interface EventListener {
+	...
+    String condition() default "";
+	...
+}
+```
+
+## 异步执行
+
+再默认的情况下，事件的发出者和接受者是同步的，但是有时我们会希望他是异步实现的，这里我们就要使用Spring为我们提供的异步注解`@Async`(当然，异步注解和事件发布没有直接关系，这里只是配合使用)
+
+启动异步逐渐x'b'v
+
