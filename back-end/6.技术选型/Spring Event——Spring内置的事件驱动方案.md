@@ -135,5 +135,35 @@ public @interface EventListener {
 
 再默认的情况下，事件的发出者和接受者是同步的，但是有时我们会希望他是异步实现的，这里我们就要使用Spring为我们提供的异步注解`@Async`(当然，异步注解和事件发布没有直接关系，这里只是配合使用)
 
-启动异步逐渐x'b'v
+启动异步逐渐需要我们在SpringBootApplication或则某个Configuration类上使用`@EnableAsync`注解，同时我们建议自定义一个线程池去实现它
 
+```java
+@Slf4j
+@EnableAsync
+@Configuration
+public class ConcurrencyConfig {
+
+    @Primary
+    @Bean
+    public TaskExecutor threadPoolExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setCorePoolSize(2);
+        executor.setMaxPoolSize(8);
+        executor.setQueueCapacity(20);
+        executor.setKeepAliveSeconds(1);
+        executor.setWaitForTasksToCompleteOnShutdown(true);
+        executor.setThreadNamePrefix("task-thread-");
+        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.AbortPolicy());
+
+        executor.initialize();
+        return executor;
+    }
+}
+
+```
+
+然后就只需要我们为监听者的方法加上`@Async`注解即可
+
+## 事务机制
+
+我们的一个
