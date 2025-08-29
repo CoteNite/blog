@@ -6,7 +6,7 @@
 
 一般这样的流程需要我们通过设计模式来进行实现，但Spring为我们内置了这套组件，让我们只需要使用简单的注解就可以实现
 
-## 最小实例
+## 最小实现
 
 对于事件驱动，最小的实现只需要三个部分——事件，事件发出者，事件接收者
 
@@ -50,7 +50,51 @@ public interface ApplicationEventPublisher {
 }
 ```
 
-最后就是监听器了
+最后就是事件接受者了
 
-```j
+```java
+@Component
+@Slf4j
+public class HomeEventListener {
+
+    @EventListener
+    public TurnOnLightsEvent listenOpenDoorEvent(OpenDoorEvent event) {
+        log.info("已经接收到事件————{}: {}", event.getTime(), event.getEvent());
+        return new TurnOnLightsEvent("turn on light", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+    }
+
+}
 ```
+
+这里记得要将接收者也要注册为Spring Bean，因为只有Spring Bean才能被我们的Spring管理，进而使用Spring的各种强大功能
+
+## 事件链
+
+接着我们再来说一些高级一些的使用
+
+我们可以在监听者的代码中返回一个事件（比如上面的`TurnOnLightsEvent`），这个事件会被我们的Spring控制，如果你还有一个新的接受该事件的方法，那么就会自动发送过去
+
+```java
+@Component  
+@Slf4j  
+public class HomeEventListener {  
+  
+    @EventListener  
+    public TurnOnLightsEvent listenOpenDoorEvent(OpenDoorEvent event) {  
+        log.info("已经接收到事件————{}: {}", event.getTime(), event.getEvent());  
+        return new TurnOnLightsEvent("turn on light", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));  
+    }  
+  
+    @EventListener  
+    public void listenOpenDoorEvent(TurnOnLightsEvent event) {  
+  
+        log.info("链式成功————{} {}", event.getEvent(), event.getTime());  
+  
+    }  
+  
+}
+```
+
+## 一个方法监听多个事件
+
+我们上面使用了一个方法监听一个sjhi
