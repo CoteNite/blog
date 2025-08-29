@@ -97,4 +97,28 @@ public class HomeEventListener {
 
 ## 一个方法监听多个事件
 
-我们上面使用了一个方法监听一个sjhi
+我们上面使用了一个方法监听一个事件，但是我们其实可以一个方法监听多个事件，这需要我们在`@EventListener`上下点功夫
+
+```java
+public @interface EventListener {
+    ...
+	@AliasFor("value")
+	Class<?>[] classes() default {};
+	...
+}
+```
+
+EventListener会监视classes中的class，所以我们只需要指定他即可
+
+```java
+@EventListener(classes = {OpenDoorEvent.class, TurnOnLightsEvent.class})
+public void listenMultiEvent(Object object) {
+    log.info("监听到了事件:{}",object);
+}
+```
+
+不过这里接受的参数就是两个类共同的父类了
+
+## 监听的条件
+
+EventListener中存在一个condition
