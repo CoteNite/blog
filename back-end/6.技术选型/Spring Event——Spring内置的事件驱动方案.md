@@ -21,4 +21,36 @@ public class OpenDoorEvent {
 }
 ```
 
-然后就是
+然后就是事件发出者
+
+```java
+@Service  
+public class EventService {  
+  
+    @Resource  
+    private ApplicationEventPublisher publisher;  
+  
+    public void goHome() {  
+        publisher.publishEvent(new OpenDoorEvent("open door", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)));  
+    }  
+  
+}
+```
+
+这里有一个`ApplicationEventPublisher`是Spring为我们提供的，其作用就是为我们发送事件
+
+```java
+@FunctionalInterface
+public interface ApplicationEventPublisher {
+    default void publishEvent(ApplicationEvent event) {
+        this.publishEvent((Object)event);
+    }
+
+    void publishEvent(Object event);  //这里我们可以看到源码就是发送一个事件（Object）出去
+}
+```
+
+最后就是监听器了
+
+```j
+```
