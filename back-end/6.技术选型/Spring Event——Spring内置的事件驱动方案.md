@@ -168,14 +168,34 @@ public class ConcurrencyConfig {
 
 我们在发布了一个事件后，在同一个方法内去查询这个刚刚发送的方法，会发现会出现报错
 
+只是因为在一个EventListener中，内部的内容是受到事务控制的，方法还执行完，时间查询，你就去查询，这当然会出现问题了
+
+为了解决这个问题，Spring提供了另一个注解`@TransactionalEventListener`
+
 ```java
-@EventListener(condition = "true")
-    public TurnOnLightsEvent listenOpenDoorEvent(OpenDoorEvent event) {
-        log.info("已经接收到事件————{}: {}", event.getTime(), event.getEvent());
-        itemRepository.save(new Item(1000, "打开门", "打开门", LocalDateTime.now(), LocalDateTime.now()));
-        log.info(String.valueOf(itemRepository.findById(1000)));
+// @since 4.2 注解的方式提供的相对较晚，其实API的方式在第一个版本就已经提供了。
+// 值得注意的是，在这个注解上面有一个注解：`@EventListener`，所以表明其实这个注解也是个事件监听器。 
+@Target({ElementType.METHOD, ElementType.ANNOTATION_TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@EventListener //有类似于注解继承的效果
+public @interface TransactionalEventListener {
+	// 这个注解取值有：BEFORE_COMMIT、AFTER_COMMIT、AFTER_ROLLBACK、AFTER_COMPLETION
+	// 各个值都代表什么意思表达什么功能，非常清晰，下面解释了对应的枚举类~
+	// 需要注意的是：AFTER_COMMIT + AFTER_COMPLETION是可以同时生效的
+	// AFTER_ROLLBACK + AFTER_COMPLETION是可以同时生效的
+	TransactionPhase phase() default TransactionPhase.AFTER_COMMIT;
 
-        return new TurnOnLightsEvent("turn on light", LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
-    }
+	// 表明若没有事务的时候，对应的event是否需要执行，默认值为false表示，没事务就不执行了。
+	boolean fallbackExecution() default false;
+
+	// 这里巧妙的用到了@AliasFor的能力，放到了@EventListener身上
+	// 注意：一般建议都需要指定此值，否则默认可以处理所有类型的事件，范围太广了。
+	@AliasFor(annotation = EventListener.class, attribute = "classes")
+	Class<?>[] value() default {};
+	@AliasFor(annotation = EventListener.class, attribute = "classes")
+	Class<?>[] classes() default {};
+	
+	String condition() default "";
+}
 ```
-
