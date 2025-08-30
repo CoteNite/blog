@@ -121,4 +121,23 @@ spring:
 @Cacheable(value = {"hot"}, key = "#root.method.name")
 ```
 
-这里使用的是SpEL表达式，此时的#root指向了当前的这个类，method则指向了正在huan'chu
+这里使用的是SpEL表达式，此时的#root指向了当前的这个类，method则指向了正在使用缓存的方法，name则为方法的名字
+
+因此如果是
+
+```kotlin
+@Cacheable(value = {"hot"}, key = "#root.method.name")
+fun test(){
+
+}
+```
+
+等价于
+
+```kotlin
+@Cacheable(value = {"hot"}, key = "test")
+fun test(){
+
+}
+```
+
