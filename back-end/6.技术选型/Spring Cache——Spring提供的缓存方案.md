@@ -45,4 +45,16 @@ class WebController {
 }
 ```
 
-当我们调用这个接口后，查看Redis中存储的数据，fa'xian
+当我们调用这个接口后，查看Redis中存储的数据，发现多了这样一个
+
+![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20250830200752.png)
+
+显而易见，我们的Cacheable注解的value属性就是其在缓存中对应的Key
+
+然后我们修改原本代码的返回值，重启应用，再次调用同一个接口，会发生什么呢？
+
+会返回之前的返回值！
+
+这也就说明了我们的数据已经保存在了Spring Cache中，并且获取的数据也是从Cache中获取到的
+
+
