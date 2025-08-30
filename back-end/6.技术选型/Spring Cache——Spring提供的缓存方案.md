@@ -149,4 +149,19 @@ Spring Cache还为我们提供了条件功能，你可以使用条件来决定�
 
 ## 更新注解
 
-`@CachePut`是Spring Cache提供的一种用来更新缓存的
+`@CachePut`是Spring Cache提供的一种用来更新缓存的注解
+
+```java
+@RequestMapping("/create")
+@CachePut(value = "hot", key = "#result.id")
+public QuestionEntity create(@Valid @RequestBody QuestionEntity question){
+    return IQuestionService.createQuestion(question);
+}
+```
+
+这里的#result就是拿到的返回值，.id自然就是获取到对象的id了
+
+## 删除注解
+
+有了更新自然还会有删除，这里使用的是`@CacheEvict`注解
+
