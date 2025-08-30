@@ -31,3 +31,18 @@ Spring Cache支持九种缓存方案
 
 配置好后需要在启动类上加上`@EnableCaching`注解，然后在需要缓存的方法上加上`@Cacheable`注解就能对这个方法开启缓存
 
+```kotlin
+@RestController
+@RequestMapping("/test")
+class WebController {
+
+    @GetMapping("/getStr")
+    @Cacheable(value = ["cache"])
+    fun getStr(): String{
+        return "hello world"
+    }
+
+}
+```
+
+当我们调用这个接口后，查看Redis中存储的数据，fa'xian
