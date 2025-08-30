@@ -141,3 +141,12 @@ fun test(){
 }
 ```
 
+## 条件
+
+Spring Cache还为我们提供了条件功能，你可以使用条件来决定是否保存这个Cache
+
+对应的属性是condition和unless属性
+
+## 更新注解
+
+`@CachePut`是Spring Cache提供的一种用来更新缓存的
