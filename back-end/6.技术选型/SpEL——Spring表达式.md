@@ -38,9 +38,25 @@ SpEL表达式也支持判断语句，除了Java支持的几种外，还特别支
 
 && ||  ！  均支持
 
+## 变量
 
+可以使用#xxx的格式来将一个外部的变量引用到SpEL内部
 
+```java
+ExpressionParser parser = new SpelExpressionParser();
 
+Inventor tesla = new Inventor("Nikola Tesla", "Serbian");
 
+EvaluationContext context = SimpleEvaluationContext.forReadWriteDataBinding().build();
+context.setVariable("newName", "Mike Tesla"); // 设置变量
 
+// 获取变量newName，并将其赋值给name属性
+parser.parseExpression("Name = #newName").getValue(context, tesla);
+System.out.println(tesla.getName());  // "Mike Tesla"
+```
 
+但是一般我们肯定很少这么写，因此下面的这种才是最常用的方法。
+
+### 使用#root与#this变量
+
+Spring提供了两个特殊的变量——#root和#this，其中#this变量引用当前的对象，#root变量则引用上下文对象
