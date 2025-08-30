@@ -98,6 +98,26 @@ class WebController {
 
 我们也可以为Spring Cache配置一些内容
 
-```yaml
-
+```yml
+spring:
+  cache:
+    type: redis
+    redis:
+      # 缓存的过期时间，单位毫秒
+      time-to-live: 3600000
+      # 是否使用前缀
+      use-key-prefix: true
+      # 使用的前缀
+      key-prefix: test
+      # 防止缓存穿透
+      cache-null-values: true
 ```
+
+## 自定义Key
+
+前面说了我们可以自定义Key，这里我们来细节的聊一下
+
+```kotlin
+@Cacheable(value = {"hot"}, key = "#root.method.name")
+```
+
