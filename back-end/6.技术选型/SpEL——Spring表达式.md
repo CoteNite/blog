@@ -59,4 +59,5 @@ System.out.println(tesla.getName());  // "Mike Tesla"
 
 ### 使用#root与#this变量
 
-Spring提供了两个特殊的变量——#root和#this，其中#this变量引用当前的对象，#root变量则引用上下文对象
+Spring提供了两个特殊的变量——#root和#this，其中#this变量引用当前正在被迭代或处理的对象，而#root变量则引用表达式的根对象。
+

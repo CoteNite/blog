@@ -121,4 +121,4 @@ spring:
 @Cacheable(value = {"hot"}, key = "#root.method.name")
 ```
 
-这里使用的是SpEL表达式，
+这里使用的是SpEL表达式，此时的#root指向了当前的这个类，method则指向了正在huan'chu
