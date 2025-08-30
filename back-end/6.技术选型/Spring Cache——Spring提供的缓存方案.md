@@ -83,6 +83,21 @@ class WebController {
 
 我们会发现还是返回之前保存的Cache值，这也就说明了`@Cacheable`的value属性相同的方法公用了同一个Cache
 
+如果不设置value呢？
+
+实际测试结果会报错。
+
 这里我们就可以得到一些结论
 
-- 
+- 如果没有指定参数，则缓存生成的 key name，是默认自动生成的，叫做 SimpleKey\[]
+- 我们可以使用`@Cacheable`的key参数来设置key的值
+- key对应的值是JDK序列化后的值
+- value默认的过期时间是永不过期
+
+## 基础配置
+
+我们也可以为Spring Cache配置一些内容
+
+```yaml
+
+```
