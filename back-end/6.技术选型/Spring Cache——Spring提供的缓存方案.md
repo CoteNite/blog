@@ -83,3 +83,6 @@ class WebController {
 
 我们会发现还是返回之前保存的Cache值，这也就说明了`@Cacheable`的value属性相同的方法公用了同一个Cache
 
+这里我们就可以得到一些结论
+
+- 
