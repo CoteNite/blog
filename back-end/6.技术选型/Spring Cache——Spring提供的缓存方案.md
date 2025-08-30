@@ -57,4 +57,29 @@ class WebController {
 
 这也就说明了我们的数据已经保存在了Spring Cache中，并且获取的数据也是从Cache中获取到的
 
+此时我们再创建一个新的方法
+
+```kotlin
+@RestController
+@RequestMapping("/test")
+class WebController {
+
+    @GetMapping("/getStr")
+    @Cacheable(value = ["cache"])
+    fun getStr(): String{
+        return "hello 111 world"
+    }
+
+    @GetMapping("/getStr2")
+    @Cacheable(value = ["cache"])
+    fun getStr2(): String{
+        return "hello 222 world"
+    }
+
+}
+```
+
+再去查询数据会发生什么呢？
+
+我们会发现还是返回之前保存的Cache值，这也就说明了`@Cacheable`的value属性相同的方法公用了同一个Cache
 
