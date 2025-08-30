@@ -121,3 +121,4 @@ spring:
 @Cacheable(value = {"hot"}, key = "#root.method.name")
 ```
 
+这里使用的是SpEL表达式，
