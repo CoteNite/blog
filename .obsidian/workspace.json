@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/6.技术选型/Spring Cache——Spring提供的缓存方案.md",
+                "file": "back-end/84.后端杂谈/JPA or Jimmer？ORM之间的区别是什么？.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spring Cache——Spring提供的缓存方案"
+              "title": "JPA or Jimmer？ORM之间的区别是什么？"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/6.技术选型/Spring Cache——Spring提供的缓存方案.md",
+                "file": "back-end/84.后端杂谈/JPA or Jimmer？ORM之间的区别是什么？.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Spring Cache——Spring提供的缓存方案 的大纲"
+              "title": "JPA or Jimmer？ORM之间的区别是什么？ 的大纲"
             }
           }
         ],
@@ -174,10 +174,10 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "back-end/6.技术选型/Spring Event——Spring内置的事件驱动方案.md",
+    "back-end/84.后端杂谈/JPA or Jimmer？ORM之间的区别是什么？.md",
     "back-end/6.技术选型/Spring Cache——Spring提供的缓存方案.md",
+    "back-end/6.技术选型/Spring Event——Spring内置的事件驱动方案.md",
     "back-end/6.技术选型/SpEL——Spring表达式.md",
-    "back-end/84.后端杂谈/未命名.md",
     "back-end/83.功能设计/Code Agent.md",
     "back-end/83.功能设计/分片，分点，秒传.md",
     "back-end/82.协程与响应式编程/2.Channel.md",
