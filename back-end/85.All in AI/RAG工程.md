@@ -14,3 +14,23 @@
 
 首先我们面临的问题就是如何将非结构化的文档解析为结果化的内容，这里我们选用[Apache Tika](https://tika.apache.org/)作为我们的工具
 
+```kotlin
+implementation("org.springframework.ai:spring-ai-tika-document-reader")
+```
+
+```kotlin
+@Test  
+fun contextLoads() {  
+    val path="D:\\workspace\\study-demo\\rag-study\\src\\main\\resources\\Prompt.pdf"  
+    val resource = PathResource(path)  
+    val reader = TikaDocumentReader(resource)  
+    val documents = reader.get()  
+  
+    if (documents.isNotEmpty()){  
+        val chunk = documents[0]  
+        println("文档内容——————${chunk.text}")  
+        println("元数据——————${chunk.metadata}")  
+    }  
+}
+```
+
