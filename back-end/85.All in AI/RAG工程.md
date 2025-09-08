@@ -5,4 +5,12 @@
 **RAG（Retrieval-Augmented Generation）** 又名检索增强生成，是一种将外部的知识输入给大模型，然后让大模型根据输入的知识来进行回答的工程
 
 **关键部分：**
-- 索引：将非结构化文档（PDF/Word /Markdown等）进行切片，然后通过嵌入模型（Embedding Model）转化为向量数据
+
+- 索引：将非结构化文档（PDF/Word /Markdown等）进行切片，然后通过嵌入模型（Embedding Model）转化为向量数据存入向量数据库中
+- 检索：通过用户输入的需求，搜索出最具关联性的文档片段、
+- 生成：让LLM结合检索出的内容生成对话
+
+## 加载与分块
+
+首先我们面临的问题就是如何将非结构化的文档解析为结果化的内容，这里我们选用[Apache Tika](https://tika.apache.org/)作为我们的工具
+
