@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/85.All in AI/0.前言.md",
+                "file": "back-end/85.All in AI/RAG工程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.前言"
+              "title": "RAG工程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/85.All in AI/0.前言.md",
+                "file": "back-end/85.All in AI/RAG工程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "0.前言 的大纲"
+              "title": "RAG工程 的大纲"
             }
           }
         ],
@@ -174,8 +174,8 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "back-end/82.协程与响应式编程/0.前言.md",
     "back-end/85.All in AI/0.前言.md",
+    "back-end/82.协程与响应式编程/0.前言.md",
     "back-end/85.All in AI/RAG工程.md",
     "back-end/84.后端杂谈/JPA or Jimmer？不同ORM对项目开发的影响？.md",
     "back-end/85.All in AI",
