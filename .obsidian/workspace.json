@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/85.All in AI/RAG工程.md",
+                "file": "back-end/85.All in AI/0.前言.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RAG工程"
+              "title": "0.前言"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/85.All in AI/RAG工程.md",
+                "file": "back-end/85.All in AI/0.前言.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "RAG工程 的大纲"
+              "title": "0.前言 的大纲"
             }
           }
         ],
@@ -174,8 +174,10 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "back-end/84.后端杂谈/JPA or Jimmer？不同ORM对项目开发的影响？.md",
+    "back-end/82.协程与响应式编程/0.前言.md",
+    "back-end/85.All in AI/0.前言.md",
     "back-end/85.All in AI/RAG工程.md",
+    "back-end/84.后端杂谈/JPA or Jimmer？不同ORM对项目开发的影响？.md",
     "back-end/85.All in AI",
     "back-end/6.技术选型/Spring Cache——Spring提供的缓存方案.md",
     "back-end/6.技术选型/Spring Event——Spring内置的事件驱动方案.md",
@@ -208,8 +210,6 @@
     "om/Nginx——必备代理服务器.md",
     "story/小说/李代桃僵/钟时悟.md",
     "story/小说/李代桃僵/Tmp.md",
-    "front-end/ts/基础语法.md",
-    "front-end/ES6语法指北/1.基本语法.md",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
