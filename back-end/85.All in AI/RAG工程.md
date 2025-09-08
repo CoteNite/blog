@@ -12,7 +12,7 @@
 
 ## 加载与分块
 
-首先我们面临的问题就是如何将非结构化的文档解析为结果化的内容，这里我们选用[Apache Tika](https://tika.apache.org/)作为我们的工具
+首先我们面临的问题就是如何将非结构化的文档解析为结果化的内容，这里我们选用Spring整合的[Apache Tika](https://tika.apache.org/)作为我们的工具
 
 ```kotlin
 implementation("org.springframework.ai:spring-ai-tika-document-reader")
@@ -34,3 +34,4 @@ fun contextLoads() {
 }
 ```
 
+最新版本中需要通过text来获取解析的文本，metadata是文件除了内容外的其他数据
