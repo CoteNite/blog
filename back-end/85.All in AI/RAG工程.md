@@ -80,4 +80,6 @@ LangChain4j has a `DocumentSplitter` interface with several out-of-the-box imp
 - `DocumentByRegexSplitter`
 - Recursive: `DocumentSplitters.recursive(...)`
 
-从名字中我们不难看出他们的qie'feng
+从名字中我们不难看出他们的切分规则
+
+
