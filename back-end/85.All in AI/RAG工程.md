@@ -103,4 +103,5 @@ fun contextLoads() {
 }
 ```
 
-chu'chi
+除此之外，Spring AI还提供了一个`MetadataEnricher`用于让大模型根据切片内容为文本生成元数据，也是一种提高检索准确度的不错的模式
+
