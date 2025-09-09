@@ -1,5 +1,9 @@
 # RAG工程
 
+## 参考文档
+
+[ALL in RAG](https://datawhalechina.github.io/all-in-rag/#/chapter2/05_text_chunking)
+
 ## 简介
 
 **RAG（Retrieval-Augmented Generation）** 又名检索增强生成，是一种将外部的知识输入给大模型，然后让大模型根据输入的知识来进行回答的工程
@@ -11,6 +15,8 @@
 - 生成：让LLM结合检索出的内容生成对话
 
 ## 加载与分块
+
+### 加载
 
 首先我们面临的问题就是如何将非结构化的文档解析为结果化的内容，这里我们选用Spring整合的[Apache Tika](https://tika.apache.org/)作为我们的工具
 
@@ -35,3 +41,7 @@ fun contextLoads() {
 ```
 
 最新版本中需要通过text来获取解析的文本，metadata是文件除了内容外的其他数据
+
+### 分块
+
+为了更好的检索效果和
