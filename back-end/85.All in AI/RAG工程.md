@@ -82,4 +82,24 @@ LangChain4j has a `DocumentSplitter` interface with several out-of-the-box imp
 
 从名字中我们不难看出他们的切分规则
 
+而Spring AI中则是提供了一个`TokenTextSplitter`作为切分器，他会尝试在合适的断点（句号、问号、感叹号或换行符）中进行切分
+
+```kotlin
+@Test  
+fun contextLoads() {  
+    val path="D:\\workspace\\study-demo\\rag-study\\src\\main\\resources\\Prompt.pdf"  
+    val resource = PathResource(path)  
+    val reader = TikaDocumentReader(resource)  
+    val documents = reader.get()  
+  
+    val splitter = TokenTextSplitter()  
+    val splitDocuments = splitter.apply(documents)  
+  
+    splitDocuments.forEach {  
+        println("chunk————${it.text}")  
+        println("Metadata————${it.metadata}")  
+    }  
+  
+}
+```
 
