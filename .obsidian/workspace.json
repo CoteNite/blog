@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/85.All in AI/RAG工程.md",
+                "file": "back-end/51.Spring/01.Spring——IOC&AOP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RAG工程"
+              "title": "01.Spring——IOC&AOP"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/85.All in AI/RAG工程.md",
+                "file": "back-end/51.Spring/01.Spring——IOC&AOP.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "RAG工程 的大纲"
+              "title": "01.Spring——IOC&AOP 的大纲"
             }
           }
         ],
@@ -174,8 +174,10 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "未命名.md",
+    "back-end/51.Spring/Spring常见错误.md",
+    "back-end/51.Spring/01.Spring——IOC&AOP.md",
     "back-end/85.All in AI/RAG工程.md",
+    "未命名.md",
     "back-end/84.后端杂谈/JPA or Jimmer？不同ORM对项目开发的影响？.md",
     "back-end/85.All in AI/0.前言.md",
     "back-end/82.协程与响应式编程/0.前言.md",
@@ -208,8 +210,6 @@
     "aboutMe/aboutMe.md",
     "om/常用命令行.md",
     "om/Shell脚本编写.md",
-    "om/Nginx——必备代理服务器.md",
-    "story/小说/李代桃僵/钟时悟.md",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
