@@ -66,6 +66,18 @@ fun contextLoads() {
 
 ### 分块策略
 
-目前Java生态中对文档的
+目前Java生态中对文档的切分没有像py那种完善的生态，大部分都是相对简单的切分方式
 
+以下是Langchain4j中对文档切分的接口分类
 
+LangChain4j has a `DocumentSplitter` interface with several out-of-the-box implementations:
+
+- `DocumentByParagraphSplitter`
+- `DocumentByLineSplitter`
+- `DocumentBySentenceSplitter`
+- `DocumentByWordSplitter`
+- `DocumentByCharacterSplitter`
+- `DocumentByRegexSplitter`
+- Recursive: `DocumentSplitters.recursive(...)`
+
+从名字中我们不难看出他们的qie'feng
