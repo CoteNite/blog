@@ -60,3 +60,31 @@ ScopedValue通过newInstance方法创建其实例，在获得其实例后，我�
 Scoped的含义是作用域，而这里的作用域指的则是实例的run方法，在run方法中接受的Runable代码中，ScopedValue实例的值将能够直接的被其get方法获取，同样的，出了run方法后，则无法使用设定的ScopedValue实例的值
 
 通过这种方法，ScopedValue强迫开发者在使用其时明确其有效的位置，进而完成了对ScopedValue的自动回收
+
+为了更好的实现chi'o
+
+```java
+void main() throws InterruptedException {  
+  
+    ScopedValue<String> CONTEXT = ScopedValue.newInstance();  
+  
+    ScopedValue.where(CONTEXT,"father").run(()->{  
+        System.out.println("this is "+CONTEXT.get());  
+        ScopedValue.where(CONTEXT,"son").run(()->{  
+            System.out.println("this is "+CONTEXT.get());  
+        });  
+        System.out.println("this is "+CONTEXT.get());  
+    });  
+  
+}
+```
+
+最后代码打印出来的结果是
+
+```text
+this is father
+this is son
+this is father
+```
+
+我们可以发现，在子线程中，ScopedValue的值仍然可以使用，而
