@@ -18,5 +18,8 @@ Project Amber主要涉及的是一些“小而美”的特性，他们以生产�
 
 本次更新中[JEP 512 紧凑源文件和实例主方法](https://openjdk.org/jeps/512)被确定了下来，这个JEP希望能够提供给Java初学者亦或是非Java开发者一个更加便捷的学习方式，同时这项JEP也**希望可以通过这次提案来简化Java开发小型程序的难度**（我认为这或许更有价值的一点）
 
+### Project Loom 相关
 
+Project Loom是Java针对新时代对协程的需求而创建的项目，旨在利用Java语言实现基于JVM的协程包，同时可以完美兼容老的线程模型
 
+Project Loom在JDK21中就已经登场，但由于其初次登场的原因，仍然存在一些bug/不好用的地方，其中最受大家关注的就是ThreadLocal在虚拟线程
