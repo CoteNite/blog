@@ -20,6 +20,7 @@ Project Amber主要涉及的是一些“小而美”的特性，他们以生产�
 
 ### Project Loom 相关
 
-Project Loom是Java针对新时代对协程的需求而创建的项目，旨在利用Java语言实现基于JVM的协程包，同时可以完美兼容老的线程模型
+Project Loom是Java针对新时代对协程的需求而创建的项目，旨在利用Java语言实现基于JVM的协程包（也就是围绕虚拟线程进行的包），同时可以完美兼容老的线程模型
 
-Project Loom在JDK21中就已经登场，但由于其初次登场的原因，仍然存在一些bug/不好用的地方，其中最受大家关注的就是ThreadLocal在虚拟线程
+Project Loom在JDK21中就已经登场，但由于其初次登场的原因，仍然存在一些bug/不好用的地方，其中最受大家关注的就是ThreadLocal在虚拟线程中的问题，而为了解决这些问题，[JEP 506，作用域值（Scoped Values）](https://openjdk.org/jeps/506)被提出，并于JDK25中正式引入到LTS版本中
+
