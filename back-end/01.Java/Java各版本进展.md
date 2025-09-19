@@ -38,7 +38,7 @@ public class ScopedValueService {
     private static final ScopedValue<String> CONTEXT = ScopedValue.newInstance();
 
     public void run(String str, Runnable runnable) {
-        where(CONTEXT, str).run(runnable);
+        ScopedValue.where(CONTEXT, str).run(runnable);
     }
 
     public void printContext() {
@@ -55,4 +55,8 @@ void main() throws InterruptedException {
 }
 ```
 
-ScopedValue
+ScopedValue通过newInstance方法创建其实例，在获得其实例后，我们需要在其静态方法`where`中对其进行赋值
+
+Scoped的含义是作用域，而这里的作用域指的则是实例的run方法，在run方法中接受的Runable代码中，ScopedValue实例的值将能够直接的被其get方法获取，同样的，出了run方法后，则无法使用设定的ScopedValue实例的值
+
+通过这种方法，ScopedValue强迫开发者在使用其时明确其有效的位置，进而完成了对ScopedValue的自动回收
