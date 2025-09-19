@@ -61,7 +61,7 @@ Scoped的含义是作用域，而这里的作用域指的则是实例的run方�
 
 通过这种方法，ScopedValue强迫开发者在使用其时明确其有效的位置，进而完成了对ScopedValue的自动回收
 
-为了更好的实现chi'o
+为了更好的实现重新绑定的功能，ScopedValue放弃了使用set方法，而是使用了更加复杂的where+run的方法，上面的内容可能看不出什么，但下面的例子可以很好的表明这个特性
 
 ```java
 void main() throws InterruptedException {  
@@ -87,4 +87,4 @@ this is son
 this is father
 ```
 
-我们可以发现，在子线程中，ScopedValue的值仍然可以使用，而
+我们可以发现，新的作用域中，同一个实例有了新的赋值，这就是ScopedValue对于ThreadLocal set方法提出的革命，即当你设定了新值后，你就属于在了一个新的作用域，新的作用域属于新的代码单元，其被包含在上一个作用域中，bei'shang'yi'ge
