@@ -28,6 +28,31 @@ Project Loom在JDK21中就已经登场，但由于其初次登场的原因，仍
 
 这些问题在过去使用线程实现并发模型的时代是可以接受的，因为线程的开辟本身就是一个相对困难/重量级的事情，这也就要求了开发者在使用多线程时已经有了足够的经验和开发水平
 
-但虚拟线程旨在为开发者提供一种更加轻量级，便捷的并发模型，这极大程度的降低了并发开发的难度，也就使得我们迫切的需要一个更加轻量级的并发局部变量模型，这也就是JEP 506中要实现的`Scoped Values`类
+但虚拟线程旨在为开发者提供一种更加轻量级，便捷的并发模型，这极大程度的降低了并发开发的难度，也就使得我们迫切的需要一个更加轻量级的并发局部变量模型，这也就是JEP 506中要实现的`ScopedValue`类
 
+我们先来看一段代码
 
+```java
+public class ScopedValueService {
+
+    private static final ScopedValue<String> CONTEXT = ScopedValue.newInstance();
+
+    public void run(String str, Runnable runnable) {
+        where(CONTEXT, str).run(runnable);
+    }
+
+    public void printContext() {
+        System.out.println(CONTEXT.get());
+    }
+}
+```
+
+```java
+//这里用到的是上面提到的简化main
+void main() throws InterruptedException {  
+    ScopedValueService scopedValueService=new ScopedValueService();  
+    scopedValueService.run("this is now Value", scopedValueService::printContext); 
+}
+```
+
+ScopedValue
