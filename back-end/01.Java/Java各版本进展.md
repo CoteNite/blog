@@ -93,4 +93,6 @@ this is father
 
 ### Project Leyden 相关
 
-Project Leyden 的目标是优化Java程序的启动时间，达到峰值的性能以及
+长期以来，Java受利JVM技术，使得“一次编译，到处运行”成为了一个时代的标志，除此之外基于JVM预编译的技术也成为了JVM生态中不可或缺的一部分。
+
+使得但是随着硬件水平的提升和时代的发展，JVM预编译的问题逐渐显露，Project Leyden 的目标是优化Java程序的启动时间，达到峰值的性能以及其占用的空间
