@@ -219,4 +219,53 @@ public class Employee extends Person{
 }
 ```
 
-但是这样不够灵活，JEP 513中提出一个例子，比如雇员的年龄都要超过18岁，这时如果你想要提前
+但是这样不够灵活，JEP 513中提出一个例子，比如雇员的年龄都要超过18岁，这时如果你想要对年龄进行校验，那么必须要在父类构造函数之后，但是如果校验结果失败，抛出异常，那么就代表之前对父类构造函数的调用是没必要的
+
+这是我们不想看到的情况
+
+除此之外，JEP 513中还举了这么一个例子
+
+```java
+class Person {
+
+    ...
+    int age;
+
+    void show() {
+        System.out.println("Age: " + this.age);
+    }
+
+    Person(..., int age) {
+        if (age < 0)
+            throw new IllegalArgumentException(...);
+        ...
+        this.age = age;
+        show();
+    }
+
+}
+
+class Employee extends Person {
+
+    String officeID;
+
+    @Override
+    void show() {
+        System.out.println("Age: " + this.age);
+        System.out.println("Office: " + this.officeID);
+    }
+
+    Employee(..., int age, String officeID) {
+        super(..., age);        // Potentially unnecessary work
+        if (age < 18  || age > 67)
+            throw new IllegalArgumentException(...);
+        this.officeID = officeID;
+    }
+
+}
+```
+
+这个代码的结果是什么？你可能希望是 `Age: 42` ，或许还有 `Office: CAM-FORA` ，但实际上它打印 `Age: 42` ， `Office: null` ，这是因为父类的构造函数全部都发生于officeID的赋值之前，但是父类调用函数时却可以调用到子类被重写的函数，因此就会出现这个令人意外的结果，在《Effective Java》第19条中也明确的提到“不要再构造函数中调用可以被重写的函数”。
+
+总而言之，老的构造方法模型是不安全且不灵活的，因此我们必须要求一种新的构造方法模型
+
