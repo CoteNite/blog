@@ -175,7 +175,7 @@ import module java.base;
 import com.a.Date; 
 
 public class Main{
-	public static String main(String args[]){
+	public static void main(String args[]){
 		com.b.Date date=new Date(); //如果要引入同名类
 	}
 }
@@ -188,7 +188,7 @@ import moudle com.a;//假设A所属的模块
 import com.b.Date;
 
 public class Main{
-	public static String main(String args[]){
+	public static void main(String args[]){
 		Date date=new Date(); //会使用import com.b.Date
 	}
 }
@@ -330,7 +330,10 @@ class Employee extends Person {
 
 现在打印的结果就是`Age: 42,officelID: xxx` 因为我们已经提前的将OfficialID注入到了子类中
 
-==**除此之外还有一些值得关注的在Java21——Java24中加入的稳定JEP**==
-### [JEP 485 留收集器](https://openjdk.org/jeps/485)
+::: warning 注意
+**除此之外还有一些值得关注的在Java21——Java24中已经完成与交付，可以作为正规语法的JEP**
+:::
 
-流收集器于JDK24中加入，是一个已经closed的JEP，
+### [JEP 485 流收集器](https://openjdk.org/jeps/485)
+
+
