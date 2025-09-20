@@ -336,4 +336,6 @@ class Employee extends Person {
 
 ### [JEP 485 流收集器](https://openjdk.org/jeps/485)
 
-JEP 485 对老的Stream API进行升级，希望让开发者能够享受到更加便捷的Stream
+JEP 485 对老的Stream API进行升级，希望让开发者能够享受到更加便捷的Stream。
+
+在老的Stream流中存在一个问题，那就是我们的处理方法基本都是1-0..1的形式，然而实际业务中经常会出现n-m的x
