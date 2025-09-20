@@ -327,3 +327,10 @@ class Employee extends Person {
 
 }
 ```
+
+现在打印的结果就是`Age: 42,officelID: xxx` 因为我们已经提前的将OfficialID注入到了子类中
+
+==**除此之外还有一些值得关注的在Java21——Java24中加入的稳定JEP**==
+### [JEP 485 留收集器](https://openjdk.org/jeps/485)
+
+流收集器于JDK24中加入，是一个已经closed的JEP，
