@@ -149,4 +149,28 @@ JEP 515指出，HotSpot在JIT的过程中会尝试寻找热点方法，并尝试
 import java.util.*
 ```
 
-而在Java 9之后，模块化定义模式允许将一系列高度相关的包定义为一个模块（module），一个标准的module中包含的包应该gong
+而在Java 9之后，模块化定义模式允许将一系列高度相关的包定义为一个模块（module），一个标准的module中包含的包应该高度内聚，围绕着一个功能前进
+
+比如现在我们要同时使用 `List` 、 `Map` 、 `Stream` 和 `Path`这几个类，老的写法是引入
+
+```java
+import java.util.*;
+import java.util.stream.*;
+import java.nio.file.*;
+```
+
+而这些包在Java 9中已经被归属到 java.base模块中
+
+因此JDK提供了一种新的导入模式
+
+```java
+import module java.base;
+```
+
+同时新的导入模式还解决了歧义的问题
+
+lao'de
+
+```java
+
+```
