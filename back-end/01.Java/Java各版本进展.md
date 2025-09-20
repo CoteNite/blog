@@ -101,4 +101,4 @@ this is father
 
 #### [JEP 515 提前编译方法分析](https://openjdk.org/jeps/515)
 
-JEP 515 希望通过HotSpot JVBM
+JEP 515 指出，HotSpot
