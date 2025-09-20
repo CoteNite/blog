@@ -376,5 +376,42 @@ JEP 456 明确的指出开发人员有时会声明一些他们不打算使用的
 
 那么在这种情况下，语法上提供一种好的方式来让用户不给这个无用的变量命名，或许能够在一定程度上减少变量的错误使用以及起名带来的负担
 
+现在，如果一个变量不被后续的代码块使用，但其必须要声明，可以使用_（单下划线）来进行代表
+
+案例：
+
+```java
+sealed interface Ball permits RedBall, BlueBall, GreenBall {}
+
+final class RedBall implements Ball {}
+final class BlueBall implements Ball {}
+final class GreenBall implements Ball {}
+
+record Box(Ball ball) {}
 
 
+public class MultiPatternSwitchExample {
+    static void main() {
+        int x = 42;
+        Box box = new Box(new RedBall());
+
+        switch (box) {
+            // 多模式 case，两个模式共用一个右侧
+            case Box(RedBall _), Box(BlueBall _) when x == 42 ->
+                    System.out.println("Processing red or blue box when x == 42");
+
+            case Box(GreenBall _) ->
+                    System.out.println("Stop processing green box");
+
+            case Box(var _) ->
+                    System.out.println("Pick another box");
+
+            default ->
+                    System.out.println("Unknown box");
+        }
+    }
+}
+
+```
+
+这里我们的冰封类只用作表示一个状态（这在MVI中十分常见）
