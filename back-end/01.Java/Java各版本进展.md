@@ -149,3 +149,4 @@ JEP 515指出，HotSpot在JIT的过程中会尝试寻找热点方法，并尝试
 import java.util.*
 ```
 
+而在Java 9之后，模块化定义模式允许将一系列高度相关的包定义为一个模块（module），一个标准的module中包含的包应该gong
