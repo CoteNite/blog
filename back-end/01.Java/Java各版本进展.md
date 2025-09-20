@@ -193,3 +193,30 @@ public class Main{
 	}
 }
 ```
+
+### [JEP 513 灵活的构造函数](https://openjdk.org/jeps/513)
+
+再老的Java程序中（<JDK22），子类的构造函数强制要求父类的构造函数必须在其构造函数的第一行，也就是类似
+
+```java
+public class Person {  
+  
+    private String name;  
+    private int age;  
+  
+    public Person(String name, int age) {  
+        this.name = name;  
+        this.age = age;  
+    }  
+}
+
+public class Employee extends Person{  
+  
+    public Employee(String name, int age) {  
+        super(name, age);  
+        //剩余的代码
+    }  
+}
+```
+
+但是这样不够灵活，JEP 513中提出一个例子，比如雇员的年龄都要超过18岁，这时如果你想要提前
