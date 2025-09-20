@@ -348,4 +348,25 @@ JEP 485 对老的Stream API进行升级，希望让开发者能够享受到更�
 | `scan`          | 一对一 | 将该元素和其前一个元素进行函数操作，返回一个操作结果，两个入参与上方一样                                                      | 前缀和、累积乘积、费式数列 |
 | `mapConcurrent` | 一对一 | 并发的对每一个元素执行lambda的内容，两个参数分别为并发数的上限和要执行的并发lambda                                           | 下载、读档、图片运算    |
 | `windowFixed`   | 多对多 | 将指定个数的元素转化为一个List，从上一个list的最后以一个值截断（即所有List应该不含相同元素），当元素不够时则返回一个不够指定个数大小的元素，入参为指定个数的大小    | 批次处理、缓冲区读取    |
-| `windowSliding` | 多对多 | 将指定个数的元素转化为一个List，但                                                                       | 移动平均、局部最大值    |
+| `windowSliding` | 多对多 | 将指定个数的元素转化为一个List，但每次只从第一个使用的元素那里截断，直到List中包含最后一个元素，入参为指定个数的大小                            | 移动平均、局部最大值    |
+
+`windowFixed`和windowSliding区别的参考代码：
+
+```java
+System.out.println(Stream.of(1, 2, 3, 4,5,6,7)  
+        .gather(Gatherers.windowFixed(5))  
+        .toList()); 
+//结果为[[1, 2, 3, 4, 5], [6, 7]]
+```
+
+```java
+System.out.println(Stream.of(1, 2, 3, 4,5,6,7)  
+        .gather(Gatherers.windowSliding(5))  
+        .toList()); 
+//结果为[[1, 2, 3, 4, 5], [2, 3, 4, 5, 6], [3, 4, 5, 6, 7]]
+```
+
+### [JEP 467 MarkDown格式的JavaDoc](https://openjdk.org/jeps/467)
+
+现在JavaDoc 支持MarkDown格式了👏👏👏
+
