@@ -99,6 +99,8 @@ this is father
 
 在JDK 25中，JEP 515和JEP 514正式上线， 他们都理智与提供更好的编译过程与编译方式
 
+在了解`JEP 515`和`JEP 514`之前，我们有必要提前了解以下他们基于的li
+
 #### [JEP 515 提前编译方法分析](https://openjdk.org/jeps/515)
 
 JEP 515 指出，HotSpot
