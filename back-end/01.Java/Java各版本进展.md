@@ -97,4 +97,8 @@ this is father
 
 然而随着硬件水平的提升和时代的发展，JVM预编译的问题逐渐显露，尤其是在云原生时代，我们渴望Java能够减少其对于内存的高需求和较慢的编译时间，而Project Leyden就是为了解决这个问题而诞生的，Project Leyden 的目标是优化Java程序的启动时间，达到峰值的性能以及其占用的空间
 
-在JDK 25中，
+在JDK 25中，JEP 515和JEP 514正式上线， 他们都理智与提供更好的编译过程与编译方式
+
+#### [JEP 515 提前编译方法分析](https://openjdk.org/jeps/515)
+
+JEP 515 希望通过HotSpot JVBM
