@@ -269,3 +269,61 @@ class Employee extends Person {
 
 总而言之，老的构造方法模型是不安全且不灵活的，因此我们必须要求一种新的构造方法模型
 
+这也就是JEP513提出的新构造方法
+
+现在我们允许在父类的构造方法前书写代码了，我们可以将父类构造方法前的代码称为前言，父类构造方法后的代码称呼为结尾
+
+那么现在就是这样样子
+
+```java
+class Employee extends Person {
+
+    String officeID;
+
+    @Override
+    void show() {
+        System.out.println("Age: " + this.age);
+        System.out.println("Office: " + this.officeID);
+    }
+
+    Employee(..., int age, String officeID) {
+        //前言
+        super(..., age);
+        //结尾
+    }
+
+}
+```
+
+而新的模型的创建方式如下
+
+```text
+Person 前言
+    --> Employee 前言
+        --> Object 对象的构造方法
+    --> Employee 结尾
+Person 结尾
+```
+
+这样的写法可以避免上述我们提到的重写问题，我们现在只需要这样书写我们的构造函数
+
+```java
+class Employee extends Person {
+
+    String officeID;
+
+    @Override
+    void show() {
+        System.out.println("Age: " + this.age);
+        System.out.println("Office: " + this.officeID);
+    }
+
+    Employee(..., int age, String officeID) {
+       if (age < 18  || age > 67)
+            throw new IllegalArgumentException(...);
+        this.officeID = officeID;
+        super(..., age);        // Potentially unnecessary work
+    }
+
+}
+```
