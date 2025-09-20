@@ -167,10 +167,29 @@ import java.nio.file.*;
 import module java.base;
 ```
 
-同时新的导入模式还解决了歧义的问题
+**同时新的导入模式还解决了歧义的问题**
 
-lao'de
+老的导入
 
 ```java
+import com.a.Date; 
 
+public class Main{
+	public static String main(String args[]){
+		com.b.Date date=new Date(); //如果要引入同名类
+	}
+}
+```
+
+但现在你只需要类似这样的写法
+
+```java
+import moudle com.a;//假设A所属的模块
+import com.b.Date;
+
+public class Main{
+	public static String main(String args[]){
+		Date date=new Date(); //会使用import com.b.Date
+	}
+}
 ```
