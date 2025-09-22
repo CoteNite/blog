@@ -418,3 +418,10 @@ public class MultiPatternSwitchExample {
 
 这里还出现了JEP 456对case的修改，JEP456允许case对应多个情况，同时允许在最尾部指定一个判断表达式，用来进行在case满足时的补充判断（官方称之为guard/守卫表达式）
 
+###  [JEP 491 可用于虚拟线程的Synchronize](https://openjdk.org/jeps/491)
+
+在虚拟线程出现后，开发者们发现虚拟线程无法正常与synchronize关键字一同使用，这是因为synchronize关键字是基于平台线程的monitor（监视器）实现的，而虚拟线程则是共享平台线程。
+
+我们可以参考这样一个情景：
+
+现在平台有一个synchronize关键字上锁的虚拟线程代码
