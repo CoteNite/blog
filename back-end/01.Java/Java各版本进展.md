@@ -418,7 +418,7 @@ public class MultiPatternSwitchExample {
 
 这里还出现了JEP 456对case的修改，JEP456允许case对应多个情况，同时允许在最尾部指定一个判断表达式，用来进行在case满足时的补充判断（官方称之为guard/守卫表达式）
 
-###  [JEP 491 可用于虚拟线程的Synchronize](https://openjdk.org/jeps/491)
+###  [JEP 491 可用于虚拟线程的synchronize](https://openjdk.org/jeps/491)
 
 在虚拟线程出现后，开发者们发现虚拟线程无法正常与synchronize关键字一同使用，这是因为synchronize关键字是基于平台线程的monitor（监视器）实现的，而虚拟线程则是共享平台线程。
 
@@ -434,5 +434,9 @@ public class MultiPatternSwitchExample {
 
 取而代之的解决方案是推荐我们使用[`java.util.concurrent 锁API`](https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/concurrent/locks/package-summary.html)，这个API不会锁定虚拟线程，但是这又违背了Java synchronize 的“简化锁”的想法，同时同样的功能（为并发代码上锁）却因为由于线程或是虚拟线程的区别就要使用不同的API进行解决，这也是不合理的
 
-因此JEP 491特地对synchronize的实现做出了修改，现在虚拟线程的锁不再ji
+因此JEP 491特地对synchronize的实现做出了修改，现在虚拟线程的锁不再基于平台线程的monitor（监视器实现），虚拟线程可以自行持有和释放锁，这样也就避免了synchronize的bug
+
+由于JEP 491的实现，JDK现在推荐我们在没有特殊情况下优先使用synchronize关键字对代码块上锁（就如同平台线程并发一样），这样减小了使用虚拟线程带来的心智压力
+
+
 
