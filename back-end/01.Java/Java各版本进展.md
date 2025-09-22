@@ -430,4 +430,9 @@ public class MultiPatternSwitchExample {
 
 由于我们的synchronize是与平台线程绑定的，所以这个时候，新的虚拟线程是拥有锁的，这就导致了这个虚拟线程可以执行之前被上锁的代码
 
-这种情况是不被允许的，早期的Project Loom的解决方案是不允许虚拟线程在执行synchronize代码块的时候被挂起，但这在一定程度上失去了虚拟线程的
+这种情况是不被允许的，早期的Project Loom的解决方案是不允许虚拟线程在执行synchronize代码块的时候被挂起（或者说是虚拟线程被锁定（pin）在了平台线程上），但这在一定程度上违背了虚拟线程的本意（毕竟无法被挂起的协程还叫什么协程呢）
+
+取而代之的解决方案是推荐我们使用[`java.util.concurrent 锁API`](https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/concurrent/locks/package-summary.html)，这个API不会锁定虚拟线程，但是这又违背了Java synchronize 的“简化锁”的想法，同时同样的功能（为并发代码上锁）却因为由于线程或是虚拟线程的区别就要使用不同的API进行解决，这也是不合理的
+
+因此JEP 491特地对synchronize的实现做出了修改，现在虚拟线程的锁不再ji
+
