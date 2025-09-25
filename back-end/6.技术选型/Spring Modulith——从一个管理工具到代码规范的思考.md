@@ -104,4 +104,8 @@ data class Purchase(
 )
 ```
 
-这是一个订单业务的聚合根，其中purchases是一个zhi'dui
+这是一个订单业务的聚合根，其中purchases是一个值对象（VO/Value Object），表示订单上的商品
+
+在老的架构中这几乎不可能出现，因为purchases: Set< Purchase >无法被数据库直接映射，这也就使其无法成为代码的中心，顶多可能会以一个DTO/Request/VO（View Object）类的形式出现，用于承载前端或是中间转载的数据
+
+然而实际上，如果我们只考虑业务，我们会发现这样的一个对象其实才更加合理，因为我们业务中的订单就是和我们的Order对象一致的，有id，用户名，购买的商品，以及购买的时间
