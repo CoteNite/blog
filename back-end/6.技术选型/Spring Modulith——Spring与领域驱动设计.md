@@ -16,6 +16,8 @@ Spring Modulith 会自动的帮我们对包进行管理，它默认与启动类�
 
 同样的，我定义了一个repository包，这个包用于来存放我们的仓储类，由于仓储和我们的具体业务无关，只是单纯的为了存放数据到不同的数据库中，因此也单独被设置为一个模块，我们任何模块的cmd类都可以使用并且调用他
 
+## 访问问题
+
 此时就会引入一个新的问题——如果存在多个数据库的问题
 
 ![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20250925210117.png)
@@ -24,14 +26,25 @@ Spring Modulith 会自动的帮我们对包进行管理，它默认与启动类�
 
 为了解决这个问题Spring Modulith提供了两种解决方案
 
-**使用命名接口**
+### 命名接口
 
 ```kotlin
 @NamedInterface("redisRepository")  
 @PackageInfo
-@Repository  
 class RedisRepository {  
 }
 ```
 
-我们可以使用@NamedInterface+@PackageInfo注解为这个类提供一个名字，在这种情况下，这个类tong'yu'i
+我们可以使用@NamedInterface+@PackageInfo注解为这个类提供一个名字，在这种情况下，这个类同一个包下的所有类均可被外界访问
+
+### 开放模块
+
+```kotlin
+@ApplicationModule(type = Type.OPEN)
+@PackageInfo
+class MoudleMeta {
+
+}
+```
+
+或者也可以像这样，在模块（也就是和启动类同一目录下的包）中放入一个这样的类，这也就表明1了这个模块是开放的，他下面的类可以被其他的模块自由的访问
