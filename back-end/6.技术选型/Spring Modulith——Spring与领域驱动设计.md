@@ -10,3 +10,8 @@ Spring Modulith 是 Spring 公司出品的，用于帮助开发者更好的实�
 
 Spring Modulith 会自动的帮我们对包进行管理，它默认与启动类相同目录的包是一个模块，且只有模块中最外层的类可以被其他模块调用
 
+![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20250925205237.png)
+
+像这个代码分层中，只有最外层的Order，Product 可以被别的模块调用，这也是我们的聚合根，用来处理业务问题
+
+同样的，我定义了一个repository包，这个包用于来存放我们的仓储类，由于仓储和我们的具体业务无关，只是单纯的为了存放数据到不同的数据库中，因此也单独被设置we
