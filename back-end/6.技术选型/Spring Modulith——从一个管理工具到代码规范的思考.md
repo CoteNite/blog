@@ -112,3 +112,18 @@ data class Purchase(
 
 我们是如何构建出这样的聚合根的呢？实际上很简单，只是因为我们没有考虑数据库映射的难度，只是单纯的从业务出发（当然，真正的业务中一个聚合根的出现需要复杂的建模）
 
+然后，我们就会很自然的发现，好像大部分订单相关的代码都只需要在Order这个聚合根中完成（比如计算订单总价，添加或者减少商品）
+
+因此这个聚合根就会变成充血的
+
+```kotlin
+data class Order(  
+    val id: Int,  
+    val userName: String,  
+    val purchases: Set<Purchase>,  
+    val createTime: LocalDateTime  
+){
+
+}
+```
+
