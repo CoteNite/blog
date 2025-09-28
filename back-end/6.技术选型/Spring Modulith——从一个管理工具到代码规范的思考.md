@@ -53,7 +53,7 @@ class MoudleMeta {
 
 在老的代码中，我们的业务逻辑可能大量的存在与一个Service类中，所有的业务都由Service和Service之间的互相调用完成，而数据类只是承载数据的贫血模型，其除了承载数据之外没有任何意义
 
-除此之外还有在Service中大量的使用mp提供的查询构造器，而舍弃掉使用Repository，这实际上是将Repository的任务变相的交给了Service来处理，而所谓的Dao变成了一个用于作为代码于数据库访问的”大门“（一个很薄弱的，没有什么作用的门），提供几个访问数据库的api，而具体访问后的操作（大部分都是构建SQL）却被强制安排在了Service中
+除此之外还有在Service中大量的使用mp提供的查询构造器，而舍弃掉使用Repository，这实际上是将Repository（实际上并不是真正意义上的Repository，因为没有涉及聚合根的构建，只是单纯的将数据库表映射为Java Bean）的任务变相的交给了Service来处理，而所谓的Dao变成了一个用于作为代码于数据库访问的”大门“（一个很薄弱的，没有什么作用的门），提供几个访问数据库的api，而具体访问后的操作（大部分都是构建SQL）却被强制安排在了Service中
 
 而在Spring Modulith的要求下，我们强制的只能把少量的类放在模块根目录（比如我们的聚合根），这就要求我们把代码都集中在聚合根中(当然，你也可以把传统意义上的Service类或者更多的类放在根目录，但这也就失去了我们模块化的意义)
 
@@ -88,25 +88,23 @@ class MoudleMeta {
 这里我来展示一下我写的一个简单的聚合根
 
 ```kotlin
-data class Order(  
-    val id: Int,  
-    val userName: String,  
-    val purchases: Set<Purchase>,  
-    val createTime: LocalDateTime  
+data class Order(
+    val id: Int,
+    val user: String,
+    val purchases: MutableMap<Int,Purchase>,
+    val createTime: LocalDateTime
 )
 
-data class Purchase(  
-    val productId: Int,  
-    val productName: String,  
-    val singlePrice: Double,  
-    val sumPrice: Double,  
-    val number: Int  
+data class Purchase(
+    val productName: String,
+    val singlePrice: Double,
+    val number: Int
 )
 ```
 
 这是一个订单业务的聚合根，其中purchases是一个值对象（VO/Value Object），表示订单上的商品
 
-在老的架构中这几乎不可能出现，因为purchases: Set< Purchase >无法被数据库直接映射，这也就使其无法成为代码的中心，顶多可能会以一个DTO/Request/VO（View Object）类的形式出现，用于承载前端或是中间转载的数据
+在老的架构中这几乎不可能出现，因为purchases: MutableMap<Int,Purchase >无法被数据库直接映射，这也就使其无法成为代码的中心，顶多可能会以一个DTO/Request/VO（View Object）类的形式出现，用于承载前端或是中间转载的数据
 
 然而实际上，如果我们只考虑业务，我们会发现这样的一个对象其实才更加合理，因为我们业务中的订单就是和我们的Order对象一致的，有id，用户名，购买的商品，以及购买的时间，很自然的与业务相对应，也不用做额外的转换
 
@@ -117,13 +115,28 @@ data class Purchase(
 因此这个聚合根就会变成充血的
 
 ```kotlin
-data class Order(  
-    val id: Int,  
-    val userName: String,  
-    val purchases: Set<Purchase>,  
-    val createTime: LocalDateTime  
+data class Order(
+    val id: Int,
+    val user: String,
+    val purchases: MutableMap<Int,Purchase>,
+    val createTime: LocalDateTime
 ){
 
+    fun getTotalPrice()= purchases.entries.sumOf { it.value.singlePrice*it.value.number }
+
+    fun getTotalNumber(id: Int)= purchases.remove(id)
+
+    fun addPurchase(id:Int,purchase: Purchase)=purchases.put(id, purchase)
+
 }
+
+data class Purchase(
+    val productName: String,
+    val singlePrice: Double,
+    val number: Int
+)
 ```
 
+我们的业务直接在聚合根中完成，而Cmd类只需要构建聚合根（手动创建或者使用Repository获取）并使用其类即可
+
+这样我们的代码就被高度复用在了聚合根中，并且对数据库相关的操作被屏蔽在了核心代码之外，这也就使得我们获得了更加高质量的代码
