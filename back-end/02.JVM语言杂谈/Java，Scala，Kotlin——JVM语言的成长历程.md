@@ -58,4 +58,8 @@ Kotlin 从一开始就带着“让开发更简单、更愉快”的目标，它�
 
 如今，Kotlin 已成为 Android 与 Spring 官方推荐语言之一，他仍然准守着“简洁、高效、可维护”的承诺，也让人们看到了——Java 的精神，正在以新的形式继续延伸。
 
+## 更好的面向对象
 
+我们都知道，Java，Scala，Kotlin，都是面向对象的语言，但是Java却由于时代原因保留了八种基本类型——byte short int long float double boolean char
+
+这是Java相对保守的一面，但是在后面的实践体验中，开发者们逐渐意识到这几个基本类型是不必要的，基本类型想要使用方法必须jie'you
