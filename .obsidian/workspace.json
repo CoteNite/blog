@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/02.JVM语言杂谈/Java，Kotlin，Scala——JVM语言的成长历程.md",
+                "file": "back-end/02.JVM语言杂谈/Java，Scala，Kotlin——JVM语言的成长历程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java，Kotlin，Scala——JVM语言的成长历程"
+              "title": "Java，Scala，Kotlin——JVM语言的成长历程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/02.JVM语言杂谈/Java，Kotlin，Scala——JVM语言的成长历程.md",
+                "file": "back-end/02.JVM语言杂谈/Java，Scala，Kotlin——JVM语言的成长历程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java，Kotlin，Scala——JVM语言的成长历程 的大纲"
+              "title": "Java，Scala，Kotlin——JVM语言的成长历程 的大纲"
             }
           }
         ],
@@ -175,7 +175,7 @@
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
     "back-end/01.Java/Java各版本进展.md",
-    "back-end/02.JVM语言杂谈/Java，Kotlin，Scala——JVM语言的成长历程.md",
+    "back-end/02.JVM语言杂谈/Java，Scala，Kotlin——JVM语言的成长历程.md",
     "back-end/02.JVM语言杂谈",
     "back-end/6.技术选型/Spring Modulith——从一个管理工具到代码规范的思考.md",
     "back-end/7.DDD/0.前言.md",
