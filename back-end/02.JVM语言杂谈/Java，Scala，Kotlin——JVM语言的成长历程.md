@@ -102,3 +102,24 @@ a=3 // 产生报错
 
 同时，对于不可变的要求还符合函数式编程的思想，即尽可能的减少副作用，当你要对一个类做出修改时，做好的方法就是返回这个类的一个复制品，而不是直接修改这个类并将这个类返回，这也就是为什么Kotlin和Scala中都会引入一个copy方法。
 
+```kotlin
+fun main() {  
+    val person = Person("CoteNite", 21)  
+    val oldPerson = person.copy(age = 20)  
+}  
+  
+data class Person(  
+    val name: String,  
+    val age:Int   
+)
+```
+
+```scala
+@main def main(): Unit = {  
+  val person = Person("CoteNite", 20)  
+  val personOld = person.copy(name = "Old CoteNite")  
+}  
+  
+case class Person(name: String,age:Int)
+```
+
