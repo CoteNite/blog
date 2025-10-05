@@ -211,8 +211,23 @@ Java中的语句类似于C/C++语言（statement-based），这是因为在Java�
 
 我们可以看出判断语句是自带返回值的，返回值可以直接写在代码块的最后一行，表示其作为返回值
 
-这也是为什么Scala中没有三目表达式的原因，因为不需要，你可以使用if-else语句hen'zi'ra
+这也是为什么Scala中没有三目表达式的原因，因为不需要，你可以使用if-else语句很自然的写出三目表达式
 
+```scala
+val a=true
+val b=if(a) 1 else 2
+```
+
+#### 循环语句
+
+for语句基于一个可以被遍历的接口
+
+```scala
+val ints=List(1,2,3)
+for(item <- ints){
+	println(item)
+}
+```
 
 
 ## 类似Builder的传参形式
