@@ -177,10 +177,15 @@ Trait和接口最大的区别是Java早期接口不可以有字段参数和方�
 
 case class是Scala在语言层面提供的解决方案，它自带比较（equals的作用），复制（copy方法）和toString方法
 
-同样的，Kotlin你可以创建的类是
+同样的，Kotlin你可以创建的类是：类，接口，数据类，枚举类，注解，对象（其实就是单例，IDEA中用的是用来定义单例类的关键字的object的直译）
 
+其中data class就类似Scala中的case class 而接口则类似Trait，但是由于Kotlin正式版发布的时候Java正式版（Java 8/9）中已经引入了很多Scala中Trait的思想，所以这里仍然使用的接口作为名字
 
+从Scala和Kotlin的创建中我们不难发现，他们都渴望一种更加方便于开发者的类：
 
+- 接口 == 一些特性的体验，进而减少abstract class的使用
+- 数据类在语言层面的实现，排除Lombok这种外界包对语言的影响
+- 
 
 
 ## 类似Builder的传参形式
