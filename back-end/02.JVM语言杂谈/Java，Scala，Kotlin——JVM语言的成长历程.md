@@ -444,7 +444,9 @@ def pattern(x: Matchable): String = x match {
 
 ### Kotlin
 
-Kotlin在设计上很大程度的吸取了Scala的经验
+Kotlin在设计上很大程度的吸取了Scala的经验，但是去掉了一些过于繁重的功能
+
+
 
 ## 类似Builder的传参形式
 
