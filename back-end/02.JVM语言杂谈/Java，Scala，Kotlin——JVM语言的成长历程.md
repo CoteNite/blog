@@ -446,6 +446,10 @@ def pattern(x: Matchable): String = x match {
 
 Kotlin在设计上很大程度的吸取了Scala的经验，但是去掉了一些过于繁重的功能
 
+#### 判断语句
+
+与Scala类似，Kotlin的判断语句也是表达式的形式，因此你也可以这样写
+
 
 
 ## 类似Builder的传参形式
