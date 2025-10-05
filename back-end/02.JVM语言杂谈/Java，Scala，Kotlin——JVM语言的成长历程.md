@@ -323,10 +323,40 @@ val str = i match {
   case 4 => "Thursday"
   case 5 => "Friday"
   case 6 => "Saturday"
-  case _ => "invalid day"   // 除了上述外的其他值
+  case _ => "invalid day"   // 除了上述外的其他值,default语句必须在最后一行，且default语句一旦出现则后面的语句无法抵达
 }
 ```
 
+然后就是对于缺省值的使用 
+
+```scala
+val item =1 
+val str = i match {
+  case 0 => "Sunday"
+  case 1 => "Monday"
+  case 2 => "Tuesday"
+  case 3 => "Wednesday"
+  case 4 => "Thursday"
+  case 5 => "Friday"
+  case 6 => "Saturday"
+  case what => s"this is $what"   // 除了上述外的其他值
+}
+```
+
+但是值得注意的是，缺省值必须使用小写字母开头的变量定义，这就造成了缺省值和变量的冲突，因此Scala中强制如果要在match语句中引入外界变量，则要使用大写字母开头的变量
+
+```scala
+val N = 42
+val n=42
+i match {
+  case 0 => println("1")
+  case 1 => println("2")
+  case N => println("42")  //会匹配到这里
+  case n => println(s"You gave me: $n" )
+}
+```
+
+当然，模式匹配也是支持守卫的
 
 
 
