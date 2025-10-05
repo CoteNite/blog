@@ -231,15 +231,37 @@ for(item <- ints){
 
 其中 i <- ints 这一部分被称之为生成器，故名思意就是用来产生item这个元素的
 
-Scala对for语句的表达式实现采用的是 `yield` 关键字
+由于for表达式的特殊性（你无法很明确的得知返回值的具体类型及数量），Scala没有直接将for表达式化，而是采用 `yield` 关键字来实现for的表达式
 
 ```scala
 val ints=List(1,2,3)
-val list=for(item <- ints)yiled{
+val list=for(item <- ints)yield{
 	item
 }
 ```
 
+与判断语句if一样，代码块的最后一行就是返回值，最后返回值会是一个列表
+
+**除此之外就是Scala for的两个强大的语法了——守卫和多生成器**
+
+我们先来看一下守卫，其实就是C语言中for对i判断的写法的增强
+
+```scala
+val list = for (  
+  item <- ints  
+  if item > 1  
+) yield {  
+  item  
+}
+```
+
+守卫的作用就是对生成器中产生的数据进行一个判断
+
+再然后是多生成器
+
+```scala
+
+```
 
 ## 类似Builder的传参形式
 
