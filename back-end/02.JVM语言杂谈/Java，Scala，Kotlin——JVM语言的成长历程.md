@@ -220,12 +220,23 @@ val b=if(a) 1 else 2
 
 #### 循环语句
 
-for语句基于一个可以被遍历的接口
+for语句基于一个可以被遍历的类实例
 
 ```scala
 val ints=List(1,2,3)
 for(item <- ints){
 	println(item)
+}
+```
+
+其中 i <- ints 这一部分被称之为生成器，故名思意就是用来产生item这个元素的
+
+Scala对for语句的表达式实现采用的是 `yield` 关键字
+
+```scala
+val ints=List(1,2,3)
+val list=for(item <- ints)yiled{
+	item
 }
 ```
 
