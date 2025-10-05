@@ -160,3 +160,20 @@ case class Person(name: String,age:Int)
 ```
 
 除此之外，你还可以通过为参数设置默认值的方式来决定其是否必须被传入
+
+```scala
+@main def hello(): Unit = {
+  test(value="hello")
+  test(value="hello", value2="world")
+}
+
+def test(value:String,value2:String=""): Unit = {
+  println(s"$value $value2")
+}
+```
+
+## 更好的单例
+
+单例模式是一种很优秀的设计模式，我们会经常使用单例模式来实现一些工具类
+
+在Java中，你要实现单例模式是有些困难的，因此Scala和Kotlin内置了单例模式
