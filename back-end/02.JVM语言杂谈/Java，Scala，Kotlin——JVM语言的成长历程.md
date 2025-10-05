@@ -241,6 +241,16 @@ val list=for(item <- ints)yield{
 
 与判断语句if一样，代码块的最后一行就是返回值，最后返回值会是一个列表
 
+你也可以获取带下标的循环
+
+```scala
+val myList = List("A", "B", "C", "D")
+
+for ((element, index) <- myList.zipWithIndex) {
+  println(s"索引: $index, 元素: $element")
+}
+```
+
 **除此之外就是Scala for的两个强大的语法了——守卫和多生成器**
 
 我们先来看一下守卫，其实就是C语言中for对i判断的写法的增强
@@ -463,6 +473,28 @@ val a= if(i==1) 1 else 2
 val list=mutableListOf(1,2,3)  
 for(item in list){  
     println(item)  
+}
+```
+
+如果你想要下标可以使用 `withIndex` 方法
+
+```kotlin
+val list=mutableListOf(1,2,3)
+    for((index,item) in list.withIndex()){
+        println("$index - $item")
+    }
+```
+
+当然也少不了Map
+
+```kotlin
+val list=mutableMapOf(
+        1 to "one",
+        2 to "two",
+        3 to "three"
+)
+for((index,item) in list){
+	println("$index - $item")
 }
 ```
 
