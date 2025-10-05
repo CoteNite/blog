@@ -311,7 +311,25 @@ for((num, str)<-  map){
 
 #### 匹配结构
 
-类似Java的switch Scalaye'you
+类似Java的switch Scala也有自己的匹配结构——match，他功能更加强大
+
+```scala
+val item =1 
+val str = i match {
+  case 0 => "Sunday"
+  case 1 => "Monday"
+  case 2 => "Tuesday"
+  case 3 => "Wednesday"
+  case 4 => "Thursday"
+  case 5 => "Friday"
+  case 6 => "Saturday"
+  case _ => "invalid day"   // 除了上述外的其他值
+}
+```
+
+
+
+
 
 ## 类似Builder的传参形式
 
