@@ -399,7 +399,7 @@ i match{
 }
 ```
 
-最后就是Scala的逆天match功能了，这里就简单的复制一下Scala Book中的内容
+最后就是Scala match的逆天功能性了，这里就简单的复制一下Scala Book中的内容
 
 ```scala
 def pattern(x: Matchable): String = x match {
@@ -440,6 +440,7 @@ def pattern(x: Matchable): String = x match {
 
 ### Kotlin
 
+Kotlin在设计上很大程度的吸取了Scala的经验
 
 ## 类似Builder的传参形式
 
