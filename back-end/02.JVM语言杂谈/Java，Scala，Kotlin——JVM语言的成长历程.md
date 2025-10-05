@@ -386,6 +386,59 @@ speak(Person("Fred",1))      // "Fred says, Yubba dubba doo"
 speak(Person("Bam Bam",2))   // "Bam Bam says, Bam bam!"
 ```
 
+在这个代码中我们可以看出守卫模式的意义，在这种复杂的匹配中守卫的作用就很大了
+
+然后值得一提的是Scala的match还支持或的形式
+
+```scala
+val i=1
+i match{
+	case 1|2|3|4 => println("small")
+	case 5|6|7 => println("big")
+	case _ => println("none")
+}
+```
+
+最后就是Scala的逆天match功能了，这里就简单的复制一下Scala Book中的内容
+
+```scala
+def pattern(x: Matchable): String = x match {
+
+  // constant patterns
+  case 0 => "zero"
+  case true => "true"
+  case "hello" => "you said 'hello'"
+  case Nil => "an empty List"
+
+  // sequence patterns
+  case List(0, _, _) => "a 3-element list with 0 as the first element"
+  case List(1, _*) => "list, starts with 1, has any number of elements"
+  case Vector(1, _*) => "vector, starts w/ 1, has any number of elements"
+
+  // tuple patterns
+  case (a, b) => s"got $a and $b"
+  case (a, b, c) => s"got $a, $b, and $c"
+
+  // 字段匹配
+  case Person(first, "Alexander") => s"Alexander, first name = $first"
+  case Dog("Zeus") => "found a dog named Zeus"
+
+  // 类型匹配
+  case s: String => s"got a string: $s"
+  case i: Int => s"got an int: $i"
+  case f: Float => s"got a float: $f"
+  case a: Array[Int] => s"array of int: ${a.mkString(",")}"
+  case as: Array[String] => s"string array: ${as.mkString(",")}"
+  case d: Dog => s"dog: ${d.name}"
+  case list: List[?] => s"got a List: $list"
+  case m: Map[?, ?] => m.toString
+
+  // the default wildcard pattern
+  case _ => "Unknown"
+}
+```
+
+### Kotlin
 
 
 ## 类似Builder的传参形式
