@@ -309,6 +309,9 @@ for((num, str)<-  map){
 
 **至于循环结构中的另一种——while，则是基本和Java一样，因此这里就不提了**
 
+细心的小伙伴们可能会发现，Scala中没有break和continue，这是因为Scala并不提倡使用这两个关键字，因为对于函数式编程来说，如果你要是用break或是continue，那么最好的选择是使用递归函数+if替代
+
+
 #### 匹配结构
 
 类似Java的switch Scala也有自己的匹配结构——match，他功能更加强大
