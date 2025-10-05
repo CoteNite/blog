@@ -230,3 +230,16 @@ fun main() {
     }
 ```
 
+## 更好的文件与主方法
+
+在Java中有一个经常被Java程序员喜闻乐道的东西，那就是我们写一个代码永远都要先写一堆
+
+```Java
+public class Main{
+   public static void main(String[] args){
+	   
+   }
+}
+```
+
+这是Java对于面向对象给出的答案，也是Java强约束的体验，诚然，在Java刚诞生不久
