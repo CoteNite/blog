@@ -203,5 +203,15 @@ object Util{
 try-with-resource 是Java中的一个极其实用的语法糖，他的诞生是为了取代使用try-final来实现Closeable类的自动关闭
 
 ```java
-tr
+public static void main(String[] args) throws IOException {  
+    try(FileInputStream fis = new FileInputStream("d:/a.txt");){  
+        //一些代码  
+    }  
+}
+```
+
+在Scala和Kotlin中取消了这种形式，反而使用了一种函数式的形式来实现（上下文）
+
+```scala
+
 ```
