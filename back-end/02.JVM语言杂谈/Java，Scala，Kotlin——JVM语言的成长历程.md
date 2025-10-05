@@ -522,6 +522,26 @@ listOf(1, 2, 3, 4, 5).forEach {
 
 这里的return@forEach 实际上起到的是类似正常循环结构中的continue的功能，如果你要实现真正意义上的break可以这样写
 
+```kotlin
+run loop@ {
+        listOf(1, 2, 3, 4, 5).forEach {
+            if (it == 3) return@loop // 局部返回到该 lambda 表达式的调用者——forEach 循环
+            print(it)
+        }
+    }
+```
+
+#### 匹配结构
+
+Kotlin中的匹配基于when关键字，他和Scala一样也是一个表达式
+
+```kotlin
+val a=1
+val b=when(a){
+	1 -> 2
+	else -> print("null")  //这里返回的类是Unit
+}
+```
 
 ## 类似Builder的传参形式
 
