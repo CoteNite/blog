@@ -197,3 +197,11 @@ object Util{
     fun add(num: Int): Int = num+1  
     }
 ```
+
+## 更好的try-with-resource
+
+try-with-resource 是Java中的一个极其实用的语法糖，他的诞生是为了取代使用try-final来实现Closeable类的自动关闭
+
+```java
+tr
+```
