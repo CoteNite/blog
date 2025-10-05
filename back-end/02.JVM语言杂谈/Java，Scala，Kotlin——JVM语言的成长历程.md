@@ -177,3 +177,23 @@ def test(value:String,value2:String=""): Unit = {
 单例模式是一种很优秀的设计模式，我们会经常使用单例模式来实现一些工具类
 
 在Java中，你要实现单例模式是有些困难的，因此Scala和Kotlin内置了单例模式
+
+```scala
+@main def hello(): Unit = {  
+  Util.add(1)  
+}  
+  
+object Util {  
+  def add(num:Int): Int = num+1  
+}
+```
+
+```kotlin
+fun main() {  
+    Util.add(1)  
+}  
+  
+object Util{  
+    fun add(num: Int): Int = num+1  
+    }
+```
