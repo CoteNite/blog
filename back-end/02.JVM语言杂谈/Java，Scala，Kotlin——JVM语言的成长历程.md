@@ -543,6 +543,15 @@ val b=when(a){
 }
 ```
 
+比较特别的是Kotlin中的when可以没有主语（也就是小括号的那一部分），如果去除之后就是一个类似if的功能
+
+```kotlin
+val message = when {
+    a > b -> "a is greater than b"
+    a < b -> "a is less than b"
+    else -> "a is equal to b"
+} //这里必须要注意的是，如果没有主语，那么必须存在else
+```
 ## 类似Builder的传参形式
 
 《Effective Java》第三版的第二条提到当构造方法的参数过多时应该使用builder模式，这是因为当参数过多时，你很难按照构造方法规定的顺序去将参数一一对应的传入，这一点也适用于一些参数较多的方法（当然，当一个方法的参数较多时，我们就应该考虑是否要将他拆分为两个方法并且使用lambda/方法参数的方式来将其进行优化，虽然Java中对于这一块的支持并不是很好）
