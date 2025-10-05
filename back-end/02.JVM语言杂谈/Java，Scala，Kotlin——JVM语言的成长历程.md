@@ -489,14 +489,20 @@ val list=mutableListOf(1,2,3)
 
 ```kotlin
 val list=mutableMapOf(
-        1 to "one",
-        2 to "two",
-        3 to "three"
+    1 to "one",
+    2 to "two",
+    3 to "three"
 )
 for((index,item) in list){
 	println("$index - $item")
 }
 ```
+
+**但是Kotlin中的for循环并不支持返回值，也就是说Kotlin的for循环是纯粹的语句而无表达式的形式**
+
+至于continue和break，Kotlin是基于它独特的标签语法实现的
+
+
 
 ## 类似Builder的传参形式
 
