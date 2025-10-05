@@ -200,9 +200,7 @@ object Util{
 
 ## 更好的try-with-resource
 
-在《Effective Java》第三版的第九条中提倡使用try-with-resource
-
-try-with-resource 是Java中的一个极其实用的语法糖，他的诞生是为了取代使用try-final来实现Closeable类的自动关闭
+在《Effective Java》第三版的第九条中提倡使用try-with-resource语法来代替try-finally语法，try-with-resource 是Java中的一个极其实用的语法糖，他的诞生是为了取代使用try-final来实现Closeable类的自动关闭
 
 ```java
 public static void main(String[] args) throws IOException {  
