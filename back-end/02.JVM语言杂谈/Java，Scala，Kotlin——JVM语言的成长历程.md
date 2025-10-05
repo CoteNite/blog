@@ -173,7 +173,11 @@ fun main(){
 
 Trait和接口最大的区别是Java早期接口不可以有字段参数和方法的默认实现，而在Scala的Trait中这一问题得到了解决，Scala对于Trait的定义就和Trait（特性）的名字一样，是一些特性的集合，所有继承Trait的类都具有Trait中的特性
 
-而case class则是record 
+而case class则是Scala对于数据类（一些用来承载一些字段/状态的类）的思考，在Java中，如果一个类作为数据类，那么我们往往要重写他的toString equals 等方法，虽然Lombok包可以使用注解的形式解决这个问题，但这毕竟不是语言层面上的解决方案
+
+case class是Scala在语言层面提供的解决方案，它自带比较（equals的作用），复制（copy方法）和toString方法
+
+
 
 
 
