@@ -311,6 +311,7 @@ for((num, str)<-  map){
 
 细心的小伙伴们可能会发现，Scala中没有break和continue，这是因为Scala并不提倡使用这两个关键字，因为对于函数式编程来说，如果你要是用break或是continue，那么最好的选择是使用递归函数+if替代
 
+除此之外，Scala确实引入了一个break函数用来解决break的缺失，但是并不提倡使用
 
 #### 匹配结构
 
