@@ -500,8 +500,27 @@ for((index,item) in list){
 
 **但是Kotlin中的for循环并不支持返回值，也就是说Kotlin的for循环是纯粹的语句而无表达式的形式**
 
-至于continue和break，Kotlin是基于它独特的标签语法实现的
+至于continue和break，Kotlin则是进行了保留，并且使用了独特的标签语0法进行了功能上的增强
 
+```kotlin
+loop@ for (i in 1..100) {
+    for (j in 1..100) {
+        if (……) break@loop
+    }
+}
+```
+
+对于方法而言，你可以直接使用方法名作为标签
+
+```kotlin
+listOf(1, 2, 3, 4, 5).forEach {
+        if (it == 3) return@forEach // 局部返回到该 lambda 表达式的调用者——forEach 循环
+        print(it)
+}
+// 打印结果为1245
+```
+
+这里的return@forEach 实际上起到的是类似正常循环结构中的continue的功能，如果你要实现真正意义上的break可以这样写
 
 
 ## 类似Builder的传参形式
