@@ -191,9 +191,9 @@ case class是Scala在语言层面提供的解决方案，它自带比较（equal
 
 Java中的语句类似于C/C++语言（statement-based），这是因为在Java推出的年代C/C++语言是市面上最火的语言，这使得C/C++程序员可以很轻松的入门Java
 
-### Scala
+而在Scala和Kotlin中，他们则选择了一种面向表达式的编程范式，这是一更符合函数式的编程范式，在原本的语句中，我们的代码
 
-而在Scala中，为了更好的适应函数式编程，决定将语句转化为表达式的形式（expression-based）。这是因为在函数式编程中，每个函数都应该有返回值（x-y），而语句作为代码中最基本的一份子，也应该具有自己的返回值
+### Scala
 
 #### 判断语句
 
@@ -280,11 +280,35 @@ val list = for (
 
 由此我们就可以实现多守卫多生成器
 
-对于Map类型，我们还可以使用解构语法
+得益于Scala对解构语法的支持，我们还可以对map使用for
 
 ```scala
-
+val map = Map(1 -> "one", 2 -> "two", 3 -> "three")  
+  
+for((num, str)<-  map){  
+  println(s"$num -> $str")  
+}
 ```
+
+也可以这样玩
+
+```scala
+@main def main(): Unit = {
+
+  val map = Map(1 -> "one", 2 -> "two", 3 -> "three")
+
+  val stringToInt = for ((num, str) <- map) yield {
+    println(s"$num -> $str")
+    str -> num
+  }
+
+  print(stringToInt) 
+  
+  //Map(one -> 1, two -> 2, three -> 3)
+}
+```
+
+
 
 
 ## 类似Builder的传参形式
