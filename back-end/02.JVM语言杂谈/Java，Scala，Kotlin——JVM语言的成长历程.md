@@ -200,6 +200,8 @@ object Util{
 
 ## 更好的try-with-resource
 
+在《Effective Java》第三版的第九条中提倡使用try-with-resource
+
 try-with-resource 是Java中的一个极其实用的语法糖，他的诞生是为了取代使用try-final来实现Closeable类的自动关闭
 
 ```java
@@ -220,4 +222,13 @@ Using(new BufferedReader(new FileReader("d:/a.txt"))){reader =>
 }
 ```
 
-而在Kotlin中，则更加方便，Kotlin提供了一个use方法，只需要对Close'a'b
+而在Kotlin中，则更加方便，Kotlin提供了一个use方法，只需要对Closeable类使用其use方法就可以实现try-with-resource
+
+```kotlin
+fun main() {  
+    BufferedReader(FileReader("d:/a.txt")).use { it ->  
+		    
+	    }  
+    }
+```
+
