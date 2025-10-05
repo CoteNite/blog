@@ -210,8 +210,14 @@ public static void main(String[] args) throws IOException {
 }
 ```
 
-在Scala和Kotlin中取消了这种形式，反而使用了一种函数式的形式来实现（上下文）
+在Scala和Kotlin中取消了这种形式，并且两者各有不同
+
+Scala中使用Using类来实现try-with-resource，这是一种函数式的实现方式，在Scala的世界里，它会将一个Closeable的类定义为当前代码的上下文
 
 ```scala
-
+Using(new BufferedReader(new FileReader("d:/a.txt"))){reader =>  
+   
+}
 ```
+
+而在Kotlin中，则更加方便，Kotlin提供了一个use方法，只需要对Close'a'b
