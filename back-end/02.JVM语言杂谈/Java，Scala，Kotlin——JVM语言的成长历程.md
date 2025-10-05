@@ -177,6 +177,8 @@ Trait和接口最大的区别是Java早期接口不可以有字段参数和方�
 
 case class是Scala在语言层面提供的解决方案，它自带比较（equals的作用），复制（copy方法）和toString方法
 
+同样的，Kotlin你可以创建的类是
+
 
 
 
