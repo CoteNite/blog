@@ -314,7 +314,7 @@ for((num, str)<-  map){
 类似Java的switch Scala也有自己的匹配结构——match，他功能更加强大
 
 ```scala
-val item =1 
+val i =1 
 val str = i match {
   case 0 => "Sunday"
   case 1 => "Monday"
@@ -330,7 +330,7 @@ val str = i match {
 然后就是对于缺省值的使用 
 
 ```scala
-val item =1 
+val i =1 
 val str = i match {
   case 0 => "Sunday"
   case 1 => "Monday"
@@ -346,6 +346,7 @@ val str = i match {
 但是值得注意的是，缺省值必须使用小写字母开头的变量定义，这就造成了缺省值和变量的冲突，因此Scala中强制如果要在match语句中引入外界变量，则要使用大写字母开头的变量
 
 ```scala
+val i =42
 val N = 42
 val n=42
 i match {
@@ -358,6 +359,32 @@ i match {
 
 当然，模式匹配也是支持守卫的
 
+```scala
+val i =42
+val N = 42
+val n=42
+i match {
+  case 0 => println("1")
+  case 1 => println("2")
+  case N if N>42 => println("42") //左脑搏击右脑
+  case n => println(s"You gave me: $n" ) //会匹配到这里
+}
+```
+
+Scala的match表达式对case class 有着极好的支持，因此你可以这样写代码
+
+```scala
+case class Person(name: String,age:Int)
+
+def speak(p: Person) = p match {
+  case Person(name,_) if name == "Fred" => println(s"$name says, Yubba dubba doo")
+  case Person(name,_) if name == "Bam Bam" => println(s"$name says, Bam bam!")
+  case _ => println("Watch the Flintstones!")
+}
+
+speak(Person("Fred",1))      // "Fred says, Yubba dubba doo"
+speak(Person("Bam Bam",2))   // "Bam Bam says, Bam bam!"
+```
 
 
 
