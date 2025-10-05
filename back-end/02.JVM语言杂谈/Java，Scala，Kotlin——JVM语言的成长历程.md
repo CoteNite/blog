@@ -139,4 +139,24 @@ case class Person(name: String,age:Int)
 
 《Effective Java》第三版的第二条提到当构造方法的参数过多时应该使用builder模式，这是因为当参数过多时，你很难按照构造方法规定的顺序去将参数一一对应的传入，这一点也适用于一些参数较多的方法（当然，当一个方法的参数较多时，我们就应该考虑是否要将他拆分为两个方法并且使用lambda/方法参数的方式来将其进行优化，虽然Java中对于这一块的支持并不是很好）
 
-在Kotlin和Scala中，这一问题得到了优化，
+在Kotlin和Scala中，这一问题得到了优化，我们可以通过参数名=的方式进行优化
+
+```kotlin
+fun main() { 
+    val person = Person(name="CoteNite", age =  21)  
+}  
+  
+data class Person(  
+    val name: String,  
+    val age:Int  
+)
+```
+
+```scala
+@main def main(): Unit = {  
+	val person = Person(name = "CoteNite", age = 21)
+}  
+case class Person(name: String,age:Int)
+```
+
+除此之外，你还可以通过为参数设置默认值的方式来决定其是否必须被传入
