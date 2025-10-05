@@ -446,11 +446,25 @@ def pattern(x: Matchable): String = x match {
 
 Kotlin在设计上很大程度的吸取了Scala的经验，但是去掉了一些过于繁重的功能
 
-#### 判断语句
+#### 判断结构
 
 与Scala类似，Kotlin的判断语句也是表达式的形式，因此你也可以这样写
 
+```kotlin
+val i=1  
+val a= if(i==1) 1 else 2
+```
 
+#### 循环结构
+
+也是与Scala类似
+
+```kotlin
+val list=mutableListOf(1,2,3)  
+for(item in list){  
+    println(item)  
+}
+```
 
 ## 类似Builder的传参形式
 
