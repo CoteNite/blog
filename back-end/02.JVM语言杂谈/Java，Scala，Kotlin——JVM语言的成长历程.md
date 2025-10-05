@@ -404,18 +404,18 @@ i match{
 ```scala
 def pattern(x: Matchable): String = x match {
 
-  // constant patterns
+  // 常规匹配
   case 0 => "zero"
   case true => "true"
   case "hello" => "you said 'hello'"
   case Nil => "an empty List"
 
-  // sequence patterns
-  case List(0, _, _) => "a 3-element list with 0 as the first element"
-  case List(1, _*) => "list, starts with 1, has any number of elements"
-  case Vector(1, _*) => "vector, starts w/ 1, has any number of elements"
+  // 列表元素匹配
+  case List(0, _, _) => "一个0开头长度为3的List"
+  case List(1, _*) => "一个1开头且长度不固定的List"
+  case Vector(1, _*) => "一个1开头且长度不固定的Vector"
 
-  // tuple patterns
+  // 元组匹配
   case (a, b) => s"got $a and $b"
   case (a, b, c) => s"got $a, $b, and $c"
 
