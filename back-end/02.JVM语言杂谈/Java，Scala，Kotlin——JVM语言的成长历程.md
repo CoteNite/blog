@@ -58,7 +58,7 @@ Kotlin 从一开始就带着“让开发更简单、更愉快”的目标，它�
 
 如今，Kotlin 已成为 Android 与 Spring 官方推荐语言之一，他仍然准守着“简洁、高效、可维护”的承诺，也让人们看到了——Java 的精神，正在以新的形式继续延伸。
 
-## 更好的面向对象
+## 对基本类型的舍弃
 
 我们都知道，Java，Scala，Kotlin，都是面向对象的语言，但是Java却由于时代原因保留了八种基本类型——byte short int long float double boolean char
 
@@ -135,13 +135,45 @@ case class Person(name: String,age:Int)
 
 正如《Effective Java》中写的一样——**除非有充分的理由使类成为可变类，否则类应该是不可变的。如果一个类不能设计为不可变类，那么也要尽可能地限制它的可变性**
 
-## 类
+## 更简洁的主方法
+
+在Java中有一个经常被Java程序员喜闻乐道的东西，那就是我们写一个代码永远都要先写一堆
+
+```Java
+public class Main{
+   public static void main(String[] args){
+	   
+   }
+}
+```
+
+这是Java对于面向对象给出的答案，也是Java强约束的体验，诚然，在Java刚诞生不久的那个年代，这样的写法很有意义，但是时至今日，这样的写法有些过于臃肿了，甚至在Java25中，Java也不得不对这种写法做出优化
+
+在Kotlin和Scala中，我们都允许使用一种简便的方式实现主函数
+
+```scala
+@main def main():Unit={
+
+}
+```
+
+```kotlin 
+fun main(){
+	
+}
+```
+
+## 类的差异
 
 作为一名Java程序员，我们都知道我们可以在Java中创建以下几种形式的类：类（包含record 类和异常类），接口，枚举，注解，这是Java对于面向对象给出的答案，基于这几个类，我们可以写出完美的OOP代码
 
-而在Scala中，可以创建的类变成了
+而在Scala中，可以创建的类变成了以下几种：类，样版（Trait），案例类，枚举，单例类
 
-## 更好的传参形式
+其中类对应Java中的普通类，样板对应接口，案例类对应record类（或者说Java的record类对应案例类，因为推出时间更晚），枚举和单例类就不多说了
+
+
+
+## 类似Builder的传参形式
 
 《Effective Java》第三版的第二条提到当构造方法的参数过多时应该使用builder模式，这是因为当参数过多时，你很难按照构造方法规定的顺序去将参数一一对应的传入，这一点也适用于一些参数较多的方法（当然，当一个方法的参数较多时，我们就应该考虑是否要将他拆分为两个方法并且使用lambda/方法参数的方式来将其进行优化，虽然Java中对于这一块的支持并不是很好）
 
@@ -178,7 +210,7 @@ def test(value:String,value2:String=""): Unit = {
 }
 ```
 
-## 更好的单例
+## 语法层面的单例实现
 
 单例模式是一种很优秀的设计模式，我们会经常使用单例模式来实现一些工具类
 
@@ -204,7 +236,7 @@ object Util{
     }
 ```
 
-## 更好的try-with-resource
+## 基于函数式实现的try-with-resource
 
 在《Effective Java》第三版的第九条中提倡使用try-with-resource语法来代替try-finally语法，try-with-resource 是Java中的一个极其实用的语法糖，他的诞生是为了取代使用try-final来实现Closeable类的自动关闭
 
@@ -215,6 +247,8 @@ public static void main(String[] args) throws IOException {
     }  
 }
 ```
+
+但是这种写法更像是一种面向过程的写法，在Scala和Kotlin中，他们认为这种写法或许应该有所改变
 
 在Scala和Kotlin中取消了这种形式，并且两者各有不同
 
@@ -236,30 +270,3 @@ fun main() {
     }
 ```
 
-## 更好的文件与主方法
-
-在Java中有一个经常被Java程序员喜闻乐道的东西，那就是我们写一个代码永远都要先写一堆
-
-```Java
-public class Main{
-   public static void main(String[] args){
-	   
-   }
-}
-```
-
-这是Java对于面向对象给出的答案，也是Java强约束的体验，诚然，在Java刚诞生不久的那个年代，这样的写法很有意义，但是时至今日，这样的写法有些过于臃肿了，甚至在Java25中，Java也不得不对这种写法做出优化
-
-在Kotlin和Scala中，我们都允许使用一种简便的方式实现主函数
-
-```scala
-@main def main():Unit={
-
-}
-```
-
-```kotlin 
-fun main(){
-	
-}
-```
