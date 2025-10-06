@@ -189,7 +189,7 @@ case class是Scala在语言层面提供的解决方案，它自带比较（equal
 
 ## 空安全
 
-
+在无数的实践中我们会发现，Java对空（null）的处理其实并不算好，NullPointerException是最常见也最容易让Java程序员破防的异常，纵使
 
 ## 表达式代替语句
 
