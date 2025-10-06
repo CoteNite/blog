@@ -195,9 +195,26 @@ case class是Scala在语言层面提供的解决方案，它自带比较（equal
 
 Scala标准库中存在一个Option类，并包含两个子类Some和None，其中Some表示存在某个值，而None则表示无值
 
+```scala
+def makeInt(s: String):Option[Int] = {
+  try {
+    Some(s.toInt)
+  } catch {
+    case e: Exception => None
+  }
+}
+```
 
+而调用方则是要使用match
 
+```scala
+makeInt(x) match {
+  case Some(i) => println(i)
+  case None => println("That didn’t work.")
+}
+```
 
+我们可以将Option理解为一个容器，Some表示容器中含有某个值，而None则表示这是一个空的容器
 
 
 
