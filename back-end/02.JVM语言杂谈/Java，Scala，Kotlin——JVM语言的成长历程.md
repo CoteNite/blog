@@ -191,6 +191,8 @@ case class是Scala在语言层面提供的解决方案，它自带比较（equal
 
 在无数的实践中我们会发现，Java对空（null）的处理其实并不算好，NullPointerException是最常见也最容易让Java程序员破防的异常，纵使Java 8中引入了Optional API作为对于空安全的解决方案，但却时常因为其方法的不便之处被人诟病，与其说是解决方案不如说是Java对null的一种妥协
 
+### Scala
+
 在Scala中，空安全得到了一定的重视，因为对于一个函数来说，你不应该返回一个类似null的值，因为null在业务/功能上并没有实际的意义，在函数上对应了一个没有因变量的自变量
 
 Scala标准库中存在一个Option类，并包含两个子类Some和None，其中Some表示存在某个值，而None则表示无值
@@ -214,8 +216,25 @@ makeInt(x) match {
 }
 ```
 
-我们可以将Option理解为一个容器，Some表示容器中含有某个值，而None则表示这是一个空的容器
+对于Some，我们可以直接用get来获取其中的值，但如果对None使用get则会报错
 
+Option最大的意义其实是提供一个令程序员可见的可控性，也就是说你可以这样写一个类
+
+```scala
+class Address(
+  var street1: String,
+  var street2: Option[String],
+  var city: String, 
+  var state: String, 
+  var zip: String
+)
+```
+
+这个类的正确理解应该是只有street2是可空的，其余的字段均为非空字段
+
+### Kotlin
+
+在学习了上面的内容后，我们不难发现，Scala的Option和Java的Optional类似，只是一种更加便利的API而已，对于空安全并没有很深刻的限制，当然，
 
 
 ## 表达式代替语句
