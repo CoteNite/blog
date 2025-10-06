@@ -191,7 +191,7 @@ case class是Scala在语言层面提供的解决方案，它自带比较（equal
 
 在无数的实践中我们会发现，空其实不是一个很好的设计方案，正如空引用的发明者Tony Hoare自己说的一样，这个发明是一个[”价值数十亿美元的错误“](https://en.wikipedia.org/wiki/Null_pointer#History)
 
-由于历史原因，Java对空（null）的处理其实并不算好，NullPointerException是最常见的Java异常，为了解决空安全的问题，Java 8中引入了Optional API，但又因为Optional API的不便性被程序员们诟病，甚至可以说Optional API与其说是解决方案不如说是Java对null的一种妥协
+由于历史原因，Java对空（null）的处理其实并不算好，NullPointerException（NPE）是最常见的Java异常，为了解决空安全的问题，Java 8中引入了Optional API，但又因为Optional API的不便性被程序员们诟病，甚至可以说Optional API与其说是解决方案不如说是Java对null的一种妥协
 
 ### Scala
 
@@ -251,14 +251,24 @@ class Person(
 
 这里的?表示的就是Int可以存在空的情况，当没有?时，则不能将null赋值给该字段
 
-结合这项语法，Kotlin实现了elvis表达式的功能
-
 ```kotlin
 val a:String?=null
 println(a?.length)
 ```
 
-这里的?.表示是只有不为空才会执行?后的.的内容，不然就会在?处截断，直接返回null通过这个语法糖直接避免了对null调用.l
+这里的?.表示是只有不为空才会执行?后的.的内容，不然就会在?处截断，直接返回null通过这个语法糖直接避免了对null调用.length造成的NPE
+
+结合这项语法，Kotlin实现了极其实用的elvis表达式的功能
+
+```kotlin
+val b: String? = null
+val l = b?.length ?: 0
+```
+
+这里的?:就是elvis表达式，其含义是如果?:前面的部分为null则使用?:后面的部分
+
+
+
 ## 表达式代替语句
 
 Java中的语句类似于C/C++语言（statement-based），这是因为在Java推出的年代C/C++语言是市面上最火的语言，这使得C/C++程序员可以很轻松的入门Java
