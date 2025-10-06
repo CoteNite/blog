@@ -565,10 +565,24 @@ when(a){
 然后就是一些花式使用了
 
 ```kotlin
-when(obj){
-	is String -> "string" //shi'yo
+val obj = 1  
+when(obj){  
+    is String -> "是不是String类型"  
+    in 1..10  -> "判断是否在列表中"  
+    !in 1..10 -> "如果不是呢？"  
 }
 ```
+
+特殊的主语引入语法（其实就是在小括号中定义主语）
+
+```kotlin
+ when (val response = executeRequest()) { // <--- 这里的 `val response = executeRequest()` 就是主语引入
+        is Success -> response.body
+        is HttpError -> throw HttpException(response.status)
+    }
+```
+
+值得一提的是，**Kotlin实际上也有守卫语法，但是是作为实验语法存在，不过在最新的JDK25中，Java正式将switch的s**
 
 ## 类似Builder的传参形式
 
