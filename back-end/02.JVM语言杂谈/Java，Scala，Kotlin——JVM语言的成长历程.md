@@ -189,7 +189,7 @@ case class是Scala在语言层面提供的解决方案，它自带比较（equal
 
 ## 空安全
 
-在无数的实践中我们会发现，空其实不是一个很好的设计方案，正如空引用的发明者Tony Hoare自己说的一样，这个发明是一个”价值数十亿美元的错误“
+在无数的实践中我们会发现，空其实不是一个很好的设计方案，正如空引用的发明者Tony Hoare自己说的一样，这个发明是一个[”价值数十亿美元的错误“](https://en.wikipedia.org/wiki/Null_pointer#History)
 
 由于历史原因，Java对空（null）的处理其实并不算好，NullPointerException是最常见的Java异常，为了解决空安全的问题，Java 8中引入了Optional API，但又因为Optional API的不便性被程序员们诟病，甚至可以说Optional API与其说是解决方案不如说是Java对null的一种妥协
 
