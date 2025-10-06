@@ -234,9 +234,22 @@ class Address(
 
 ### Kotlin
 
-在学习了上面的内容后，我们不难发现，Scala的Option和Java的Optional类似，只是一种更加便利的API而已，对于空安全并没有很深刻的限制，当然，
+在学习了上面的内容后，我们不难发现，Scala的Option和Java的Optional类似，只是一种更加便利的API而已，对于空安全并没有很深刻的限制，当然，这也和Scala的设计哲学相关，Scala相信程序员能够自己写出优秀的代码，他们只需要给程序员可以实现优秀代码的工具和案例即可
 
+但是在Kotlin中，为了更利于程序员的业务开发，以及后续统一的维护，Kotlin选择直接在语法层面实现空安全
 
+在Kotlin中，可空类和非空类完全是两种不同的体现
+
+```kotlin
+class Person(
+	name:String,
+	age:Int?
+)
+```
+
+这里的?表示的就是Int可以存在空的情况，当没有?时，则不能将null赋值给该字段
+
+相信有些小伙伴已经看出来了，这就是我们熟悉的elvis表达式
 ## 表达式代替语句
 
 Java中的语句类似于C/C++语言（statement-based），这是因为在Java推出的年代C/C++语言是市面上最火的语言，这使得C/C++程序员可以很轻松的入门Java
