@@ -253,8 +253,12 @@ class Person(
 
 结合这项语法，Kotlin实现了elvis表达式的功能
 
+```kotlin
+val a:String?=null
+println(a?.length)
+```
 
-
+这里的?.表示是只有不为空才会执行?后的.的内容，不然就会在?处截断，直接返回null通过这个语法糖直接避免了对null调用.l
 ## 表达式代替语句
 
 Java中的语句类似于C/C++语言（statement-based），这是因为在Java推出的年代C/C++语言是市面上最火的语言，这使得C/C++程序员可以很轻松的入门Java
