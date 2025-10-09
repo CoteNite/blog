@@ -242,27 +242,7 @@ class B extends A{
 
 至于interface这里就不演示了，因为Java中interface的static方法本身就不是用来实现接口实现的功能的
 
-在Kotlin中这一问题得到了解决
-
-```kotlin
-fun main() {
-    B.test()
-}
-
-interface BComp{
-    fun test()
-}
-
-class B{
-    companion object: BComp {
-        override fun test() {
-            print("B")
-        }
-    }
-}
-```
-
-同样的还有Scala
+Scala通过创建和类同名的object来实现伴侣对象，Scala的语法可以让我们很清楚的理解伴侣对象和类的关系
 
 ```scala
 @main def mainScala(): Unit = {
@@ -283,6 +263,28 @@ object A extends AService {
   override def foo(x: Int): Int = 1
 }
 ```
+
+而Kotlin则是通过在类中创建companion object的方式来创建伴侣对象，同时我们也可以通过类名.companion的方法来获取到伴侣对象
+
+```kotlin
+fun main() {
+    B.test()
+}
+
+interface BComp{
+    fun test()
+}
+
+class B{
+    companion object: BComp {
+        override fun test() {
+            print("B")
+        }
+    }
+}
+```
+
+### 构造函数
 
 
 ## 空安全
