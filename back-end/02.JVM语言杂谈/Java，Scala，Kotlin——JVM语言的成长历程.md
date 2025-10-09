@@ -225,7 +225,39 @@ Companion Object本质上是一个单例对象（在Kotlin和Scala中都有专�
 
 首先，static方法其实不是一个很符合OOP的设计，因为他不是建立在对象上的，而是建立在类上，这也进一步导致了Java中的static方法没有办法继承
 
+```java
+class A {
+    public static void staticMethod() {
+        
+    }
+}
 
+class B extends A{
+    @Override  //IDEA这里会直接爆红
+    public static void staticMethod() {
+        
+    }
+}
+```
+
+至于interface这里就不演示了，因为Java中i
+
+在Kotlin中这一问题得到了解决
+
+```kotlin
+interface BComp{
+    fun test()
+}
+
+class B{
+    companion object: BComp {
+        override fun test() {
+            TODO("Not yet implemented")
+        }
+
+    }
+}
+```
 
 ## 空安全
 
