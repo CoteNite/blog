@@ -193,6 +193,8 @@ fun main(){
 
 作为一名Java程序员，我们都知道我们可以在Java中创建以下几种形式的类：类（包含record 类和异常类），接口，枚举，注解，这是Java对于面向对象给出的答案，基于这几个类，我们可以写出完美的OOP代码
 
+###
+
 而在Scala中，可以创建的类变成了以下几种：类，Trait，case class，枚举，单例类
 
 其中类对应Java中的普通类，Trait对应接口，case class类对应record类（或者说Java的record类对应案例类，因为推出时间更晚），枚举和单例类就不多说了
