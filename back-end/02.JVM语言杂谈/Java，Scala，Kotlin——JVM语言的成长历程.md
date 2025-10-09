@@ -286,9 +286,41 @@ class B{
 
 ### 构造函数
 
-Java的构造函数定义起来有些麻烦，我们需要现在类里面定义一些参数，然后根据需要参数的不同创建一个方法，然后再
+Java的构造函数定义起来有些麻烦，我们需要现在类里面定义一些参数，然后根据需要参数的不同创建一个与类名相同的方法
 
-对于构造函数，Kotlin和Scala采用了主构造函数和
+```java
+class Person{
+    private int id;
+    private String name;
+    private int age;
+    
+    public Person(int id,String name,int age){
+        this.name = name;
+        this.age = age;
+        this.id = id;
+    }
+}
+```
+
+对于这一部分，Kotlin和Scala采用了主副构造函数的方法来进行简化
+
+我们先来看一下
+
+```kotlin
+class Person(
+    val id:Int,
+    val name: String,
+    val age: Int
+){
+    private var inner: String?=null
+    
+    constructor(id:Int, name: String,age: Int,inner: String):this(id,name,age){
+        this.inner=inner
+    }
+}
+```
+
+ramn'h
 ## 空安全
 
 在无数的实践中我们会发现，空其实不是一个很好的设计方案，正如空引用的发明者Tony Hoare自己说的一样，这个发明是一个[”价值数十亿美元的错误“](https://en.wikipedia.org/wiki/Null_pointer#History)
