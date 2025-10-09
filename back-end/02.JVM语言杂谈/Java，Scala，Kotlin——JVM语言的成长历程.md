@@ -338,9 +338,9 @@ class Person(val id: Int, val name: String, val age: Int) {
 
 ### 顶类与底类
 
-就像Java的顶类是Object一样，Kotlin和Scala也有自己的顶类，都叫做Any，这个类用来放所有的类都共有的类
+就像 Java 的顶类是 `Object` 一样，Kotlin 和 Scala 也都有自己的顶类 `Any`，它是所有类的父类，这个类中含有所有类都有的方法。
 
-除此之外他们还都有一个Unit类，表示无返回值，其实等价于Java中的void和Void，只是因为Kotlin和Scala最求更加真正的OOP，所以使用了一个类来同时代替原本的Void类和void关键字
+此外Kotlin和Scala还引入了一个Unit类，表示无返回值，等价于Java中的void和Void，只是因为Kotlin和Scala最求更加真正的OOP，所以使用了一个类来同时代替原本的Void类和void关键字，进而可以让函数返回真正的实例
 
 最后就是一个底类，也就是所有类的子类，是Nothing类，这个类在Java上没有对应的类，所以可能有些难以理解，实际上他的功能就和他的名字一样，表示无。研究源码我们不难发现，Kotlin与Scala中的类均不能创建实例，而Nothing的关键也就在此：
 
@@ -350,8 +350,7 @@ class Person(val id: Int, val name: String, val age: Int) {
 
 - 方法的返回值：当一个方法的返回值为Nothing时，则表示这个方法一定会报错（因为永远无法执行到return的地方就会提前中断）
 
-Nothing本身的存在其实是FP与OOP思想结合的产物，因为我们要求函数尽可能要存在一个返回值（减少副作用），且OOP中存在异常会提前中断方法导致副作用的产生，因此就是用Nothing来在源码层面缓减二者的冲突
-
+Nothing本身的存在其实是FP与OOP思想结合的产物，因为我们要求函数尽可能要存在一个返回值（减少副作用），但OOP中存在异常会提前中断方法导致副作用的产生，进而诞生Nothing在类型层面安全的强调不会返回这一概念
 
 ## 空安全
 
