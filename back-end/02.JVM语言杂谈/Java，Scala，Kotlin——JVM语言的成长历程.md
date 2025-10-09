@@ -217,7 +217,15 @@ case class是Scala在语言层面提供的解决方案，它自带比较（equal
 
 ### 伴侣对象
 
-Kotlin和Scala都选择了去除了在对象中定义static方法，取而代之的是使用一种名叫伴侣对象(Companion object)的方式，将static方法以正常方法的x
+Kotlin和Scala都选择了去除了在对象中定义static方法，取而代之的是使用一种名叫伴侣对象(Companion object)的方式，将static方法以正常方法的形式定义在这里面。
+
+Companion Object本质上是一个单例对象（在Kotlin和Scala中都有专门的实现），由于其自身特点，我们可以用它完成类似原本static的方式来调用方法
+
+这里肯定会有人问，为什么要抛弃老的static方法的定义，反而额外创造一个陪伴对象来实现static的功能
+
+首先，static方法其实不是一个很符合OOP的设计，因为他不是建立在对象上的，而是建立在类上，这也进一步导致了Java中的static方法没有办法继承
+
+
 
 ## 空安全
 
