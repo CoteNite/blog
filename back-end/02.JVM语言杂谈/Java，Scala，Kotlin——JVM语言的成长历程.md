@@ -94,7 +94,13 @@ val strToInt: String => Int = (str: String) => {
 
 在Scala中，箭头语法用=>实现，方法体可以用大括号来包含，与正常的函数一样，你可以直接将最后一行作为返回值，不用写return
 
-而在Kotlin中，箭头语法使用->
+而在Kotlin中，箭头语法使用->，因此我们的函数写出来大概是这个样子
+
+```kotlin
+val strToInt:String -> Int={ str:Strinng
+
+}
+```
 
 
 
