@@ -338,6 +338,11 @@ class Person(val id: Int, val name: String, val age: Int) {
 
 ### 顶类与底类
 
+就像Java的顶类是Object一样，Kotlin和Scala也有自己的顶类，都叫做Any，这个类用来放所有的类都共有的类
+
+除此之外他们还都有一个Unit类，表示无返回值，其实等价于Java中的void和Void，只是因为Kotlin和Scala最求更加真正的OOP，所以使用了一个类来同时代替原本的Void类和void关键字
+
+最后就是一个底类，也就是所有类的子类，是Nothing类，这个类在Java上没有对应的类，所以可能有些难以理解，
 
 ## 空安全
 
