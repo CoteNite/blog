@@ -87,7 +87,7 @@ Scala作为一门深度支持FP的语言，对函数式编程具有极好的支�
 这意味着，我们可以在程序中将函数当作正常的变量使用，它可以是变量，参数，返回值
 
 ```scala
-val strToInt: String => Int = (str: String) => {
+val strToInt: (String)=>Int = (str: String) => {
 	  str.toInt
 }
 ```
@@ -97,17 +97,10 @@ val strToInt: String => Int = (str: String) => {
 而在Kotlin中，箭头语法使用->，因此我们的函数写出来大概是这个样子
 
 ```kotlin
-val strToInt:String -> Int={ str:Strinng
-
+val strToInt: (String)->Int ={str:String ->
+	str.toInt()
 }
 ```
-
-
-
-
-
-
-
 
 ## 最小可变性
 
