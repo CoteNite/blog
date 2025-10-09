@@ -87,8 +87,20 @@ Scala作为一门深度支持FP的语言，对函数式编程具有极好的支�
 这意味着，我们可以在程序中将函数当作正常的变量使用，它可以是变量，参数，返回值
 
 ```scala
-  val strToInt: String => Int = (str: String) => str.toInt
+val strToInt: String => Int = (str: String) => {
+	  str.toInt
+}
 ```
+
+在Scala中，箭头语法用=>实现，方法体可以用大括号来包含，与正常的函数一样，你可以直接将最后一行作为返回值，不用写return
+
+而在Kotlin中，箭头语法使用->
+
+
+
+
+
+
 
 
 ## 最小可变性
