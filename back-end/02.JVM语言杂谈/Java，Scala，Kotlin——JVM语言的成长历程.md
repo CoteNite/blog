@@ -217,7 +217,7 @@ case class是Scala在语言层面提供的解决方案，它自带比较（equal
 
 ### 伴侣对象
 
-
+Kotlin和Scala都选择了去除了在对象中定义static方法，取而代之的是使用一种名叫伴侣对象(Companion object)的方式，将static方法以正常方法的x
 
 ## 空安全
 
