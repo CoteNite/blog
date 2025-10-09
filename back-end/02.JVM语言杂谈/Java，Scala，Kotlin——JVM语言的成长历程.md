@@ -240,11 +240,15 @@ class B extends A{
 }
 ```
 
-至于interface这里就不演示了，因为Java中i
+至于interface这里就不演示了，因为Java中interface的static方法本身就不是用来实现接口实现的功能的
 
 在Kotlin中这一问题得到了解决
 
 ```kotlin
+fun main() {
+    B.test()
+}
+
 interface BComp{
     fun test()
 }
@@ -252,12 +256,34 @@ interface BComp{
 class B{
     companion object: BComp {
         override fun test() {
-            TODO("Not yet implemented")
+            print("B")
         }
-
     }
 }
 ```
+
+同样的还有Scala
+
+```scala
+@main def mainScala(): Unit = {
+  A.foo(1)
+  new A().foo(1)
+}
+
+
+class A {
+  def foo(x: Int): Int = x + 1
+}
+
+trait AService {
+  def foo(x: Int): Int
+}
+
+object A extends AService {
+  override def foo(x: Int): Int = 1
+}
+```
+
 
 ## 空安全
 
