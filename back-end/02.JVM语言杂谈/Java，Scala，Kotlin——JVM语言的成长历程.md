@@ -342,7 +342,12 @@ class Person(val id: Int, val name: String, val age: Int) {
 
 除此之外他们还都有一个Unit类，表示无返回值，其实等价于Java中的void和Void，只是因为Kotlin和Scala最求更加真正的OOP，所以使用了一个类来同时代替原本的Void类和void关键字
 
-最后就是一个底类，也就是所有类的子类，是Nothing类，这个类在Java上没有对应的类，所以可能有些难以理解，
+最后就是一个底类，也就是所有类的子类，是Nothing类，这个类在Java上没有对应的类，所以可能有些难以理解，实际上他的功能就和他的名字一样，表示无。研究源码我们不难发现，Kotlin与Scala中的类均不能创建实例，而Nothing的关键也就在此：
+
+- 集合的泛型：当一个集合的泛型为Nothing时，我们可以清楚的直到这个集合的长度就是0
+
+- 字段的类型：当一个字段的类型为Not 
+
 
 ## 空安全
 
