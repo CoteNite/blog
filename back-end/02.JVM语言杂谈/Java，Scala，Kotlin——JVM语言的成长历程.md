@@ -324,7 +324,17 @@ class Person(
 
 方法内部的construc方法是副构造函数，其通过:语法实现委托，通过委托主构造方法完成类实例的创建
 
+```scala
+class Person(val id: Int, val name: String, val age: Int) {
+  var inner: String = null
+  def this(id: Int, name: String, age: Int, inner: String) = {
+    this(id, name, age)
+    this.inner = inner
+  }
+}
+```
 
+而在Scala中，副构造函数使用this来创建，且主构造函数必须在构造函数方法体的第一行
 ## 空安全
 
 在无数的实践中我们会发现，空其实不是一个很好的设计方案，正如空引用的发明者Tony Hoare自己说的一样，这个发明是一个[”价值数十亿美元的错误“](https://en.wikipedia.org/wiki/Null_pointer#History)
