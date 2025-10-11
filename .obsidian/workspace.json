@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/02.JVM与JVM语言/Java，Scala，Kotlin——JVM语言的成长历程.md",
+                "file": "back-end/02.JVM与JVM语言/JVM与内存管理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java，Scala，Kotlin——JVM语言的成长历程"
+              "title": "JVM与内存管理"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/02.JVM与JVM语言/Java，Scala，Kotlin——JVM语言的成长历程.md",
+                "file": "back-end/02.JVM与JVM语言/JVM与内存管理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java，Scala，Kotlin——JVM语言的成长历程 的大纲"
+              "title": "JVM与内存管理 的大纲"
             }
           }
         ],
@@ -174,8 +174,9 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "back-end/01.Java/Java各版本进展.md",
     "back-end/02.JVM与JVM语言/Java，Scala，Kotlin——JVM语言的成长历程.md",
+    "back-end/02.JVM与JVM语言/JVM与内存管理.md",
+    "back-end/01.Java/Java各版本进展.md",
     "back-end/02.JVM与JVM语言",
     "back-end/6.技术选型/Spring Modulith——从一个管理工具到代码规范的思考.md",
     "back-end/7.DDD/0.前言.md",
@@ -209,7 +210,6 @@
     "node_modules/feed/README.md",
     "node_modules/feed/CONTRIBUTORS.md",
     "node_modules/feed/CONTRIBUTING.md",
-    "node_modules/feed/CODE_OF_CONDUCT.md",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
