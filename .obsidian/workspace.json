@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/02.JVM与JVM语言/Java，Scala，Kotlin——JVM语言的成长历程.md",
+                "file": "back-end/01.Java/Java各版本进展.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java，Scala，Kotlin——JVM语言的成长历程"
+              "title": "Java各版本进展"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/02.JVM与JVM语言/Java，Scala，Kotlin——JVM语言的成长历程.md",
+                "file": "back-end/01.Java/Java各版本进展.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java，Scala，Kotlin——JVM语言的成长历程 的大纲"
+              "title": "Java各版本进展 的大纲"
             }
           }
         ],
@@ -172,44 +172,44 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "e3e2d012b0c325c7",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
-    "back-end/02.JVM与JVM语言/JVM与内存管理.md",
-    "back-end/7.DDD/10.DDD，MVC，大泥鳅，微服务.md",
-    "back-end/02.JVM与JVM语言/Java，Scala，Kotlin——JVM语言的成长历程.md",
-    "back-end/01.Java/Java各版本进展.md",
-    "back-end/02.JVM与JVM语言",
-    "back-end/6.技术选型/Spring Modulith——从一个管理工具到代码规范的思考.md",
-    "back-end/7.DDD/0.前言.md",
-    "back-end/51.Spring/01.Spring——IOC&AOP.md",
-    "back-end/01.Java",
-    "back-end/未命名.md",
-    "back-end/51.Spring/Spring常见错误.md",
-    "back-end/84.后端杂谈/JPA or Jimmer？不同ORM对项目开发的影响？.md",
+    "back-end/2.多线程相关/8.协程.md",
+    "back-end/2.多线程相关/6.认知并发问题出现.md",
+    "back-end/2.多线程相关/4.volatile关键字.md",
+    "back-end/2.多线程相关/3.synchronized关键字——JDK内部的锁.md",
+    "back-end/2.多线程相关/1.多线程理论.md",
+    "back-end/2.多线程相关/2.线程在Java中的使用.md",
+    "back-end/2.多线程相关/5.ThreadPoolExecutor——线程池.md",
+    "back-end/4.Netty/1.常用的东西.md",
+    "back-end/7.DDD/14.聚合.md",
     "back-end/85.All in AI/RAG工程.md",
-    "未命名.md",
     "back-end/85.All in AI/0.前言.md",
-    "back-end/82.协程与响应式编程/0.前言.md",
-    "back-end/85.All in AI",
-    "back-end/6.技术选型/Spring Cache——Spring提供的缓存方案.md",
-    "back-end/6.技术选型/Spring Event——Spring内置的事件驱动方案.md",
-    "back-end/6.技术选型/SpEL——Spring表达式.md",
+    "back-end/84.后端杂谈/JPA or Jimmer？不同ORM对项目开发的影响？.md",
     "back-end/83.功能设计/Code Agent.md",
+    "back-end/83.功能设计/网络请求.md",
     "back-end/83.功能设计/分片，分点，秒传.md",
     "back-end/82.协程与响应式编程/2.Channel.md",
-    "back-end/83.功能设计/网络请求.md",
+    "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
+    "back-end/82.协程与响应式编程/0.前言.md",
+    "back-end/51.Spring/Spring常见错误.md",
+    "back-end/8.分布式/20.分布式问题——事务问题.md",
+    "back-end/8.分布式/14.流量网关.md",
+    "back-end/8.分布式/13.限流——Sentinel.md",
+    "back-end/8.分布式/12.网关.md",
+    "back-end/8.分布式/11.注册中心.md",
+    "back-end/6.技术选型/SAA/SpringAiAlibaba——工作流.md",
+    "back-end/6.技术选型/SAA/开源自然语言转SQL——nl2sql.md",
+    "back-end/02.JVM与JVM语言",
+    "back-end/01.Java",
+    "back-end/85.All in AI",
     "back-end/84.后端杂谈",
     "node_modules/@sugarat/theme-shared/dist/index.mjs",
     "node_modules/@sugarat/theme-shared/dist/index.js",
     "node_modules/@sugarat/theme-shared/dist/index.d.ts",
     "node_modules/@sugarat/theme-shared/dist/index.d.mts",
-    "node_modules/@sugarat/theme-shared/README.md",
     "node_modules/@sugarat/theme-shared/LICENSE",
     "node_modules/@sugarat/theme-shared/package.json",
-    "node_modules/sax/README.md",
-    "node_modules/xml-js/README.md",
-    "node_modules/feed/README.md",
-    "node_modules/feed/CONTRIBUTORS.md",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
