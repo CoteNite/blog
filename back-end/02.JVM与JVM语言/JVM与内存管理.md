@@ -119,4 +119,6 @@ JVM作为Java乃至后续各种JVM语言的基石，其设计一定是相当合�
 - JDK7：true false
 - JDK17：true true
 
-在JDK6中String的intern方法会把第一次遇到的字符串放入字符串常量区，而是用StringBuilder
+在JDK6中String的intern方法会把第一次遇到的字符串实例放入永久代/方法区中的字符串常量区，返回的是永久大而使用StringBuilder创建的字符串是直接创建在Java堆上的
+
+而在JDK7中，永久代中的字符串常量区被移动到了Java堆上
