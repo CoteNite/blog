@@ -102,5 +102,21 @@ JVM作为Java乃至后续各种JVM语言的基石，其设计一定是相当合�
 
 一般JVM都是采用指向实例数据的方式，因为这种方式少一次定位，速度更快
 
+## 实战——JDK String常量池在不同JVM下的区别
 
+```java
+  public static void main(String[] args) {
+        String str1 = new StringBuilder("计算机").append("软件").toString();
+        System.out.println(str1.intern() == str1);
+        String str2 = new StringBuilder("ja").append("va").toString();
+        System.out.println(str2.intern() == str2);
+    }
+```
 
+这段代码在JDK6，7，17中均有不同的答案：
+
+- JDK6：false false
+- JDK7：true false
+- JDK17：true true
+
+在JDK6中String的intern方法会把第一次遇到的字符串放入字符串常量区，而是用StringBuilder
