@@ -129,4 +129,52 @@ JVM作为Java乃至后续各种JVM语言的基石，其设计一定是相当合�
 
 主流的垃圾回收方式有两种——引用计数法和可达性分析法
 
-引用计数法相对简单，一个对象在创建时添加一个引用计数器，每被引用一次引用计数器+1，引用失效则计数器-1，凡是计数器数值为0的对象均是vbu
+引用计数法相对简单，一个对象在创建时添加一个引用计数器，每被引用一次引用计数器+1，引用失效则计数器-1，凡是计数器数值为0的对象均是无法被使用的
+
+但是引用计数法会在一些特殊的情况下造成引用内存泄漏
+
+```java
+public class ReferenceCountingGC {
+    public Object instance = null;
+    private static final int _1MB = 1024 * 1024;
+    /**
+     * 这个成员属性的唯一意义就是占点内存，以便能在GC日志中看清楚是否有回收过
+     */
+    private byte[] bigSize = new byte[2 * _1MB];
+    public static void testGC() {
+        ReferenceCountingGC objA = new ReferenceCountingGC();
+        ReferenceCountingGC objB = new ReferenceCountingGC();
+        objA.instance = objB;
+        objB.instance = objA;
+        objA = null;
+        objB = null;
+        // 假设在这行发生GC，objA和objB是否能被回收？
+        System.gc();
+    }
+}
+```
+
+比如这个代码，虽然objA和objB都为null吗，但是其内部互相引用仍然存在，因此就出现了内存泄漏
+
+于是就产生了可达性分析法
+
+可达性分析法会设置一个特殊的对象作为GCRoots，一个对象根据自身的引用关系（比如A引用B，B引用C）向上找，凡是能达到GCRoots的就是不可回收的，反之就是可回收的
+
+在Java技术体系里面，固定可作为GC Roots的对象包括以下几种：
+
+- 在虚拟机栈（栈帧中的本地变量表）中引用的对象，譬如各个线程被调用的方法堆栈中使用到的
+参数、局部变量、临时变量等。
+- 在方法区中类静态属性引用的对象，譬如Java类的引用类型静态变量。
+- 在方法区中常量引用的对象，譬如字符串常量池（String Table）里的引用。
+- 在本地方法栈中JNI（即通常所说的Native方法）引用的对象。
+- Java虚拟机内部的引用，如基本数据类型对应的Class对象，一些常驻的异常对象（比如
+NullPointExcepiton、OutOfMemoryError）等，还有系统类加载器。
+- 所有被同步锁（synchronized关键字）持有的对象。
+- 反映Java虚拟机内部情况的JMXBean、JVMTI中注册的回调、本地代码缓存等。
+
+## 引用的区别
+
+所谓引用就是指一个reference累心过多
+
+根据引用类型的不同，Java1.2后将引用区分为强引用（Strongly Re-ference）、软
+引用（Soft Reference）、弱引用（Weak Reference）和虚引用（Phantom Reference）4种
