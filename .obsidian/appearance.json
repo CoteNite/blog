@@ -3,7 +3,7 @@
   "enabledCssSnippets": [],
   "cssTheme": "",
   "textFontFamily": "JetBrains Mono Medium",
-  "interfaceFontFamily": "",
+  "interfaceFontFamily": "JetBrains Mono Medium",
   "monospaceFontFamily": "JetBrains Mono Medium",
   "baseFontSizeAction": true
 }
