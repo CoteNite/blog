@@ -2,8 +2,8 @@
   "showRibbon": false,
   "enabledCssSnippets": [],
   "cssTheme": "",
-  "textFontFamily": "Maple Mono NF CN Medium,JetBrains Mono Medium",
+  "textFontFamily": "JetBrains Mono Medium",
   "interfaceFontFamily": "",
-  "monospaceFontFamily": "Maple Mono NF CN Medium,JetBrains Mono Medium",
+  "monospaceFontFamily": "JetBrains Mono Medium",
   "baseFontSizeAction": true
 }
