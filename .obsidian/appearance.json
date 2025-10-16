@@ -2,6 +2,7 @@
   "showRibbon": false,
   "enabledCssSnippets": [],
   "cssTheme": "",
-  "textFontFamily": "Andale Mono",
-  "interfaceFontFamily": "Andale Mono"
+  "textFontFamily": "JetBrainsMono NFP",
+  "interfaceFontFamily": "JetBrainsMono NFP",
+  "monospaceFontFamily": "JetBrainsMono NFP"
 }
