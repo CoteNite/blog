@@ -277,3 +277,6 @@ NullPointExcepiton、OutOfMemoryError）等，还有系统类加载器。
 - 休眠（`Thread.sleep()`）
 - I/O 等待
 
+## 卡表与卡页
+
+我们之前有提到过
