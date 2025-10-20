@@ -393,4 +393,12 @@ Epsilon 收集器是一个非常独特的垃圾收集器，也被称为 **“A N
 
 JVM本身提供了很多的小工具，这些工具大多存在于JDK的JMod包下，用来对JVM的状态进行监控
 
-**JPS**指令类似Unix系统的PS指令，用于查看当前jVM虚拟机上运行的应用
+**JPS**指令类似Unix系统的PS指令，用于查看当前jVM虚拟机上运行的应用，一般进程ID会与操作系统的进程ID一致
+
+```sh
+jps -l
+
+23892 jdk.jcmd/sun.tools.jps.Jps
+15784 com.intellij.idea.Main
+```
+
