@@ -446,4 +446,6 @@ jmap -dump:format=b,file=eclipse.bin 3500
 
 这里的指令就是生成3500进程的堆快照文件
 
+**jhst**
+
 
