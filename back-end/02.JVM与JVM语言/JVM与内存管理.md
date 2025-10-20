@@ -393,7 +393,7 @@ Epsilon 收集器是一个非常独特的垃圾收集器，也被称为 **“A N
 
 JVM本身提供了很多的小工具，这些工具大多存在于JDK的JMod包下，用来对JVM的状态进行监控
 
-**JPS**指令类似Unix系统的PS指令，用于查看当前jVM虚拟机上运行的应用，一般进程ID会与操作系统的进程ID一致
+**jps**指令类似Unix系统的PS指令，用于查看当前jVM虚拟机上运行的应用，一般进程ID会与操作系统的进程ID一致
 
 ```sh
 jps -l
@@ -402,31 +402,31 @@ jps -l
 15784 com.intellij.idea.Main
 ```
 
-**JStat**指令用于监控虚拟机的各种运行状态
+**jstat**指令用于监控虚拟机的各种运行状态
 
 ![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20251020104721.png)
 
 这里是我监控IDEA的GC操作的指令，其中2764是IDEA的进程ID，250指么欸此监控之间间隔的毫秒数，20指监控次数
 
-|列名|全称|含义|单位|
-|---|---|---|---|
-|**S0C**|Survivor 0 Capacity|第一个幸存区（Survivor 0）的容量（字节）|KB|
-|**S1C**|Survivor 1 Capacity|第二个幸存区（Survivor 1）的容量（字节）|KB|
-|**S0U**|Survivor 0 Used|第一个幸存区已使用的空间|KB|
-|**S1U**|Survivor 1 Used|第二个幸存区已使用的空间|KB|
-|**EC**|Eden Capacity|Eden 区的容量|KB|
-|**EU**|Eden Used|Eden 区已使用空间|KB|
-|**OC**|Old Capacity|老年代（Old Generation）的容量|KB|
-|**OU**|Old Used|老年代已使用空间|KB|
-|**MC**|Metaspace Capacity|元空间（Metaspace）的容量|KB|
-|**MU**|Metaspace Used|元空间已使用空间|KB|
-|**CCSC**|Compressed Class Space Capacity|压缩类空间容量|KB|
-|**CCSU**|Compressed Class Space Used|压缩类空间已使用空间|KB|
-|**YGC**|Young GC Count|从 JVM 启动到现在，年轻代（Minor GC）发生的次数|次数|
-|**YGCT**|Young GC Time|从 JVM 启动到现在，年轻代 GC 总耗时|秒|
-|**FGC**|Full GC Count|从 JVM 启动到现在，Full GC（老年代GC）发生的次数|次数|
-|**FGCT**|Full GC Time|从 JVM 启动到现在，Full GC 总耗时|秒|
-|**CGC**|Concurrent GC Count|（G1/ZGC等）并发GC发生的次数|次数|
-|**CGCT**|Concurrent GC Time|并发GC耗时|秒|
-|**GCT**|Total GC Time|所有GC（年轻代 + 老年代 + 并发）总耗时|秒|
-**Jinfo**
+| 列名       | 全称                              | 含义                              | 单位  |
+| -------- | ------------------------------- | ------------------------------- | --- |
+| **S0C**  | Survivor 0 Capacity             | 第一个幸存区（Survivor 0）的容量（字节）       | KB  |
+| **S1C**  | Survivor 1 Capacity             | 第二个幸存区（Survivor 1）的容量（字节）       | KB  |
+| **S0U**  | Survivor 0 Used                 | 第一个幸存区已使用的空间                    | KB  |
+| **S1U**  | Survivor 1 Used                 | 第二个幸存区已使用的空间                    | KB  |
+| **EC**   | Eden Capacity                   | Eden 区的容量                       | KB  |
+| **EU**   | Eden Used                       | Eden 区已使用空间                     | KB  |
+| **OC**   | Old Capacity                    | 老年代（Old Generation）的容量          | KB  |
+| **OU**   | Old Used                        | 老年代已使用空间                        | KB  |
+| **MC**   | Metaspace Capacity              | 元空间（Metaspace）的容量               | KB  |
+| **MU**   | Metaspace Used                  | 元空间已使用空间                        | KB  |
+| **CCSC** | Compressed Class Space Capacity | 压缩类空间容量                         | KB  |
+| **CCSU** | Compressed Class Space Used     | 压缩类空间已使用空间                      | KB  |
+| **YGC**  | Young GC Count                  | 从 JVM 启动到现在，年轻代（Minor GC）发生的次数  | 次数  |
+| **YGCT** | Young GC Time                   | 从 JVM 启动到现在，年轻代 GC 总耗时          | 秒   |
+| **FGC**  | Full GC Count                   | 从 JVM 启动到现在，Full GC（老年代GC）发生的次数 | 次数  |
+| **FGCT** | Full GC Time                    | 从 JVM 启动到现在，Full GC 总耗时         | 秒   |
+| **CGC**  | Concurrent GC Count             | （G1/ZGC等）并发GC发生的次数              | 次数  |
+| **CGCT** | Concurrent GC Time              | 并发GC耗时                          | 秒   |
+| **GCT**  | Total GC Time                   | 所有GC（年轻代 + 老年代 + 并发）总耗时         | 秒   |
+**jinfo**
