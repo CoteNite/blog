@@ -438,3 +438,5 @@ jinfo -flag InitiatingHeapOccupancyPercent 25472
 
 这里可以看出IDEA的InitiatingHeapOccupancyPercent为45
 
+**jmap**用于生成堆快照，可以让开发者在Java进程运行的过程中优雅的生成堆快照文件
+
