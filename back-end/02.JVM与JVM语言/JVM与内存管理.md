@@ -429,4 +429,12 @@ jps -l
 | **CGC**  | Concurrent GC Count             | （G1/ZGC等）并发GC发生的次数              | 次数  |
 | **CGCT** | Concurrent GC Time              | 并发GC耗时                          | 秒   |
 | **GCT**  | Total GC Time                   | 所有GC（年轻代 + 老年代 + 并发）总耗时         | 秒   |
-**jinfo**
+**jinfo**的作用是实时的去查看JVM进程的虚拟机参数
+
+```sh
+jinfo -flag InitiatingHeapOccupancyPercent 25472
+-XX:InitiatingHeapOccupancyPercent=45
+```
+
+这里可以看出IDEA的InitiatingHeapOccupancyPercent为45
+
