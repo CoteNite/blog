@@ -446,6 +446,12 @@ jmap -dump:format=b,file=eclipse.bin 3500
 
 这里的指令就是生成3500进程的堆快照文件
 
-**jhst**
+**jhat**是JDK自带的分析工具，可以搭配jmap创建的bin文件一同使用
+
+```sh
+jhat eclipse.bin
+```
+
+不过值得一提的是，在正常的生产环境中很少使用jhat，因为有更好的工具可供使用
 
 
