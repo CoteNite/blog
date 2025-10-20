@@ -441,6 +441,9 @@ jinfo -flag InitiatingHeapOccupancyPercent 25472
 **jmap**用于生成堆快照，可以让开发者在Java进程运行的过程中优雅的生成堆快照文件
 
 ```sh
-jmap -dump:format=b,file=eclipse.bin 3500 这里的指令就是生成
+jmap -dump:format=b,file=eclipse.bin 3500 
 ```
+
+这里的指令就是生成3500进程的堆快照文件
+
 
