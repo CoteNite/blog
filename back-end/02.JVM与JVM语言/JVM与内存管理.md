@@ -502,4 +502,9 @@ at org.eclipse.jetty.io.nio.DirectNIOBuffer.<init>
 这里顺带总结了除了堆内存外造成内存问题的情况：
 
 - DirectMemory：可通过-XX：MaxDirectMemorySize调整大小，内存不足时抛出OutOf-MemoryError或OutOfMemoryError：Direct buffer memory。
-- 线程堆栈：可通过-Xss调整大小，内存不足会发生StackOverflowErrorhuo
+- 线程堆栈：可通过-Xss调整大小，内存不足会发生StackOverflowError或OutOfMemoryError
+- Socket缓存区：每个Socket连接都Receive和Send两个缓存区，分别占大约37KB和25KB内存，连接多的话这块内存占用也比较可观。如果无法分配，可能会抛出IOException：Too many open files异常。
+- JNI代码：如果代码中使用了JNI调用本地库，那本地库使用的内存也不在堆中，而是占用Java虚拟机的本地方法栈和本地内存的。
+- 虚拟机和垃圾收集器：虚拟机、垃圾收集器的工作也是要消耗一定数量的内存的
+
+### 外部命令导致的系统缓慢
