@@ -479,7 +479,7 @@ jhat eclipse.bin
 
 尽管如此，该方案在不更换 JVM 的前提下，有效地减少了单次 Full GC 带来的全局停顿问题，属于一种在旧系统中常见且实用的性能优化思路。
 
-### 大量NIO造成的 Direct Memory 溢出
+### 堆外内存导致的溢出错误
 
 在一个被部署在4GB内存32位Windows的简单系统中，网站管理员发现该系统频繁的出现内存溢出的问题，但是使用入-XX：+HeapDumpOnOutOfMemoryError参数却发现没有任何反应，只得从日志中进行寻找，最终发现报错
 
@@ -494,4 +494,12 @@ at org.eclipse.jetty.io.nio.DirectNIOBuffer.<init>
 
 可以观察到报错中涉及了DirectXXX的内容，故而得知是直接内存的溢出造成的BUG
 
-后经发现，由于系统划分了1.6g给到系统的堆，而windows 32位最大给系统分配2g的内存，故而系统可以使用的Direct Memory就只剩下了2-1.6=0.4g,而系统使用的
+后经发现，由于系统划分了1.6g给到系统的堆，而windows 32位最大给系统分配2g的内存，故而系统可以使用的Direct Memory就只剩下了2-1.6=0.4g,而Direct Memory又无法像堆内存一样智能的GC，只能在Full GC完成后顺带帮忙清理，故而造成了频繁的内存溢出
+
+一种可想的解决方案是使用try-catch检测异常，然后使用System.gc()来手动对Direct Memory进行回收，但是如果JVM开启了-XX：+DisableExplicitGC开关，禁止了人工触发垃圾
+收集的话，那就只能眼睁睁看着堆中还有许多空闲内存，自己却不得不抛出内存溢出异常了
+
+这里顺带总结了除了堆内存外造成内存问题的情况：
+
+- DirectMemory：可通过-XX：MaxDirectMemorySize调整大小，内存不足时抛出OutOf-MemoryError或OutOfMemoryError：Direct buffer memory。
+- 线程堆栈：可通过-Xss调整大小，内存不足会发生StackOverflowErrorhuo
