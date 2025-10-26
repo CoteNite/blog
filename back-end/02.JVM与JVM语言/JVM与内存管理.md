@@ -479,4 +479,19 @@ jhat eclipse.bin
 
 尽管如此，该方案在不更换 JVM 的前提下，有效地减少了单次 Full GC 带来的全局停顿问题，属于一种在旧系统中常见且实用的性能优化思路。
 
-### 大量NIO造成的Direct 
+### 大量NIO造成的 Direct Memory 溢出
+
+在一个被部署在4GB内存32位Windows的简单系统中，网站管理员发现该系统频繁的出现内存溢出的问题，但是使用入-XX：+HeapDumpOnOutOfMemoryError参数却发现没有任何反应，只得从日志中进行寻找，最终发现报错
+
+```text
+[org.eclipse.jetty.util.log] handle failed java.lang.OutOfMemoryError: null
+at sun.misc.Unsafe.allocateMemory(Native Method)
+at java.nio.DirectByteBuffer.<init>(DirectByteBuffer.java:99)
+at java.nio.ByteBuffer.allocateDirect(ByteBuffer.java:288)
+at org.eclipse.jetty.io.nio.DirectNIOBuffer.<init>
+....
+```
+
+可以观察到报错中涉及了DirectXXX的内容，故而得知是直接内存的溢出造成的BUG
+
+后经发现，由于系统划分了1.6g给到系统的堆，而windows 32位最大给系统分配2g的内存，故而系统可以使用的Direct Memory就只剩下了2-1.6=0.4g,而系统使用的
