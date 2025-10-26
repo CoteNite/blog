@@ -515,3 +515,18 @@ at org.eclipse.jetty.io.nio.DirectNIOBuffer.<init>
 
 这里最简单的修改方式就是更换代码，删除Shell脚本，使用纯Java API完成Shell脚本的功能
 
+### 虚拟机进程崩溃
+
+一个系统的虚拟机进程频繁自动关闭，观察日志发现报错
+
+```text
+java.net.SocketException: Connection reset
+at java.net.SocketInputStream.read(SocketInputStream.java:168)
+at java.io.BufferedInputStream.fill(BufferedInputStream.java:218)
+at java.io.BufferedInputStream.read(BufferedInputStream.java:235)
+at org.apache.axis.transport.http.HTTPSender.readHeadersFromSocket(HTTPSender.java:583)
+at org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:143)
+... 99 more
+```
+
+该异常是与远程断开，调查得知是由于外界系统存在
