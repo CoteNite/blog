@@ -549,3 +549,4 @@ at org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:143)
 
 ## class文件
 
+Java语言是运行在虚拟机上的，而在Java虚拟机上，我们不可能直接使用Java语言这种对于计算机来说太过“高级”的语言来执行命令，因此Java虚拟机有一套自己的程序存储文件，名为class文件，其中存储的代码被称之为字节码，是一种二进制的
