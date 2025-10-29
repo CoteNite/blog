@@ -586,4 +586,8 @@ Java虚拟机会将Java中的class文件加载到内存中，并对数据进行�
 	- 使用new关键字
 	- 读取或设置一个类型的静态字段（使用final修饰，已在编译器被丢入了常量池的静态字段除外）
 	- 调用一个类的静态方法
-- 使用java.lang.reflect的方法dui'lei
+- 使用java.lang.reflect的方法对类型进行反射调用的时候，如果类还没有完成初始化则要对其进行初始化
+- 当初始化一个类时发现它的父类还未初始化则要初始化
+- 虚拟机启动时初始化主类
+- 当使用JDK 7新加入的动态语言支持时，如果一个java.lang.invoke.MethodHandle实例最后的解析结果为REF_getStatic、REF_putStatic、REF_invokeStatic、REF_newInvokeSpecial四种类型的方法句柄，并且这个方法句柄对应的类没有进行过初始化，则需要先触发其初始化。
+- 含有default方法的接口的实现类初始化时需要对接口进行初始化
