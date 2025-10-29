@@ -591,3 +591,6 @@ Java虚拟机会将Java中的class文件加载到内存中，并对数据进行�
 - 虚拟机启动时初始化主类
 - 当使用JDK 7新加入的动态语言支持时，如果一个java.lang.invoke.MethodHandle实例最后的解析结果为REF_getStatic、REF_putStatic、REF_invokeStatic、REF_newInvokeSpecial四种类型的方法句柄，并且这个方法句柄对应的类没有进行过初始化，则需要先触发其初始化。
 - 含有default方法的接口的实现类初始化时需要对接口进行初始化
+
+有且只有以上的七种情况会导致类文件的初始化
+
