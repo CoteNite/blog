@@ -20,5 +20,5 @@ Kotlin和Java种元编程又分为运行时元编程和编译时元编程，顾�
 
 ## Kotlin中的元编程
 
-Kotlin编译器在编译阶段会生成一系列的数据结构，包括PSI，FIR，IR，其中.kt文件会先经过PSI或FIR，最终被处理成为IR，而不同目标平台的后端编译器会对IR进行进一步编译，以生成我们需要的平台上的代码，比如Kotlin JVM生成的是JVM字节码，Kotlin-JS生成的则是JS代码
+Kotlin编译器在编译阶段会生成一系列的数据结构，包括PSI，FIR，IR。其中PSI，FIR由Kotlin编译器的前端部分处理，.kt文件会先被编译器处理为PSI或FIR，然后再被前端编译器处理成为IR，而不同目标平台的后端编译器会对IR进行进一步编译，以生成我们需要的平台上的代码，比如Kotlin JVM生成的是JVM字节码，Kotlin-JS生成的则是JS代码
 
