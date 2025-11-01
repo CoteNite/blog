@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/02.JVM与JVM语言/JVM与内存管理.md",
+                "file": "back-end/5.Kotlin/Kotlin元编程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JVM与内存管理"
+              "title": "Kotlin元编程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/02.JVM与JVM语言/JVM与内存管理.md",
+                "file": "back-end/5.Kotlin/Kotlin元编程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "JVM与内存管理 的大纲"
+              "title": "Kotlin元编程 的大纲"
             }
           }
         ],
@@ -174,13 +174,14 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "back-end/01.Java/Java各版本进展.md",
+    "back-end/5.Kotlin/Kotlin元编程.md",
+    "back-end/02.JVM与JVM语言/JVM与内存管理.md",
     "back-end/02.JVM与JVM语言/Java，Scala，Kotlin——JVM语言的成长历程.md",
     "back-end/82.协程与响应式编程/2.Channel.md",
     "back-end/85.All in AI/RAG工程.md",
     "story/小说/李代桃僵/钟时悟.md",
-    "back-end/02.JVM与JVM语言/JVM与内存管理.md",
     "story/杂文，随笔/未命名.md",
-    "back-end/01.Java/Java各版本进展.md",
     "back-end/2.多线程相关/8.协程.md",
     "back-end/2.多线程相关/6.认知并发问题出现.md",
     "back-end/2.多线程相关/4.volatile关键字.md",
@@ -199,7 +200,6 @@
     "back-end/82.协程与响应式编程/0.前言.md",
     "back-end/51.Spring/Spring常见错误.md",
     "back-end/8.分布式/20.分布式问题——事务问题.md",
-    "back-end/8.分布式/14.流量网关.md",
     "back-end/02.JVM与JVM语言",
     "back-end/01.Java",
     "back-end/85.All in AI",
