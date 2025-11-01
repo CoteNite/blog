@@ -60,5 +60,30 @@ Kotlin有自己的一套元数据设计，用于为编译产物提供完善的Ko
 
 Kotlin编译器会为每一个类文件生成一个@Metadata注解，这个注解中存放了Kotlin的语法信息
 
+```kotlin
+@Retention(AnnotationRetention.RUNTIME)
+@Target(AnnotationTarget.CLASS)
+@SinceKotlin("1.3")
+public annotation class Metadata(
+    @get:JvmName("k")
+    val kind: Int = 1,
 
+    @get:JvmName("mv")
+    val metadataVersion: IntArray = [],
 
+    @Deprecated(
+        "Bytecode version had no significant use in Kotlin metadata and it will be removed in a future version.",
+        level = DeprecationLevel.WARNING,
+    )
+    @get:JvmName("bv")
+    val bytecodeVersion: IntArray = [1, 0, 3],
+
+    @get:JvmName("d1")
+    val data1: Array<String> = [],
+
+    @get:JvmName("d2")
+    val data2: Array<String> = [],
+    ......
+```
+
+里面最关键的就是data1和data2两个字段，其中data1直接存储的二进制字面量，而data2则是存储的data1中使用的类名函数名等字面信息，这样设计主要还是为了方便JVM可以直接将这些两加载到常量池中，方便内存使用
