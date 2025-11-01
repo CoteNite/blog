@@ -88,3 +88,4 @@ public annotation class Metadata(
 
 里面最关键的就是data1和data2两个字段，其中data1直接存储的二进制字面量，而data2则是存储的data1中使用的类名函数名等字面信息，这样设计主要还是为了方便JVM可以直接将这些两加载到常量池中，方便内存使用
 
+
