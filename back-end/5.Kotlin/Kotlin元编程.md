@@ -32,4 +32,10 @@ Kotlin编译器在编译阶段会生成一系列的数据结构，包括PSI，FI
 
 ### 源代码可见注解
 
-这类注解一般会对代码书写（通过IDE提示开发人员）和编译时造成影响，通过对注解类添加@Retention(AnnotationRetention.SOURCE)实现，比较常见的注解就是RequireKotlin注解，这个注解用来提示该注解标记的API所需的最低版本的Kotlin版本
+这类注解一般会对代码书写（通过IDE提示开发人员）和编译时造成影响，通过对注解类添加@Retention(AnnotationRetention.SOURCE)实现，比较常见的注解就是RequireKotlin注解，这个注解用来提示该注解标记的API所需的最低版本的Kotlin编译器版本，当我们在不正确的编译器版本中使用这个注解，编译器就会直接报错
+
+### 二进制可见注解
+
+二进制可见注解主要是影响编译产物（比如jar包），通过对注解类添加@Retention(AnnotationRetention.BINARY)实现
+
+Kotlin的空安全就大量的使用了二进制可见注解来兼容Java代码，当Kotlin遇到了被注释为
