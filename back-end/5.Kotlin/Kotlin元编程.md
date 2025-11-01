@@ -36,6 +36,11 @@ Kotlin编译器在编译阶段会生成一系列的数据结构，包括PSI，FI
 
 ### 二进制可见注解
 
-二进制可见注解主要是影响编译产物（比如jar包），通过对注解类添加@Retention(AnnotationRetention.BINARY)实现
+二进制可见注解会出现在响编译产物（比如jar包）中，但不会在运行时被感知（也就是说不会对运行起来的代码照成影响），主要通过对注解类添加@Retention(AnnotationRetention.BINARY)实现
 
-Kotlin的空安全就大量的使用了二进制可见注解来兼容Java代码，当Kotlin遇到了被注释为
+Kotlin的空安全就大量的使用了二进制可见注解来兼容Java代码，当Kotlin遇到了被注释为@Nullable的Java代码时就会知道这个部分是可空的，进而在编程过程中使用外部jar包时可以正确的感知出这里是否要用空安全语法
+
+### 运行时可见注解
+
+运行时可见代码是最为常用的注解形式，该注解会出现在编译产物中，并且会对运行时照成影响，通过为注解类添加@Retention(AnnotationRetention.Runtime)实现
+
