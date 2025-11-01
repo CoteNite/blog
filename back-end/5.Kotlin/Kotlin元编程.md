@@ -32,4 +32,4 @@ Kotlin编译器在编译阶段会生成一系列的数据结构，包括PSI，FI
 
 ### 源代码可见注解
 
-这类注解一般会对代码书写（通过IDE提示开发人员）和编译时造成影响，通过对注解类添加@Retention(AnnotationRetention.SOURCE)实现，比较常见的注解就是@Depressed
+这类注解一般会对代码书写（通过IDE提示开发人员）和编译时造成影响，通过对注解类添加@Retention(AnnotationRetention.SOURCE)实现，比较常见的注解就是RequireKotlin注解，这个注解用来提示该注解标记的API所需的最低版本的Kotlin版本
