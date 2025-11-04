@@ -95,3 +95,6 @@ Service::class.companionObjectInstance
 ```
 
 同样的，由于Kotlin反射基于的是@Metadata注解，因此Java反射无法直接获取一些Kotlin反射能直接获取的内容
+
+在Kotlin JVM中，Kotlin_moudle的文件存储了模块内JVM字节码不支持的一些内容，包括函数，属性，类型别名等，当Kotlin文件最后不含有kotlin_moudle文件的话很可能造成Kotlin编译器无法正常使用引入的Kotlin包
+
