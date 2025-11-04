@@ -108,4 +108,5 @@ APT是Java元编程的重要技术之一，本质上可以理解为是Java编译
 
 早期的Kotlin实现了对APT的支持，即KAPT，他将Kotlin代码转换为Java存根，作为Java编译器的输入进而支持APT，但这样实现的弊端也是很明显的，也就是Kotlin高度依赖于Java符号，且Kotlin代码转换为Java存根也要消耗大量的时间，对于大型项目这几乎难以接受。
 
-为了解决这个问题，作为Kotlin基金会核心成员的Google（Kotlin义父）开源了KSP，可以直接将Kotlin代码转换为抽象语法树，这也就解决了KAPT的问题（当前Kot）
+为了解决这个问题，作为Kotlin基金会核心成员的Google（Kotlin义父）开源了KSP，可以直接将Kotlin代码转换为抽象语法树，这也就解决了KAPT的问题（当前Kotlin已经不建议用户使用KAPT）
+
