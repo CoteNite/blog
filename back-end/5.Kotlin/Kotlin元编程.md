@@ -98,3 +98,8 @@ Service::class.companionObjectInstance
 
 在Kotlin JVM中，Kotlin_moudle的文件存储了模块内JVM字节码不支持的一些内容，包括函数，属性，类型别名等，当Kotlin文件最后不含有kotlin_moudle文件的话很可能造成Kotlin编译器无法正常使用引入的Kotlin包
 
+## 语法树
+
+只有语法正确的代码才可以正常的被编译器运行，编译器对语法的检测一般基于内部维护一个抽象语法树来完成，同样的，如果我们想要生成代码，那么也需要依赖于语法树实现
+
+早年间为了快速上线Kotlin的正式版，Kotlin编译器的语法树依赖于了IntelliJ平台的PSI，知道第二代Kotlin编译器（K2）正式登场，
