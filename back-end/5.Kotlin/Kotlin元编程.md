@@ -88,4 +88,10 @@ public annotation class Metadata(
 
 里面最关键的就是data1和data2两个字段，其中data1直接存储的二进制字面量，而data2则是存储的data1中使用的类名函数名等字面信息，这样设计主要还是为了方便JVM可以直接将这些两加载到常量池中，方便内存使用
 
-Kotlin的反射本身也是基于@Metadata注解中存储的信息的，我们可以通过Kotlin反射直接获取到类的伴生类
+Kotlin的反射本身也是基于@Metadata注解中存储的信息的，例如我们可以通过Kotlin反射直接获取到类的伴生类。
+
+```kotlin
+Service::class.companionObjectInstance
+```
+
+同样的，由于Kotlin反射基于的是@Metadata注解，因此Java反射无法直接获取一些Kotlin反射能直接获取的内容
