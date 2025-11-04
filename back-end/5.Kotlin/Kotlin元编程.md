@@ -58,7 +58,7 @@ Java知名JSON序列化框架GSON中的@SerializedName就是一个典型的运�
 
 Kotlin有自己的一套元数据设计，用于为编译产物提供完善的Kotlin语法信息，可以说Kotlin中很多便捷的语法都是通过元数据进行实现的
 
-Kotlin编译器会为每一个类文件生成一个@Metadata注解，这个注解中存放了Kotlin的语法信息
+Kotlin编译器会为每一个类文件生成一个@Metadata注解，这个注解中存放了Kotlin的语法信息，同时也会为模块内所有的顶级声明（Top-Level Declaration）生成一个模块专属的元数据文件，这些文件通常以kotlin_module为后缀。
 
 ```kotlin
 @Retention(AnnotationRetention.RUNTIME)
