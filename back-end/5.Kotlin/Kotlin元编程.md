@@ -102,4 +102,10 @@ Service::class.companionObjectInstance
 
 只有语法正确的代码才可以正常的被编译器运行，编译器对语法的检测一般基于内部维护一个抽象语法树来完成，同样的，如果我们想要生成代码，那么也需要依赖于语法树实现
 
-早年间为了快速上线Kotlin的正式版，Kotlin编译器的语法树依赖于了IntelliJ平台的PSI，知道第二代Kotlin编译器（K2）正式登场，
+早年间为了快速上线Kotlin的正式版，Kotlin编译器的语法树依赖于了IntelliJ平台的PSI，知道第二代Kotlin编译器（K2）正式登场，Kotlin才有了真正独立的语法树。
+
+APT是Java元编程的重要技术之一，本质上可以理解为是Java编译器为元编程提供的接口，我们可以通过APT直接去访问Java语法树
+
+早期的Kotlin实现了对APT的支持，即KAPT，他将Kotlin代码转换为Java存根，作为Java编译器的输入进而支持APT，但这样实现的弊端也是很明显的，也就是Kotlin高度依赖于Java符号，且Kotlin代码转换为Java存根也要消耗大量的时间，对于大型项目这几乎难以接受。
+
+为了解决这个问题，作为Kotlin基金会核心成员的Google（Kotlin义父）开源了KSP，可以直接将Kotlin代码转换为抽象语法树，这也就解决了KAPT的问题（当前Kot）
