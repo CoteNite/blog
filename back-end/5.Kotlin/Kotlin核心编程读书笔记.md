@@ -125,11 +125,22 @@ fun test(a:()-> Unit){
 Lambda表达式起源于Lambda演算，是构建函数式编程最为底层的基石，著名的函数式语言Lisp就是基于Lambda演算而来的，Lisp中匿名函数的部分就被称之为Lambda表达式，可以将其认为是一种匿名函数的语法糖
 
 ```kotlin
-{a:Int->
+{a:Int,b:Int->
 	a
 }
 ```
 
-上面
+上面就是一个Lambda表达式的例子，其中第一行用于表示当前lambda表达式的参数,箭头函数后的内容用于表示函数体，当未显示声明Lambda表达式的返回值为Unit时，则认为最后一行的量就是返回值
 
+在Kotlin类型推导的帮助下，我们可以声明Lambda表达式的类型
+
+```kotlin
+fun a(c:(Int)->Unit){
+
+}
+
+a{b->
+	b+1
+}
+```
 
