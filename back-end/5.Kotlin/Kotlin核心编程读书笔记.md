@@ -85,6 +85,26 @@ User::copy
 
 获得的引用可以直接赋值给变量
 
+```kotlin
+data class GitUser(  
+    val name: String,  
+    val email: String  
+){  
+    fun test(): String{  
+        return this.name  
+    }  
+  
+    fun sum(): Int{  
+        return 1  
+    }  
+  
+}
+val function = GitUser::test  
+val function1 = GitUser::sum//这些方法除了自己的参数外还需要传入一个GitUser类，这里可以认为是调用这个方法的类的实例
+```
+
+
+
 
 
 
