@@ -162,3 +162,17 @@ a{
 
 一个简单的例子
 
+```kotlin
+var sum=0
+fun a(b:Int):Int{
+	sum+=b
+	sum
+}
+a(1)
+```
+
+除此之外Kotlin还支持Lambda的直接运行
+
+```kotlin
+{x:Int->println(x)}(1)   //直接运行了
+```
