@@ -120,6 +120,16 @@ fun test(a:()-> Unit){
 ```
 
 
+## Lambda表达式与后缀函数
 
+Lambda表达式起源于Lambda演算，是构建函数式编程最为底层的基石，著名的函数式语言Lisp就是基于Lambda演算而来的，Lisp中匿名函数的部分就被称之为Lambda表达式，可以将其认为是一种匿名函数的语法糖
+
+```kotlin
+{a:Int->
+	a
+}
+```
+
+上面
 
 
