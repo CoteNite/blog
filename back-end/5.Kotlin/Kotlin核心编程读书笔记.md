@@ -103,6 +103,21 @@ val function = GitUser::test
 val function1 = GitUser::sum//这些方法除了自己的参数外还需要传入一个GitUser类，这里可以认为是调用这个方法的类的实例
 ```
 
+## 缺省函数/匿名函数
+
+Kotlin还支持没有函数名的函数，这些函数大多用于只使用一次的场合
+
+```kotlin
+fun main() {  
+    test(fun(){  
+        println("hello")  
+    })  
+}  
+  
+fun test(a:()-> Unit){  
+    a()  
+}
+```
 
 
 
