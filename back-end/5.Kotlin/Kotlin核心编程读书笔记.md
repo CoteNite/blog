@@ -51,3 +51,26 @@ val f:(Int)->Unit={a->
 - 变量类型必须要用小括号包裹
 - 如果没有返回值必须要用Unit显式声明
 
+除此之外我们还可以给变量定义名字
+
+```Kotlin
+(a:Int)->Unit
+```
+
+当然也可以函数返回函数
+
+```kotlin
+(a:Int)->((A:Int)->Unit)
+```
+
+举个例子
+
+```kotlin
+   val f:(a:Int)->((A:Int)->Unit)={
+        it+1
+        {
+            it-1
+        }
+    }
+```
+
