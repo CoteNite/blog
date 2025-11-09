@@ -189,4 +189,19 @@ a(1)
 
 为了纪念提出这个理论的科学家Haskell Curry，这个操作又被命名为Currying——柯里化
 
-上面的nei'ron
+上面的内容可能听起来有些绕，不过没有关系，Kotlin本身也支持柯里化，这里我们就来写一个柯里化函数
+
+```kotlin
+fun main() {
+    println(add(1)(2)(3))
+    println(add(1,2,3))
+}
+
+fun add(x: Int)={y: Int-> {z: Int-> x+y+z } }
+fun add(x:Int,y:Int,z:Int)=x+y+z
+```
+
+上面就是柯里化函数和非柯里化函数之间的区别，两者的输出结果与实现的功能完全等价，但是写出来的样式却天差地别
+
+
+
