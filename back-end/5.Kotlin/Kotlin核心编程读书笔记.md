@@ -275,3 +275,22 @@ Function<String,Integer> stringLength=new Function<String,Integer>(){
 
 而Kotlin则是选择引入Unit类，这个类本身是个单例，只要返回其单例的值即可
 
+## when表达式
+
+switch一直被很多Java程序员诟病，其语法方面由于一些历史原因导致显得过于落后，很多程序员喜欢使用if来代替switch能实现的逻辑
+
+为了优化switch语句，Kotlin采用了更好的when表达式
+
+```kotlin
+val a:Int=1
+val c=when(a){
+	1->{
+		a+1
+	}
+	2->{
+		a+2
+		a/2
+	}
+	else ->0
+}
+```
