@@ -408,7 +408,7 @@ data class User(
 
 相对Java，Kotlin不强制可变参数必须作为函数的最后一个变量，取而代之的是使用调用函数时的显式传参
 
-在方法中，可变函数会作为一种列表的形式使用（xxArray）
+在方法中，可变函数会作为一种列表的形式使用（xxArray），我们也可以使用解构语法对可变参数的函数进行传参
 
 ```kotlin
 fun sum(vararg a: Int) {  
@@ -423,3 +423,9 @@ val listOf = arrayOf(1, 2, 3, 4, 5)
 sum(1, 2, 3, 4, 5)  
 sum(*listOf.toIntArray())
 ```
+
+## === 与 ==
+
+Kotlin也存在三等号语法，用于表示的是引用是否相同同样的!== 就是判断引用是否不相同，至于== 就和原本Java中的含义一样了（调用.equals方法）
+
+
