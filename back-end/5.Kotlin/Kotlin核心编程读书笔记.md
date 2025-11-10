@@ -483,3 +483,23 @@ Kotlin的构造方法在方法名的后面,构造方法中直接定义了构建�
 
 ## init块
 
+我们可以在函数中定义一个init代码块，这个代码块理论上属于是构造函数的一部分，但是在Kotlin中独立了出来成为了类中的一个代码块
+
+```kotlin
+class User(  
+    val name:String,  
+    val age:Int  
+){  
+  
+    init {  
+        println("初始化")  
+    }  
+  
+    fun printAll(){  
+        print("$name+$age")  
+    }  
+}
+```
+
+init代码块中的部分会在类初始化的时候执行，我们的一个类中也可以有多个init代码块，这写init代码块会按照从上到下的顺序执行
+
