@@ -389,3 +389,37 @@ infix fun <A,B> A.to(that:B):Pair<A,B>
 - 中缀方法只能有一个入参
 - 中缀方法的入参不允许有默认值，也不允许是可变参数
 
+```kotlin
+fun main() {
+    val user = User("张三")
+    println(user all "B23")
+}
+
+data class User(
+    val name: String,
+){
+    infix fun all(className: String)="$className:$name"
+}
+```
+
+## 可变参数
+
+所谓可变参数就是变量长度不固定的参数，在Java中使用..表示，但在Kotlin中使用单独的关键字varargs（var args：许多变量）
+
+相对Java，Kotlin不强制可变参数必须作为函数的最后一个变量，取而代之的是使用调用函数时的显式传参
+
+在方法中，可变函数会作为一种列表的形式使用（xxArray）
+
+```kotlin
+fun sum(vararg a: Int) {  
+    var sum = 0  
+    for (i in a) {  
+        sum += i  
+    }  
+    println(sum)  
+}  
+  
+val listOf = arrayOf(1, 2, 3, 4, 5)  
+sum(1, 2, 3, 4, 5)  
+sum(*listOf.toIntArray())
+```
