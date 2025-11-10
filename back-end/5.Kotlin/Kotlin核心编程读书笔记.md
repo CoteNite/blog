@@ -327,5 +327,34 @@ for(i in 1..10){
 
 这里的..叫做范围表达式（range表达式），表示一个范围，只有实现了Comparable接口的类才可以使用(比如String)
 
-这里需要注意的是，虽然实现了Comparable接口的函数可以使用范围表达式，但是只有存在迭代器的类才可以使用i in ra'b'f
+这里需要注意的是，虽然实现了Comparable接口的函数可以使用范围表达式，但是只有存在迭代器的类才可以使用i in range这种写法写在for循环中
 
+当然，我们也可以自定义跳过的步数，或者是到过来排序等方法
+
+```kotlin
+for(i in 1..10 step 2){
+	println(i)
+}
+for(i in 10 downTo 1){
+
+}
+for(i in 1 until 10){
+	//左开右闭（正常是双开）
+}
+```
+
+除此之外Kotlin还支持了in来检查一个元素是否在列表中
+
+```kotlin
+val a=1
+val b=2
+val list=listOf(1,2,3,4)
+a in list
+b !in list
+```
+
+甚至可以这样
+
+```kotlin
+"kot" in "abc".."xyz"   //等价于kot>=abc&&“kot”<=xyz
+```
