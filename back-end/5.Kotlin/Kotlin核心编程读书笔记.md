@@ -259,6 +259,19 @@ inteface Function<Arg,Return>{
 	Return apply(Arg arg)
 }
 Function<String,Integer> stringLength=new Function<String,Integer>(){
-	public In
+	public Integer apply(String arg){
+		return arg.length();
+	}
 }
 ```
+
+这里是一个类函数式的接口，用于模拟函数式编程，接口中有两个泛型，一个是入参类型，一个是出参类型
+
+但是如果我希望引入一个没有出参的函数呢？
+
+这里就需要把出参的泛型变化为Void类，但Void没有实例，因此只能返回null，但是返回null又相当丑陋
+
+因此Java引入了大量函数式接口，用来对应各种情况（n个入参，n个出参排列组合）
+
+而Kotlin则是选择引入Unit类，这个类本身是个单例，只要返回其单例的值即可
+
