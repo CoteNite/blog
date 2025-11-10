@@ -453,3 +453,24 @@ class User(
 - 默认开放：对于Kotlin，一个类如果不声明则默认是public的（Kotlin中称之为open），一个.kt文件中可以有多个类
 - 自带的get/set：在kotlin中，使用实例.字段实际上是调用字段的.get方法，这一点和js类似，同样的，赋值就是使用了set方法
 
+而接口相对Java来说则更加开放
+
+```kotlin 
+interface UserService{
+    val user:User  
+    fun printAll()  
+    fun printName(){  
+        print(user.name)  
+    }       
+}
+
+class UserServiceImpl(  
+    override val user:User  
+):UserService{  
+    override fun printAll() {  
+        print("$user")  
+    }  
+}
+```
+
+我们的接口可以有自带实现的方法，可以有参数，也可以有未实现的方法，如果你熟悉Scala的话，你会发现Kotlin的接口其实更像Scala中的trait（模板），他的主要作用的是定义出一个类的大概样子（里面有哪些内容），以及写一些这个类中的共有部分
