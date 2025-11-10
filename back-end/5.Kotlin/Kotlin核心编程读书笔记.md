@@ -246,4 +246,19 @@ println(str.length)
 
 换成Kotlin的写法，我们会发现副作用消失了，因为表达式起到了类似函数中返回值的效果，返回的值直接被str接受
 
-但是Kotlin无法做到yi'qwi
+但是Kotlin无法做到一切皆为表达式，这要由Java的设计说起
+
+在Java中，函数可以没有返回值，这时函数的返回值为void，但是Kotlin和Scala为了尽可能兼容表达式，因此引入了Unit类
+
+我们可以通俗的将Unit理解为和Java中Void类似的类，它不代表任何信息，仅表示函数没有返回值，最大的意义是来在代码底层为高阶函数兼容泛型来铺垫
+
+这里看一个例子
+
+```kotlin
+inteface Function<Arg,Return>{
+	Return apply(Arg arg)
+}
+Function<String,Integer> stringLength=new Function<String,Integer>(){
+	public In
+}
+```
