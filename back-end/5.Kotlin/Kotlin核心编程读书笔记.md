@@ -356,5 +356,22 @@ b !in list
 甚至可以这样
 
 ```kotlin
-"kot" in "abc".."xyz"   //等价于kot>=abc&&“kot”<=xyz
+"kot" in "abc".."xyz"   //等价于“kot”>=“abc”&&“kot”<=“xyz”
+```
+
+那么我们想要带有下标的循环呢
+
+可以这样
+
+```kotlin
+for((index,value)in array.withIndex()){
+	
+}
+```
+
+## 中缀方法
+
+我们之前看的in downTo until这种像是关键字一样的单词其实也是一种方法，这种方法被称作中缀方法，其固定写法就为
+
+```tex
 ```
