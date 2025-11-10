@@ -223,4 +223,27 @@ if (a>1) a else 1 //if表达式，值是a或1
 
 这样的设计在Scala中也很常见，那么Kotlin为什么大量推荐我们使用表达式呢
 
-**更见安全的b**
+**让程序更加安全的表达式**
+
+这里我们可以看一下一个Java代码
+
+```java
+String str;
+if(a==1){
+	str="true"
+}
+System.out.println(str.length())
+```
+
+这个代码纯在两个问题，一是空安全问题，即当a!=1时，后面的sout部分会出现空指针异常，IDEA也会在这里爆黄标
+
+其次就是副作用问题，对于if语句的整个部分，str属于整个if语句的外部，这一操作直接影响了外部的环境，不论是在易读性还是安全性上都不佳
+
+```kotlin
+val str = if (a==1) "true" else ""
+println(str.length)
+```
+
+换成Kotlin的写法，我们会发现副作用消失了，因为表达式起到了类似函数中返回值的效果，返回的值直接被str接受
+
+但是Kotlin无法做到yi'qwi
