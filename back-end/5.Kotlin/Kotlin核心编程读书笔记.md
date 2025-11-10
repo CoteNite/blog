@@ -551,5 +551,16 @@ class User(
 }
 ```
 
+但是如果我们不想在构建的时候就传入值呢？Kotlin也很贴心的为我们准备了两种方式
 
+## by lazy 与 lateinit
+
+对于val字段，Kotlin设计了by lazy方法（利用了Kotlin的委托语法），比较常见的场景是存在字段是动态的由构造函数中的字段来确定值
+
+```Kotlin
+class Bird(
+	 val 
+)
+
+```
 
