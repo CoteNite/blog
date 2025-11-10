@@ -294,3 +294,19 @@ val c=when(a){
 	else ->0
 }
 ```
+
+when使用了更像函数的写法，在小括号中传入要匹配的变量，后面紧跟的花括号为匹配的内容，使用箭头语法来指明具体要进入的部分，else则实现了default的功能，同时还具备表达式的能力，返回公共的父类
+
+除此之外，when还可以省略小括号，用来实现多组判断的if-else效果
+
+```kotlin
+val a=true  
+val b=true  
+val c=true  
+when{  
+    a->println("hello")  
+    (b&&c)->println("world")  
+}
+```
+
+上面的代码，由于a先执行到并满足结果，于是打印hello，结束when
