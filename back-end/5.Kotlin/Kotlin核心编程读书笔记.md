@@ -503,3 +503,53 @@ class User(
 
 init代码块中的部分会在类初始化的时候执行，我们的一个类中也可以有多个init代码块，这写init代码块会按照从上到下的顺序执行
 
+那如果我们在类的内部定义一个字段呢？
+
+```kotlin
+class User(  
+    val name:String,  
+    val age:Int  
+){  
+  
+    val sex: String
+  
+    fun printAll(){  
+        print("$name+$age")  
+    }  
+}
+```
+
+这里IDEA会直接爆红，这是因为Kotlin不允许在非抽象类中只声明一个字段而不再构建的时候向他传值，所以就延伸出两种写法
+
+```kotlin
+class User(  
+    val name:String,  
+    val age:Int  
+){  
+  
+    val sex: String = "s" //写默认值
+  
+    fun printAll(){  
+        print("$name+$age")  
+    }  
+}
+
+class User(  
+    val name:String,  
+    val age:Int  
+){  
+
+    val sex: String   
+
+	init{
+		sex="a" //init代码块中声明类型
+	}
+	
+    fun printAll(){  
+        print("$name+$age")  
+    }  
+}
+```
+
+
+
