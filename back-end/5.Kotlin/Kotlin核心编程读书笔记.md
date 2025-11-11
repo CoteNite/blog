@@ -606,4 +606,18 @@ object UserFactory{
 }
 ```
 
-当然，我们也可以通过多创建一个构造方法来解决
+这样的缺点在于工厂类与被创建类的关系不够直观
+
+因此Java中可以通过多创建一个构造方法来解决，而Kotlin则在此基础上进一步建立了一种主从的关系
+
+```kotlin
+class User(  
+    val name:String,  
+    val age:Int  
+){   
+    constructor(name:String,birth: LocalDateTime): this(name,birth.year - LocalDateTime.now().year) {  
+        }  
+ }
+```
+
+我们可以观察一下这个方法，首先是通过constructor方法创建了一个从构造函数，这个从构造函数将创建实例的任务委托给了主构造方法，从构造方法也可以有方法体，hui
