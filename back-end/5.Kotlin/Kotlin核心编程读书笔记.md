@@ -595,4 +595,15 @@ class User(
 
 其中和类名在一起的小括号表示的就是主构造函数，你可以理解为创建这个类所必要的所有字段，有这些字段就一定可以创建出这个类
 
-但是有时候我们可能想要使用别的方式创建这个类，比如User类中的年龄，我们可能希望通过创建时当天的时间
+但是有时候我们可能想要使用别的方式创建这个类，比如User类中的年龄，我们可能希望通过输入出生日期然后减去当天的日期进行求值，根据设计模式，我们知道这种情况最好的实现方式是创建一个工厂类/工厂方法
+
+```kotlin
+object UserFactory{
+    fun createUserByBirthday(name:String,birth: LocalDateTime): User {
+        val age = birth.year - LocalDateTime.now().year
+        return User(name,age)
+    }
+}
+```
+
+当然，我们也可以通过多创建一个构造方法来解决
