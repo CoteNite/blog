@@ -559,8 +559,23 @@ class User(
 
 ```Kotlin
 class Bird(
-	 val 
-)
+){
+	val sex:String by lazy{
+		 
+	}
+}
 
 ```
+
+lazy的本质上是一个函数，当你第一次访问该属性的时候会通过lazy接受的lambda表达式返回结果
+
+lateinit关键字则比较简单，只要在var前面加上lateinit关键字就可以消除编译器的报错
+
+```kotlin
+class Bird(){
+	lateinit sex:String
+}
+```
+
+
 
