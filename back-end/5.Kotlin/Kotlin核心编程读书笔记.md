@@ -756,3 +756,18 @@ class AmphibiousVehicle(
 
 首先，接口是无状态的，这也就代表着接口实际上不能承载太多的信息，而如果我们真的需要一个类实现真正意义上的多继承，那么处了继承父类的方法，一定还要持有父类的信息，因此这里就要使用委托，将信息放在两个委托类中，进而实现多继承
 
+## data class
+
+在Java Bean中，如果我们的一个类要同时拥有一堆的getset方法，这样很不方便，于是Kotlin中就出现了data class
+
+```kotlin
+data class User(
+	val name:String
+)
+```
+
+一个data class类会自动的生成他的get set equls hashcode 构造函数等方法，就如同lombok一样
+
+除此之外data class还会生成copy和componentN两个Java中一般不会设定的方法
+
+其中copy方法jiu
