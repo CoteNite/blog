@@ -709,7 +709,23 @@ class C:A,B{
 
 ## 使用委托实现多继承
 
-委托也是一种经典的设计模式，你调用A类的xx方法
+委托也是一种经典的设计模式，你调用A类的a方法实际上是在调用B类的a方法去执行，这种设计模式本身较难实现，不过Kotlin在语法层面实现了这一功能，只需要使用by关键字即可
+
+```kotlin
+interface Flyable {
+    fun fly()
+    fun takeOff() {
+        println("准备起飞...")
+    }
+}
+
+interface Swimmable {
+    fun swim()
+    fun dive() {
+        println("潜入水中...")
+    }
+}
+```
 
 
 
