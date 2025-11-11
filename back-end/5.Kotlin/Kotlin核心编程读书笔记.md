@@ -776,3 +776,19 @@ data class User(
 
 而componentN方法则是用来实现类似js中的解构语法
 
+```kotlin
+data class User(val id: Int, val name: String, val email: String)
+
+fun main() {
+    val user = User(101, "张三", "zhangsan@example.com")
+    val (userId, userName, userEmail) = user
+    val (_, nameOnly, _) = user // 忽略 id 和 email
+
+    val map = mapOf(1 to "Apple", 2 to "Banana", 3 to "Cherry")
+    for ((key, value) in map) {
+        println("Key: $key, Value: $value")
+    }
+}
+```
+
+需要注意的是，和一般的类不同，数据类中的字段必须使用val或者var指明
