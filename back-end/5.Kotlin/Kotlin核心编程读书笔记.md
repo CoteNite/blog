@@ -770,4 +770,9 @@ data class User(
 
 除此之外data class还会生成copy和componentN两个Java中一般不会设定的方法
 
-其中copy方法jiu
+其中copy方法就是复制一个相同的类实例出来，在复制的时候你可以传入不同字段的参数，进而实现修改的效果
+
+这一点有点像是Spring中BeanUtil中的copyProperties方法，但是更加灵活（可以通过向方法传入参数的方式修改字段），至于这样设计的原因还是为了进一步让程序员去使用不变字段以及减少编码过程中的副作用
+
+而componentN方法则是用来实现类似js中的解构语法
+
