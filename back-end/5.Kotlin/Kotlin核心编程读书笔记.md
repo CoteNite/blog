@@ -669,4 +669,30 @@ sealed class Bird{
 首先我们知道，Kotlin中的接口是可以有默认方法的，那么一个接口同时存在两个同样的方法就会出现钻石问题
 
 ```kotlin
+interface A{  
+    fun print(){  
+        println("A")  
+    }  
+}  
+interface B{  
+    fun print(){  
+        println("B")  
+    }  
+}  
+  
+class C:A,B{  
+  
+}
 ```
+
+这时IDEA中C类爆红，但是我们知道接口的默认方法不需要在实现类中实现啊，这就是Kotlin在编译器上做出的规定，**一旦遇上钻石问题，那么就必须重写方法**
+
+```kotlin
+class C:A,B{  
+    override fun print() {  
+        super<A>.print()  
+    }  
+}
+```
+
+这里是Kotlin解决钻石问题的方法，使用 `super< 父类 >.方法 的形式
