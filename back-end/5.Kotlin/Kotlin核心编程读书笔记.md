@@ -811,6 +811,14 @@ Kotlin中常见的ADT有和类型和积类型
 
 顾名思义，积类型模仿的就是数学运算中的和运算，其代表特点是具有有限的实例数量，且各个实例之间是非此即彼的关系，在Kotlin中经常使用密封类实现
 
+```kotlin
+sealed class Shape{
+	class Circle(val radius:Double):Shape()
+	class Rectangle(val width:Double,val height:Double):Shape()
+	class Triangle(val base:Double,val height:Double):Shape()
+}
+```
+
 
 
 
