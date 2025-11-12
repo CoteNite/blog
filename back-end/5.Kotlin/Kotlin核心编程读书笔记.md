@@ -821,7 +821,7 @@ sealed class Shape{
 
 ## 模式匹配
 
-ADT在函数式编程中一个很大的意义就是
+ADT在函数式编程中一个很大的意义就是可以实现模式匹配，这里我们先来解释一下模式是什么意思，模式匹配的英文是Pattern Match，熟悉Java的小伙伴肯定知道，Java中存在Pattern类和Matcher类，两者共同实现了Java中的正则表达式，而模式匹配实际上和正则biao'da'shi
 
 
 
