@@ -834,6 +834,35 @@ val a=0
 when(a){
 	1-> 1
 	2-> 2
-	else ->
+	else ->a
+}
+```
+
+### 类型匹配
+
+用来和enum与密封类组合的类型匹配则更加常用
+
+```kotlin
+sealed class Shape{
+	class Circle(val radius:Double):Shape()
+	class Rectangle(val width:Double,val height:Double):Shape()
+	class Triangle(val base:Double,val height:Double):Shape()
+}
+val shape=Shape.Circle(3.14)
+when(shape){
+	is Shape.Circle->Math.PI*shape.radius*shape.radius
+	...
+	//这里不用else，因为密封类的情况是有限的
+}
+```
+
+### 逻辑匹配
+
+其实就是之前提到过的没有小括号的情况
+
+```kotlin
+when{
+	true->true
+	false
 }
 ```
