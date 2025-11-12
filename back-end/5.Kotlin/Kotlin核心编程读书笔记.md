@@ -863,6 +863,9 @@ when(shape){
 ```kotlin
 when{
 	true->true
-	false
+	false->false
 }
 ```
+
+### 处理嵌套表达式
+
