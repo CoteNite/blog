@@ -906,10 +906,13 @@ val len=if(str!=null){
 
 我们不得不承认，null会带来很多问题，但它也确实是一门语言在设计的时候近乎无法被取消的部分，因此Java也在努力的对null进行优化
 
-在Java8，Java选择引入Optional类来解决null的各种问题，我们可以将一个对象封装为Optional类实例，并使用Optional类中带有的API去对其进行处理，但这一层的封装却又给类的使用带来了负担
+在Java8，Java选择引入Optional类来解决null的各种问题，我们可以将一个对象封装为Optional类实例，并使用Optional类中带有的API去对其进行处理，但这一层的封装却又给类的使用带来了负担，好在在另一方面，我们可以使用Java的类函数式编程与Optional类提供的flatMap函数来进行较为简便的写法
+
+
 
 一些开源项目中则选择返回一些非空的实例来代表空，比如常见的一些获取List的方法，如果获取不到List，返回的并不是null而是Empty List
 
 另一种被大家推广的方式则是使用注解，在一个对象被创造出来的时候就使用注解对其内部字段是否为空进行定义，进而强制开发者提前去思考一个字段的可空性，目前知名框架[Spring](https://docs.springframework.org.cn/spring-framework/reference/core/null-safety.html)联手[JSpecify组织](https://jspecify.dev/docs/start-here/)也正在努力的在这方面进行推广
 
 而在Kotlin中，则是试图在语法层面结局空的问题，Spring在类型层面推出了可空类型，用来特别对空进行处理
+
