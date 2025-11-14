@@ -991,4 +991,6 @@ public inline fun<T,R>T.let(block:(T)->R):R=block(this)
 
 调用某个方法的let函数，会将该对象作为Lambda的参数，进而将对该对象的操作转化到该对象的let方法的后缀函数的函数体中，返回值使用return表示
 
+## Smart Casts/智能类型转换
 
+Kotlin实现了Smart Casts，可以隐式的jiang
