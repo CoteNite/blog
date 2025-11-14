@@ -899,7 +899,11 @@ System.out.println(strNull.length());
 万幸的是，IDEA有一套强大的类型检测系统，可以提前帮我们分析出一个对象实例是否存在为null的可能，但是在这种情况下，我们就不得不在这种情况下进行一些防御性代码
 
 ```kotlin
-if(str==n)
+val len=if(str!=null){
+	str.length
+}
 ```
 
+我们不得不承认，null会带来很多问题，但它也确实是一门语言在设计的时候近乎无法被取消的部分，因此Java也在努力的对null进行优化
 
+在Java8，Java选择引入Optional类来解决null的各种问题，我们可以将一个对象疯传我给
