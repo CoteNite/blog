@@ -950,4 +950,18 @@ class Glasses {
 
 而在Kotlin中，则是试图在语法层面结局空的问题，Spring在类型层面推出了可空类型，用来特别对空进行处理
 
-在Kotlin中，如果我们想要将一个类型声明为空，需要显式的将其设置为可控lei'xing
+在Kotlin中，如果我们想要将一个类型声明为空，需要显式的将其设置为可空类型
+
+```kotlin
+val student:Student? =null
+```
+
+那么，对于一个对象的调用使用的也是专门的语法
+
+```kotlin
+s.student?.glasses?.degree
+```
+
+这里的?.会在前面数据不为空时才会执行，否则这会立刻截断并返回null
+
+除此之外Kotlin还支持Elvis表达式?:其含义是如果
