@@ -1009,8 +1009,23 @@ Kotlin的编译器只有在检测到变量不会变化的情况下才会发生�
 ```kotlin
 class Kot{
 	var str:String?
-	fun printStrLen(){
-		return if(str!=null) str.length else -1  //这里会被拒绝，因为strben'shen
+	fun getStrLen():Int{
+		return if(str!=null) str.length else -1  //这里会被拒绝，因为str本身多线程不安全
+	}
+}
+```
+
+当然，上述的代码将var修改为val就可以通过编译器了
+
+亦或是我们可以使用更加高效的let方法
+
+```kotlin
+class Kot{
+	var str:String?
+	fun getStrLen():Int{
+		return if(str!=null) str?.let{
+			return it.length
+		}?:-1
 	}
 }
 ```
