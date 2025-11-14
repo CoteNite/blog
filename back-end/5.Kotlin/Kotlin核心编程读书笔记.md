@@ -910,4 +910,6 @@ val len=if(str!=null){
 
 一些开源项目中则选择返回一些非空的实例来代表空，比如常见的一些获取List的方法，如果获取不到List，返回的并不是null而是Empty List
 
-另一种被大家推广的方式则是使用注解，在一个对象被创造出来的时候就使用注解对其内部字段是否为空进行定义，进而强制开发者提前去思考一个字段的可空性
+另一种被大家推广的方式则是使用注解，在一个对象被创造出来的时候就使用注解对其内部字段是否为空进行定义，进而强制开发者提前去思考一个字段的可空性，目前知名框架[Spring](https://docs.springframework.org.cn/spring-framework/reference/core/null-safety.html)联手[JSpecify组织](https://jspecify.dev/docs/start-here/)也正在努力的在这方面进行推广
+
+而在Kotlin中，则是试图在语法层面结局空的问题，Spring在类型层面推出了可空类型，用来特别对空进行处理
