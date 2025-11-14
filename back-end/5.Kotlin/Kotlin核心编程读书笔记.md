@@ -891,7 +891,15 @@ String str="null";
 String strNull=null;
 
 System.out.println(str.length());
-System.o
+System.out.println(strNull.length());
+```
+
+这段代码在编译时期不会出现报错但是在运行期会爆出NPE的问题，同时，当代码长到一定程度，被赋值为null的对象与调用它的语句距离太远，NPE也很难被程序员发现
+
+万幸的是，IDEA有一套强大的类型检测系统，可以提前帮我们分析出一个对象实例是否存在为null的可能，但是在这种情况下，我们就不得不在这种情况下进行一些防御性代码
+
+```kotlin
+if(str==n)
 ```
 
 
