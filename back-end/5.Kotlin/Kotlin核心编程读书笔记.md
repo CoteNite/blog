@@ -879,11 +879,19 @@ Tony Hoare是第一个使用null引用的学者，他在ALGOL W中引入了null�
 
 - 该值未被初始化
 - 该值不合法
-- 
+- 该值不需要
+- 该值不存在
 
+在我们的日常业务中往往需要程序员根据实际的业务去为null赋予真实的意义，但这一步又为开发者带来了无谓的心智负担
 
+除此之外，NPE也是一种十分令人恼火的错误，我们来看一个代码
 
+```java
+String str="null";
+String strNull=null;
 
-
+System.out.println(str.length());
+System.o
+```
 
 
