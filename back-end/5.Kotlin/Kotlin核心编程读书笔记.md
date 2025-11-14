@@ -993,4 +993,24 @@ public inline fun<T,R>T.let(block:(T)->R):R=block(this)
 
 ## Smart Casts/智能类型转换
 
-Kotlin实现了Smart Casts，可以隐式的jiang
+Kotlin实现了Smart Casts，可以隐式的将一个类型转换为另一种类型，举个例子
+
+```kotlin
+val str:Any="abc"
+if(str is String) str.length
+```
+
+如果是Java，在if处其实还要完成一部类型转换，但是Kotlin中，由于前面已经识别到了str是String类型，所以可以直接的调用str的API
+
+同样的，对于可空类型也是，如果我们的代码在前面已经确定了非null，那么后面的代码就不用在使用?语法
+
+Kotlin的编译器只有在检测到变量不会变化的情况下才会发生智能转换，这一检测对多线程也有效
+
+```kotlin
+class Kot{
+	var str:String?
+	fun printStrLen(){
+		return if(str!=null) str.length else -1  //这里会被拒绝，因为strben'shen
+	}
+}
+```
