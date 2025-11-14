@@ -908,6 +908,39 @@ val len=if(str!=null){
 
 在Java8，Java选择引入Optional类来解决null的各种问题，我们可以将一个对象封装为Optional类实例，并使用Optional类中带有的API去对其进行处理，但这一层的封装却又给类的使用带来了负担，好在在另一方面，我们可以使用Java的类函数式编程与Optional类提供的flatMap函数来进行较为简便的写法
 
+```java
+public class Seat {  
+    private Optional<Student> student;  
+  
+    public Optional<Student> getStudent() {  
+        return student;  
+    }  
+  
+    public static void main(String[] args) {  
+        Optional<Seat> seat = Optional.of(null);  
+        seat.flatMap(Seat::getStudent)//虽然不能在这里对代码进行中断，但可以避免NPE出现
+                .flatMap(Student::getName)  
+                .map(Glasses::getDegree)  
+                .ifPresent(System.out::println);  
+    }  
+}  
+  
+class Student {  
+    private Optional<Glasses> name;  
+  
+    public Optional<Glasses> getName() {  
+        return name;  
+    }  
+}  
+  
+class Glasses {  
+    private double degree;  
+  
+    public double getDegree() {  
+        return degree;  
+    }  
+}
+```
 
 
 一些开源项目中则选择返回一些非空的实例来代表空，比如常见的一些获取List的方法，如果获取不到List，返回的并不是null而是Empty List
