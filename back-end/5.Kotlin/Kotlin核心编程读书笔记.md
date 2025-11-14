@@ -982,6 +982,13 @@ sealed class Either<A,B>(
 	class Right<A,B>(val value:B):Either<A,B>()
 )
 
-seat?.student?.glasses?.let{Either.Right<Error,Double>(it.degree)}?:Either.Left<Error,TR>
+seat?.student?.glasses?.let{Either.Right<Error,Double>(it.degree)}?:Either.Left<Error,Double>(Error(code=1))
 ```
+
+```kotlin
+public inline fun<T,R>T.let(block:(T)->R):R=block(this)
+```
+
+调用某个方法的let函数，会将该对象作为Lambda的参数，进而将对该对象的操作转化到该对象的let方法的后缀函数的函数体中，返回值使用return表示
+
 
