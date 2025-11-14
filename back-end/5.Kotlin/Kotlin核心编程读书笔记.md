@@ -972,7 +972,16 @@ s.student?.glasses?.degree?:5.0
 
 最后，Kotlin还支持一种非空断言!!.，该语法没有实际意义，仅仅是让编译器忽略!!.前面的部分为空的可能性（也可以理解为强制让编译器认为前面的部分为非空），这一步只是为了骗过编译器让其可以正常编译，但是运行时如果出现null的情况任然会出现NPE
 
-## Either类型
+## Either
 
-有了可空类型就完全够了吗？实则不然，虽然我们可以给代码设置一个默认值，但是在一些情况下，外界传入了一个null的值，我们如何在不出现NPE的时候将异常表示出来呢，Kotlin选择使用Either类进行实现
+有了可空类型就完全够了吗？实则不然，虽然我们可以给代码设置一个默认值，但是在一些情况下，外界传入了一个null的值，我们如何在不出现NPE的时候将异常表示出来呢，Kotlin选择使用Either进行实现
+
+```kotlin
+sealed class Either<A,B>(
+	class Left<A,B>(val value:A):Either<A,B>()
+	class Right<A,B>(val value:B):Either<A,B>()
+)
+
+seat?.student?.glasses?.let{Either.Right<Error,Double>(it.degree)}?:Either.Left<Error,TR>
+```
 
