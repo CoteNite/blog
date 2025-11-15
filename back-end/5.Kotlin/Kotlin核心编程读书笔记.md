@@ -1072,3 +1072,14 @@ class Kot{
 
 实际上并不会，因为Kotlin上的可空类型的设计实际上类似UnionType，也就是说Any?实际上类似Any并Null，而Any??从语义上看就是Any并Null并Null，也就等价于Any?，因此并无讨论意义
 
+## Nothing与Nothing?
+
+Kotlin中还引入了底类的定义，也就是所有类的子类型，这其实是为了进一步实现表达式而引入的
+
+举个例子，如果我们的一个方法要产生报错，且我们还希望他能具有返回值（像是表达式一样），那么他的返回值应该是什么
+
+这种情况下就是Nothing出现的意义，我们可以让其返回Nothing，Nothing在Kotlin中无法被实例化，也就是说，如果一个函数的返回值为Nothing，则直接表明这个函数没有返回值，且大概率会有意外终止
+
+你可能会感觉这有点像Java中的return或是break的作用，实际上，Kotlin的return和throw的返回值都是Nothing
+
+除此之外则是Nothing的可空类型Nothing?由于Nothing无法被实例化，实际上Nothing?的值只有一个，就是null，也正是y
