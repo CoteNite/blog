@@ -1029,3 +1029,5 @@ class Kot{
 	}
 }
 ```
+
+不过有时候，我们不太能满足使用smart castas的情况，并且smart casts缺乏语义，不能使用于所有的场景，所以一旦我们需要xian'shi
