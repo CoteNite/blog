@@ -1187,3 +1187,19 @@ fun <T> cook(t:T): String where T: Animal, T: Eatable ="can eat"
 
 ## 类型擦除
 
+如果了解Java泛型的小伙伴应该清楚，Java泛型本质上其实是假泛型，本质上是通过类型擦除实现的，那么类型擦除究竟是什么呢？我们下来看一段代码
+
+```java
+List<String> list=new ArrayList<String>();
+String[] array=new String[]{};
+System.out.println(list.getClass());
+System.out.println(array.getClass());
+
+//输出结果
+//class java.util.ArrayList
+//class [Ljava.lang.String;
+```
+
+我们会发现，Java并不知道List的泛型究竟填入了什么，仅仅知道他是ArrayList类型，这一过程中，对于String泛型的定义就如同被擦除了一样，因此被称之为类型擦除
+
+而之所以这样设计，是因为Java在最早期的版本ji
