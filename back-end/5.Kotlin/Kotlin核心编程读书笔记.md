@@ -1042,6 +1042,7 @@ class Kot{
 
 ```kotlin
 class Kot{
-	val stu:Student?=getStu() as Student?
+	val stu:Student?=getStu() as? Student?  //当as?前的部分非as?后的类型时，则返回null
 }
 ```
+
