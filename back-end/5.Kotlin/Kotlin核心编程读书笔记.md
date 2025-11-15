@@ -1030,4 +1030,18 @@ class Kot{
 }
 ```
 
-不过有时候，我们不太能满足使用smart castas的情况，并且smart casts缺乏语义，不能使用于所有的场景，所以一旦我们需要xian'shi
+不过有时候，我们不太能满足使用smart castas的情况，并且smart casts缺乏语义，不能使用于所有的场景，所以一旦我们需要显式的类型转换的时候，我们可以使用as操作符来实现
+
+```kotlin
+class Kot{
+	val stu:Student?=getStu() as Student?
+}
+```
+
+除此之外Kotlin还支持as的安全版本，as?
+
+```kotlin
+class Kot{
+	val stu:Student?=getStu() as Student?
+}
+```
