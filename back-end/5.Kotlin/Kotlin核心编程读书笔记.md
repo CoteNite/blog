@@ -1140,3 +1140,23 @@ List list=new ArrayList()
 ```kotlin
 val list=mutableListOf<String>()
 ``` 
+
+## 上界约束
+
+有时候我们不希望泛型的位置可以填充任意的内容，这时候我们就需要对泛型进行一些约束
+
+```kotlin
+class Cal<T:Number>{
+	
+}
+```
+
+这里我们定义了一个Cal类，用来进行一些基本的计算，由于涉及计算，我们希望它传入的都是数字类型，因此将其限定为了Number及其子类
+
+这里的语法其实和继承一致，如果你还希望泛型传入的类型可空，还能这样
+
+```kotlin
+class Cal<T:Number?>{
+	
+}
+```
