@@ -1210,4 +1210,14 @@ System.out.println(array.getClass());
 
 首先，类型检测这一过程实际上发生在编译之前，因此不受类型擦除的影响，而自动转换，其本质上是JVM在字节码层面对取出的泛型进行了强制类型转换实现的
 
-类型擦除固然解决了代码兼容的问题，但是我们会
+类型擦除固然解决了代码兼容的问题，但是我们需要知道泛型真正的类型的时候该怎么版呢？
+
+一个常见的情景就是序列化与发序列化，当我们将一个Java实例序列化到程序外部后再将其反序列化到我们代码的内部，如何保证前后泛型的一致？
+
+其中一种方式是通过匿名内部类实现
+
+```kotlin
+val list=object:ArrayList<String>(){}
+println(list.javaClass.genericSuperClass) //打印java.utile.ArrayList<java.lang.String>
+```
+
