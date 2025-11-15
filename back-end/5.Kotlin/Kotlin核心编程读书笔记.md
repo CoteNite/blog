@@ -1133,4 +1133,10 @@ fun <T> ArrayList<T>.find(t:T):T?
 List list=new ArrayList()
 ```
 
-这个代码没有声明List的类型，同时编译器也无法对其
+这个代码没有声明List的类型，同时编译器也无法对其进行推导，但是Java中可以正常编译通过，这是Java为了兼容Java5之前的版本做出的妥协
+
+但是Kotlin最早的版本是基于Java6实现的，这个时候Java中已经有了泛型，因此Kotlin中不允许这种写法的出现，如果要定义一个空列表，则必须显示的声明列表的类型
+
+```kotlin
+val list=mutableListOf<String>()
+``` 
