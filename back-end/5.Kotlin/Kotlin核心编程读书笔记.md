@@ -1082,4 +1082,11 @@ Kotlin中还引入了底类的定义，也就是所有类的子类型，这其�
 
 你可能会感觉这有点像Java中的return或是break的作用，实际上，Kotlin的return和throw的返回值都是Nothing
 
-除此之外则是Nothing的可空类型Nothing?由于Nothing无法被实例化，实际上Nothing?的值只有一个，就是null，也正是y
+除此之外则是Nothing的可空类型Nothing?由于Nothing无法被实例化，实际上Nothing?的值只有一个，就是null，也正是因为这个设计，我们可以让null作为任何可空类型的值（因为本质上他是作为所有类的子类Nothing?的值被传入的）
+
+## 自动装箱
+
+Kotlin取消了基本类型，所有Java中的基本类型都是以其包装类型的情况在Kotlin中被使用，如果查看其字节码，我们会发现，Int的字节码会将其视为int，而Int?的字节码会将其视为Integer，这是为了进一步优化性能而实现的，同时，统一使用包装类型还可以减少程序员的心智负担，以一种统一的形式去使用一个变量
+
+## “新”的数组类型
+
