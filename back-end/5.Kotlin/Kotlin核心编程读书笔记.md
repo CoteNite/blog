@@ -1093,5 +1093,19 @@ Kotlin取消了基本类型，所有Java中的基本类型都是以其包装类�
 Java中数组的声明方式实际上比较类似C/C++，而Kotlin则是放弃了这种写法
 
 ```kotlin
-val arr=arryO
+val arr=arrayOf(n1,n2,n3)//Kotlin会自动识别arrayOf中的类，返回其最近父类或其自身
 ```
+
+熟悉Google著名Java工具类Guava的小伙伴看这种写法yinbg'gai
+
+数组在Kotlin中也是以类的情况出现，我们可以将其视作Kotlin集合系统的一部分
+
+```kotlin
+val arr=arrayOf<Int>(1,2,3)//我们也可以手动声明array的类型
+```
+
+Array是一种大小固定的集合，同时在内存中地址连续，这些特点同样也是Kotlin中数组类的特点
+
+除此之外，Kotlin还专门提供了IntArray，CharArray等类，用来作为基本类型的数组类，与直接使用Array的区别在于这些基本类型数组都做了专门的优化，因此推荐优先使用这些特殊数组，值得注意的是，这些基本类型数组与Array类之间不存在父子类关系
+
+## 泛型
