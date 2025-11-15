@@ -1160,3 +1160,23 @@ class Cal<T:Number?>{
 	
 }
 ```
+
+那么我们对一个泛型有多个条件呢？
+
+```kotlin
+open class Animal{}
+interface Eatable{}
+
+class Duck:Animal(),Eatable{
+
+}
+```
+
+现在有这么一个类Animal，其子类均为动物，同时存在一个接口Eatable，表示一个动物是否能被吃
+
+那么现在存在一个类Cook，用来烹饪动物，他就要求传入的泛型同时继承Animal并实现Eatable，这时就要使用Kotlin提供的where语法
+
+```kotlin
+
+
+```
