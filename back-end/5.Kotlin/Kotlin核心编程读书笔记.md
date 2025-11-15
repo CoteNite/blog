@@ -1221,4 +1221,16 @@ val list=object:ArrayList<String>(){}
 println(list.javaClass.genericSuperclass) //打印java.utile.ArrayList<java.lang.String>
 ```
 
-匿名内部类本质上创建出的是一个ArrayList的子类，
+匿名内部类本质上创建出的是一个ArrayList的子类，而子类中保存父类的信息不会进行类型擦除，因此我们可以明确的知道他的泛型是什么
+
+我们常用的Gson库本质上也是通过这种方式实现的泛型信息的获取
+
+除此之外，Kotlin还支持使用内联函数的方式获取泛型信息
+
+```kotlin
+inline fun <reified T> getType(){
+	return T:class.java
+}
+```
+
+内联函数想要保存泛型的信息只需要在使用的泛型前面加上reified关键字即可，在编译的时候会将泛型的类型插入到字节码中，进而实现对泛型类型的记录，同样的，由于这个功能的特殊性，使用了reified关键字的内联函数无法直接bie
