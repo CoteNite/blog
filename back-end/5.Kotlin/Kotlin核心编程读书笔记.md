@@ -1218,6 +1218,7 @@ System.out.println(array.getClass());
 
 ```kotlin
 val list=object:ArrayList<String>(){}
-println(list.javaClass.genericSuperClass) //打印java.utile.ArrayList<java.lang.String>
+println(list.javaClass.genericSuperclass) //打印java.utile.ArrayList<java.lang.String>
 ```
 
+匿名内部类本质上创建出的是一个ArrayList的子类，
