@@ -1177,6 +1177,13 @@ class Duck:Animal(),Eatable{
 那么现在存在一个类Cook，用来烹饪动物，他就要求传入的泛型同时继承Animal并实现Eatable，这时就要使用Kotlin提供的where语法
 
 ```kotlin
+class Cook<T> where  T : Animal,T: Eatable{  //where放在最后，对T进行限制 
+    fun cook(t:T): String ="can eat"  
+}  
 
-
+//泛型方法定义的方式，where同样也是放在了最后
+fun <T> cook(t:T): String where T: Animal, T: Eatable ="can eat"
 ```
+
+## 类型擦除
+
