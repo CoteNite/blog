@@ -1287,12 +1287,6 @@ val value:Int=listFather.get()
 
 而逆变则刚好相反，逆变是如果逆变类A的泛型部分是逆变类B的泛型部分的子类，那么逆变类A就是逆变类B的父类，用关键字`in`表示
 
-```kotlin
-class Comperable<in T>{
-	fun sort(value:T)
-}
-```
-
 相对协变，逆变的管控更加严格（因为逆变本身的情景就很苛刻），逆变不能作为类中的字段使用，仅能作为方法的入参
 
 还是用String Any Int举例，如果存在逆变类
@@ -1302,5 +1296,24 @@ class Inverse<in T>(
     var value:T  //实际上这里会报错
 )
 
-va
+val inverse = Inverse<Any>("1")  
+val parent: Inverse<Int> =inverse  
+val value: Int =parent.value
 ```
+
+根据上述的伪代码，我们知道根据逆变后，取出来的value实际上是原本类的任意一种子类，而输入的时候是原本类的任意一种子类，二者是平行关系，不存在子类化的替换关系，因此不安全
+
+那么其意义是什么呢？
+
+```kotlin
+class Comparable<in T>{  
+    fun compareTo(other:T){  
+         
+    }  
+}
+
+ComperableM<
+
+```
+
+我们来看上述方法，如果我们创建一个
