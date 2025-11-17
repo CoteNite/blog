@@ -1237,4 +1237,20 @@ inline fun <reified T> getType(){
 
 ## 协变与逆变
 
-Kotlin本身支持协变与逆变，fe
+Kotlin本身支持协变与逆变，分别使用in和out关键字进行实现
+
+```kotlin
+class List<out T>{
+
+}
+
+val listChild=List<Int>()
+val listFather:List<Number> =listChild
+```
+
+所谓协变就是泛型类实例A中使用的泛型是泛型类实例B的泛型的子类，那么泛型类实例A就是泛型类实例B的子类
+
+对于协变，Kotlin的要求是协变类中使用泛型的字段是只读的，比如
+
+```kotlin
+```
