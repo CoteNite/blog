@@ -1262,7 +1262,7 @@ fun main() {
 class Covariance<out T>(
     var value:T  //这里会报错，声明协变字段只能是只读类型
 ){
-	fun getValue(inValue:T){  //这里也会报错，因为协变不能作为方法的入参
+	fun setValue(inValue:T){  //这里也会报错，因为协变不能作为方法的入参
 
     }
 }
@@ -1293,4 +1293,14 @@ class Comperable<in T>{
 }
 ```
 
-逆变最大的
+相对协变，逆变的管控更加严格（因为逆变本身的情景就很苛刻），逆变不能作为类中的字段使用，仅能作为方法的入参
+
+还是用String Any Int举例，如果存在逆变类
+
+```kotlin
+class Inverse<in T>(
+    var value:T  //实际上这里会报错
+)
+
+va
+```
