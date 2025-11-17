@@ -1253,4 +1253,18 @@ val listFather:List<Number> =listChild
 对于协变，Kotlin的要求是协变类中使用泛型的字段是只读的，比如
 
 ```kotlin
+fun main() {
+    val int= Covariance(1)
+    val any: Covariance<Any> = int
+    any.value="s"
+}
+
+class Covariance<out T>(
+    var value:T  //这里会报错，声明协变字段只能是只读类型
+){
+	fun getValue(inValue:T){  //这里也会报错，因为协变不能作为方法的入参
+
+    }
+}
 ```
+
