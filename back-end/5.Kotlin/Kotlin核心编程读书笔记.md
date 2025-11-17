@@ -1277,5 +1277,8 @@ class List<out T>{
 
 val listChild=List<Int>()
 val listFather:List<Number> =listChild
-lia
+listFather.add("12")
+val value:Int=listFather.get()
 ```
+
+上面的伪代码中，我们设计了一个场景，由于协变的存在，我们可以在协变中的父类中插入更加宽泛的值，但是将这个值取出时，应该是协变类中顶层父类的任意子类，这些子类之间不包含子类化的“替代关系”，因此使用它们是不安全的，唯一安全的形式就是将其统一当作父类取出（因为从协变中的父类中，去出的泛型字段也只能是父类的类型），而子类作为父类去使用是始终安全的
