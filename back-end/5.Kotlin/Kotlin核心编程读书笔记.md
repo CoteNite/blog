@@ -1268,3 +1268,14 @@ class Covariance<out T>(
 }
 ```
 
+之所以会强制这么设计，是因为协变中存在以下的问题
+
+```kotlin
+class List<out T>{
+
+}
+
+val listChild=List<Int>()
+val listFather:List<Number> =listChild
+lia
+```
