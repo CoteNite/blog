@@ -1312,8 +1312,16 @@ class Comparable<in T>{
     }  
 }
 
-ComperableM<
+val comparableAny = Comparable<Any>()  
+val comparableInt:Comparable<Int> = comparableAny  
+comparableInt.compareTo(1)
 
 ```
 
-我们来看上述方法，如果我们创建一个
+我们来看上述方法，如果我们将comparableAny当作comparableInt使用，而老的代码中存在的compareTo方法，用的实际上是父类中的参数和方法，所以当你将其子类传入时，不会出现问题，因为子类的方法可以被使用
+
+在逆变中，我们只能让逆变部分作为方法的入参，就如同他的关键字`in`一样
+
+一些小伙伴看完一遍可能觉得这里很绕，没关系，我们总结一下
+
+协变和逆变zhi'suo'yi
