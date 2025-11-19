@@ -1416,4 +1416,21 @@ Kotlin中类似的方法有很多，这里一并提及了
 
 ### sumOf——求和
 
-sumOf函数用来接受一个Number元素，
+sumOf函数用来接受一个可以执行`+`操作的元素，然后将所有的返回值累加起来
+
+```kotlin
+fun main() {  
+    val listOf = listOf(1, 2, 3.3,4,5,6,7,8,9)  
+    val sum = listOf.sumOf { it .toDouble() }  
+    println(sum)  
+}
+```
+
+对于一个固定的数字列表，还可以使用更加方便的sum方法直接求和
+
+### fold
+
+fold函数可以在进行返回本轮要累加的值之前对之前累加的值进行操作，该方法除了需要一个Lambda函数之外，还需要一个初始值，作为第一次累加的时候的参数
+
+```
+```
