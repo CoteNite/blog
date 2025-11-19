@@ -1353,3 +1353,31 @@ val fn = { a: Int ->
 
 同时Kotlin对Java原有的使用Lambda表达式的方式进行了优化，当方法的最后一个参数为Lambda表达式时，可以以未随的形式使用Lambda表达式，当函数只有一个参数且为Lambda表达式时，可以省略小括号
 
+## with与apply
+
+Kotlin中提供了with与apply两个函数，用来让我们更加方便的调用一个实例的内部参数
+
+```kotlin
+fun main() {  
+  
+    val user = User("张三", 18)  
+    user.apply {  
+        println(this.name)  
+        name="李四"  
+        println(name)  
+    }  
+  
+    with(user){  
+        println(this.name)  
+  
+        println(age)  
+    }  
+}  
+  
+data class User(  
+    var name: String,  
+    val age: Int  
+)
+```
+
+在apply和with
