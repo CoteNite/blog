@@ -1386,4 +1386,26 @@ data class User(
 
 ### map
 
-Kotlin中的map类似Java Str
+Kotlin中的map类似Java Stream API中的map，核心作用在于将集合中的`所有`元素都进行一遍操作，然后将其转化为一个新的集合
+
+```kotlin
+fun main() {  
+    val listOf = listOf(1, 2, 3)  
+    val map = listOf.map { it * 2 }  
+    println(map)  //[2, 4, 6]  
+}
+```
+
+### filter
+
+filter实现了对集合的筛选操作，我们可以传入一个返回值为Bollean的Lambda表达式，他会对集合中的每一个元素进行检验，只有返回true的元素才会被留下
+
+```kotlin
+fun main() {  
+    val listOf = listOf(1, 2, 3,4,5,6,7,8,9)  
+    val map = listOf.filter { it>3 }  
+    println(map)  //[4, 5, 6, 7, 8, 9]
+}
+```
+
+Kotlin中内含了一个便捷的
