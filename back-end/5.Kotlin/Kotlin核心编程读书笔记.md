@@ -1380,4 +1380,10 @@ data class User(
 )
 ```
 
-在apply和with
+在apply和with的函数体中，我们就像是再写一个User类内部的函数一样对User实例进行操作
+
+## 集合类中好用的，使用Lambda的方法
+
+### map
+
+Kotlin中的map类似Java Str
