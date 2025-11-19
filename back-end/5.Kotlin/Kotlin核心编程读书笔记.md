@@ -1345,5 +1345,11 @@ comparableInt.compareTo(1)
 Lambda表达式的返回值就是一个函数，所以我们可以轻松的用lambda表达式来创建一个函数
 
 ```kotlin
-
+val fn = { a: Int ->  
+    println(a)  
+    a  
+}
 ```
+
+同时Kotlin对Java原有的使用Lambda表达式的方式进行了优化，当方法的最后一个参数为Lambda表达式时，可以以未随的形式使用Lambda表达式，当函数只有一个参数且为Lambda表达式时，可以省略小括号
+
