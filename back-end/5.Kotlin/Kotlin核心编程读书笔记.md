@@ -1384,7 +1384,7 @@ data class User(
 
 ## 集合类中好用的，使用Lambda的方法
 
-### map
+### map——转换
 
 Kotlin中的map类似Java Stream API中的map，核心作用在于将集合中的`所有`元素都进行一遍操作，然后将其转化为一个新的集合
 
@@ -1396,7 +1396,7 @@ fun main() {
 }
 ```
 
-### filter
+### filter——筛选
 
 filter实现了对集合的筛选操作，我们可以传入一个返回值为Bollean的Lambda表达式，他会对集合中的每一个元素进行检验，只有返回true的元素才会被留下
 
@@ -1408,4 +1408,12 @@ fun main() {
 }
 ```
 
-Kotlin中内含了一个便捷的
+Kotlin中类似的方法有很多，这里一并提及了
+
+- filterNotNull：用来筛选出不是null的元素（不需要参数）
+- filterNot：在返回false的时候才会保留元素
+- count：返回会返回true的元素的个数
+
+### sum——求和
+
+sum函数
