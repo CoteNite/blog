@@ -1432,5 +1432,13 @@ fun main() {
 
 fold函数可以在进行返回本轮要累加的值之前对之前累加的值进行操作，该方法除了需要一个Lambda函数之外，还需要一个初始值，作为第一次累加的时候的参数
 
+```kotlin
+val listOf = listOf(1, 3, 4,7)  
+val sum = listOf.fold(0){pre,now->  
+    pre  
+}  
+println(sum)//0
 ```
-```
+
+Kotlin中还有一个类似fold的方法reduce，区别在于reduce自动使用列表的第一个值作为初始值
+
