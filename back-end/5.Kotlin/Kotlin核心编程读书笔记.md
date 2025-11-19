@@ -1414,6 +1414,6 @@ Kotlin中类似的方法有很多，这里一并提及了
 - filterNot：在返回false的时候才会保留元素
 - count：返回会返回true的元素的个数
 
-### sum——求和
+### sumOf——求和
 
-sum函数
+sumOf函数用来接受一个Number元素，
