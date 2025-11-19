@@ -1442,3 +1442,11 @@ println(sum)//0
 
 Kotlin中还有一个类似fold的方法reduce，区别在于reduce自动使用列表的第一个值作为初始值
 
+### groupBy——分组
+
+groupBy用于对列表进行分组操作，分组后会产生一个Map集合，其中key为我们自定义的fe
+
+```kotlin
+
+
+```
