@@ -1454,4 +1454,6 @@ groupBy用于对列表进行分组操作，要求Lambda表达式返回一个元�
 
 ## 集合库的设计
 
-在Kotlin中，所有的集合都被分为了两类，带有Mutable和不带Mutable的，具体区别在于，带有Mutable的集合都是可变的，er
+在Kotlin中，所有的集合都被分为了两类，带有Mutable（可变）和不带Mutable的，具体区别在于，带有Mutable的集合都是可变的，而不带Mutable的均为不可变的
+
+在本质上，Kotlin的集合都是基于Java的集合实现的，Kotlin只是使用了拓展函数对其进行了增强
