@@ -1454,6 +1454,12 @@ groupBy用于对列表进行分组操作，要求Lambda表达式返回一个元�
 
 ## 集合库的设计
 
-在Kotlin中，所有的集合都被分为了两类，带有Mutable（可变）和不带Mutable的，具体区别在于，带有Mutable的集合都是可变的，而不带Mutable的均为不可变的
+在Kotlin中，所有的集合都被分为了两类，带有Mutable（可变）和不带Mutable的，具体区别在于，带有Mutable的集合都是可变的，而不带Mutable的均为只读的
 
 在本质上，Kotlin的集合都是基于Java的集合实现的，Kotlin只是使用了拓展函数对其进行了增强
+
+一般情况下，Mutable的集合类是继承自非Mutable的集合类，也就是说，我们可以将一个MutableList赋值给一个List，这时，这个List就不再是只读的了，因此，只有使用普通的listOf方法创造出来的List实例才是只读的
+
+另一方面，由于Java不区分是否可读的原因，因此Java函数调用Kotlin只读集合是可以对其进行修改操作的
+
+
