@@ -1451,3 +1451,6 @@ groupBy用于对列表进行分组操作，要求Lambda表达式返回一个元�
 有时候我们的集合中的内容是集合，我们想将这些集合中的元素在不分层的情况下转为一个只有一层的集合，这时我们就可以使用flatten方法
 
 出此之外，Kotlin还提供了faltMap函数，要求Lambda返回一个列表，Kotlin会自动的将所有列表列表进行flatten（也可以理解成先Map再flatten，而flatMap只需要你写map中的部分）
+
+## 集合库的设计
+
