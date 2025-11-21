@@ -1523,4 +1523,13 @@ list.takeWhile{it<=9}.toList
 
 ## Java Stream API
 
-我们其实不难联想到Jav
+我们其实不难联想到Java的Stream API，但是StreamAPI和Kotlin的链式操作还是有一定的区别的
+
+在Java中，Stream API是一次性的，也就说是，如果我们创建了一个Stream类，并对他进行了链式操作，那么他就无法再被使用了
+
+除此之外，Stream API还实现了多线程流，只需要通过集合类的paralleStream方法获取即可
+
+## 内联函数
+
+Kotlin中的内联函数其实是一个Java中不太需要的语法点，因为Kotlin设计他的主要目的是优化Lambda表达式产生的性能开销，而Java在Java7之后就通过JVM引入的invokednamic技术实现了隐式的Lambda优化
+
