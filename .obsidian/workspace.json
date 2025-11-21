@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/如宝石般易碎的.md",
+                "file": "story/小说/如宝石般易碎的.md",
                 "mode": "source",
                 "source": false
               },
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/如宝石般易碎的.md",
+                "file": "story/小说/如宝石般易碎的.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -172,12 +172,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "e3e2d012b0c325c7",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
-    "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
-    "story/如宝石般易碎的.md",
-    "back-end/5.Kotlin/Kotlin元编程.md",
     "story/小说/李代桃僵/钟时悟.md",
+    "story/小说/如宝石般易碎的.md",
+    "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
+    "back-end/5.Kotlin/Kotlin元编程.md",
     "story/小说/来世.md",
     "story/生活记/第一次实习.md",
     "story/奇怪的东西/Obsidian 快捷键.md",
