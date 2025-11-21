@@ -172,10 +172,11 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "9884943ad5bd65e9",
+  "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "story/小说/李代桃僵/钟时悟.md",
+    "story/小说/1.前言.md",
     "story/小说/如宝石般易碎的.md",
+    "story/小说/李代桃僵/钟时悟.md",
     "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
     "back-end/5.Kotlin/Kotlin元编程.md",
     "story/小说/来世.md",
@@ -199,7 +200,6 @@
     "back-end/2.多线程相关/4.volatile关键字.md",
     "back-end/2.多线程相关/3.synchronized关键字——JDK内部的锁.md",
     "back-end/2.多线程相关/1.多线程理论.md",
-    "back-end/2.多线程相关/2.线程在Java中的使用.md",
     "back-end/02.JVM与JVM语言",
     "back-end/01.Java",
     "back-end/85.All in AI",
