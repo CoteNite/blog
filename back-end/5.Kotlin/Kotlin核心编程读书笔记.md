@@ -1549,3 +1549,12 @@ Kotlin为了最大程度的兼容Java6，导致它无法通过invokednamic来解
 
 有时候我们希望inline函数中有的Lambda参数不会被黏贴，这时候就要用noinline关键字对Lambda参数进行修饰了
 
+## 非局部返回
+
+Kotlin中的Lambda为了实现代码的简洁，不允许在Lambda中使用return关键字，但是inline函数是个例外，当你在inline函数的Lambda参数中写入了return关键字，由于inline的内联特性，会直接导致这部分代码返回
+
+为解决这个问题，crossinline关键字对inline函数的Lambda参数进行修饰，这也就可以严格声明inline函数的Lambda参数中也不允许有return函数
+
+## 具体化参数类型
+
+由于Java自带的类型擦除，我们不能直接捕获一个参数的类型，但是，对于内联函数来说，由于其可以直接将代码zan'tie
