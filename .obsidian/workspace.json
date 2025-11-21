@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
+                "file": "story/未命名.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kotlin核心编程读书笔记"
+              "title": "未命名"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
+                "file": "story/未命名.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Kotlin核心编程读书笔记 的大纲"
+              "title": "未命名 的大纲"
             }
           }
         ],
@@ -174,6 +174,8 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
+    "story/未命名.md",
     "back-end/5.Kotlin/Kotlin元编程.md",
     "story/小说/李代桃僵/钟时悟.md",
     "story/小说/来世.md",
@@ -183,7 +185,6 @@
     "story/工作之外，工作之内/你是否适合计算机？.md",
     "story/工作之外，工作之内/0.前言.md",
     "algorithm/1.前言.md",
-    "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
     "back-end/5.Kotlin/1.基本语法 or 与Java的基本区别.md",
     "back-end/5.Kotlin/2.类与对象.md",
     "back-end/5.Kotlin/Kotlin NoteBook.md",
@@ -199,7 +200,6 @@
     "back-end/2.多线程相关/3.synchronized关键字——JDK内部的锁.md",
     "back-end/2.多线程相关/1.多线程理论.md",
     "back-end/2.多线程相关/2.线程在Java中的使用.md",
-    "back-end/2.多线程相关/5.ThreadPoolExecutor——线程池.md",
     "back-end/02.JVM与JVM语言",
     "back-end/01.Java",
     "back-end/85.All in AI",
