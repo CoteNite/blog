@@ -1580,3 +1580,23 @@ inline fun <reified T> getType(){
 ```kotlin
 fun <T> sum(a:T,b:T):T=a+b
 ```
+
+这个方法显然会报错，因为Kotlin并不确定T是否真的可以执行加法操作
+
+对此的解决方式是使用特设多态，即一个多态函数有多个不同的实现，其实现的选择根据实参的类型而决定
+
+为了实现这个功能，Kotlin特地设计了运算符重载这一语言特性来解决这个问题
+
+```kotlin
+data class Area(val v:Double)
+
+operator fun Area.plus(that:Area):Area{
+	return Area(this.value+that.value)
+}
+
+fun main(){
+	print(Area(1.9)+Area(2.1)) 
+}
+```
+
+实现运算符重载的是
