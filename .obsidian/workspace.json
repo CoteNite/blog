@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/未命名.md",
+                "file": "story/如宝石般易碎的.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "如宝石般易碎的"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/未命名.md",
+                "file": "story/如宝石般易碎的.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "如宝石般易碎的 的大纲"
             }
           }
         ],
@@ -175,7 +175,7 @@
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
     "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
-    "story/未命名.md",
+    "story/如宝石般易碎的.md",
     "back-end/5.Kotlin/Kotlin元编程.md",
     "story/小说/李代桃僵/钟时悟.md",
     "story/小说/来世.md",
