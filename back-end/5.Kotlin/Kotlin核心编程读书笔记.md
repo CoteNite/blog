@@ -1533,4 +1533,10 @@ list.takeWhile{it<=9}.toList
 
 Kotlin中的内联函数其实是一个Java中不太需要的语法点，因为Kotlin设计他的主要目的是优化Lambda表达式产生的性能开销，而Java在Java7之后就通过JVM引入的invokednamic技术实现了隐式的Lambda优化
 
-在早期，Kotlin的主要合作者是Google，其责任
+在早期，Kotlin的主要合作者是Google，其责任就是实现广大Android开发者的需求，而Android开发大多使用的都是Java 6，这也就导致在Java7中对Lambda进行的优化大多Android开发者是享受不到的
+
+因此，Kotlin必须得想办法解决这个问题
+
+在Java7中，JVM的invokenamic通过在运行时残生翻译代码来解决的这个问题，invokednamic在首次被调用的时候，就会触发产生一个匿名类来替换中间码invokednamic，后续的掉用会直接采用这个匿名类的代码，这样做的好处在于：
+
+- 由于具体的转换发生在运行时，因此字节码中能看到的实际上只有一个invoked
