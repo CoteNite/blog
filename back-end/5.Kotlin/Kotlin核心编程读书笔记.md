@@ -1660,8 +1660,8 @@ val MutableList<Int>.sumIsEven:Boolean
 
 这里我们需要理解下属性和字段的区别
 
-- 属性：包含私有字段和访问器（也就是getter和setter），可以是可变也可以是只读
-- 字段：拥有值的类成员变量，可以是只读或是可变，为了安全性一般是私有的
+- 属性（property）：包含私有字段和访问器（也就是getter和setter），可以是可变也可以是只读
+- 字段（filed）：拥有值的类成员变量，可以是只读或是可变，为了安全性一般是私有的
 
 举个例子
 
@@ -1720,5 +1720,33 @@ class Person{
 }
 ```
 
-则会发生报错`Initializer is not allowed here because this property has no backing field`
+则会发生报错`Initializer is not allowed here because this property has no backing field`，即这个属性没有幕后字段
 
+在Kotlin的文档中提到，只有我们在get和set方法中使用filed才会生成幕后字段，比如
+
+```kotlin
+class Person{  
+    var name="CoteNite"  
+        set(value){  
+            field=value  
+        }  
+        get(){   
+            return field  
+        }  
+}
+```
+
+这样就不会报错，因为其反编译出的Kotlin代码为
+
+```kotlin
+public final class Person {  
+  
+   public final String getName() {  
+      return "CoteNite";  
+   }  
+  
+   public final void setName(@NotNull String value) {  
+      System.out.print(value);  
+   }  
+}
+```
