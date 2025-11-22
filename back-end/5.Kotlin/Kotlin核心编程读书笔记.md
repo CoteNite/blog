@@ -1661,4 +1661,24 @@ val MutableList<Int>.sumIsEven:Boolean
 这里我们需要理解下属性和字段的区别
 
 - 属性：包含私有字段和访问器（也就是getter和setter），可以是可变也可以是只读
-- 字段：拥有值的类成员变量，可以是只读或是可变
+- 字段：拥有值的类成员变量，可以是只读或是可变，一般是私有的
+
+举个例子
+
+```java
+class Person{
+	private String name="CoteNite"  //这里的是字段
+
+	public void setAge(int age){
+		
+	}
+
+	public int getAge(){
+		
+	}  //同时拥有set和get方法，认为存在属性age
+}
+```
+
+这里有一个很常见的疑惑，就是如果一个字段也拥有get和set方法，那他是属性吗，那他还是字段吗
+
+当然是，这里就像是子类型话和继承一样，属性和字段本身也是平行的gua
