@@ -1826,7 +1826,11 @@ fun Son.Componion.foo(){
 
 ## Kotlin中常用的拓展函数
 
-- let：返回Lambda的运行结果或null，调用者本身通过it被使用，调用函数的对象为空时返回空
+- let：返回Lambda的运行结果或null，调用者本身通过it来使用，调用函数的对象为空时返回空
+- run：返回Lambda的运行结果，调用者本身通过this来使用，
 - apply：返回对象本身，调用者本身通过this来使用（因为闭包的范围是对象的内部），因此主要是对对象进行一些链式的调用，
-- also：调用对象以Lambda参数的形式被使用，主要使用于进行一些存在副作用（比如日志操作）的操作，其返回值是Unit
-- run：类似apply，但其本事无返回值
+- also：返回Unit，调用者本身通过it来使用，主要使用于进行一些存在副作用（比如日志操作）的操作
+- takeIf：返回对象本身或null，调用者以it的形式来使用，其Lambda返回Boolean，当其Lambda为false时返回null
+- takeUnless:takeIf的反向，也就是Lambda为false的时候返回对象本身
+
+
