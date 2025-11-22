@@ -1640,8 +1640,18 @@ fun MutableList<Int>.exchange(fromIndex:Int,toIndex:Int){
 
 Kotlin的this相对Java更加强大，可以直接指代接收者对象
 
-这里就是我们直接拓展了MutableList<Int>的方法
+这里就是我们直接拓展了MutableList< Int>的方法
 
 扩展函数本身是使用Java的静态方法实现，因此不会带来额外的性能消耗，我们一般会直接将他定义到我们的包内，亦或是定义在一个类中进行统一的管理
 
-但是值得注意的是，如果我们将拓展函数定义在一个类中，那么只有zai'ga
+但是值得注意的是，如果我们将拓展函数定义在一个类中，那么只有在该类和该类的子类才可以使用这个拓展函数
+
+除了拓展函数外，我们还可以定义拓展属性
+
+
+```kotlin
+val MutableList<Int>.sumIsEven:Boolean
+	get()=this.sum%2==0
+```
+
+我们可以显示的为其提供get和set方法，但却无法为其设置默认值，这是因为拓展属性也是通过静态方法实现的
