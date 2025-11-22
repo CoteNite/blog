@@ -1739,14 +1739,21 @@ class Person{
 这样就不会报错，因为其反编译出的Kotlin代码为
 
 ```kotlin
-public final class Person {  
-  
-   public final String getName() {  
-      return "CoteNite";  
-   }  
-  
-   public final void setName(@NotNull String value) {  
-      System.out.print(value);  
-   }  
+public final class Person {
+   @NotNull
+   private String name = "CoteNite";
+
+   @NotNull
+   public final String getName() {
+      return this.name;
+   }
+
+   public final void setName(@NotNull String value) {
+      Intrinsics.checkNotNullParameter(value, "value");
+      this.name = value;
+   }
 }
 ```
+
+也就是说，只有在get和set方法中使用了属性本身，Kotlin才会在反编译的时候生成幕后字段
+
