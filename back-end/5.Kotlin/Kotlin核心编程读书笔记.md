@@ -1632,6 +1632,16 @@ a in list//转化为 list.contain(a)
 
 ```kotlin
 fun MutableList<Int>.exchange(fromIndex:Int,toIndex:Int){
-	val tmp=this[from]
+	val tmp=this[fromIndex]
+	this[fromIndex]=this[toIndex]
+	this[toIndex]=tmp
 }
 ```
+
+Kotlin的this相对Java更加强大，可以直接指代接收者对象
+
+这里就是我们直接拓展了MutableList<Int>的方法
+
+扩展函数本身是使用Java的静态方法实现，因此不会带来额外的性能消耗，我们一般会直接将他定义到我们的包内，亦或是定义在一个类中进行统一的管理
+
+但是值得注意的是，如果我们将拓展函数定义在一个类中，那么只有zai'ga
