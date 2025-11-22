@@ -1760,19 +1760,35 @@ public final class Person {
 而所谓幕后属性是指的这样一种情况
 
 ```kotlin
-class Example {
-    inner class Inner {
-        var x: Int
-            get() = x
-            set(value) {
-                x = value
-            }
+private var _table: Map<String, Int>? = null  
+public val table: Map<String, Int>  
+    get() {  
+        if (_table == null) {  
+            _table = HashMap() // 类型参数已推断出  
+        }  
+        return _table ?: throw AssertionError("Set to null by another thread")  
     }
-
-    fun test() {
-        println(Inner().x)
-    }
-}
 ```
 
-由于Kotlin中对属性的调用会直接映射为get和setfang'fa
+存在一个私有的可变shu'xi`_table`，其调用完全基于另一个属性table
+
+反编译的Java代码为
+
+```java
+private Map _table;  
+  
+   public final Map getTable() {  
+      if (this._table == null) {  
+         this._table = (Map)(new HashMap());  
+      }  
+  
+      Map var10000 = this._table;  
+      if (var10000 != null) {  
+         return var10000;  
+      } else {  
+         throw (Throwable)(new AssertionError("Set to null by another thread"));  
+      }  
+   }
+```
+
+我们会发现，实际上存在的只有属性
