@@ -1661,7 +1661,7 @@ val MutableList<Int>.sumIsEven:Boolean
 这里我们需要理解下属性和字段的区别
 
 - 属性：包含私有字段和访问器（也就是getter和setter），可以是可变也可以是只读
-- 字段：拥有值的类成员变量，可以是只读或是可变，一般是私有的
+- 字段：拥有值的类成员变量，可以是只读或是可变，为了安全性一般是私有的
 
 举个例子
 
@@ -1681,4 +1681,44 @@ class Person{
 
 这里有一个很常见的疑惑，就是如果一个字段也拥有get和set方法，那他是属性吗，那他还是字段吗
 
-当然是，这里就像是子类型话和继承一样，属性和字段本身也是平行的gua
+当然是，这里就像是子类型话和继承一样，属性和字段本身也是平行的关系，如果一个字段同时拥有get和set方法，那么这个字段就是一个属性，但这并不耽误它本身也是一个字段
+
+对于面向对象而言，属性是对于字段的封装，由于get和set的存在，我们可以让外界对字段的访问在我们的控制之下，而不是直接取用，一般我们会将私有字段通过封装成公共属性，以便于外界访问和修改。
+
+再回到Kotlin,如果我们这样定一个字段
+
+```kotlin
+class Person{
+	val name
+		set(value)=print(value)
+		get()="CoteNite"
+}
+```
+
+其反编译的代码为
+
+```java
+public final class Person {  
+  
+   public final String getName() {  
+      return "CoteNite";  
+   }  
+  
+   public final void setName(@NotNull String value) {  
+      System.out.print(value);  
+   }  
+}
+```
+
+而如果我们这样去写
+
+```kotlin
+class Person{
+	val name="CoteNite"
+		set(value)=print(value)
+		get()="CoteNite"
+}
+```
+
+则会发生报错`Initializer is not allowed here because this property has no backing field`
+
