@@ -1770,7 +1770,7 @@ public val table: Map<String, Int>
     }
 ```
 
-存在一个私有的可变shu'xi`_table`，其调用完全基于另一个属性table
+存在一个私有的字段`_table`，其对外的获取完全基于另一个属性table
 
 反编译的Java代码为
 
@@ -1791,4 +1791,6 @@ private Map _table;
    }
 ```
 
-我们会发现，实际上存在的只有属性
+我们会发现，**实际的存储**是由私有的 **`_table` 属性**对应的 **Java 字段** `_table` 来承担的。
+    
+- **对外的访问**是由公有的 **`table` 属性**对应的 **Java 方法** `getTable()` 来实现的。
