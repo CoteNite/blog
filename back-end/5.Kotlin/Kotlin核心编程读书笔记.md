@@ -1935,3 +1935,16 @@ data class Person(
     }  
 }
 ```
+
+## Kotlin的注解
+
+Kotlin的注解与Java的注解一样，都是元编程实现的核心语法，与Java相同的是Kotlin的注解也可以放在代码中任意的位置，但是有时候Kotlin的一些语法点实际上是对应的Java的多处代码
+
+```kotlin
+data class Person(
+	@Annotation
+	val name:String//这里
+){
+	
+}
+```
