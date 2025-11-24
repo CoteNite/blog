@@ -1902,4 +1902,36 @@ C的宏相对简单除暴，大多数干的都是全局文本替换的工作，�
 
 ## KCallable
 
-Kotlin中的KCallable类是用来获取Class文件相关s'j'h'hu'xing
+Kotlin中的KCallable类是用来获取Class文件相关属性的，之所以这么设计，是因为Kotlin在代码底层将属性和函数（包括构造方法）都通过方法的形式实现的，因此你可以将他们都当成一个KCallable类
+
+```kotlin
+fun main() {  
+    Person::class.members.forEach {  
+        println(it.name)  
+    } 
+    //运行结果
+	//age  
+	//name  
+	//component1  
+	//component2  
+	//copy  
+	//equals  
+	//hashCode  
+	//printAge  
+	//printName  
+	//toString
+}  
+  
+data class Person(  
+    var name: String,  
+    var age: Int  
+  
+){  
+    fun printName() {  
+        println(name)  
+    }  
+    fun printAge() {  
+        println(age)  
+    }  
+}
+```
