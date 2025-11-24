@@ -1896,4 +1896,9 @@ C的宏相对简单除暴，大多数干的都是全局文本替换的工作，�
 - Kotlin的KCallable和Java的AccessiableObject都可以理解为调用元素，且Kotlin的构造函数本身不会作为一个单独的类型，都是使用KFunction
 - Kotlin的KProperty不能直接与Java的Field对应，因为Kotlin的KProperty是利用GetSet方法来定位的，而Java的Field则直接是检查字段，这是因为一般请款下，Kotlin不会出现字段，大多都是以属性的形式存在
 
+## KClass
+
+虽然我们说KClass和Java的Class类似，但为了更强大的功能，KClass实际上还有一些自己的API，这些API往往是涉及Kotlin自身有而Java中不存在的语法的
+
+## KCallable
 
