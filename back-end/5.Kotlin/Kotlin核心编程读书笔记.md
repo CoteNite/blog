@@ -1902,3 +1902,4 @@ C的宏相对简单除暴，大多数干的都是全局文本替换的工作，�
 
 ## KCallable
 
+Kotlin中的KCallable类是用来获取Class文件相关s'j'h'hu'xing
