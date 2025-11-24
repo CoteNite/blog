@@ -1849,4 +1849,13 @@ fun Son.Componion.foo(){
 
 - 使用API动态获取代码信息，也就是反射
 - 动态加载文本并将其作为代码执行，比如JS的eval函数
-- 通过外部编译器将问本转换为AST，
+- 通过外部编译器将文本转换为AST，也就是语法糖
+
+## AST/抽象语法树
+
+在[计算机科学](https://zh.wikipedia.org/wiki/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6 "计算机科学")中，**抽象语法树**（**A**bstract **S**yntax **T**ree，AST），或简称**语法树**（Syntax tree），是[源代码](https://zh.wikipedia.org/wiki/%E6%BA%90%E4%BB%A3%E7%A0%81 "源代码")[语法](https://zh.wikipedia.org/wiki/%E8%AF%AD%E6%B3%95%E5%AD%A6 "语法学")结构的一种抽象表示。它以[树状](https://zh.wikipedia.org/wiki/%E6%A0%91_\(%E5%9B%BE%E8%AE%BA\) "树 (图论)")的形式表现[编程语言](https://zh.wikipedia.org/wiki/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80 "编程语言")的语法结构，树上的每个节点都表示源代码中的一种结构。之所以说语法是“抽象”的，是因为这里的语法并不会表示出真实语法中出现的每个细节。比如，嵌套括号被隐含在树的结构中，并没有以节点的形式呈现；而类似于 `if-condition-then` 这样的条件跳转语句，可以使用带有三个分支的节点来表示。
+
+![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20251124200718.png)
+
+上述内容来自维基百科
+
