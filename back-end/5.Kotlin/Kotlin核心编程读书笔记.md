@@ -2018,5 +2018,21 @@ fun main() {
 }
 ```
 
-在上述的代码中，StockUpdate的price方法被委托给了Delgegates#observable方法的返回值，该方法的返回值是一个可读写值，即如果你调用了该属性的set方法，会直接执行创造这个方法时的回调，ye'ji
+在上述的代码中，StockUpdate的price方法被委托给了Delgegates#observable方法的返回值，该方法的返回值是一个可读写值，即如果你调用了该属性的set方法，会直接执行创造这个方法时的回调，而我们可以在这个回调中讲消息发送给消费者（比如上面的forEach方法调用队列）
+
+通过这种方法，我们可以实现发布订阅模式
+
+## by，Delegates与委托模式
+
+Kotlin的by关键字是Kotlin用来在语法层面实现委托的方式，其具体分为属性委托和类委托
+
+其中属性委托，我们可以将一个属性委托给一个类实例，该类有以下要求
+
+- 如果是val的属性，则必须重写getValue运算符
+- 如果是var的属性，则必须重新getValue和setValue运算符
+
+至于getValue和setValue两个方法，其实根据其名字不难知道就是在设置值和获取值的时候的回调
+
+而类委托，则是Kotlin用来实践“组合>ji'c”
+
 
