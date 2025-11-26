@@ -2033,6 +2033,93 @@ Kotlin的by关键字是Kotlin用来在语法层面实现委托的方式，其具
 
 至于getValue和setValue两个方法，其实根据其名字不难知道就是在设置值和获取值的时候的回调
 
-而类委托，则是Kotlin用来实践“组合>ji'c”
+而类委托，则是Kotlin用来实践“组合>继承”思想的实现
 
+```kotlin
+interface Counter {
+    fun increment()
+    fun getCount(): Int
+}
+
+class BasicCounter : Counter {
+    private var count = 0
+    override fun increment() { count++ }
+    override fun getCount() = count
+}
+
+// DecoratedCounter 使用类委托，但重写了 increment
+class DecoratedCounter(counter: Counter) : Counter by counter {
+    // 重写了 increment 方法，不再转发给 counter
+    override fun increment() {
+        println("Before increment...")
+        // 委托实例本身没有被调用，而是执行了这里的逻辑
+        // 如果想调用底层的 increment，必须手动调用: counter.increment() 
+        // 这里的代码只是一个示例，展示重写会覆盖委托
+    }
+
+    // getCount 方法未重写，它会自动转发给 counter.getCount()
+}
+```
+
+上面就是类委托的一个实例，我们的DecoratedCounter类本身是要继承Counter类的，但是我们却要求它在构造方法的时候传入一个counter的接口实现类，这个类的实例用来承担继承的任务
+
+我们可以自然的重写counter的方法，进而起到原本重写的功能，同时，如果我们不主动的进行重写的话，则会自然的使用我们的counter的功能
+
+### Delegates
+
+Delegates类实际上是Kotlin为我们提供的一些设计好的委托方式
+
+`observable()`
+
+用于创建 **可观察属性**。这是您示例中使用的委托。
+
+- **机制：** 它在属性值发生变化 **后** 执行回调。
+    
+- **方法签名：**
+
+ ```kotlin
+    fun <T> observable(initialValue: T, onChange: (property: KProperty<*>, oldValue: T, newValue: T) -> Unit): ReadWriteProperty<Any?, T> 
+    ```
+    
+- **适用场景：** 需要在数据更新后触发副作用（如更新 UI、发送网络请求、通知其他对象）时使用。
+    
+
+`vetoable()`
+
+用于创建 **可否决属性**。与 `observable` 类似，但它在属性值发生变化 **前** 执行回调，并且可以阻止变化。
+
+- **机制：** 回调函数必须返回一个 `Boolean` 值。
+    
+    - 如果返回 `true`，则允许赋值操作发生。
+        
+    - 如果返回 `false`，则 **阻止** 赋值操作，属性值保持不变（即 **否决** 了赋值）。
+        
+- **方法签名：**
+    
+    ```Kotlin
+    fun <T> vetoable(initialValue: T, onChange: (property: KProperty<*>, oldValue: T, newValue: T) -> Boolean): ReadWriteProperty<Any?, T>
+    ```
+    
+- **适用场景：** 需要对属性赋值进行 **验证** 或 **前置条件检查** 时使用。例如，限制一个数值属性不能赋值为负数。
+    
+
+### 3. `notNull()`
+
+用于创建 **非空延迟初始化** 属性。
+
+- **机制：**
+    
+    - 它用于 `var` 属性，且属性类型不能是可空的（例如 `Int` 而不是 `Int?`）。
+        
+    - 在第一次访问 (`getValue`) 之前，您必须先设置 (`setValue`) 它的值。
+        
+    - 如果在赋值前尝试读取，会抛出 `IllegalStateException`。
+        
+- **方法签名：**
+    
+    ```kotlin
+    fun <T> notNull(): ReadWriteProperty<Any?, T>
+    ```
+    
+- **适用场景：** 当您知道一个属性是非空的，但无法在构造函数中初始化，而必须在某个初始化方法（如 Android 的 `onCreate` 或测试的 `setUp`）中设置时使用。它避免了使用可空类型和手动检查 `null`。
 
