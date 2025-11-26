@@ -1978,3 +1978,45 @@ data class Person(
 
 ## 观察者/发布-订阅模式
 
+Kotlin利用了自身的委托语法与Delegates类实现了发布订阅模式
+
+```kotlin
+interface StockUpdateListener{  
+    fun onRise(price: Int)  
+    fun onFall(price: Int)  
+}  
+  
+class StockDisplay: StockUpdateListener{  
+    override fun onRise(price: Int) {  
+        println("rise to $price")  
+    }  
+  
+    override fun onFall(price: Int) {  
+        println("fall to $price")  
+    }  
+}  
+  
+class StockUpdate{  
+    val listener=mutableSetOf<StockUpdateListener>()  
+  
+    var price: Int by Delegates.observable(0){ _, old, new->  
+        listener.forEach {  
+            if(new>old){  
+                it.onRise(new)  
+            }else{  
+                it.onFall(new)  
+            }  
+        }  
+    }}  
+  
+fun main() {  
+    val stockUpdate=StockUpdate()  
+    val sd=StockDisplay()  
+    stockUpdate.listener.add(sd)  
+    stockUpdate.price=10  
+    stockUpdate.price=5  
+}
+```
+
+在上述的代码中，StockUpdate的price方法被委托给了Delgegates#observable方法的返回值，该方法的返回值是一个可读写值，即如果你调用了该属性的set方法，会直接执行创造这个方法时的回调，ye'ji
+
