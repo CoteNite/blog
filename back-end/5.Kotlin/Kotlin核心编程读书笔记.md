@@ -2123,7 +2123,7 @@ Delegates类实际上是Kotlin为我们提供的一些设计好的委托方式
     
 - **适用场景：** 当您知道一个属性是非空的，但无法在构造函数中初始化，而必须在某个初始化方法（如 Android 的 `onCreate` 或测试的 `setUp`）中设置时使用。它避免了使用可空类型和手动检查 `null`。
 
-## 使用部分申请实现责任链模式
+## 偏函数与偏应用
 
 [一篇对于偏函数思考的文章](https://print4d.org/blog/2019/04/partial#id-11-total-function)
 
@@ -2162,7 +2162,7 @@ fun partiallyApply(a:Int,f:(Int,Int,Int)->Int):(Int,Int)->Int{
 
 首先，原本的函数实际上是f，然后我们将f函数封装成了partiallyApply这个函数，该函数接受一个参数，这是我们要固定的那个参数，然后我们将其返回，返回的函数中变成了一个只要两个参数的函数，这就实现了对一个参数的固定
 
-好了，现在你已经了解偏应用了，那让我们来看看偏应用的实际场景吧
+我们先来看一个偏函数的实现场景
 
 ```kotlin
 class PartialFunction<in P1, out R>(private val definetAt: (P1) -> Boolean, private val f: (P1) -> R) :(P1) -> R {  
@@ -2201,5 +2201,25 @@ invoke方法中是一个极其简答的实现，也就是检查以下f传入的�
 然后我们看一下这个函数的实际使用
 
 ```kotlin
+fun main() {
+    val evenPF = PartialFunction<Int, String>(
+        definetAt = { it % 2 == 0 },
+        f = { "even: $it" }
+    )
+    val positivePF = PartialFunction<Int, String>(
+        definetAt = { it > 0 },
+        f = { "positive: $it" }
+    )
+    val combinedPF = evenPF orElse positivePF
+
+    println(combinedPF(4))
+    println(combinedPF(5))
+    println(combinedPF(-2))
+    try {
+        println(combinedPF(-3))
+    } catch (e: Exception) {
+        println("Error: ${e.message}")
+    }
+}
 
 ```
