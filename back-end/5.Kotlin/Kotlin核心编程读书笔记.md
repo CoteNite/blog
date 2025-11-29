@@ -2069,7 +2069,7 @@ class DecoratedCounter(counter: Counter) : Counter by counter {
 
 Delegates类实际上是Kotlin为我们提供的一些设计好的委托方式
 
-`observable()`
+### 1.`observable()`
 
 用于创建 **可观察属性**。这是您示例中使用的委托。
 
@@ -2077,14 +2077,14 @@ Delegates类实际上是Kotlin为我们提供的一些设计好的委托方式
     
 - **方法签名：**
 
- ```kotlin
+```kotlin
     fun <T> observable(initialValue: T, onChange: (property: KProperty<*>, oldValue: T, newValue: T) -> Unit): ReadWriteProperty<Any?, T> 
-    ```
+```
     
 - **适用场景：** 需要在数据更新后触发副作用（如更新 UI、发送网络请求、通知其他对象）时使用。
     
 
-`vetoable()`
+### 2.`vetoable()`
 
 用于创建 **可否决属性**。与 `observable` 类似，但它在属性值发生变化 **前** 执行回调，并且可以阻止变化。
 
@@ -2096,9 +2096,9 @@ Delegates类实际上是Kotlin为我们提供的一些设计好的委托方式
         
 - **方法签名：**
     
-    ```Kotlin
+```Kotlin
     fun <T> vetoable(initialValue: T, onChange: (property: KProperty<*>, oldValue: T, newValue: T) -> Boolean): ReadWriteProperty<Any?, T>
-    ```
+```
     
 - **适用场景：** 需要对属性赋值进行 **验证** 或 **前置条件检查** 时使用。例如，限制一个数值属性不能赋值为负数。
     
@@ -2117,9 +2117,9 @@ Delegates类实际上是Kotlin为我们提供的一些设计好的委托方式
         
 - **方法签名：**
     
-    ```kotlin
+```kotlin
     fun <T> notNull(): ReadWriteProperty<Any?, T>
-    ```
+```
     
 - **适用场景：** 当您知道一个属性是非空的，但无法在构造函数中初始化，而必须在某个初始化方法（如 Android 的 `onCreate` 或测试的 `setUp`）中设置时使用。它避免了使用可空类型和手动检查 `null`。
 
