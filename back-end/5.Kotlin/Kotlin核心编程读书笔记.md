@@ -2160,3 +2160,32 @@ fun partiallyApply(a:Int,f:(Int,Int,Int)->Int):(Int,Int)->Int{
 
 这个例子就是大多数函数式编程中偏函数的本质，我们来看一下他究竟干了些什么
 
+首先，原本的函数实际上是f，然后我们将f函数封装成了partiallyApply这个函数，该函数接受一个参数，这是我们要固定的那个参数，然后我们将其返回，返回的函数中变成了一个只要两个参数的函数，这就实现了对一个参数的固定
+
+好了，现在你已经了解偏应用了，那让我们来看看偏应用的实际场景吧
+
+```kotlin
+class PartialFunction<in P1, out R>(private val definetAt: (P1) -> Boolean, private val f: (P1) -> R) :(P1) -> R {  
+    override fun invoke(p1: P1): R {  
+        if(definetAt(p1)) {  
+            return f(p1)  
+        } else {  
+            throw IllegalArgumentException("Value: ($p1) isn't supported by this function")  
+        }  
+    }  
+    fun isDefinedAt(p1: P1) = definetAt(p1)  
+}  
+  
+infix fun <P1, R> PartialFunction<P1, R>.orElse(that: PartialFunction<P1, R>): PartialFunction<P1, R> {  
+  
+    return PartialFunction({  
+        this.isDefinedAt(it) || that.isDefinedAt(it)  
+    }) {  
+        when {  
+            this.isDefinedAt(it) -> this(it)  
+            else -> that(it)  
+        }  
+    }  
+  
+}
+```
