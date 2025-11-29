@@ -2221,5 +2221,7 @@ fun main() {
         println("Error: ${e.message}")
     }
 }
-
 ```
+
+## 函数式编程
+
