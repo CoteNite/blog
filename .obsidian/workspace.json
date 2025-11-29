@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/91.给初学者的建议/给后端orJava初学者的建议.md",
+                "file": "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "给后端orJava初学者的建议"
+              "title": "Kotlin核心编程读书笔记"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/91.给初学者的建议/给后端orJava初学者的建议.md",
+                "file": "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "给后端orJava初学者的建议 的大纲"
+              "title": "Kotlin核心编程读书笔记 的大纲"
             }
           }
         ],
@@ -174,10 +174,10 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
-    "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
-    "back-end/91.给初学者的建议/给后端orJava初学者的建议.md",
-    "back-end/91.给初学者的建议",
     "back-end/5.Kotlin/Kotlin元编程.md",
+    "back-end/91.给初学者的建议/给后端orJava初学者的建议.md",
+    "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
+    "back-end/91.给初学者的建议",
     "story/小说/如宝石般易碎的.md",
     "back-end/5.Kotlin/Kotlin NoteBook.md",
     "story/小说/1.前言.md",
