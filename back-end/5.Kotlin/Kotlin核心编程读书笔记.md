@@ -2189,3 +2189,9 @@ infix fun <P1, R> PartialFunction<P1, R>.orElse(that: PartialFunction<P1, R>): P
   
 }
 ```
+
+首先的第一行，是让类继承一个函数，进而可以让类像函数一样直接调用，同时重写其invoke方法，即调用该类实例时执行的内容
+
+该类传入两个函数，其中defineAt用来检测传入的参数是否在定义域内，而f参数则是偏函数降元前本身的函数
+
+invoke方法中是一个极其简答的实现，也就是检查以下f传入的函数符不符合defineAt的定义，如果符合就直接d
