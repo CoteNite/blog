@@ -2158,11 +2158,11 @@ fun partiallyApply(a:Int,f:(Int,Int,Int)->Int):(Int,Int)->Int{
 }
 ```
 
-这个例子就是大多数函数式编程中偏函数的本质，我们来看一下他究竟干了些什么
+这个例子就是大多数函数式编程中偏应用的实现，我们来看一下他究竟干了些什么
 
 首先，原本的函数实际上是f，然后我们将f函数封装成了partiallyApply这个函数，该函数接受一个参数，这是我们要固定的那个参数，然后我们将其返回，返回的函数中变成了一个只要两个参数的函数，这就实现了对一个参数的固定
 
-我们先来看一个偏函数的实现场景
+接着，我们再来看一个**偏函数**的实现场景
 
 ```kotlin
 class PartialFunction<in P1, out R>(private val definetAt: (P1) -> Boolean, private val f: (P1) -> R) :(P1) -> R {  
@@ -2196,7 +2196,7 @@ infix fun <P1, R> PartialFunction<P1, R>.orElse(that: PartialFunction<P1, R>): P
 
 invoke方法中是一个极其简答的实现，也就是检查以下f传入的函数符不符合defineAt的定义，如果符合就直接调用f，否则报错
 
-最后使用的是Kotlin的拓展语法对PartialFunction类拓展了一个orElse方法，并且支持中缀的写法，该方法接受了类实例，返回的是一个新的PartialFunction类实例，其中defineAt要求中缀涉及的两个类传入的参数至少有一个是可以不报错的，执行的f是现实是：如果中缀函数的调用者本身的参数不会报错，则使用中缀函数调用者，否则则使用后一个参数
+最后使用的是Kotlin的拓展语法对PartialFunction类拓展了一个orElse方法，并且支持中缀的写法，该方法接受了类实例，返回的是一个新的PartialFunction类实例，其中defineAt要求中缀涉及的两个类传入的参数至少有一个是可以不报错的，执行的f是现实是：如果中缀函数的调用者本身的参数不会报错，则使用中缀函数调用者，否则则使用后面的比较
 
 然后我们看一下这个函数的实际使用
 
