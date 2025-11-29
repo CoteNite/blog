@@ -19,7 +19,7 @@
 
 ![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20251129174553.png)
 
-红框中圈主的部分是短时间内不用看的，这些内容有的过于底层有的则需要一定的编程实现才可以看下去
+红框中圈主的部分是短时间内不用看的，还有图中没有的，位于图最后放的SpringCloud也暂时不用看，这些内容有的过于底层有的则需要一定的编程实现才可以看下去
 
 现阶段先观看[JavaSE](https://www.bilibili.com/video/BV163GGz2E8c/?spm_id_from=333.1387.homepage.video_card.click&vd_source=9376a85d54558433ad7f11594f35ffa4)的内容，这个课程中主要是Java的语法知识
 
@@ -29,6 +29,12 @@
 
 ![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20251129175122.png)
 
+## IDEA
+
+总所周知，IDEA是一款付费软件，但是JetBrain公司提供了教育优惠，只要你提供了你的学信网信息，他就可以让你在大学期间一直免费使用，推荐大家从最开始就使用完整版而非社区版
+
+[IDEA学生认证教程](https://blog.csdn.net/qq_36667170/article/details/79905198)
+
 ## 看不懂怎么办？
 
 理论上，除了我上面框选的内容，其他的内容都是不容易理解的，但是这是正常的现象，希望各位先不要自我怀疑，因为我当时学的时候也是这么过来的
@@ -37,7 +43,9 @@
 
 ## 项目？
 
-我的建议是，你们可以快速的学到SpringBoot的
+我的建议是，你们可以快速的学到SpringBoot的内容，然后去找个项目去做，记得一定要跟着课程，ta敲一行你敲一行，这样才有效果，这里的目的是提升你的代码量（你可以问我推荐什么项目）
+
+当你写了两三个后端项目后，你就算是入门初级后端了
 
 ## 提问
 
@@ -51,6 +59,9 @@
 
 国内使用bing，如果可以上外网，则**无条件使用Google**
 
+## 浏览器
+
+推荐使用Chrome浏览器，或者也可用Edge（国内网络），其他的浏览器一律不用
 ## 🪜
 
 这个肯定都得会，不会也不用混了，洗洗睡吧，学会之后建议电脑一直挂着，多看看外面的世界
