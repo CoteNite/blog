@@ -2158,4 +2158,5 @@ fun partiallyApply(a:Int,f:(Int,Int,Int)->Int):(Int,Int)->Int{
 }
 ```
 
-这个l
+这个例子就是大多数函数式编程中偏函数的本质，我们来看一下他究竟干了些什么
+
