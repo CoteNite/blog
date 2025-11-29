@@ -2196,5 +2196,10 @@ infix fun <P1, R> PartialFunction<P1, R>.orElse(that: PartialFunction<P1, R>): P
 
 invoke方法中是一个极其简答的实现，也就是检查以下f传入的函数符不符合defineAt的定义，如果符合就直接调用f，否则报错
 
-最后使用的是Kotlin的拓展语法对PartialFunction类拓展了一个orElse方法，并且支持中缀的写法，该方法接受了类实例，返回的是一个新的PartialFunction类实例，其中defineAt要求中缀涉及的两个类传入的参数至少有一个是可以不报错的，执行的f是执行不保错的那个PartialFunction类实例的invoke方法
+最后使用的是Kotlin的拓展语法对PartialFunction类拓展了一个orElse方法，并且支持中缀的写法，该方法接受了类实例，返回的是一个新的PartialFunction类实例，其中defineAt要求中缀涉及的两个类传入的参数至少有一个是可以不报错的，执行的f是现实是：如果中缀函数的调用者本身的参数不会报错，则使用中缀函数调用者，否则则使用后一个参数
 
+然后我们看一下这个函数的实际使用
+
+```kotlin
+
+```
