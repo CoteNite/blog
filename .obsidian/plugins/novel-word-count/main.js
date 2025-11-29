@@ -2061,4 +2061,5 @@ var NovelWordCountPlugin = class extends import_obsidian5.Plugin {
   }
 };
 
+
 /* nosourcemap */
