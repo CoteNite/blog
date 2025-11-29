@@ -2127,7 +2127,9 @@ Delegates类实际上是Kotlin为我们提供的一些设计好的委托方式
 
 [一篇对于偏函数思考的文章](https://print4d.org/blog/2019/04/partial#id-11-total-function)
 
+注意：偏函数的**偏**，实际上是英文的**partial**，中文直接翻译为**部分的**，虽然可能偏函数这个翻译更加信达雅，但是部分函数实际上更容易让初学者直接理解他想表达的意思
 
 则里有一个常见的误区，也是很多网上文章搞错的地方，在函数式编程中存在两个名字很相似的概念
 
-- [partial function](https://en.wikipedia.org/wiki/Partial_function)：偏函数，本身是指一种特殊的数学情况，即存在一个集合x，一个集合y，集合x中的所有元素并非全部至少有
+- [partial function](https://en.wikipedia.org/wiki/Partial_function)：偏函数/部分函数，本身是指一种特殊的数学情况，即存在一个集合x，一个集合y，集合x中的所有元素并非全部至少有一个y与之对应，在编程领域，则是副作用与具体业务之间的矛盾，也就是我们很难保证一个函数输入的所有参数都能有一个对应的返回值（比如异常）
+- [partial application](https://en.wikipedia.org/wiki/Partial_application)：部分应用/偏应用(?)：这个实际上才是很多文章中提到的”偏函数“，也就是那个与**柯里化**很像的概念，在wiki百科中提到，它也可以被称为**pi函数的应用**，
