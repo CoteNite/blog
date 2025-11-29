@@ -2103,7 +2103,7 @@ Delegates类实际上是Kotlin为我们提供的一些设计好的委托方式
 - **适用场景：** 需要对属性赋值进行 **验证** 或 **前置条件检查** 时使用。例如，限制一个数值属性不能赋值为负数。
     
 
-### 3. `notNull()`
+### 3.`notNull()`
 
 用于创建 **非空延迟初始化** 属性。
 
@@ -2194,4 +2194,7 @@ infix fun <P1, R> PartialFunction<P1, R>.orElse(that: PartialFunction<P1, R>): P
 
 该类传入两个函数，其中defineAt用来检测传入的参数是否在定义域内，而f参数则是偏函数降元前本身的函数
 
-invoke方法中是一个极其简答的实现，也就是检查以下f传入的函数符不符合defineAt的定义，如果符合就直接d
+invoke方法中是一个极其简答的实现，也就是检查以下f传入的函数符不符合defineAt的定义，如果符合就直接调用f，否则报错
+
+最后使用的是Kotlin的拓展语法对PartialFunction类拓展了一个orElse方法，并且支持中缀的写法，该方法接受了类实例，返回的是一个新的PartialFunction类实例，其中defineAt要求中缀涉及的两个类传入的参数至少有一个是可以不报错的，执行的f是执行不保错的那个PartialFunction类实例的invoke方法
+
