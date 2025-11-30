@@ -2389,7 +2389,18 @@ curr.head.eq(that.head)
 
 首先我们使用Kind模仿了一个高阶类型，而所谓的高阶类型，其实就是类型的类型，即对于该类型来说，类型就像是值一样，我们可以使用高阶类型对类型进行一些操作
 
-而Kind则是接受一个F
+而Kind则是接受一个F，用来作为类型构造器，A则作为类型构造器的参数
+
+即
+
+```kotlin
+Kind<List.K,Int>
+```
+
+也就是表示我们使用Kind构建Int类型的List，即等价于List< Int>
+
+然后我们让List继承Kind进而使用TypeClass，其中List中的object K实际上是一种类型gou
+
 
 
 
