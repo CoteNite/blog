@@ -2415,8 +2415,13 @@ sealed class List<out A>: Kind<List.K, A> {
 abstract class ListEq<A>(val a: Eq<A>) : Eq<Kind<List.K, A>> 
 ```
 
-这行代码就表示，如果元素A有Eq实例，那么List< A>也可以有Eq实例
+这行代码要求构建的ListEq中必须传入List的元素A的Eq实例，然后构建ListEq，用于创建List的Eq实例
 
+而该代码中对于Eq的实现，就是使用A的Eq实例对List进行递归检测，进而构成了ListEq的eq方法
+
+而最后这个代码实现的就是**使用A元素的Eq实例，构建出了他的List类型的Eq实例，即ListEq是通过AEq派生出来的**
+
+这就是TypeClass的告诫用法：**使用高阶类型（上文中的Kind）实现通过一个类型**
 
 
 
