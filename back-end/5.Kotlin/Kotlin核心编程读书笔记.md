@@ -2336,7 +2336,19 @@ interface Set<T>: Iterable<T> {
 
 我们这里来看一下Scala中对于TypeClass的一个应用————Fuctor/函子
 
-所谓函子，涉及的是数学中范畴论的概念
+所谓函子，涉及的是数学中范畴论的概念，在函数式编程中实际上是实现的两个类型之间的映射关系
+
+我们来看一个Scala中函子应用的代码
+
+```scala
+trait Functor[F[_]]{
+	def fmap[A,B](fa:F[A],f:A=>B):F[B]
+}
+```
+
+在这个scala代码中定义了一个模板，模板中存在一个待实现的函数fmap，fmap完成的操作是将F[A]这个类型转换为F[B]而A到B的转换方式则通过传入的参数f实现
+
+
 
 
 
