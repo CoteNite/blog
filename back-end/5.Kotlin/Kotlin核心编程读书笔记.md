@@ -2304,11 +2304,35 @@ fun main(){
 
 所谓的TypeClass其实是对于多态的一种使用，让我们先来了解一下他出现的契机
 
-我们可以看一下迭代器的实现方式，在我们的语言中存在迭代器接口，所有实现gai'jie
+我们可以看一下迭代器的实现方式，在我们的语言中存在迭代器接口，所有实现该接口的函数都可以完成迭代的操作，于是就有了以下的代码
 
+```kotlin
+interface Iterable<T> {
+    fun filter(p: (T) -> Boolean): Iterable<T>
+    fun remove(p: (T) -> Boolean): Iterable<T> = filter { x -> !p(x) }
+}
 
+interface List<T>: Iterable<T> {
+    override fun filter(p: (T) -> Boolean): List<T>
+    override fun remove(p: (T) -> Boolean): List<T> = filter { x -> !p(x) }
+}
+```
 
+但是当实现迭代器的类太多时，我们会发现有很多重复的代码
 
+```kotlin
+interface List<T>: Iterable<T> {
+    override fun filter(p: (T) -> Boolean): List<T>
+    override fun remove(p: (T) -> Boolean): List<T> = filter { x -> !p(x) }
+}
+
+interface Set<T>: Iterable<T> {
+    override fun filter(p: (T) -> Boolean): Set<T>
+    override fun remove(p: (T) -> Boolean): Set<T> = filter { x -> !p(x) }
+}
+```
+
+为了解决这个问题，我们引入了新的语言特性————TypeClass
 
 
 
