@@ -2348,6 +2348,13 @@ trait Functor[F[_]]{
 
 在这个scala代码中定义了一个模板，模板中存在一个待实现的函数fmap，fmap完成的操作是将F[A]这个类型转换为F[B]而A到B的转换方式则通过传入的参数f实现
 
+然后就是函子的一个使用案例
+
+```scala
+implicit val listFunctor=new Functor[List]{
+	def fmap(fa:List[A])(f:A=>B)=fa.map(f)
+}
+```
 
 
 
