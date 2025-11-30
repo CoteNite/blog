@@ -2310,7 +2310,6 @@ fun main(){
 
 举个例子，我们要给所有的列表都要实现迭代器方法，这个时候不管是继承还是拓展都要重复实现一个相似的方法，但是TypeClass可以比片这个问题
 
-
 那么我们先来看一下TypeClass在Kotlin中是如何定义的
 
 1.先定义一个TypeClass接口
@@ -2421,7 +2420,8 @@ abstract class ListEq<A>(val a: Eq<A>) : Eq<Kind<List.K, A>>
 
 而最后这个代码实现的就是**使用A元素的Eq实例，构建出了他的List类型的Eq实例，即ListEq是通过AEq派生出来的**
 
-这就是TypeClass的告诫用法：**使用高阶类型（上文中的Kind）实现通过一个类型**
+这就是TypeClass的告诫用法：**使用高阶类型（上文中的Kind）实现通过一个TypeClass实例派生出另一个TypeClass实例**
+
 
 
 
