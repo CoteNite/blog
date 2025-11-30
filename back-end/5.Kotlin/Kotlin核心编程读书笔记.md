@@ -2331,10 +2331,17 @@ object IntShow : Show<Int> {
 object StringShow : Show<String> {
     override fun show(value: String) = "String(\"$value\")"
 }
-
 ```
 
+3.使用单例类的run方法在其闭包内调用typeClass方法
 
+```kotlin
+fun main() {  
+    IntShow.run {  
+        show(1)  
+    }  
+}
+```
 
 
 
