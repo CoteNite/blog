@@ -2422,9 +2422,14 @@ abstract class ListEq<A>(val a: Eq<A>) : Eq<Kind<List.K, A>>
 
 这就是TypeClass的告诫用法：**使用高阶类型（上文中的Kind）实现通过一个TypeClass实例派生出另一个TypeClass实例**
 
+## Monoid
 
+要理解Monoid，首先我们先得理解函子，所谓函子（Functor）就是干了一个这样的事：Functor(A)->Functor(B)
 
+准确的说，函子就是一个满足这样情况的数学系统
 
+- 对任何对象 X∈C ，恒有 F(id<sub>X​</sub>)=id<sub>F(X)</sub>​ 。
+- 对任何态射 f:X→Y, g:Y→Z ，恒有 F(g∘f)=F(g)∘F(f) 。换言之，函子会保持单位态射与态射的复合。
 
 
 
