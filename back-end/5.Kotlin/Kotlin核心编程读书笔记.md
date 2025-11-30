@@ -2430,7 +2430,26 @@ abstract class ListEq<A>(val a: Eq<A>) : Eq<Kind<List.K, A>>
 
 在大多数的函数式编程语言中，我们喜欢使用typeClass来实现函子
 
-再来看Monoid，Monoid其实就是一个满足以下规则的数学系统
+再来看Monoid，Monoid其实就是一个包含以下规则的数学系统
 
-- 
+- 存在一个抽象类型A
+- 存在一个满足结合律的二元操作append，接受任何两个A类型的参数，然后返回一个A类型的结果
+- 存在一个A类型下的特数值————单位元zero
 
+Monoid还要满足以下两个数学法则
+
+- 结合律：append(a,append(b,c)) == append(append(a,b),c)
+- 同一律：append(a,zero) == append(zero,a)，即单位元zero与任何参数a进行append操作结果都是a本身
+
+
+然后我们再来实现以下Monoid
+
+```kotlin
+interface Moniod<A>{
+	fun zero():A
+	fun A.append(b:A):A
+}
+```
+
+那么Monoid可以做什么呢？
+ 
