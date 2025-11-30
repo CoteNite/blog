@@ -2489,4 +2489,16 @@ fun <A> List<A>.sum(ma:Monoid<A>){
 }
 ```
 
-而我们的Kotlin标准库中存在一个fold方法其实与之就十分类似
+而我们的Kotlin标准库中存在一个fold方法其实与之就十分类似，我们可以看一下
+
+```kotlin
+inline fun <T,R> Iterable<T>.fold(
+	initial:R,
+	operation:(acc:R,T)->R
+):R
+```
+
+其中的两个参数实际上就是分别对应zero和append操作
+
+接着我们再来看Monad，Monad实际上是函数式编程中最常见的数据结构
+
