@@ -2356,6 +2356,16 @@ implicit val listFunctor=new Functor[List]{
 }
 ```
 
+然而在Kotlin中实际上是不支持上述的写法的，但是我们可以使用接口和密封类对其进行实现
+
+1. 利用类型的扩展语法定义Typeclass接口
+2. 通过object定义具体的Typeclass实例
+3. 在实例的run闭包中实现了Typeclass的功能
+
+一个
+
+
+
 
 
 
