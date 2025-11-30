@@ -2547,4 +2547,16 @@ List(1).map { a -> List(a + 1) }
 
 也就是说函子无法实现将容器拍平的操作
 
-接着，我们就会残生一个想法，如何将一个普通的值装入一个
+接着，我们就会残生一个想法，如何将一个普通的值装入一个Functor，这也就产生了Applicative
+
+Applicative中包含一个pure方法，用于将一个值构造成Functor
+
+```kotlin
+interface Applicative<F>:Functor<F>{
+	fun <A> pure(a:A):Kind<F,A>
+}
+```
+
+pure的含义就是将一个普通的值封装成一个容器上下文
+
+
