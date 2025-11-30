@@ -2452,4 +2452,23 @@ interface Moniod<A>{
 ```
 
 那么Monoid可以做什么呢？
- 
+
+比如我们字符串拼接操作，其实他就是一个符合Monoid法则的操作
+
+- "A"+"B"+"C" ==  "A"+("B"+"C")
+- "A"+"" == "A"  此处zero == ""
+
+于是我们就能创造出Monoid
+
+```kotlin
+object StringConcatMonoid:Monoid<String>{
+	override fun zero():String=""
+	override fun String.append(b:String):String=this+b 
+}
+```
+
+
+很简单，很自然，同时再一次让我们意思到了TypeClass的优势，它可以封装一个系统，专门用于实现对一个类的一个特殊运算的拓展
+
+那么Monoid的好处究竟是什么呢？
+
