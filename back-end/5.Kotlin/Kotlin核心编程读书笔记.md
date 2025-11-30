@@ -2472,3 +2472,21 @@ object StringConcatMonoid:Monoid<String>{
 
 那么Monoid的好处究竟是什么呢？
 
+现在假设我们要给List添加一个求和操作该怎么写，我们很容易能想到，这其实也是一个Monoid，然后我们就可以对其实现以下代码
+
+```kotlin
+object IntAdditionMonoid : Monoid<Int> {
+    override fun zero(): Int = 0
+    override fun append(a1: Int, a2: Int): Int = a1 + a2
+}
+
+fun <A> List<A>.sum(ma:Monoid<A>){
+    var result = ma.zero()
+    for (element in this) {
+        result = ma.append(result, element)
+    }
+    return result
+}
+```
+
+而我们的Kotlin标准库中存在一个fold方法其实与之就十分类似
