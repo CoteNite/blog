@@ -2358,7 +2358,8 @@ object IntEq:Eq<Int>{
 上面的代码就是TypeClass的一个典型的例子，为F类全部实现了一个eq函数，我们进一步将其拓展到列表类
 
 ```kotlin
-interface Kind<outF,out A>
+interface Kind<out F,out A>
+
 sealed class List<out A>: Kind<List.K,A> {  
     object K  
 }  
@@ -2384,9 +2385,7 @@ curr.head.eq(that.head)
 }
 ```
 
-我们自定义了一个列表的实现，并且使用密封类规定了列表的两种情况，空列表Nil与普通列表Cons
-
-接着我们实现了该列表类的TypeClass ListEq，ListEq继承自接口
+我们自定义了一个列表的实现，并且使用密封类规定了列表的两种情况，空列表Nil与普通列表Cons，而ListEq是一个抽象类，他接受一个类型为Eq<A>的构造参数a，即一个Eq的实例，
 
 
 
