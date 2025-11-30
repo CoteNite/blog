@@ -2334,8 +2334,9 @@ interface Set<T>: Iterable<T> {
 
 为了解决这个问题，我们引入了新的语言特性————TypeClass
 
+我们这里来看一下Scala中对于TypeClass的一个应用————Fuctor/函子
 
-
+所谓函子，涉及的是数学中范畴论的概念
 
 
 
