@@ -2306,7 +2306,34 @@ fun main(){
 
 其最直接的作用，就是在一个类已经存在的情况下，为其拓展更多的方法
 
-当然，这个时候肯定就有小伙伴有疑问，既然是拓展方法，那为什么不直接使用拓展yu'g'fa
+当然，这个时候肯定就有小伙伴有疑问，既然是拓展方法，那为什么不直接使用拓展语法呢？这是因为一旦我们要拓展很多的方法，且多个类中可能要拓展相似的方法，这个时候直接使用拓展方法会造成代码的冗余
+
+举个例子，我们要给所有的列表都要实现迭代器方法，这个时候不管是继承还是拓展都要重复实现一个相似的方法，但是TypeClass可以比片这个问题
+
+
+那么我们先来看一下TypeClass在Kotlin中是如何定义的
+
+1.先定义一个TypeClass接口
+
+```kotlin
+interface Show<T>{
+	fun show(v:T):String
+}
+```
+
+2.为不同的类型提供实例
+
+```kotlin
+object IntShow : Show<Int> {
+    override fun show(value: Int) = "Int($value)"
+}
+
+object StringShow : Show<String> {
+    override fun show(value: String) = "String(\"$value\")"
+}
+
+```
+
 
 
 
