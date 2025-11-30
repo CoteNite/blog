@@ -2389,7 +2389,7 @@ curr.head.eq(that.head)
 
 首先我们使用Kind模仿了一个高阶类型，而所谓的高阶类型，其实就是类型的类型，即对于该类型来说，类型就像是值一样，我们可以使用高阶类型对类型进行一些操作
 
-而Kind则是接受一个F，用来作为类型构造器，A则作为类型构造器的参数
+而Kind则是接受一个类型构造器，用来构造A类型的F
 
 即
 
@@ -2399,10 +2399,23 @@ Kind<List.K,Int>
 
 也就是表示我们使用Kind构建Int类型的List，即等价于List< Int>
 
-然后我们让List继承Kind进而使用TypeClass，其中List中的object K实际上是一种类型gou
+```kotlin
+sealed class List<out A>: Kind<List.K, A> {  
+    object K  
+}
+```
 
+然后我们让List继承Kind进而使用TypeClass，其中List中的object K和Kind中的List.K实际上是一种类型构造器标签，也就是用来告诉类型系统，这里的类型构造器F就是List
 
+然后就是我们使用ADT定义了List的两种情况，即空List和普通的List
 
+最后就是我们定义了一个Eq TypeClass的List实例————ListEq
+
+```kotlin
+abstract class ListEq<A>(val a: Eq<A>) : Eq<Kind<List.K, A>> 
+```
+
+这行代码就表示，如果元素A有Eq实例，那么List< A>也可以有Eq实例
 
 
 
