@@ -2302,71 +2302,11 @@ fun main(){
 
 ## TypeClass
 
-所谓的TypeClass其实是对于多态的一种使用，让我们先来了解一下他出现的契机
+在纯粹的函数时编程语言中，由于内部没有OOP的涉及模式，因此很难实现继承，这个时候Haskell就选择了通过TypeClass的方式，在**不修改类型、不用继承、不用接口实现的前提下，为某个类型“添加行为”**
 
-我们可以看一下迭代器的实现方式，在我们的语言中存在迭代器接口，所有实现该接口的函数都可以完成迭代的操作，于是就有了以下的代码
+其最直接的作用，就是在一个类已经存在的情况下，为其拓展更多的方法
 
-```kotlin
-interface Iterable<T> {
-    fun filter(p: (T) -> Boolean): Iterable<T>
-    fun remove(p: (T) -> Boolean): Iterable<T> = filter { x -> !p(x) }
-}
-
-interface List<T>: Iterable<T> {
-    override fun filter(p: (T) -> Boolean): List<T>
-    override fun remove(p: (T) -> Boolean): List<T> = filter { x -> !p(x) }
-}
-```
-
-但是当实现迭代器的类太多时，我们会发现有很多重复的代码
-
-```kotlin
-interface List<T>: Iterable<T> {
-    override fun filter(p: (T) -> Boolean): List<T>
-    override fun remove(p: (T) -> Boolean): List<T> = filter { x -> !p(x) }
-}
-
-interface Set<T>: Iterable<T> {
-    override fun filter(p: (T) -> Boolean): Set<T>
-    override fun remove(p: (T) -> Boolean): Set<T> = filter { x -> !p(x) }
-}
-```
-
-为了解决这个问题，我们引入了新的语言特性————TypeClass
-
-我们这里来看一下Scala中对于TypeClass的一个应用————Fuctor/函子
-
-所谓函子，涉及的是数学中范畴论的概念，在函数式编程中实际上是实现的两个类型之间的映射关系
-
-我们来看一个Scala中函子应用的代码
-
-```scala
-trait Functor[F[_]]{
-	def fmap[A,B](fa:F[A],f:A=>B):F[B]
-}
-```
-
-在这个scala代码中定义了一个模板，模板中存在一个待实现的函数fmap，fmap完成的操作是将F[A]这个类型转换为F[B]而A到B的转换方式则通过传入的参数f实现
-
-然后就是函子的一个使用案例
-
-```scala
-implicit val listFunctor=new Functor[List]{
-	def fmap(fa:List[A])(f:A=>B)=fa.map(f)
-}
-```
-
-然而在Kotlin中实际上是不支持上述的写法的，但是我们可以使用接口和密封类对其进行实现
-
-1. 利用类型的扩展语法定义Typeclass接口
-2. 通过object定义具体的Typeclass实例
-3. 在实例的run闭包中实现了Typeclass的功能
-
-一个
-
-
-
-
+当然，这个时候肯定就有小伙伴有疑问，既然是拓展方法，那为什么不直接使用拓展yu'g'fa
 
 
 
