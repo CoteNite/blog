@@ -2333,15 +2333,29 @@ object StringShow : Show<String> {
 }
 ```
 
-3.使用单例类的run方法在其闭包内调用typeClass方法
+3.定义show函数进而使用typeclass
+```kotlin
+fun <T> show(value: T, inst: Show<T>): String =
+    inst.show(value)
+
+show(10, IntShow)
+```
+
+然后我们看几个常见的TypeClass的设计
 
 ```kotlin
-fun main() {  
-    IntShow.run {  
-        show(1)  
-    }  
+interface Eq<F>{
+	fun F.eq(that:F):Boolean
+}
+
+object IntEq:Eq<Int>{  
+    override fun Int.eq(that: Int): Boolean {  
+        return this==that  
+    }   
 }
 ```
+
+上面的代码就是TypeClass的一个典型的例子，为F类全部实现了一个eq函数，我们进一步将其拓展到列表类
 
 
 
