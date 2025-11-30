@@ -2521,4 +2521,16 @@ ListFunctor.fun{
 //返回Cons(1，Nil)
 ```
 
-2.使用map进行的组合满足结合律：该法则说明，当我们对函子的实例先应用函数f进行map，再用转化h到应用函数g进行
+2.使用map进行的组合满足结合律：该法则说明，当我们对函子的实例先应用函数f进行map，再用转化后的类应用函数g进行map，最后得到的应该与对函子实例应用两个函数组合出的新函数一样
+
+```kotlin
+fun f(a:Int)=a+1
+fun g(a:Int)=a*2
+
+ListFunctor.run{
+	val r1=Cons(1,Nil).map{f(it)}.map(g(it))
+	val r2=Cons(1,Nil).map{f(g(it))}
+	println(r1==r2)
+}
+//打印结果true
+```
