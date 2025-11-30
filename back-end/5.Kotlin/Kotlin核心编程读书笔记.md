@@ -2502,3 +2502,23 @@ inline fun <T,R> Iterable<T>.fold(
 
 接着我们再来看Monad，Monad实际上是函数式编程中最常见的数据结构
 
+先回到函子，经过前人的实践，他们发现所有的函子都遵循一个定律，即函子定律：
+
+1.同一律法则：假设存在一个indentity函数，接收A类型的参数a，则返回的函数还是a
+
+```kotlin
+fun indetity<A>(a:A)=a
+```
+
+那么，当我们调用函子实例的map方法，执行identity函数时，显然返回的结果韩式实例本身
+
+```kotlin
+ListFunctor.fun{
+	println(Cons(1,Nil)).map{
+		indentitty(it)
+	}
+} 
+//返回Cons(1，Nil)
+```
+
+2.使用map进行的组合满足结合律：该法则说明，当我们对函子的实例先应用函数f进行map，再用转化h到应用函数g进行
