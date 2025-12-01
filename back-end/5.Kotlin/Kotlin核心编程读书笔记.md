@@ -2671,6 +2671,9 @@ fun main() {
 
 首先是我们定义好了StdIO，并且定义好了他的几个状态(ADT)
 
-然后我们定义了StdIOMonad，用来操作StdIO实例，其中flatMap用来shi
+然后我们定义了StdIOMonad，用来操作StdIO实例，其中flatMap用来实现不同的StdIO之间的转换
 
-最后我们定义给StdIO
+## 同步与异步
+
+
+
