@@ -2818,3 +2818,7 @@ fun main() {
 Kotlin的lauch方法会启动一个协程，代码中的部分会自动执行，除此之外还有runBlocking方法，其也会启动一个协程，但他启动的协程为主协程，也就是说不存在lauch创建出的写成中使用runBlocking再创建协程
 
 之所以引入runBlocking是为了将代码划分出一个协程的区域，也就是只要在runBlocking中的代码，全部都是协程领域中的代码
+
+lauch函数本身是有返回值的，其返回值是Job类型的，job中包含着对协程的管理，比如job的cancel方法可以让我们在外界提前终止这个协程
+
+如果我们yao'ding'yi'g
