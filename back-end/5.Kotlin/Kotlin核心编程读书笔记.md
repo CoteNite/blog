@@ -2539,6 +2539,13 @@ ListFunctor.run{
 
 这里注意的一点是，函子的fmap虽然我们给的代码是f< A > -> f< B >，但是特别的A允许等于B，此时的fmap其实类似于普通的map
 
+在Functor的基础上，我们对其进行一次增强，我们对其实现一个pure函数
 
+```kotlin
+interface Applicative<F>:Functor<F>{
+	fun pure(a:F):Applicative<F>
+}
+```
 
+简单的说呢，Applicative就是实现了一个将外界内容包装进我们的函子中的功能
 
