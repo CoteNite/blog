@@ -2797,3 +2797,20 @@ Kotlin为了解决回调地狱，同时也是为了解决轻量化线程的需�
 
 关于协程为什么好，以及协程的优势我再另一篇文章中进行过探讨，这里只引出那篇文章中的结论：在IO这种内存密集型操作中，协程的效率一般要高于线程，而对于计算密集型操作时协程可能和线程的效率差不多
 
+```kotlin
+@OptIn(DelicateCoroutinesApi::class)  
+fun main() {  
+  
+    GlobalScope.launch {  
+        val job = launch {  
+            delay(1000)  
+            println("World!")  
+        }  
+        println("Hello,")  
+        job.join()  
+    }  
+    Thread.sleep(2000)  
+}
+```
+
+这就是一个简单的Kotlin协程代码，我们接下来深入探讨一下他的ge
