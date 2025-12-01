@@ -2567,7 +2567,7 @@ val result = ap(ff, fa)  // Some(15)
 
 在了解了Applicative后，我们基本可以解决很多问题了，因为现在我们可以自由的将一个值封装为Applicative，并且在里面进行一个安全的操作，这个操作甚至可以来自外界，只要它也是一个针对F的Applicative即可
 
-但是，如果Applicative中包含的F本身也是Applicative呢？
+但是，如果Applicative中包含的F本身也是Applicative呢？Applicative 能让我们在上下文中组合计算，但无法处理嵌套的上下文。
 
 这里就涉及到了双层封装，为了将其取出，我们再一次引入了flatMap函数
 
@@ -2575,3 +2575,19 @@ val result = ap(ff, fa)  // Some(15)
 join: F<F<A>> -> F<A>
 ```
 
+```kotlin
+sealed class Option<out A> {
+    data class Some<A>(val value: A) : Option<A>()
+    object None : Option<Nothing>()
+}
+
+fun <A, B> Option<A>.flatMap(f: (A) -> Option<B>): Option<B> =
+    when (this) {
+        is Option.Some -> f(this.value)
+        Option.None -> Option.None
+    }
+    
+fun <A> pure(a: A): Option<A> = Option.Some(a)
+```
+
+我们不难发现，flatMap直接接受了一个值，然后将这个值包装为了Monad返回了回去
