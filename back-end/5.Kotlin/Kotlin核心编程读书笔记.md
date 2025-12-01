@@ -2632,10 +2632,10 @@ data class FlatMap<A,B>(val fa: StdIO<A>, val f: (A) -> StdIO<B>):StdIO<B>()
   
 object StdIOMonad : Monad<StdIO.K> {  
     override fun <A, B> Kind<StdIO.K, A>.flatMap(f: (A) -> Kind<StdIO.K, B>): Kind<StdIO.K, B> {  
-        return FlatMap(this.unwrap(), ({ a ->  
-            f(a).unwrap()  
-        }))  
-    }  
+	    return FlatMap(this.unwrap()){ a ->  
+	        f(a).unwrap()  
+	    }  
+	} 
   
     override fun <A> pure(a: A): Kind<StdIO.K, A> {  
         return Pure(a)  
