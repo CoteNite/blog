@@ -2655,7 +2655,14 @@ fun <A> perform(stdIO: StdIO<A>): A {
     }  
 }
 
-fun main(){
-
+fun main() {  
+    val io = StdIOMonad.run {  
+        StdIO.read().flatMap { a ->  
+            StdIO.read().flatMap { b ->  
+                StdIO.write("$a $b")  
+            }  
+        }    
+    }  
+    perform(io.unwrap())  
 }
 ```
