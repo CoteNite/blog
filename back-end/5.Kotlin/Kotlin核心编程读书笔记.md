@@ -2983,4 +2983,11 @@ Actor是一个二十世纪七十年代被提出的编程模型，它主要是设
 
 - 每个actor持有一个邮箱，本质上是一个队列，用于存储信息
 - 每个actor可以发消息给任何actor
-- 每个actor可以通过处理消息来更新内部状态，对于外界来说actor内部是隔离的zhuan
+- 每个actor可以通过处理消息来更新内部状态，对于外界来说actor内部是隔离的状态
+
+早年间将Actor发扬光大的语言是Erlang，这是门专精于分布式的语言，我们常用的RabbitMQ也是基于Erlang写的
+
+Kotlin早期也想实现Actor，但是由于种种原因，最后Kotlin放弃了这个想法，当然，或许你也可以使用Channel来实现Actor，不过在语言层面已经没有继续支持了
+
+anyway，我们可以找找别的出路，Java和Scala其实是有一个知名的Actor库————Akka，我们可以直接使用Akka来在Kotlin中使用Actor
+
