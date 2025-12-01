@@ -2591,3 +2591,42 @@ fun <A> pure(a: A): Option<A> = Option.Some(a)
 ```
 
 我们不难发现，flatMap直接接受了一个值，然后将这个值包装为了Monad返回了回去
+
+## Monad消除副作用
+
+先上代码
+
+```kotlin
+interface Kind<out F,out A>
+
+interface Monad<F> {
+    fun <A,B> flatMap(fa: Kind<F,A>, f:(A)->Kind<F,B>): Kind<F,B>
+}
+
+sealed class StdIO<A> : Kind<StdIO.K, A>{
+	object K
+	companion Object{
+		fun read():StdIO<String>{
+			
+		}
+	}
+}
+
+data class FlatMap<A, B>(
+    val fa: StdIO<A>, 
+    val f: (A) -> StdIO<B>
+) : StdIO<B>()
+
+object StdIOMonad : Monad<StdIO.K> {
+
+    override fun <A, B> flatMap(
+        fa: Kind<StdIO.K, A>, 
+        f: (A) -> Kind<StdIO.K, B>
+    ): Kind<StdIO.K, B> =
+        FlatMap(fa.unwrap(), { a -> f(a).unwrap() })
+
+    override fun <A> pure(a: A): StdIO<A> =
+        Pure(a)
+}
+
+```
