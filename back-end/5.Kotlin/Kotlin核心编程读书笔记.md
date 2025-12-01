@@ -2885,8 +2885,39 @@ async与launch相似，本身也是启动一个协程执行代码，区别在asy
 
 ## 锁
 
-Java的锁通过synchronized关键字实现，而Kotlin则使用@Synchronized注解和synchronized函数
+Java的锁通过synchronized关键字实现，而在Kotlin中，你需要通过@Synchronized函数声明一个同步方法或者使用synchronized函数来对这个代码块加锁
 
-实现
+```kotlin
+class Counter {
+    private var count: Int = 0
 
-在Kotlin中，你需要
+    // 使用 @Synchronized 注解，该方法在调用时会自动对 Counter 实例加锁 (相当于 Java 的 synchronized method)
+    @Synchronized
+    fun increment() {
+        count++
+        println("Count: $count by ${Thread.currentThread().name}")
+    }
+
+    fun getCount(): Int = count
+}
+
+fun main() {
+    val counter = Counter()
+
+    // 模拟多线程访问
+    val threads = List(5) {
+        Thread {
+            repeat(1000) {
+                counter.increment()
+            }
+        }
+    }
+
+    threads.forEach { it.start() }
+    threads.forEach { it.join() } // 等待所有线程完成
+
+    println("Final Count: ${counter.getCount()}") // 结果应为 5000
+}
+```
+
+
