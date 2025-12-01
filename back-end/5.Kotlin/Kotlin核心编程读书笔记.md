@@ -2839,13 +2839,7 @@ suspend fun test(){
 Kotlin本身支持我们利用同步的方式书写异步代码
 
 ```kotlin
-private suspend fun delayTime(millis: Long, name: String) {  
-    println("--- 开始 $name (在 ${Thread.currentThread().name} 线程) ---")  
-    delay(millis)  
-    println("--- 结束 $name (在 ${Thread.currentThread().name} 线程) ---")  
-}  
-  
-/**  
+ /**  
  * 挂起函数 1: 模拟获取初始数据
  **/
  suspend fun fetchData(): String {  
@@ -2863,24 +2857,29 @@ private suspend fun delayTime(millis: Long, name: String) {
 
 fun main()=runBlocking {
     println("--- 协程任务开始 ---")
-    
-    try {
-        // 1. 调用第一个挂起函数。
-	    // 协程在这里“暂停”，等待 fetchData 完成，但不会阻塞主线程。
-        val initialData = fetchData()
-        println("获取到的初始数据: $initialData")
-
-        // 2. 调用第二个挂起函数，并依赖于第一个结果。
-	    // 协程再次“暂停”，等待 processData 完成。
-	    val finalResult = processData()
-        println("最终处理结果: $finalResult")
-    } catch (e: Exception) {
-         println("❌ 任务发生错误: ${e.message}")
-    }
+    val initialData = fetchData()
+    val finalResult = processData()
 }
 ```
 
 在runBlocking的内容中实际上是阻塞的，因此上面的代码实际上是类似同步的，我们通过Kotlin自带的measureTime函数可以计算出运行上文代码所需的时间是接近2.5s
 
 然后我们将其转换为异步的形式
+
+```kotlin
+fun main()=runBlocking {  
+    val time = measureTime {  
+        val initialData = async { fetchData() }  
+        val finalResult = async { processData() }  
+        println("最终处理结果: ${initialData.await()} ${finalResult.await()}")  
+    }  
+    println("总耗时: $time")  
+}
+```
+
+async与launch相似，本身也是启动一个协程执行代码，区别在async返回的是Defferd类，其中包含async后缀函数中的返回值，要获取返回值我们直接使用await函数等待即可
+
+我们发现上面的代码是1.5s，这是因为两个挂起函数在不同的协程中，二者并行
+
+至于所谓的同步方式，就是使用await函数去获得协程的值，如果代码运行到了await函数，就会阻塞等待协程运行完毕，但await阻塞的只有使用await函数的协程，其他协程
 
