@@ -2883,3 +2883,5 @@ fun main()=runBlocking {
     }
 }
 ```
+
+- [ ] 在runBlocking的内容中实际上是阻塞的，因此上面的代码实际上是类似同步的，我们通过Kot
