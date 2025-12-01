@@ -2885,6 +2885,8 @@ async与launch相似，本身也是启动一个协程执行代码，区别在asy
 
 ## 锁
 
-Java的锁通过synchronized关键字实现，而Kotlin则使用@Synchronized注解和synchronized函数实现
+Java的锁通过synchronized关键字实现，而Kotlin则使用@Synchronized注解和synchronized函数
+
+实现
 
 在Kotlin中，你需要
