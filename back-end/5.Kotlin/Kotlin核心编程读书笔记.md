@@ -2839,30 +2839,26 @@ suspend fun test(){
 Kotlin本身支持我们利用同步的方式书写异步代码
 
 ```kotlin
-// 模拟一个网络延迟
-private suspend fun delayTime(millis: Long, name: String) {
-    println("--- 开始 $name (在 ${Thread.currentThread().name} 线程) ---")
-    delay(millis) 
-    println("--- 结束 $name (在 ${Thread.currentThread().name} 线程) ---")
-}
-
-/**
+private suspend fun delayTime(millis: Long, name: String) {  
+    println("--- 开始 $name (在 ${Thread.currentThread().name} 线程) ---")  
+    delay(millis)  
+    println("--- 结束 $name (在 ${Thread.currentThread().name} 线程) ---")  
+}  
+  
+/**  
  * 挂起函数 1: 模拟获取初始数据
- */
-suspend fun fetchData(): String {
-    delayTime(1500, "fetchData")
-    println("数据获取完成。")
-    return "Initial_Data_X123"
-}
-
-/**
- * 挂起函数 2: 模拟处理数据（依赖于上一步的结果）
- */
-suspend fun processData(data: String): String {
-    delayTime(1000, "processData")
-    val processed = data.replace("X123", "PROCESSED")
-    println("数据处理完成。")
-    return processed
+ **/
+ suspend fun fetchData(): String {  
+    delayTime(1500, "fetchData")  
+    return "Initial_Data_X123"  
+}  
+  
+/**  
+ * 挂起函数 2: 模拟处理数据（依赖于上一步的结果） 
+ **/
+ suspend fun processData(): String { 
+    delayTime(1000, "processData")  
+    return "processed"  
 }
 
 fun main()=runBlocking {
@@ -2876,7 +2872,7 @@ fun main()=runBlocking {
 
         // 2. 调用第二个挂起函数，并依赖于第一个结果。
 	    // 协程再次“暂停”，等待 processData 完成。
-	    val finalResult = processData(initialData)
+	    val finalResult = processData()
         println("最终处理结果: $finalResult")
     } catch (e: Exception) {
          println("❌ 任务发生错误: ${e.message}")
@@ -2884,4 +2880,7 @@ fun main()=runBlocking {
 }
 ```
 
-- [ ] 在runBlocking的内容中实际上是阻塞的，因此上面的代码实际上是类似同步的，我们通过Kot
+在runBlocking的内容中实际上是阻塞的，因此上面的代码实际上是类似同步的，我们通过Kotlin自带的measureTime函数可以计算出运行上文代码所需的时间是接近2.5s
+
+然后我们将其转换为异步的形式
+
