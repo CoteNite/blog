@@ -2921,3 +2921,56 @@ fun main() {
 ```
 
 
+```kotlin
+class SafeBox {
+    private var data: String = "Initial Data"
+    
+    // 明确定义一个私有的锁对象，通常推荐使用一个不被外部访问的 final 对象
+    private val lock = Any() 
+
+    fun updateData(newData: String) {
+        // 使用 synchronized() 函数对 lock 对象加锁
+        synchronized(lock) {
+            // 这段代码块是同步的，一次只有一个线程可以执行
+            println("Thread ${Thread.currentThread().name} updating data...")
+            this.data = newData
+            Thread.sleep(5) // 模拟耗时操作
+            println("Thread ${Thread.currentThread().name} update finished.")
+        }
+    }
+
+    fun getData(): String {
+        // 读取操作如果也需要同步，也应加锁
+        synchronized(lock) {
+            return data
+        }
+    }
+}
+
+fun main() {
+    val safeBox = SafeBox()
+
+    // 模拟多线程写入
+    val threads = List(3) { index ->
+        Thread {
+            safeBox.updateData("Data from Thread $index")
+        }
+    }
+
+    threads.forEach { it.start() }
+    threads.forEach { it.join() }
+
+    println("Final Data: ${safeBox.getData()}")
+}
+```
+
+原本Java中的volatile关键字也变成了Kotlin的注解
+
+除此之外，Kotlin还支持一种高度语义化的上锁方式
+
+```kotlin
+val lock=ReentrantLock()
+lock.withLock{
+	//上锁的代码
+}
+```
