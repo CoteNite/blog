@@ -2597,36 +2597,65 @@ fun <A> pure(a: A): Option<A> = Option.Some(a)
 先上代码
 
 ```kotlin
-interface Kind<out F,out A>
-
-interface Monad<F> {
-    fun <A,B> flatMap(fa: Kind<F,A>, f:(A)->Kind<F,B>): Kind<F,B>
+interface Kind<out F,out A>  
+  
+fun <A> Kind<StdIO.K, A>.unwrap(): StdIO<A> =this as StdIO<A>  
+  
+interface Monad<F> {  
+    fun <A> pure(a: A): Kind<F, A>  
+    fun <A, B> Kind<F, A>.flatMap(f: (A) -> Kind<F, B>): Kind<F, B>  
+}  
+  
+sealed class StdIO<A> : Kind<StdIO.K, A>{  
+    object K  
+  
+    companion object{  
+        fun read(): StdIO<String>{  
+            return ReadLine()  
+        }  
+  
+        fun write(value: String): StdIO<Unit>{  
+            return WriteLine(value)  
+        }  
+  
+        fun pure(value: Unit): StdIO<Unit>{  
+            return Pure(value)  
+        }  
+    }  
+}  
+  
+class ReadLine : StdIO<String>()  
+data class WriteLine(val line: String):StdIO<Unit>()  
+data class Pure<A>(val a: A):StdIO<A>()  
+  
+data class FlatMap<A,B>(val fa: StdIO<A>, val f: (A) -> StdIO<B>):StdIO<B>()  
+  
+object StdIOMonad : Monad<StdIO.K> {  
+    override fun <A, B> Kind<StdIO.K, A>.flatMap(f: (A) -> Kind<StdIO.K, B>): Kind<StdIO.K, B> {  
+        return FlatMap(this.unwrap(), ({ a ->  
+            f(a).unwrap()  
+        }))  
+    }  
+  
+    override fun <A> pure(a: A): Kind<StdIO.K, A> {  
+        return Pure(a)  
+    }  
+}  
+  
+fun <A> perform(stdIO: StdIO<A>): A {  
+    fun <C, D> runFlatMap(fm: FlatMap<C, D>) {  
+        perform(fm.f(perform(fm.fa)))  
+    }  
+    @Suppress("UNCHECKED_CAST")  
+    return when (stdIO) {  
+        is ReadLine -> readLine() as A  
+        is Pure<A> -> stdIO.a  
+        is FlatMap<*, A> -> runFlatMap(stdIO) as A  
+        is WriteLine -> println(stdIO.line) as A  
+    }  
 }
 
-sealed class StdIO<A> : Kind<StdIO.K, A>{
-	object K
-	companion Object{
-		fun read():StdIO<String>{
-			
-		}
-	}
+fun main(){
+
 }
-
-data class FlatMap<A, B>(
-    val fa: StdIO<A>, 
-    val f: (A) -> StdIO<B>
-) : StdIO<B>()
-
-object StdIOMonad : Monad<StdIO.K> {
-
-    override fun <A, B> flatMap(
-        fa: Kind<StdIO.K, A>, 
-        f: (A) -> Kind<StdIO.K, B>
-    ): Kind<StdIO.K, B> =
-        FlatMap(fa.unwrap(), { a -> f(a).unwrap() })
-
-    override fun <A> pure(a: A): StdIO<A> =
-        Pure(a)
-}
-
 ```
