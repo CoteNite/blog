@@ -2550,5 +2550,17 @@ interface Applicative<F>:Functor<F>{
 
 简单的说呢，Applicative就是实现了一个将外界内容包装进我们的函子中的功能
 
-除此之外，我们还不难发现，Applicative其实还实现了一个ap函数，该函数接受一个
+除此之外，我们还不难发现，Applicative其实还实现了一个ap函数，该函数接受一个函子内包含函数的类，然后将其应用于另一个函子上
 
+即
+
+```kotlin
+val fa: Option<Int> = Some(10)
+val ff: Option<(Int) -> Int> = Some { it + 5 }
+
+val result = ap(ff, fa)  // Some(15)
+```
+
+其实，就是在我们原本的上下文中引入了一个新的函数进入，这个函数还可以用于我们的上下文
+
+这里我们也可以看出，Functor 像是“对一个上下文（容器）做闭包”，它让函数可以被安全地“提升”到该上下文中进行运算，但不会破坏结构。
