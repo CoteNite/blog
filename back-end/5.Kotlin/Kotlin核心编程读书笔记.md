@@ -2543,9 +2543,12 @@ ListFunctor.run{
 
 ```kotlin
 interface Applicative<F>:Functor<F>{
-	fun pure(a:F):Applicative<F>
+	fun <A> pure(a: A): Kind<F, A>
+	fun <A, B> ap(ff: Kind<F, (A) -> B>, fa: Kind<F, A>): Kind<F, B>
 }
 ```
 
 简单的说呢，Applicative就是实现了一个将外界内容包装进我们的函子中的功能
+
+除此之外，我们还不难发现，Applicative其实还实现了一个ap函数，该函数接受一个
 
