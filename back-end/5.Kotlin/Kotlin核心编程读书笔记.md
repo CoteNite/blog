@@ -2850,8 +2850,8 @@ private suspend fun delayTime(millis: Long, name: String) {
  * 挂起函数 1: 模拟获取初始数据
  */
 suspend fun fetchData(): String {
-    delayTime(1500, "fetchData") // 耗时 1.5 秒
-    println("✅ 数据获取完成。")
+    delayTime(1500, "fetchData")
+    println("数据获取完成。")
     return "Initial_Data_X123"
 }
 
@@ -2859,9 +2859,9 @@ suspend fun fetchData(): String {
  * 挂起函数 2: 模拟处理数据（依赖于上一步的结果）
  */
 suspend fun processData(data: String): String {
-    delayTime(1000, "processData") // 耗时 1 秒
+    delayTime(1000, "processData")
     val processed = data.replace("X123", "PROCESSED")
-    println("✅ 数据处理完成。")
+    println("数据处理完成。")
     return processed
 }
 
@@ -2870,23 +2870,16 @@ fun main()=runBlocking {
     
     try {
         // 1. 调用第一个挂起函数。
-       // 协程在这里“暂停”，等待 fetchData 完成，但不会阻塞主线程。
-            val initialData = fetchData()
-            println("获取到的初始数据: $initialData")
+	    // 协程在这里“暂停”，等待 fetchData 完成，但不会阻塞主线程。
+        val initialData = fetchData()
+        println("获取到的初始数据: $initialData")
 
-            // 2. 调用第二个挂起函数，并依赖于第一个结果。
-            // 协程再次“暂停”，等待 processData 完成。
-            val finalResult = processData(initialData)
-            println("最终处理结果: $finalResult")
-
-            println("🎉 异步流程全部完成。")
-
-        } catch (e: Exception) {
-            println("❌ 任务发生错误: ${e.message}")
-        }
-        
-        println("--- 协程任务结束 ---")
+        // 2. 调用第二个挂起函数，并依赖于第一个结果。
+	    // 协程再次“暂停”，等待 processData 完成。
+	    val finalResult = processData(initialData)
+        println("最终处理结果: $finalResult")
+    } catch (e: Exception) {
+         println("❌ 任务发生错误: ${e.message}")
     }
-    
-
+}
 ```
