@@ -2673,7 +2673,114 @@ fun main() {
 
 然后我们定义了StdIOMonad，用来操作StdIO实例，其中flatMap用来实现不同的StdIO之间的转换
 
-## 同步与异步
+## 同步，阻塞与异步
 
+最简单的例子就是IO操作，对于一个同步的代码，如果遇到了IO操作，那么自然要阻塞下来等待IO结束，一个很自然的想法就是：反正都要等待，那我可不可以让程序等待的时候去干点别的呢？于是就有了**挂起**，在挂起的情况下，程序会异步执行别的代码，等待IO操作结束后再回来执行
 
+对于这种情况的一种简单实现方式就是回调，即提前为阻塞操作定义好后面要做的事情（有时还有报错后要做的事），然后就可以实现异步操作
 
+但是根据大量的时间我们会发现回调很容出现回调地狱
+
+```kotlin
+/**
+ * 模拟一个通用的异步操作回调接口
+ */
+interface Callback<T> {
+    fun onSuccess(result: T)
+    fun onFailure(e: Exception)
+}
+
+// 模拟延迟，以便更像一个真正的异步网络请求
+private fun simulateDelay() = Thread.sleep(500)
+
+/**
+ * 步骤 1: 模拟异步加载用户 ID
+ */
+fun loadUserId(callback: Callback<String>) {
+    Thread {
+        try {
+            simulateDelay()
+            val userId = "user-12345"
+            println("✅ Step 1: User ID loaded: $userId")
+            callback.onSuccess(userId)
+        } catch (e: Exception) {
+            callback.onFailure(e)
+        }
+    }.start()
+}
+
+/**
+ * 步骤 2: 模拟异步获取用户详情
+ */
+fun getUserDetails(userId: String, callback: Callback<String>) {
+    Thread {
+        try {
+            simulateDelay()
+            if (userId.isEmpty()) throw IllegalArgumentException("User ID is missing")
+
+            val details = "Details for $userId: Name=Alice, Email=a@example.com"
+            println("✅ Step 2: Details loaded: $details")
+            callback.onSuccess(details)
+        } catch (e: Exception) {
+            callback.onFailure(e)
+        }
+    }.start()
+}
+
+/**
+ * 步骤 3: 模拟异步更新 UI
+ */
+fun updateUI(details: String, callback: Callback<Boolean>) {
+    Thread {
+        try {
+            simulateDelay()
+            // 假设更新成功
+            println("✅ Step 3: UI updated with details: $details")
+            callback.onSuccess(true)
+        } catch (e: Exception) {
+            callback.onFailure(e)
+        }
+    }.start()
+}
+
+fun main() {
+    println("--- 开始执行回调地狱示例 ---")
+
+    // Step 1: 加载用户 ID
+    loadUserId(object : Callback<String> {
+        override fun onSuccess(userId: String) {
+
+            // Step 2: 依赖于 Step 1 的结果，获取用户详情
+            getUserDetails(userId, object : Callback<String> {
+                override fun onSuccess(details: String) {
+
+                    // Step 3: 依赖于 Step 2 的结果，更新 UI
+                    updateUI(details, object : Callback<Boolean> {
+                        override fun onSuccess(isSuccess: Boolean) {
+                            println("🔥 全部操作完成！结果：$isSuccess")
+                        }
+
+                        override fun onFailure(e: Exception) {
+                            println("❌ Step 3 失败: ${e.message}")
+                        }
+                    })
+                }
+
+                override fun onFailure(e: Exception) {
+                    println("❌ Step 2 失败: ${e.message}")
+                }
+            })
+        }
+
+        override fun onFailure(e: Exception) {
+            println("❌ Step 1 失败: ${e.message}")
+        }
+    })
+
+    // 保持主线程活动，等待异步线程完成
+    Thread.sleep(2000)
+    println("--- 回调地狱示例结束 ---")
+}
+```
+
+上述代码中，我们加载用户ID的时候定义了一个回调函数，让加载过程异步执行，当加载完成后wo'men
