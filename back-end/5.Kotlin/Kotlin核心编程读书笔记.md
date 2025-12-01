@@ -2535,28 +2535,10 @@ ListFunctor.run{
 //打印结果true
 ```
 
-这就是函子定律，我们发现函子定律很直接的说出了函子的作用，函子可以安全的实现值的映射，即由一个A类型的值变成另一个B类型的值（A可以等于B），但是无法安全的完成Factor< A >到Functor< B >的映射
+这就是函子定律，函子定律直接的表达了一件事，那就是在函子的闭包中用 map 做任何组合，都不会破坏原来结构的语义一致性。函子的 map 提供了一个稳定、可组合、引用透明的变换上下文。
 
-同时Functor还无法完成嵌套结构的问题，即
+这里注意的一点是，函子的fmap虽然我们给的代码是f< A > -> f< B >，但是特别的A允许等于B，此时的fmap其实类似于普通的map
 
-```kotlin
-List(1).map { a -> List(a + 1) }
-```
 
-上述代码返回的是List<List< Int >>，而非List< Int >
-
-也就是说函子无法实现将容器拍平的操作
-
-接着，我们就会残生一个想法，如何将一个普通的值装入一个Functor，这也就产生了Applicative
-
-Applicative中包含一个pure方法，用于将一个值构造成Functor
-
-```kotlin
-interface Applicative<F>:Functor<F>{
-	fun <A> pure(a:A):Kind<F,A>
-}
-```
-
-pure的含义就是将一个普通的值封装成一个容器上下文
 
 
