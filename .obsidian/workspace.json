@@ -174,6 +174,7 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "application.properties",
     "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
     "back-end/51.Spring/02.SpringBoot更新.md",
     "back-end/91.给初学者的建议/给后端orJava初学者的建议.md",
@@ -200,7 +201,6 @@
     "story/杂文，随笔/未命名.md",
     "back-end/2.多线程相关/8.协程.md",
     "back-end/2.多线程相关/6.认知并发问题出现.md",
-    "back-end/2.多线程相关/4.volatile关键字.md",
     "back-end/02.JVM与JVM语言",
     "back-end/01.Java",
     "back-end/85.All in AI",
