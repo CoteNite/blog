@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/51.Spring/02.SpringBoot更新.md",
+                "file": "story/小说/如宝石般易碎的.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02.SpringBoot更新"
+              "title": "如宝石般易碎的"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/51.Spring/02.SpringBoot更新.md",
+                "file": "story/小说/如宝石般易碎的.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "02.SpringBoot更新 的大纲"
+              "title": "如宝石般易碎的 的大纲"
             }
           }
         ],
@@ -174,16 +174,17 @@
   },
   "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "story/小说/牵丝戏.md",
+    "story/小说/李代桃僵/钟时悟.md",
+    "back-end/51.Spring/02.SpringBoot更新.md",
     "application.properties",
     "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
-    "back-end/51.Spring/02.SpringBoot更新.md",
     "back-end/91.给初学者的建议/给后端orJava初学者的建议.md",
     "back-end/5.Kotlin/Kotlin元编程.md",
     "back-end/91.给初学者的建议",
     "story/小说/如宝石般易碎的.md",
     "back-end/5.Kotlin/Kotlin NoteBook.md",
     "story/小说/1.前言.md",
-    "story/小说/李代桃僵/钟时悟.md",
     "story/小说/来世.md",
     "story/生活记/第一次实习.md",
     "story/奇怪的东西/Obsidian 快捷键.md",
@@ -209,7 +210,6 @@
     "node_modules/@sugarat/theme-shared/dist/index.js",
     "node_modules/@sugarat/theme-shared/dist/index.d.ts",
     "node_modules/@sugarat/theme-shared/dist/index.d.mts",
-    "node_modules/@sugarat/theme-shared/LICENSE",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
