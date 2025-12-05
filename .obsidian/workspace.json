@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/9.系统设计/0.前言.md",
+                "file": "back-end/81.高并发/Akka————一种任务驱动的高并发解决方案.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.前言"
+              "title": "Akka————一种任务驱动的高并发解决方案"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/9.系统设计/0.前言.md",
+                "file": "back-end/81.高并发/Akka————一种任务驱动的高并发解决方案.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "0.前言 的大纲"
+              "title": "Akka————一种任务驱动的高并发解决方案 的大纲"
             }
           }
         ],
@@ -172,8 +172,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "9884943ad5bd65e9",
+  "active": "e3e2d012b0c325c7",
   "lastOpenFiles": [
+    "back-end/81.高并发/读写分离.md",
+    "back-end/81.高并发/Akka————一种任务驱动的高并发解决方案.md",
+    "back-end/9.系统设计/0.前言.md",
+    "back-end/81.高并发/d",
     "back-end/9.系统设计/IM——即时通信系统在Java中的实践.md",
     "back-end/9.系统设计/11.服务雪崩与容错.md",
     "story/小说/如宝石般易碎的.md",
@@ -199,9 +203,6 @@
     "back-end/01.Java/Java各版本进展.md",
     "back-end/02.JVM与JVM语言/JVM与内存管理.md",
     "back-end/02.JVM与JVM语言/Java，Scala，Kotlin——JVM语言的成长历程.md",
-    "back-end/82.协程与响应式编程/2.Channel.md",
-    "back-end/85.All in AI/RAG工程.md",
-    "story/杂文，随笔/未命名.md",
     "back-end/02.JVM与JVM语言",
     "back-end/01.Java",
     "back-end/85.All in AI",
@@ -209,7 +210,6 @@
     "node_modules/@sugarat/theme-shared/dist/index.mjs",
     "node_modules/@sugarat/theme-shared/dist/index.js",
     "node_modules/@sugarat/theme-shared/dist/index.d.ts",
-    "node_modules/@sugarat/theme-shared/dist/index.d.mts",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
