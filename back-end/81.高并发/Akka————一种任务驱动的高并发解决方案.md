@@ -12,4 +12,4 @@ Akka是一门使用Scala语言编写的基于Actor模型解决高并发问题的
 
 ![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20251205204002.png)
 
-
+在这种情况下，我们会发现方法执行的时序性是完全打乱的状态，我们没有办法很好的去
