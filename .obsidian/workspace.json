@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3d449ba3aa7647c7",
+        "id": "f6bef00fd8418996",
         "type": "tabs",
         "children": [
           {
-            "id": "e3e2d012b0c325c7",
+            "id": "80a32901bcaae8ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -172,10 +172,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "e3e2d012b0c325c7",
+  "active": "80a32901bcaae8ef",
   "lastOpenFiles": [
-    "未命名 1.md",
+    "back-end/2.多线程相关/8.协程.md",
+    "node_modules/@braintree/sanitize-url/README.md",
     "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
+    "未命名 1.md",
     "back-end/82.协程与响应式编程/2.Channel.md",
     "back-end/5.Kotlin/Kotlin元编程.md",
     "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
@@ -201,8 +203,6 @@
     "story/奇怪的东西/Obsidian 快捷键.md",
     "story/工作之外，工作之内/Work Or Life.md",
     "story/工作之外，工作之内/你是否适合计算机？.md",
-    "story/工作之外，工作之内/0.前言.md",
-    "algorithm/1.前言.md",
     "back-end/02.JVM与JVM语言",
     "back-end/01.Java",
     "back-end/85.All in AI",
