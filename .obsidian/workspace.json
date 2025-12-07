@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
+                "file": "back-end/82.协程与响应式编程/2.Kotlin.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Kotlinの协程"
+              "title": "2.Kotlin"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
+                "file": "back-end/82.协程与响应式编程/2.Kotlin.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.Kotlinの协程 的大纲"
+              "title": "2.Kotlin 的大纲"
             }
           }
         ],
@@ -174,11 +174,11 @@
   },
   "active": "80a32901bcaae8ef",
   "lastOpenFiles": [
+    "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
     "back-end/2.多线程相关/8.协程.md",
     "node_modules/@braintree/sanitize-url/README.md",
-    "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
     "未命名 1.md",
-    "back-end/82.协程与响应式编程/2.Channel.md",
+    "back-end/82.协程与响应式编程/2.Kotlin.md",
     "back-end/5.Kotlin/Kotlin元编程.md",
     "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
     "back-end/5.Kotlin/1.基本语法 or 与Java的基本区别.md",
