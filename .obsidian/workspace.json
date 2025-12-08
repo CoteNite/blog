@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/81.高并发/Akka————一种任务驱动的高并发解决方案.md",
+                "file": "back-end/82.协程与响应式编程/2.Kotlin协程的官方库.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Akka————一种任务驱动的高并发解决方案"
+              "title": "2.Kotlin协程的官方库"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/81.高并发/Akka————一种任务驱动的高并发解决方案.md",
+                "file": "back-end/82.协程与响应式编程/2.Kotlin协程的官方库.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Akka————一种任务驱动的高并发解决方案 的大纲"
+              "title": "2.Kotlin协程的官方库 的大纲"
             }
           }
         ],
@@ -174,6 +174,7 @@
   },
   "active": "80a32901bcaae8ef",
   "lastOpenFiles": [
+    "back-end/81.高并发/Akka————一种任务驱动的高并发解决方案.md",
     "back-end/82.协程与响应式编程/2.Kotlin协程的官方库.md",
     "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
     "back-end/2.多线程相关/8.协程.md",
@@ -184,7 +185,6 @@
     "back-end/5.Kotlin/1.基本语法 or 与Java的基本区别.md",
     "back-end/5.Kotlin/2.类与对象.md",
     "back-end/5.Kotlin/Kotlin NoteBook.md",
-    "back-end/81.高并发/Akka————一种任务驱动的高并发解决方案.md",
     "back-end/81.高并发/读写分离.md",
     "back-end/9.系统设计/0.前言.md",
     "back-end/81.高并发/d",
