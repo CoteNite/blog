@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/82.协程与响应式编程/Channel.md",
+                "file": "basic/计算机网络/计算机网络（期末复习）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Channel"
+              "title": "计算机网络（期末复习）"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/82.协程与响应式编程/Channel.md",
+                "file": "basic/计算机网络/计算机网络（期末复习）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Channel 的大纲"
+              "title": "计算机网络（期末复习） 的大纲"
             }
           }
         ],
@@ -174,8 +174,10 @@
   },
   "active": "80a32901bcaae8ef",
   "lastOpenFiles": [
-    "back-end/82.协程与响应式编程/2.Kotlin协程的官方库.md",
+    "basic/MySQL/数据库（大学期末应试）.md",
+    "basic/计算机网络/计算机网络（期末复习）.md",
     "back-end/82.协程与响应式编程/Channel.md",
+    "back-end/82.协程与响应式编程/2.Kotlin协程的官方库.md",
     "back-end/82.协程与响应式编程/0.前言.md",
     "back-end/81.高并发/Akka————一种任务驱动的高并发解决方案.md",
     "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
@@ -201,8 +203,6 @@
     "back-end/91.给初学者的建议",
     "story/小说/1.前言.md",
     "story/小说/来世.md",
-    "story/生活记/第一次实习.md",
-    "story/奇怪的东西/Obsidian 快捷键.md",
     "back-end/02.JVM与JVM语言",
     "back-end/01.Java",
     "back-end/85.All in AI",
