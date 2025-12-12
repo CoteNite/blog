@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f6bef00fd8418996",
+        "id": "bfb7ab862adffd87",
         "type": "tabs",
         "children": [
           {
-            "id": "80a32901bcaae8ef",
+            "id": "ff08e767450588d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"aboutMe/\" ",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -172,10 +172,11 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "80a32901bcaae8ef",
+  "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "basic/MySQL/数据库（大学期末应试）.md",
     "basic/计算机网络/计算机网络（期末复习）.md",
+    "node_modules/katex/node_modules/commander/Readme.md",
+    "basic/MySQL/数据库（大学期末应试）.md",
     "back-end/82.协程与响应式编程/Channel.md",
     "back-end/82.协程与响应式编程/2.Kotlin协程的官方库.md",
     "back-end/82.协程与响应式编程/0.前言.md",
@@ -202,7 +203,6 @@
     "application.properties",
     "back-end/91.给初学者的建议",
     "story/小说/1.前言.md",
-    "story/小说/来世.md",
     "back-end/02.JVM与JVM语言",
     "back-end/01.Java",
     "back-end/85.All in AI",
