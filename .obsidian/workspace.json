@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/py/py期末速成.md",
+                "file": "basic/jsp/JSP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "py期末速成"
+              "title": "JSP"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/py/py期末速成.md",
+                "file": "basic/jsp/JSP.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "py期末速成 的大纲"
+              "title": "JSP 的大纲"
             }
           }
         ],
@@ -174,8 +174,10 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "basic/计算机网络/计算机网络（期末复习）.md",
     "basic/py/py期末速成.md",
+    "basic/jsp/JSP.md",
+    "basic/jsp",
+    "basic/计算机网络/计算机网络（期末复习）.md",
     "basic/py",
     "basic/未命名.md",
     "back-end/2.多线程相关/8.协程.md",
@@ -200,7 +202,6 @@
     "back-end/5.Kotlin/2.类与对象.md",
     "back-end/5.Kotlin/Kotlin NoteBook.md",
     "back-end/81.高并发/读写分离.md",
-    "back-end/9.系统设计/0.前言.md",
     "back-end/81.高并发/d",
     "application.properties",
     "back-end/91.给初学者的建议",
@@ -209,7 +210,6 @@
     "back-end/85.All in AI",
     "back-end/84.后端杂谈",
     "node_modules/@sugarat/theme-shared/dist/index.mjs",
-    "node_modules/@sugarat/theme-shared/dist/index.js",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
