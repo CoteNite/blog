@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "basic/jsp/JSP.md",
+                "file": "story/小说/如宝石般易碎的.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "JSP"
+              "title": "如宝石般易碎的"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/jsp/JSP.md",
+                "file": "story/小说/如宝石般易碎的.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "JSP 的大纲"
+              "title": "如宝石般易碎的 的大纲"
             }
           }
         ],
@@ -174,8 +174,8 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "basic/py/py期末速成.md",
     "basic/jsp/JSP.md",
+    "basic/py/py期末速成.md",
     "basic/jsp",
     "basic/计算机网络/计算机网络（期末复习）.md",
     "basic/py",
