@@ -5,5 +5,6 @@
   "textFontFamily": "JetBrains Mono Medium",
   "interfaceFontFamily": "JetBrains Mono Medium",
   "monospaceFontFamily": "JetBrains Mono Medium",
-  "baseFontSizeAction": true
+  "baseFontSizeAction": true,
+  "baseFontSize": 15
 }
