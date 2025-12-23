@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/小说/李代桃僵/钟时悟.md",
+                "file": "basic/计算机网络/计算机网络（期末复习）.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "钟时悟"
+              "title": "计算机网络（期末复习）"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/小说/李代桃僵/钟时悟.md",
+                "file": "basic/计算机网络/计算机网络（期末复习）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "钟时悟 的大纲"
+              "title": "计算机网络（期末复习） 的大纲"
             }
           }
         ],
@@ -174,6 +174,7 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
+    "story/小说/李代桃僵/钟时悟.md",
     "basic/计算机网络/计算机网络（期末复习）.md",
     "back-end/后端补全计划/PgSQL与Spring Data JPA.md",
     "back-end/后端补全计划/0.前言.md",
@@ -202,7 +203,6 @@
     "node_modules/katex/node_modules/commander/Readme.md",
     "basic/MySQL/数据库（大学期末应试）.md",
     "back-end/82.协程与响应式编程/0.前言.md",
-    "node_modules/@braintree/sanitize-url/README.md",
     "back-end/81.高并发/d",
     "application.properties",
     "back-end/91.给初学者的建议",
