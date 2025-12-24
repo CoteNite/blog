@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "basic/计算机网络/计算机网络（期末复习）.md",
+                "file": "未命名 2.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "计算机网络（期末复习） 的大纲"
+              "title": "未命名 2 的大纲"
             }
           }
         ],
@@ -156,7 +156,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200.5
+    "width": 200.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -172,10 +173,13 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "ff08e767450588d2",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
-    "story/小说/李代桃僵/钟时悟.md",
+    "未命名 1.md",
+    "未命名.md",
+    "未命名 2.md",
     "basic/计算机网络/计算机网络（期末复习）.md",
+    "story/小说/李代桃僵/钟时悟.md",
     "back-end/后端补全计划/PgSQL与Spring Data JPA.md",
     "back-end/后端补全计划/0.前言.md",
     "back-end/8.分布式/0.前言.md",
@@ -200,9 +204,6 @@
     "back-end/85.All in AI/RAG工程.md",
     "back-end/bug记录/Spring事务与多线程的先后结束问题.md",
     "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
-    "node_modules/katex/node_modules/commander/Readme.md",
-    "basic/MySQL/数据库（大学期末应试）.md",
-    "back-end/82.协程与响应式编程/0.前言.md",
     "back-end/81.高并发/d",
     "application.properties",
     "back-end/91.给初学者的建议",
