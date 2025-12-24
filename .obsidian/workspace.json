@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "未命名 2.md",
+                "file": "basic/计算机网络/计算机网络（期末复习）.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 2 的大纲"
+              "title": "计算机网络（期末复习） 的大纲"
             }
           }
         ],
@@ -173,12 +173,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "9884943ad5bd65e9",
+  "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "未命名 1.md",
     "未命名.md",
-    "未命名 2.md",
     "basic/计算机网络/计算机网络（期末复习）.md",
+    "未命名 2.md",
+    "未命名 1.md",
     "story/小说/李代桃僵/钟时悟.md",
     "back-end/后端补全计划/PgSQL与Spring Data JPA.md",
     "back-end/后端补全计划/0.前言.md",
