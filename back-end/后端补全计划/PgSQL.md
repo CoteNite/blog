@@ -45,4 +45,12 @@ FROM sort_demo
 ORDER BY num nulls FIRST
 ```
 
-在PGSQL中null默认排序在最下，我们可以jiang
+在PGSQL中null默认排序在最下（ASC顺序下），我们可以将其放置为最上方，使用的就是最后的nulls first指令
+
+同样的，除了nulls first，自然还有nulls last，就是将null放在最后
+
+这里有两个注意点：
+
+- nulls last/nulls first与desc/asc无关，就是直接放在最上或最下
+- PgSQL中的null往往以空字符串的形式表现
+
