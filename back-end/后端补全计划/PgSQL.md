@@ -29,4 +29,7 @@ from customer
 
 ![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20251226194401.png)
 
-上述sql语句中的
+上述sql语句中的||为连接运算符，表示将两部分拼接起来，中间的' '为在两个列中插入一个空格
+
+由于同时使用了两个列，所以这个新生成的列没有名字，我们是使用了别名为其命名，其中别名语法与MySQL一致
+
