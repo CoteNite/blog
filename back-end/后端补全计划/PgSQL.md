@@ -33,3 +33,16 @@ from customer
 
 由于同时使用了两个列，所以这个新生成的列没有名字，我们是使用了别名为其命名，其中别名语法与MySQL一致
 
+### ORDER BY
+
+排序语法与MySQL类似
+
+特别的，PgSQL运行我们对null进行排序，只需要使用下列语法
+
+```sql
+SELECT num
+FROM sort_demo
+ORDER BY num nulls FIRST
+```
+
+在PGSQL中null默认排序在最下，我们可以jiang
