@@ -113,4 +113,23 @@ customer
 WHERE first_name LIKE 'Ann%';
 ```
 
-这里使用的是l
+这里使用的是like进行模糊匹配，用到的是%，表示该位置的内容任意且可以有无数长度的字符，与此相似的还有占位符_，表示当前位置内容任意，但只能有一个字符
+
+```sql
+SELECT 
+first_name, 
+LENGTH(first_name) name_length 
+FROM customer 
+WHERE first_name LIKE 'A%' 
+AND LENGTH(first_name) BETWEEN 3 AND 5 
+ORDER BY name_length;
+```
+
+这是BETWEEN的使用方式，A and B 用来创造一个左右闭合的区间
+
+### 布尔值
+
+PgSQL中的布尔值有三种，true false null
+
+其中PgSQL将`true` 、 `'t'` 、 `'true'` 、 `'y'` 、 `'yes'` 、 `'1'` 表示 `true` ，使用 `false` 、 `'f'` 、 `'false'` 、 `'n'` 、 `'no'` 和 `'0'` 表示 `false` 
+
