@@ -93,3 +93,24 @@ from table
 | IS NULL  |    非空    |
 |   NOT    |   逻辑非    |
 
+来一些例子
+
+```sql
+SELECT 
+first_name,
+last_name
+FROM customer
+WHERE first_name IN ('Ann', 'Anne', 'Annie');
+```
+
+这里我们用in进行列表检索，同时用小括号的形式创建出一个列表
+
+```sql
+SELECT
+first_name, last_name
+FROM 
+customer 
+WHERE first_name LIKE 'Ann%';
+```
+
+这里使用的是l
