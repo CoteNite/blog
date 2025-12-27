@@ -133,6 +133,7 @@ PgSQL中的布尔值有三种，true false null
 
 其中PgSQL将`true` 、 `'t'` 、 `'true'` 、 `'y'` 、 `'yes'` 、 `'1'` 表示 `true` ，使用 `false` 、 `'f'` 、 `'false'` 、 `'n'` 、 `'no'` 和 `'0'` 表示 `false` 
 
-特别的，在逻辑判断中，null永远被当作false使用，colume=false也为false
-
+- **在过滤行时**：`WHERE` 只认 `TRUE`。所以 `NULL` 和 `FALSE` 产生的**效果一致**（都不显示）
+- **在逻辑计算时**：`NULL` 具有传染性（Unknown）
+- **在比较大小时**：`NULL` 不能用 `=` 比较。`column = NULL` 结果永远是 `NULL`
 
