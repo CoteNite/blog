@@ -54,3 +54,5 @@ ORDER BY num nulls FIRST
 - nulls last/nulls first与desc/asc无关，就是直接放在最上或最下
 - PgSQL中的null往往以空字符串的形式表现
 
+### DISTINCT
+

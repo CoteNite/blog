@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/后端补全计划/0.前言.md",
+                "file": "back-end/后端补全计划/PgSQL.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "0.前言"
+              "title": "PgSQL"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/后端补全计划/0.前言.md",
+                "file": "back-end/后端补全计划/PgSQL.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "0.前言 的大纲"
+              "title": "PgSQL 的大纲"
             }
           }
         ],
@@ -174,8 +174,8 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "back-end/后端补全计划/PgSQL.md",
     "back-end/后端补全计划/0.前言.md",
+    "back-end/后端补全计划/PgSQL.md",
     "basic/计算机网络/计算机网络（期末复习）.md",
     "未命名.md",
     "未命名 2.md",
