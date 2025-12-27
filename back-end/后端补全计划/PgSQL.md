@@ -56,3 +56,21 @@ ORDER BY num nulls FIRST
 
 ### DISTINCT
 
+distinct是用来进行去重的语法，具体使用方式与MySQL一致
+
+```sql
+select distinct
+colume1,
+colume2
+from table
+```
+
+上面的查找方式实际上就是在查找table中colume1和colume2组合的不重复的情况
+
+值得注意的是，如果希望所有的列都不一样可以使用`select distinct *`，但是一般很少会有人这么写，因为id一般不会重复
+
+## 条件判断
+
+### where
+
+与MySQL一致，where的执行顺序在from后，select和order by之前
