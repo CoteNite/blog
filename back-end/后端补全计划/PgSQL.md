@@ -239,4 +239,16 @@ CROSS JOIN warehouses;
 
 ### 自然连接
 
-PgSQL将自然连接转化为了一种yu
+PgSQL将自然连接转化为了一种语法层面的实现
+
+```sql
+SELECT select_list
+FROM table1
+NATURE [INNER, LEFT, RIGHT] JOIN table2
+   ON table1.column_name = table2.column_name;
+```
+
+此处的\[INNER, LEFT, RIGHT]如果不填写，则默认你使用的是INNER JOIN
+
+自然连接的本质上就是默认你ON后面的比较是对两个表中的所有同名列进行比较
+
