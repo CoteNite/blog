@@ -196,3 +196,22 @@ ORDER BY
 
 ### 全外连接/FULL OUTER JOIN
 
+全外连接可以理解为左连接和右连接的并集，其返回的内容类似下图
+
+![外连接](https://neon.com/_next/image?url=%2Fpostgresqltutorial%2FPostgreSQL-Join-Full-Outer-Join.png&w=640&q=75&dpl=dpl_F9bdjKJK2Tq8GsFjQf8UHmeJsvcQ)
+
+```sql
+SELECT
+  employee_name,
+  department_name
+FROM
+  employees e
+FULL OUTER JOIN departments d
+  ON d.department_id = e.department_id
+WHERE
+  department_name IS NULL;
+```
+
+上面的代码就是输出不属于任何部门的员工
+
+### 交叉连接/笛卡尔积/CROSS JOIN
