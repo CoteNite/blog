@@ -165,4 +165,34 @@ ORDER BY
 
 ### 左连接，内连接，右连接
 
-这三个部分和MySQL已知
+这三个部分和MySQL一致
+
+### 自连接
+
+自连接本身就是使用内连接将自己和自己连接起来，在MySQL中也有应用
+
+```sql
+CREATE TABLE employee (
+  employee_id INT PRIMARY KEY,
+  first_name VARCHAR (255) NOT NULL,
+  last_name VARCHAR (255) NOT NULL,
+  manager_id INT,
+  FOREIGN KEY (manager_id) REFERENCES employee (employee_id) ON DELETE CASCADE
+);
+
+SELECT
+  e.first_name || ' ' || e.last_name employee,
+  m.first_name || ' ' || m.last_name manager
+FROM
+  employee e
+  INNER JOIN employee m ON m.employee_id = e.manager_id
+ORDER BY
+  manager;
+```
+
+在上面的例子中，我们的employee表在设计中包含了普通员工（employee）和管理层员工（manager）
+
+普通的员工会有一个manager_id，用来表示其直属上级是谁，这种情况下我们会使用自连接
+
+### 全外连接/FULL OUTER JOIN
+
