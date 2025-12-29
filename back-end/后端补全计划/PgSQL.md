@@ -137,3 +137,32 @@ PgSQL中的布尔值有三种，true false null
 - **在逻辑计算时**：`NULL` 具有传染性（Unknown）
 - **在比较大小时**：`NULL` 不能用 `=` 比较。`column = NULL` 结果永远是 `NULL`
 
+### BETWEEN
+
+between在PgSQL中是左右闭合的区间，一般配合AND一起使用
+
+```sql
+SELECT
+  payment_id,
+  amount
+FROM
+  payment
+WHERE
+  payment_id BETWEEN 17503 AND 17505
+ORDER BY
+  payment_id;
+```
+
+### LIKE/模糊匹配
+
+与MySQL类似，模糊匹配与%和_搭配使用
+
+### IS Null
+
+鉴定该列是否非空
+
+## 连接
+
+### 左连接，内连接，右连接
+
+这三个部分和MySQL已知
