@@ -167,6 +167,17 @@ ORDER BY
 
 这三个部分和MySQL一致
 
+```sql
+SELECT
+  select_list
+FROM
+  table1
+INNER JOIN table2
+  ON table1.column_name = table2.column_name;
+```
+
+JOIN语句与ON搭配使用
+
 ### 自连接
 
 自连接本身就是使用内连接将自己和自己连接起来，在MySQL中也有应用
@@ -215,3 +226,8 @@ WHERE
 上面的代码就是输出不属于任何部门的员工
 
 ### 交叉连接/笛卡尔积/CROSS JOIN
+
+交叉连接就是将A表中的所有元素依次与B表中的所有元素两两组合，最常见的作用是对可能性进行穷举，交叉连接不与ON一同使用
+
+```sql
+```
