@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
+                "file": "story/杂文，随笔/夜晚，童年，梦与二次元.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Kotlinの协程"
+              "title": "夜晚，童年，梦与二次元"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
+                "file": "story/杂文，随笔/夜晚，童年，梦与二次元.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.Kotlinの协程 的大纲"
+              "title": "夜晚，童年，梦与二次元 的大纲"
             }
           }
         ],
@@ -174,6 +174,10 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
+    "story/杂文，随笔/性压抑与自卑.md",
+    "story/杂文，随笔/但行好事，莫问前程.md",
+    "story/杂文，随笔/创作者与救世主的梦.md",
+    "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
     "story/小说/来世.md",
     "story/小说/牵丝戏.md",
     "story/小说/李代桃僵/钟时悟.md",
@@ -197,12 +201,8 @@
     "back-end/5.Kotlin/0.前言.md",
     "back-end/4.Netty/0.前言.md",
     "back-end/未命名.md",
-    "basic/jsp/JSP.md",
-    "basic/py/py期末速成.md",
     "basic/jsp",
     "basic/py",
-    "basic/未命名.md",
-    "back-end/2.多线程相关/8.协程.md",
     "back-end/81.高并发/d",
     "application.properties",
     "back-end/91.给初学者的建议",
