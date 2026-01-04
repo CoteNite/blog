@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/世界观/世界观其一.md",
+                "file": "story/现在范围长期要做的事/2026-1-5.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "世界观其一"
+              "title": "2026-1-5"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/世界观/世界观其一.md",
+                "file": "story/现在范围长期要做的事/2026-1-5.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "世界观其一 的大纲"
+              "title": "2026-1-5 的大纲"
             }
           }
         ],
@@ -172,11 +172,12 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "ff08e767450588d2",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
-    "story/杂文，随笔/夜晚，童年，梦与二次元.md",
     "story/世界观/世界观其一.md",
-    "story/世界观",
+    "story/现在范围长期要做的事/2026-1-5.md",
+    "story/杂文，随笔/夜晚，童年，梦与二次元.md",
+    "story/现在范围长期要做的事",
     "story/杂文，随笔/性压抑与自卑.md",
     "story/杂文，随笔/但行好事，莫问前程.md",
     "story/杂文，随笔/创作者与救世主的梦.md",
@@ -201,7 +202,6 @@
     "未命名 1.md",
     "back-end/8.分布式/0.前言.md",
     "back-end/后端补全计划",
-    "back-end/5.Kotlin/0.前言.md",
     "basic/jsp",
     "basic/py",
     "back-end/81.高并发/d",
