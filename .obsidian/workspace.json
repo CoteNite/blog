@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/杂文，随笔/夜晚，童年，梦与二次元.md",
+                "file": "story/世界观/世界观其一.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "夜晚，童年，梦与二次元"
+              "title": "世界观其一"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/杂文，随笔/夜晚，童年，梦与二次元.md",
+                "file": "story/世界观/世界观其一.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "夜晚，童年，梦与二次元 的大纲"
+              "title": "世界观其一 的大纲"
             }
           }
         ],
@@ -174,6 +174,9 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
+    "story/杂文，随笔/夜晚，童年，梦与二次元.md",
+    "story/世界观/世界观其一.md",
+    "story/世界观",
     "story/杂文，随笔/性压抑与自卑.md",
     "story/杂文，随笔/但行好事，莫问前程.md",
     "story/杂文，随笔/创作者与救世主的梦.md",
@@ -199,8 +202,6 @@
     "back-end/8.分布式/0.前言.md",
     "back-end/后端补全计划",
     "back-end/5.Kotlin/0.前言.md",
-    "back-end/4.Netty/0.前言.md",
-    "back-end/未命名.md",
     "basic/jsp",
     "basic/py",
     "back-end/81.高并发/d",
@@ -209,7 +210,6 @@
     "back-end/02.JVM与JVM语言",
     "back-end/01.Java",
     "back-end/85.All in AI",
-    "back-end/84.后端杂谈",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
