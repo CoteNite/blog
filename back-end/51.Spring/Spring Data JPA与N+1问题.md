@@ -11,4 +11,45 @@ Spring Data JPA是Spring旗下的Spring Data项目下针对SQL的ORM，其名字
 
 ## 解决方案
 
-目前JPA会推荐我们使用
+目前JPA会推荐我们使用`@ManyToOne(fetch = FetchType.LAZY)`的方式去指定关联关系
+
+```kotlin
+@Entity  
+@Table  
+class Course(  
+    @Id  
+    @SequenceGenerator(  
+        name="course_sequence",  
+        sequenceName = "course_sequence",  
+        allocationSize = 1  
+    )  
+    @GeneratedValue(  
+        strategy = GenerationType.SEQUENCE,  
+        generator = "course_sequence"  
+    )  
+    var courseId: Long?=null,  
+    var title: String,  
+    var credit: String,  
+    @OneToOne(mappedBy = "course")  
+    var courseMaterial: CourseMaterial,  
+    @ManyToOne(fetch = FetchType.LAZY)  
+    @JoinColumn(  
+        name="teacher_id",  
+        foreignKey = ForeignKey(ConstraintMode.NO_CONSTRAINT)  
+    )  
+    var teacher: Teacher  
+){  
+  
+    override fun toString(): String {  
+        return "Course(courseId=$courseId, title='$title', credit='$credit', courseMaterial=$courseMaterial, teacher=$teacher)"  
+    }  
+}
+```
+
+在这种情况先，我们针对A表的查询就不会连带着进行对B表的查询，进而在根源层面杜绝了N+1问题
+
+## 懒加载后带来的问题
+
+虽然解决了N+1问题，但是随之而来的会有更多的问题
+
+我们看上面对course代码中toString方法的定义，可能会感觉没有什么问题，可是我们在Junit下使用findById查询course数据并将得到的实体类打印出来，很快就会发现出现了报错，这是因为我们在调用toString方法的时候，由于其中的关联实体使用的是懒加载，因此会造成获取在获取关联实体
