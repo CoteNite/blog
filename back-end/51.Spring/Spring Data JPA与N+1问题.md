@@ -91,3 +91,22 @@ class Course(
 
 JPA推荐我们使用的方式是在toString方法中只打印实体自身的内容
 
+## 关联查询的方法
+
+实际上，虽然我们通过懒加载解决了N+1问题，但关联查询是不可避免的，那么我们该如何进行关联查询呢？
+
+### 一次查询所有关联数据
+
+这种查询适合原本的N+1问题相似的，也就是我们查询A表的数据，结果要求查出A表实体下的所有相关联的B表实体，这种情况下我们应该使用JPA为我们提供的@EntityGraph注解
+
+```kotlin
+@Repository
+interface CourseRepository: JpaRepository<Course, Long>{
+
+    @EntityGraph(attributePaths = ["teacher","courseMaterial"])
+    override fun findAll(): MutableList<Course>
+
+}
+```
+
+@EntityGraph可以加在实体类亦或是仓储的接口上，一般为了灵活性我们会直接加在仓储的接口上，@EntityGraph会将原本的N+1语句
