@@ -79,8 +79,43 @@ http {
 
 ## 动静分离
 
-所谓动静分离，其中动指的是后端的接口，也就是动态返回的信息，静则是指前端打包出来的文件
+所谓动静分离，其中动指的是后端的接口，也就是动态返回的信息，静则是指前端打包出来的静态资源，静态资源则包括HTML、JavaScript、CSS和图片等文件
 
+Nginx将动态和静态的内容分开，提高了前后端分离项目的可维护性
+
+### 基本使用
+
+```text
+server {
+         #如果根据 listen   server_name  没有匹配到的话，默认使用第一个server
+         #可以在listen后面加添加default_server来设置匹配不成功的默认使用的server
+        listen       8888;
+        server_name  101.31.7.23;  #多个的话可以用空格分隔
+        location /api {
+            # proxy_pass 端口后面加路径，该路径就会替换location中的路径，有/也会替换
+            #没加路径就只替换访问路径的ip和端口
+            proxy_pass http://101.31.7.23:8180/;
+        }
+        
+        location / {
+            root  /home/zcloud/applications/iomp-web; #前端部署目录
+            index  index.html index.htm;
+        }
+
+        location /images/ {
+            alias /home/zcloud/file/;   #静态文件存放目录
+            autoindex    off;  #关闭自动索引，开启后用户可以访问目录下的文件，一般建议关闭
+        }
+    }
+```
+
+主要看后两个location
+
+第一个location表示默认的访问页面，也就是首页，即访问`/`路径时，会找到`/home/zcloud/applications/iomp-web`下的index.html文件，这里写两个就是在这两个文件中找一个，有先用前面的
+
+第二个location就是将`/images/`，的访问内容直接去`/home/zcloud/file/`文件夹下找，这里有root和alias两种区别
+
+- root
 
 **启动nginx**
 
