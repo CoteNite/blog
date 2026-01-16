@@ -104,7 +104,7 @@ server {
 
         location /images/ {
             alias /home/zcloud/file/;   #静态文件存放目录
-            autoindex    off;  #关闭自动索引，开启后用户可以访问目录下的文件，一般建议关闭
+            autoindex    off;  #关闭自动索引，开启后用户可以访问目录下的文件（就是一些老的资源站的样子），一般建议关闭
         }
     }
 ```
@@ -115,7 +115,77 @@ server {
 
 第二个location就是将`/images/`，的访问内容直接去`/home/zcloud/file/`文件夹下找，这里有root和alias两种区别
 
-- root
+- root：去寻找指定目录下的文件
+- alias：会将指定的url替换为alias下的路径，再将url后的内容拼接上
+
+举个例子：
+
+请求/images/1.png，root和alias均为`/home/zcloud/file/`
+
+- root：找`/home/zcloud/file/1.png`
+- alias：找`/home/zcloud/file/iamges/1.png`
+
+**如果alias的location是/结尾，那alias也必须是/结尾**
+
+
+## 负载均衡
+
+所谓负载均衡，就是将请求分配给不同的服务，进而提高服务的可用性
+
+### 基本使用
+
+```text
+http {
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /usr/local/nginx/logs/access.log  main;  #访问日志路径，可以关掉
+    
+    #轮询的方式
+    upstream server_group {
+         server 101.31.7.24:8080; #node1
+         server 101.31.7.25:8081; #node2
+         server 101.31.7.26:8082; #node3      
+   }
+   
+    #加权轮询的方式
+  #  upstream server_group {
+  #       server 101.31.7.24:8080 weight=3; #node1
+  #       server 101.31.7.25:8081 weight=5; #node2
+  #       server 101.31.7.26:8082 weight=2; #node3      
+  # }
+  
+    
+    #ip_hash的方式，基于客户端IP的分配方式  
+  #  upstream server_group {
+  #       ip_hash;
+  #       server 101.31.7.24:8080; #node1
+  #       server 101.31.7.25:8081; #node2
+  #       server 101.31.7.26:8082; #node3      
+  # }
+   #最少连接的方式，把请求分发给连接请求较少的那台服务器
+  #  upstream server_group {
+  #       least_conn;
+  #       server 101.31.7.24:8080; #node1
+  #       server 101.31.7.25:8081; #node1
+  #       server 101.31.7.26:8082; #node1      
+  # }
+        
+    server {
+         #如果根据 listen   server_name  没有匹配到的话，默认使用第一个server
+         #可以在listen后面加添加default_server来设置匹配不成功的默认使用的server
+        listen       8888;
+        server_name  101.31.7.23;  #多个的话可以用空格分隔
+        location /api {
+            # proxy_pass 端口后面加路径，该路径就会替换location中的路径，有/也会替换
+            #没加路径就只替换访问路径的ip和端口
+            proxy_pass http://server_group/;
+        }
+    }
+```
+
 
 **启动nginx**
 
