@@ -9,16 +9,74 @@ Nginx最主要的一个作用就是进行反向代理
 
 所谓正向代理和反向代理是针对部署位置的，如果是在客户端（也就是用户的电脑上）进行代理（将信息代理到某个指定的服务器上），就是作为正向代理；如果是在服务端上，将用户请求的信息代理到不同的端口/IP，就是进行的反向代理
 
-## 基本使用
+### 基本使用
 
 nginx配置文件为conf文件下的nginx.conf
 
 ```text
+user root;
+worker_processes auto;
+error_log /usr/local/nginx/logs/error.log;  #错误日志路径
+pid /usr/local/nginx/logs/nginx.pid;
+
+include /usr/share/nginx/modules/*.conf;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+   #access_log  /usr/local/nginx/logs/access.log  main;  #访问日志路径，可以关掉
+
+    sendfile            on;
+    tcp_nopush          on;
+    tcp_nodelay         on;
+    keepalive_timeout   65;
+    types_hash_max_size 2048;
+    client_max_body_size 20M;
+
+        
     server {
-        listen       80;   #监听端口
-        server_name  localhost; #ip地址  
+         #如果根据 listen   server_name  没有匹配到的话，默认使用第一个server
+         #可以在listen后面加添加default_server来设置匹配不成功的默认使用的server
+        listen       8888;
+        server_name  101.31.7.23;  #多个的话可以用空格分隔
+
+       #以下配置是开启gzip压缩的，不需要开启的话，可以去掉，一般建议开启
+        gzip on;  #是否开启gzip模块 on表示开启 off表示关闭
+        gzip_buffers 4 16k;  #设置压缩所需要的缓冲区大小
+        gzip_comp_level 6;  #压缩级别1-9，数字越大压缩的越好，也越占用CPU时间
+        gzip_min_length 100k;  #设置允许压缩的最小字节
+        gzip_http_version 1.1;  #设置压缩http协议的版本,默认是1.1
+        gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript;  #设置压缩的文件类型
+        gzip_vary on;  #加上http头信息Vary: Accept-Encoding给后端代理服务器识别是否启用 gzip 压缩
+        location /api {
+            # proxy_pass 端口后面加路径，该路径就会替换location中的路径，有/也会替换
+            #没加路径就只替换访问路径的ip和端口
+            proxy_pass http://101.31.7.23:8180/;
+        }
+        
     }
+        
+}
 ```
+
+这里主要看的是server中的内容
+
+- listen：监听的端口，也就是说只要listen的端口遇到请求，Nginx就会进行服务
+- server_name：当前服务的IP
+- location：如何进行路由转发
+	location后面的`/api`其实就是路径，再后面的内容就是转发到哪里
+	1. 如果`proxy_pass`最后http：
+
+
 
 **启动nginx**
 
