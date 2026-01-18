@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/杂文，随笔/未命名.md",
+                "file": "story/杂文，随笔/可恨的人.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "可恨的人"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/杂文，随笔/未命名.md",
+                "file": "story/杂文，随笔/可恨的人.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "未命名 的大纲"
+              "title": "可恨的人 的大纲"
             }
           }
         ],
@@ -175,7 +175,7 @@
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
     "story/现在范围长期要做的事/2026-1-5.md",
-    "story/杂文，随笔/未命名.md",
+    "story/杂文，随笔/可恨的人.md",
     "story/小说/李代桃僵/钟时悟.md",
     "basic/jsp/JSP.md",
     "story/小说/如宝石般易碎的.md",
