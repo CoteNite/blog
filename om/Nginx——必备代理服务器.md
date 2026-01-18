@@ -181,17 +181,26 @@ http {
         location /api {
             # proxy_pass 端口后面加路径，该路径就会替换location中的路径，有/也会替换
             #没加路径就只替换访问路径的ip和端口
-            proxy_pass http://server_group/;
+            proxy_pass http://server_group/; #和反向代理一样
         }
     }
 ```
 
+## 常用命令
+
+nginx一般会在/usr/local/nginx目录下，如果没有则使用nginx -t命令查找
 
 **启动nginx**
 
 ```sh
 移动到sbin目录下
 ./nginx
+```
+
+**检查nginx配置是否有问题**
+
+```shell
+nginx -t
 ```
 
 **重新加载配置**
