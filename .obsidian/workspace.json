@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/杂文，随笔/可恨的人是怎么形成的.md",
+                "file": "story/奇怪的东西/RK键盘快捷键.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "可恨的人是怎么形成的"
+              "title": "RK键盘快捷键"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/杂文，随笔/可恨的人是怎么形成的.md",
+                "file": "story/奇怪的东西/RK键盘快捷键.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "可恨的人是怎么形成的 的大纲"
+              "title": "RK键盘快捷键 的大纲"
             }
           }
         ],
@@ -174,8 +174,9 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "story/现在范围长期要做的事/2026-1-5.md",
     "story/杂文，随笔/可恨的人是怎么形成的.md",
+    "story/奇怪的东西/RK键盘快捷键.md",
+    "story/现在范围长期要做的事/2026-1-5.md",
     "story/小说/李代桃僵/钟时悟.md",
     "basic/jsp/JSP.md",
     "story/小说/如宝石般易碎的.md",
@@ -200,7 +201,6 @@
     "back-end/7.DDD/14.聚合.md",
     "back-end/7.DDD/13.一些概念与实践.md",
     "back-end/7.DDD/12.DDD与六边形架构.md",
-    "back-end/7.DDD/10.DDD，MVC，大泥鳅，微服务.md",
     "back-end/后端补全计划",
     "basic/jsp",
     "basic/py",
