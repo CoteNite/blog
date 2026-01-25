@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/杂文，随笔/自卑的爱与不可及的幸福.md",
+                "file": "story/诗（这东西真的是诗吗）/春风十里不如你.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "自卑的爱与不可及的幸福"
+              "title": "春风十里不如你"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/杂文，随笔/自卑的爱与不可及的幸福.md",
+                "file": "story/诗（这东西真的是诗吗）/春风十里不如你.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "自卑的爱与不可及的幸福 的大纲"
+              "title": "春风十里不如你 的大纲"
             }
           }
         ],
@@ -174,8 +174,11 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "story/杂文，随笔/愿每个人都被善待.md",
     "story/杂文，随笔/自卑的爱与不可及的幸福.md",
+    "story/诗（这东西真的是诗吗）/春风十里不如你.md",
+    "story/诗（这东西真的是诗吗）",
+    "public/未命名",
+    "story/杂文，随笔/愿每个人都被善待.md",
     "story/杂文，随笔/但行好事，莫问前程.md",
     "story/杂文，随笔/性压抑与自卑.md",
     "story/杂文，随笔/我心目中的幸福.md",
@@ -200,7 +203,6 @@
     "back-end/后端补全计划/PgSQL.md",
     "back-end/7.DDD/17.读模型的设计.md",
     "back-end/7.DDD/16.风暴建模.md",
-    "back-end/7.DDD/15.工具推荐.md",
     "back-end/后端补全计划",
     "basic/jsp",
     "basic/py",
@@ -208,8 +210,6 @@
     "application.properties",
     "back-end/91.给初学者的建议",
     "back-end/02.JVM与JVM语言",
-    "back-end/01.Java",
-    "back-end/85.All in AI",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
