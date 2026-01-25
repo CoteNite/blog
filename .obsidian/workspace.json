@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/杂文，随笔/为什么GalGame怎么让我痴迷.md",
+                "file": "story/杂文，随笔/扭曲的爱与远不可及的幸福.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "为什么GalGame怎么让我痴迷"
+              "title": "扭曲的爱与远不可及的幸福"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/杂文，随笔/为什么GalGame怎么让我痴迷.md",
+                "file": "story/杂文，随笔/扭曲的爱与远不可及的幸福.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "为什么GalGame怎么让我痴迷 的大纲"
+              "title": "扭曲的爱与远不可及的幸福 的大纲"
             }
           }
         ],
@@ -174,8 +174,10 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "story/杂文，随笔/我的自卑胜过了一切爱我的.md",
-    "story/杂文，随笔/为什么GalGame怎么让我痴迷.md",
+    "story/杂文，随笔/但行好事，莫问前程.md",
+    "story/杂文，随笔/扭曲的爱与远不可及的幸福.md",
+    "story/杂文，随笔/性压抑与自卑.md",
+    "story/杂文，随笔/我心目中的幸福.md",
     "story/奇怪的东西/RK键盘快捷键.md",
     "story/杂文，随笔/可恨的人是怎么形成的.md",
     "story/现在范围长期要做的事/2026-1-5.md",
@@ -190,8 +192,6 @@
     "story/世界观/世界观其一.md",
     "story/杂文，随笔/夜晚，童年，梦与二次元.md",
     "story/现在范围长期要做的事",
-    "story/杂文，随笔/性压抑与自卑.md",
-    "story/杂文，随笔/但行好事，莫问前程.md",
     "story/杂文，随笔/创作者与救世主的梦.md",
     "back-end/82.协程与响应式编程/1.Kotlinの协程.md",
     "story/小说/来世.md",
