@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/小说/李代桃僵/钟时悟.md",
+                "file": "story/小说/李代桃僵/病.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "钟时悟"
+              "title": "病"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/小说/李代桃僵/钟时悟.md",
+                "file": "story/小说/李代桃僵/病.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "钟时悟 的大纲"
+              "title": "病 的大纲"
             }
           }
         ],
@@ -174,8 +174,8 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "story/小说/李代桃僵/病.md",
     "story/小说/李代桃僵/钟时悟.md",
+    "story/小说/李代桃僵/病.md",
     "story/杂文，随笔/自卑的爱与不可及的幸福.md",
     "story/诗（这东西真的是诗吗）/春风十里不如你.md",
     "story/诗（这东西真的是诗吗）",
