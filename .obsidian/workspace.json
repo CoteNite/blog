@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/喜欢の东西/书籍.md",
+                "file": "story/小说/如宝石般易碎的.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "书籍"
+              "title": "如宝石般易碎的"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/喜欢の东西/书籍.md",
+                "file": "story/小说/如宝石般易碎的.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "书籍 的大纲"
+              "title": "如宝石般易碎的 的大纲"
             }
           }
         ],
@@ -172,10 +172,10 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "ff08e767450588d2",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
-    "story/喜欢の东西/音乐.md",
     "story/喜欢の东西/影视.md",
+    "story/喜欢の东西/音乐.md",
     "story/喜欢の东西/书籍.md",
     "拉康派精神分析临床导论.epub",
     "story/小说/李代桃僵/钟时悟.md",
