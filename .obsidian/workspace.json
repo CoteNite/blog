@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/喜欢の东西/影视.md",
+                "file": "story/喜欢の东西/书籍.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "影视"
+              "title": "书籍"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "story/喜欢の东西/影视.md",
+                "file": "story/喜欢の东西/书籍.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "影视 的大纲"
+              "title": "书籍 的大纲"
             }
           }
         ],
@@ -174,8 +174,9 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "story/喜欢の东西/音乐.md",
     "story/喜欢の东西/影视.md",
+    "story/喜欢の东西/书籍.md",
+    "story/喜欢の东西/音乐.md",
     "story/小说/李代桃僵/钟时悟.md",
     "story/喜欢の东西",
     "story/小说/李代桃僵/病.md",
@@ -203,7 +204,6 @@
     "story/世界观/世界观其一.md",
     "story/杂文，随笔/夜晚，童年，梦与二次元.md",
     "story/现在范围长期要做的事",
-    "story/杂文，随笔/创作者与救世主的梦.md",
     "back-end/后端补全计划",
     "basic/jsp",
     "basic/py",
