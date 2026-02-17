@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
+                "file": "front-end/KMP/1.Kotlin MutiPlatform.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.Kotlin Multiplatform Compose简单教程"
+              "title": "1.Kotlin MutiPlatform"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
+                "file": "front-end/KMP/1.Kotlin MutiPlatform.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "3.Kotlin Multiplatform Compose简单教程 的大纲"
+              "title": "1.Kotlin MutiPlatform 的大纲"
             }
           }
         ],
@@ -174,6 +174,10 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
+    "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
+    "front-end/KMP/1.Kotlin MutiPlatform.md",
+    "story/奇怪的东西/RK键盘快捷键.md",
+    "story/诗（这东西真的是诗吗）/春风十里不如你.md",
     "story/小说/如宝石般易碎的.md",
     "story/喜欢の东西/影视.md",
     "story/喜欢の东西/音乐.md",
@@ -185,7 +189,6 @@
     "story/小说/来世.md",
     "story/小说/1.前言.md",
     "story/小说/牵丝戏.md",
-    "story/诗（这东西真的是诗吗）/春风十里不如你.md",
     "story/杂文，随笔/自卑的爱与不可及的幸福.md",
     "story/诗（这东西真的是诗吗）",
     "public/未命名",
@@ -193,7 +196,6 @@
     "story/杂文，随笔/但行好事，莫问前程.md",
     "story/杂文，随笔/性压抑与自卑.md",
     "story/杂文，随笔/我心目中的幸福.md",
-    "story/奇怪的东西/RK键盘快捷键.md",
     "story/杂文，随笔/可恨的人是怎么形成的.md",
     "story/现在范围长期要做的事/2026-1-5.md",
     "basic/jsp/JSP.md",
@@ -202,7 +204,6 @@
     "back-end/51.Spring/02.SpringBoot更新.md",
     "back-end/5.Kotlin/Kotlin核心编程读书笔记.md",
     "back-end/5.Kotlin/Kotlin NoteBook.md",
-    "story/世界观/世界观其一.md",
     "story/现在范围长期要做的事",
     "back-end/后端补全计划",
     "basic/jsp",
