@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "front-end/KMP/1.Kotlin MutiPlatform.md",
+                "file": "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1.Kotlin MutiPlatform"
+              "title": "3.Kotlin Multiplatform Compose简单教程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "front-end/KMP/1.Kotlin MutiPlatform.md",
+                "file": "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "1.Kotlin MutiPlatform 的大纲"
+              "title": "3.Kotlin Multiplatform Compose简单教程 的大纲"
             }
           }
         ],
@@ -174,8 +174,8 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
     "front-end/KMP/1.Kotlin MutiPlatform.md",
+    "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
     "story/奇怪的东西/RK键盘快捷键.md",
     "story/诗（这东西真的是诗吗）/春风十里不如你.md",
     "story/小说/如宝石般易碎的.md",
