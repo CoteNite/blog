@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/85.All in AI/Agent Skills.md",
+                "file": "back-end/01.Java/Java各版本进展.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Agent Skills"
+              "title": "Java各版本进展"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/85.All in AI/Agent Skills.md",
+                "file": "back-end/01.Java/Java各版本进展.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Agent Skills 的大纲"
+              "title": "Java各版本进展 的大纲"
             }
           }
         ],
@@ -174,8 +174,8 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "back-end/85.All in AI/RAG工程.md",
     "back-end/85.All in AI/Agent Skills.md",
+    "back-end/85.All in AI/RAG工程.md",
     "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
     "front-end/KMP/1.Kotlin MutiPlatform.md",
     "story/奇怪的东西/RK键盘快捷键.md",
