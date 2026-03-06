@@ -63,4 +63,17 @@ description: A description of what this skill does and when to use it.
 ---
 ```
 
-name和descriptionzu
+name和description组成了SKILL.md的基本信息，我们的LLM也是根据这个信息寻找的内容
+
+除此之外还包含几个可选的字段
+
+|     Field     | Required |            Constraints             |
+| :-----------: | :------: | :--------------------------------: |
+|     name      |   Yes    | 最多64个字符。仅限小写字母、数字和连字符。不得以连字符开头或结尾。 |
+|  description  |   Yes    |    最多1024字符。非空的，描述技能的作用以及何时使用。     |
+|    license    |    No    |          许可证名称或捆绑许可文件的引用。          |
+| compatibility |    No    |   最多500字符。表示环境需求（预期产品、系统包、网络访问等）   |
+|   metadata    |    No    |          任意键值映射以获取额外元数据。           |
+| allowed-tools |    No    |     该技能可使用的预先批准工具的空间限定列表。（实验性）     |
+
+
