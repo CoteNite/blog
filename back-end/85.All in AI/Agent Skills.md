@@ -89,4 +89,9 @@ scripts/extract.py
 
 Agent Skill支持通过编写scripts来实现一些简单的工具，工具的实现一般依赖于我们本地服务的运行环境，常见的有Python、Bash 和 JavaScript
 
-我们应该在SKILL.md文件中声明好需要的环境（比如直接写明“依赖于Node.js 18+”）没当然，我们
+我们应该在SKILL.md文件中声明好需要的环境（比如直接写明“依赖于Node.js 18+”），当然，我们也可在SKILL.md文件中的`compatibility`字段中写明（使用字段的好处是可以让LLM对当前的环境进行判断）
+
+我们可以这样在SKILL.md中写明如何引用脚本
+
+```markdo
+```
