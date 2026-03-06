@@ -76,4 +76,16 @@ name和description组成了SKILL.md的基本信息，我们的LLM也是根据这
 |   metadata    |    No    |          任意键值映射以获取额外元数据。           |
 | allowed-tools |    No    |     该技能可使用的预先批准工具的空间限定列表。（实验性）     |
 
+当我们需要使用别的文件时，我们一般采用这样的写法
+
+```markdown
+See [the reference guide](references/REFERENCE.md for details.
+
+Run the extraction script:
+scripts/extract.py
+```
+
+## Scripts
+
+Agent Skill支持
 
