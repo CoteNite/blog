@@ -44,4 +44,13 @@ SKILL.md是Agent Skills的元数据文件，其内部描述了Agent Skills所能
 
 SKILL.md文件最上方有一个元数据层，里面包含了当前skill的基本信息，这些内容会在对话的过程子一并发给LLM
 
-之后LLM会选择自己本次要使用的Skill，
+一次对话的流程：
+
+1. 用户发起对话，Agent将内容与所有的AgentSkill元数据发送给LLM
+2. LLM会选择自己本次要使用的Skill
+3. Agent将完整的SKILL.md文件与内容发送给LLM
+4. LLM将总结后的内容发送给用户
+
+
+这就是Agent开发的核心机制之一：**按需加载**
+
