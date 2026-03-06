@@ -34,4 +34,8 @@ MCP的重点实则在于联网，也就是让渡出Tools的开发权力，让服
 
 RAG提供的是一种基于外部数据库（即向量数据库）的对海量文本进行查找的功能，实现了大型文本库的知识获取和长期记忆系统的实现
 
-Agent Skills则是提供的较短的文本的知识，其提供的知识本质来源于reference
+Agent Skills则是提供的较短的文本的知识，其提供的知识本质来源于reference下，且是对内容的全部注入，整个过程较为简单
+
+## SKILL.md
+
+SKILL.md是Agent Skills的元数据文件，其内部描述了Agent Skills所neng'ti'g
