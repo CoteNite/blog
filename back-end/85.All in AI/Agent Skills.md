@@ -79,7 +79,7 @@ name和description组成了SKILL.md的基本信息，我们的LLM也是根据这
 当我们需要使用别的文件时，我们一般采用这样的写法
 
 ```markdown
-See [the reference guide](references/REFERENCE.md for details.
+See [the reference guide](references/REFERENCE.md) for details.
 
 Run the extraction script:
 scripts/extract.py
@@ -87,5 +87,6 @@ scripts/extract.py
 
 ## Scripts
 
-Agent Skill支持
+Agent Skill支持通过编写scripts来实现一些简单的工具，工具的实现一般依赖于我们本地服务的运行环境，常见的有Python、Bash 和 JavaScript
 
+我们应该在SKILL.md文件中声明好需要的环境（比如直接写明“依赖于Node.js 18+”）没当然，我们
