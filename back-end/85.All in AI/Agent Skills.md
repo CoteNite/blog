@@ -146,3 +146,4 @@ assets文件夹下包含的是一系列的静态资源，包含
 
 ## Agent_Skills_Creator
 
+[authropics官方出品的yong'yu'ch](https://github.com/anthropics/skills/tree/main/skills/skill-creator)
