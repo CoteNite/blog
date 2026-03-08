@@ -146,4 +146,13 @@ assets文件夹下包含的是一系列的静态资源，包含
 
 ## Agent_Skills_Creator
 
-[authropics官方出品的yong'yu'ch](https://github.com/anthropics/skills/tree/main/skills/skill-creator)
+[authropics官方出品的用于创建Skills的Skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator)
+
+我们可以使用这个工具快速的让AI帮我们创建Skills
+
+## Agent Skills的使用
+
+由于AgentSKills现在已经成为了一个统一的协议，因此AgentSkills的使用具有普适性
+
+以cursor为例，我们只需要在项目的根目录下放置.agents文件夹，并在下方放置我们的agentSkills即可正常使用我们的AgentSkills
+
