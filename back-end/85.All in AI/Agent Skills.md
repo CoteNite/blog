@@ -122,4 +122,24 @@ console.log($("p.info").text());
 bun run scripts/extract.ts
 ```
 
-- No `package.json` or `node_modules` needed. TypeScript works na
+对于Scripts的要求，我们会希望用户能够输出足够多合理的信息，不论运行错误与否
+
+## Reference
+
+reference下是一些SKILL.md中未能涉及的数据，这样的分层机制主要还是为了减少Token的使用
+
+reference可能包含以下的数据：
+
+- `REFERENCE.md` - 详细技术参考
+- `FORMS.md` - 表单模板或结构化数据格式
+- 域特定文件（`finance.md`、`legal.md` 等）
+
+## Assets
+
+assets文件夹下包含的是一系列的静态资源，包含
+
+- 模板（文档模板、配置模板）
+- 图片（图示、示例）
+- 数据文件（查找表，模式）
+
+在作用上与reference一致，即ti'go'i'n
