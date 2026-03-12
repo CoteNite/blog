@@ -144,7 +144,7 @@ assets文件夹下包含的是一系列的静态资源，包含
 
 在作用上与reference一致，即提供补充的数据，区别在于assets中的内容不限于md文档
 
-## Agent_Skills_Creator
+## skill-creator
 
 [authropics官方出品的用于创建Skills的Skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator)
 
@@ -155,4 +155,8 @@ assets文件夹下包含的是一系列的静态资源，包含
 由于AgentSKills现在已经成为了一个统一的协议，因此AgentSkills的使用具有普适性
 
 以cursor为例，我们只需要在项目的根目录下放置.agents文件夹，并在下方放置我们的agentSkills即可正常使用我们的AgentSkills
+
+以上述的agent-skills-creator为例子，我们将其放置到项目根目录下的./agents文件夹下，然后对cursor进行提问，就能发现cursor正在尝试使用这个agent skills
+
+
 
