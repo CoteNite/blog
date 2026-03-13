@@ -14,4 +14,10 @@ Open claw成为了26年初最火热的项目，作为开发者肯定要第一时
 
 **OpenClaw是Agent**
 
-这是对OpenClaw最好的诠释，I
+这是对OpenClaw最好的诠释，即时OpenClaw核心基于Multi-Agent的思想进行开发，仍然逃脱不开Agent的定义
+
+正如Google Agent白皮书上写的一样：
+
+**宽泛地来说，生成式 AI Agent 可以被定义为一个应用程序， 通过观察周围世界并使用可用的工具来实现其目标**
+
+不论是最近的OpenClaw还是
