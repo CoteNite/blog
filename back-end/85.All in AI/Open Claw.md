@@ -1,5 +1,7 @@
 # Open Claw
 
+[Hello-Claw](https://datawhalechina.github.io/hello-claw/)
+
 Open claw成为了26年初最火热的项目，作为开发者肯定要第一时间来调研一下（虽然其实已经有些晚了）
 
 ## 安装
@@ -24,6 +26,8 @@ Open claw成为了26年初最火热的项目，作为开发者肯定要第一时
 
 这也进一步的说明了目前Agent开发的趋势————让Agent通过电脑来尽可能的完成人可以完成的操作
 
+## OpenClaw的工具
 
+**工具是将基础模型与外部世界连接起来的桥梁**
 
-
+OpenClaw的强大能力就来源于各种各样的Tools，某种程度上，MCP，AgentSkills都属于广义上的Tools，但是我们一般会将bian
