@@ -30,4 +30,25 @@ Open claw成为了26年初最火热的项目，作为开发者肯定要第一时
 
 **工具是将基础模型与外部世界连接起来的桥梁**
 
-OpenClaw的强大能力就来源于各种各样的Tools，某种程度上，MCP，AgentSkills都属于广义上的Tools，但是我们一般会将bian
+OpenClaw的强大能力就来源于各种各样的Tools，某种程度上，MCP，AgentSkills都属于广义上的Tools，但是我们一般会将编码在项目内部的Tools称之为Tools
+
+OpenClaw的工具分为四个档次
+
+|    配置档    |          能力范围          |        适用场景        |
+| :-------: | :--------------------: | :----------------: |
+|   full    |       无限制，所有工具可用       |   推荐——个人电脑上的全能助手   |
+|  coding   | 文件读写、命令执行、会话管理、记忆、图片分析 |   开发者专用，不含消息和浏览器   |
+| messaging |     消息收发、会话浏览、状态查看     | 纯聊天机器人，不能操作文件或执行命令 |
+|  minimal  |         仅状态查看          |   最小权限，几乎什么都不能做    |
+
+网上传的神乎其神的功能本质上就是启动了full权限，OpenClaw的默认挡位为messaging，我们可以通过下列指令将其修改为full权限
+
+```sh
+# 查看当前配置
+openclaw config get tools.profile
+
+# 设置为 full（推荐）
+openclaw config set tools.profile full
+openclaw gateway restart
+```
+
