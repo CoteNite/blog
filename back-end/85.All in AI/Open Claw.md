@@ -58,4 +58,8 @@ OpenClaw的网关是OpenClaw运行的关键，如果我们使用Docker启动Open
 
 OpenClaw的网关默认接受外界的信息（WebUI和聊天软件等），然后完成对LLM的调度
 
-## 
+## AgentRuntime
+
+AgentRutime是OpenClaw设计的核心之一，我们首先要理解什么是AgentRuntime
+
+要理解AgentRuntime首先要理解Runtime是什么，Wiki中给出的解释是：“**1**”
