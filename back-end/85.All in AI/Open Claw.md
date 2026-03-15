@@ -58,6 +58,13 @@ OpenClaw的网关是OpenClaw运行的关键，如果我们使用Docker启动Open
 
 OpenClaw的网关默认接受外界的信息（WebUI和聊天软件等），然后完成对LLM的调度
 
+## LLM能力发展的过程
+
+OpenAI早期发布了FunctionCalling功能，为LLM提供了调用API的能力，在此之后，LLM就不仅限于为人们提供建议了，Agent也就由此而生
+
+
+
+
 ## AgentRuntime
 
 AgentRutime是OpenClaw设计的核心之一，我们首先要理解什么是AgentRuntime
@@ -69,6 +76,5 @@ AgentRutime是OpenClaw设计的核心之一，我们首先要理解什么是Agen
 所以我们不难发现，有些代码，如果想要将一个实例注册为全局任意时间可用，经常会将其给到一个叫XXXRuntime的东西，本质上也是这个含义（有些时候也会注册给一个叫XXXContext的东西，这个东西叫上下文，本身可以理解为Runtime的一部分）
 
 回到AgentRuntime，我们不难理解，AgentRuntime就是Agent从开始到结束的运行时间，与直接与LLM对话的核心区别就在于维护了一个长期的状态，而根据Agent的定义，Agent是必须要有对外的Tool的，所以AgentRuntime自然也包含Tools，进而也就拥有了更多的能力
-
 
 
