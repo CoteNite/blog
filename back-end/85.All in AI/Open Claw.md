@@ -83,4 +83,6 @@ AgentRutime是OpenClaw设计的核心之一，我们首先要理解什么是Agen
 
 回到AgentRuntime，我们不难理解，AgentRuntime就是Agent从开始到结束的运行时间，与直接与LLM对话的核心区别就在于维护了一个长期的状态，而根据Agent的定义，Agent是必须要有对外的Tool的，所以AgentRuntime自然也包含Tools，进而也就拥有了更多的能力
 
+OpenClaw的创始人Peter Steinberger在原有基础上希望完成的是一个更加方便的Agent，可以通过简单的配置实现复杂的Agent功能
 
+目前的OpenClaw可以实现编辑markdown就完成对于Agent的实现
