@@ -138,4 +138,73 @@ OpenClaw针对每个用户的消息是阻塞的，也就是说，用户的每一
 
 ### 统一网关
 
-OpenClaw的网关采用的适配器模式，每个平台实现一个`ChannelPlugin`，所有外部平台的差异在网关层抹平，这样就可以
+OpenClaw的网关采用的适配器模式，每个平台实现一个`ChannelPlugin`，所有外部平台的差异在网关层抹平，这样就可以实现通用的Agent
+
+### 安全网关
+
+OpenClaw的安全沙箱是基于多级的权限管理
+
+|   层级   |  防御对象  |                      机制                       |
+| :----: | :----: | :-------------------------------------------: |
+| 文件系统沙箱 | 防止越权访问 |               Agent只能在指定工作目录内操作               |
+| 命令执行沙箱 | 防止危险命令 | Security模式（deny/allowlist/full） + Ask模式（确认机制） |
+| 网络访问沙箱 | 防止恶意外联 |                    白名单域名控制                    |
+
+以`exec`工具为例，它有三层安全模型：
+
+1. **Security模式**决定基本权限——deny（全部禁止）、allowlist（白名单）、full（全部允许）
+2. **Ask模式**决定何时需要人工确认——off（从不）、on-miss（不在白名单时）、always（每次都问）
+3. **安全命令列表（safeBins）** 提供只读工具的便捷通道——`jq`、`head`、`tail`等安全命令可以直接执行
+
+### 执行
+
+基于上面的系统，OpenClaw的一次用户对话就转变为:
+
+```mermaid
+graph TD
+    %% 外部交互层
+    User((用户))
+    Gateway_In[统一网关: 感知/翻译格式]
+    Gateway_Out[统一网关: 输出/翻译格式]
+
+    %% 消息调度层
+    MsgLoop[消息循环: 调度/防并发混乱]
+
+    %% 核心大脑层
+    PromptSys[提示词系统: 上下文装配/注入灵魂]
+    
+    %% ReAct 迭代中心
+    subgraph ReAct_Cycle [ReAct 循环迭代]
+        Think[思考: Thought]
+        Observe[观察: Observation]
+        Act[行动: Action]
+    end
+
+    %% 执行与安全层
+    SafeBox[安全沙箱: 工具调用安全门]
+    ToolSys[工具系统: 真正动手执行]
+
+    %% 数据流转
+    User -->|发送消息| Gateway_In
+    Gateway_In --> MsgLoop
+    MsgLoop --> PromptSys
+    PromptSys --> Observe
+    
+    %% ReAct 内部迭代
+    Observe --> Think
+    Think --> Act
+    
+    %% 工具执行路径
+    Act -->|调用请求| SafeBox
+    SafeBox -->|安全通过| ToolSys
+    ToolSys -->|执行结果| Observe
+    
+    %% 任务终点
+    Think -->|任务完成| Gateway_Out
+    Gateway_Out -->|回复结果| User
+
+    %% 样式美化
+    style ReAct_Cycle fill:#f9f,stroke:#333,stroke-width:2px
+    style SafeBox fill:#ff9,stroke:#f66,stroke-width:2px,stroke-dasharray: 5 5
+    style ToolSys fill:#9f9,stroke:#333
+```
