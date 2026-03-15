@@ -285,6 +285,8 @@ OpenClaw针对每个用户的消息是阻塞的，也就是说，用户的每一
 
 至于定时任务，OpenClaw则是使用HEARTBEAT.md实现，OpenClaw会监控HEARTBEAT.md文件，并根据里面写明的定时任务进行工作
 
+对于OpenClaw来说
+
 ### 统一网关
 
 OpenClaw的网关采用的适配器模式，每个平台实现一个`ChannelPlugin`，所有外部平台的差异在网关层抹平，这样就可以实现通用的Agent
