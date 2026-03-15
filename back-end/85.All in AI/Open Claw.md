@@ -205,6 +205,8 @@ sequenceDiagram
 
 ### 工具系统
 
+对于
+
 OpenClaw的内置工具只有四个：
 
 - read：读取文件
@@ -213,6 +215,8 @@ OpenClaw的内置工具只有四个：
 - exec：执行命令
 
 正是这四个工具实现了OpenClaw的基础功能，并让OpenClaw可以通过Skills实现模块化拓展的能力
+
+
 
 ### 消息循环和事件驱动
 
