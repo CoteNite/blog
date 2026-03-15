@@ -86,3 +86,15 @@ AgentRutime是OpenClaw设计的核心之一，我们首先要理解什么是Agen
 OpenClaw的创始人Peter Steinberger在原有基础上希望完成的是一个更加方便的Agent，可以通过简单的配置实现复杂的Agent功能
 
 目前的OpenClaw可以实现编辑markdown就完成对于Agent的实现
+
+## OpenClaw的核心设计
+
+我们来看一下OpenClaw中包含的各个系统
+
+- ReAct循环：使LLM在一次用户感知的对话中调用多个工具
+- 提示词工程：给LLM赋予基础的身份
+- 工具系统：各个Tools
+- 消息循环：
+- 统一网关：对外部的消息进行统一的接受和回应
+- 安全沙箱：对系统提供一个基础的安全保护
+
