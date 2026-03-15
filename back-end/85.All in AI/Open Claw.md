@@ -179,7 +179,11 @@ sequenceDiagram
     rect rgb(240, 240, 240)
         Note right of E: 优先级 1: 压入工具定义 (不可覆盖)
         Note right of E: 优先级 2: 压入安全护栏
-        Note right of E: 优先级 5: 压入文件内容 (按序堆叠)
+        Note right of E: 优先级 3: 压入Skiils的索引（准寻Skills的按需加载机制）
+        Note right of E: 优先级 4: 压入工作目录信息
+        Note right of E: 优先级 5: 压入八份配置文件
+        Note right of E: 优先级 6: 压入沙箱限制
+        Note right of E: 优先级 7: 压入当前时间
     end
 
     D->>E: 读取 SOUL/USER/AGENTS 等配置文件
