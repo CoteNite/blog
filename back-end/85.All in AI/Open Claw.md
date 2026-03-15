@@ -128,3 +128,5 @@ OpenClaw的内置工具只有四个：
 - edit：修改文件
 - exec：执行命令
 
+正是这四个工具实现了OpenClaw的基础功能，并让OpenClaw可以通过Skills实现模块化拓展的能力
+
