@@ -285,7 +285,9 @@ OpenClaw针对每个用户的消息是阻塞的，也就是说，用户的每一
 
 至于定时任务，OpenClaw则是使用HEARTBEAT.md实现，OpenClaw会监控HEARTBEAT.md文件，并根据里面写明的定时任务进行工作
 
-对于OpenClaw来说
+对于OpenClaw来说，同一泳道的命令是完全的串行，而不同的泳道之间则是完全的串行，而在用户对话的角度来说，一个session就是一个泳道
+
+
 
 ### 统一网关
 
