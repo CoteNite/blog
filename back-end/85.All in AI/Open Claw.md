@@ -164,6 +164,41 @@ AGENTS.md 回答"这个Agent怎么工作"，是决策流程与操作规范，可
 "收到部署请求：检查覆盖率 → 确认环境变量 → 发确认消息 → 等待批准 → 执行部署"
 ```
 
+每当用户发出消息时，Agent进行推理之前，OpenClaw都会读取所有的配置文件，然后动态装提示词，
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant D as 磁盘 (8份配置文件)
+    participant E as 组装引擎 (Prompt Engine)
+    participant B as 字符截断器 (20k Limit)
+    participant L as LLM 推理引擎
+
+    Note over E: 用户发送消息 / 触发推理
+    
+    rect rgb(240, 240, 240)
+        Note right of E: 优先级 1: 压入工具定义 (不可覆盖)
+        Note right of E: 优先级 2: 压入安全护栏
+        Note right of E: 优先级 5: 压入文件内容 (按序堆叠)
+    end
+
+    D->>E: 读取 SOUL/USER/AGENTS 等配置文件
+
+    E->>B: 传输完整组装文本
+    alt 超过 20,000 字符
+        B->>B: 截断尾部数据 (Tail Cut)
+    else 正常范围内
+        B->>B: 保留全文
+    end
+
+    B->>E: 返回精简后的提示词
+    E->>E: 压入最低优先级: 当前时间
+    E->>L: 注入最终 System Prompt (灵魂注入)
+    L-->>E: 开始 ReAct 推理循环
+```
+
+
+
 ### 工具系统
 
 OpenClaw的内置工具只有四个：
