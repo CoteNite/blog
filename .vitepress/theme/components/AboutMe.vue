@@ -85,7 +85,7 @@ const skillGroups = [
       <div class="avatar-container">
         <div class="avatar-ring">
           <img
-              src="http://localhost:9000/blog/public/header1.png"
+              src="https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/header1.png"
               alt="个人头像"
               class="avatar"
           />
@@ -169,7 +169,6 @@ const skillGroups = [
 .avatar-ring {
   padding: 4px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2, #a78bfa));
 }
 
 .avatar {
