@@ -9,6 +9,7 @@ import ArticleMetadata from "./components/ArticleMetadata.vue"
 import backtotop from "./components/backtotop.vue"
 import header from "./components/header.vue"
 import FriendLink from "./components/FriendLink.vue"
+import AboutMe from "./components/AboutMe.vue";
 import MyLayout from './components/MyLayout.vue'
 import "vitepress-markdown-timeline/dist/theme/index.css";
 import mediumZoom from 'medium-zoom';
@@ -16,6 +17,7 @@ import { onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import {h} from "vue";
 import mermaid from "mermaid";
+
 
 
 export default {
@@ -52,6 +54,7 @@ export default {
         app.component('update' , update)
         app.component('ArticleMetadata' , ArticleMetadata)
         app.component('FriendLink' , FriendLink)
+        app.component('AboutMe' , AboutMe)
     },
     Layout() {
         return h(DefaultTheme.Layout, null, {

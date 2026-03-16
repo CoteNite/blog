@@ -16,7 +16,7 @@ import {
     <div class="personal-info-card">
       <div class="avatar-container">
         <img
-            src="../public/header1.png"
+            src="http://localhost:5173/blog/public/header1.png"
             alt="个人头像"
             class="avatar"
         />
