@@ -64,6 +64,7 @@ const baseVitePressConfig = {
       { text: '<strong>算竟败犬</strong>', link: '/algorithm/1.前言' },
       { text: '<strong>寥寥几笔</strong>', link: '/story/1.前言' },
       // { text: '<strong>圣诞快乐</strong>', link: '/圣诞' },
+      { text: '<strong>友情链接</strong>', link: '/friends/' },
       { text: '<strong>关于我</strong>', link: '/aboutMe/aboutMe' },
       { text: '<strong>主页</strong>', link: '/' },
     ],

@@ -8,6 +8,7 @@ import update from "./components/update.vue"
 import ArticleMetadata from "./components/ArticleMetadata.vue"
 import backtotop from "./components/backtotop.vue"
 import header from "./components/header.vue"
+import FriendLink from "./components/FriendLink.vue"
 import MyLayout from './components/MyLayout.vue'
 import "vitepress-markdown-timeline/dist/theme/index.css";
 import mediumZoom from 'medium-zoom';
@@ -50,6 +51,7 @@ export default {
         }
         app.component('update' , update)
         app.component('ArticleMetadata' , ArticleMetadata)
+        app.component('FriendLink' , FriendLink)
     },
     Layout() {
         return h(DefaultTheme.Layout, null, {
