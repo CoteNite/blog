@@ -6,21 +6,21 @@ const friends = [
     desc: 'myrica的下午茶',
     avatar: 'https://avatars.githubusercontent.com/u/232033124?v=4',
     link: 'https://lishiyu2006.github.io/Blog/',
-    tag: 'Ciallo～(∠・ω< )⌒★',
+    tags: ['Ciallo～(∠・ω< )⌒★'],
   },
   {
     name: 'ZroKei',
     desc: '摆烂大王',
     avatar: 'https://zrokei.github.io/logo.png',
     link: 'https://zrokei.github.io/',
-    tag: '能找到工作吗？',
+    tags: ['能找到工作吗？'],
   },
   {
     name: 'Chillward',
     desc: '牢C爱好者，嵌入式高寿',
     avatar: 'https://chillward.github.io/uploads/avatar.png',
     link: 'https://chillward.github.io/',
-    tag: '铁铁',
+    tags: ['铁铁'],
   },
   // 在此处继续追加友链对象，格式如下：
   // {
@@ -28,7 +28,7 @@ const friends = [
   //   desc: '一句话简介',
   //   avatar: 'https://xxx.com/avatar.png',  // 头像链接或本地路径
   //   link: 'https://xxx.com',               // 博客地址
-  //   tag: '分类标签',                        // 可选
+  //   tags: ['标签1', '标签2'],               // 可选，数组形式
   // },
 ];
 </script>
@@ -60,7 +60,9 @@ const friends = [
           </div>
           <div class="fl-info">
             <span class="fl-name">{{ friend.name }}</span>
-            <span v-if="friend.tag" class="fl-tag">{{ friend.tag }}</span>
+            <div class="fl-tags">
+              <span v-for="tag in friend.tags" :key="tag" class="fl-tag">{{ tag }}</span>
+            </div>
             <p class="fl-desc">{{ friend.desc }}</p>
           </div>
           <div class="fl-arrow">↗</div>
@@ -177,6 +179,7 @@ const friends = [
   min-width: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 4px;
 }
 
@@ -193,6 +196,7 @@ const friends = [
 .fl-tag {
   display: inline-block;
   font-size: 0.68rem;
+  margin-left: -3px;
   padding: 1px 7px;
   border-radius: 20px;
   background: var(--vp-c-brand-soft);
@@ -200,6 +204,12 @@ const friends = [
   width: fit-content;
   font-weight: 600;
   letter-spacing: 0.02em;
+}
+
+.fl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .fl-desc {
