@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/85.All in AI/Open Claw.md",
+                "file": "aboutMe/aboutMe.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Open Claw"
+              "title": "aboutMe"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/85.All in AI/Open Claw.md",
+                "file": "aboutMe/aboutMe.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Open Claw 的大纲"
+              "title": "aboutMe 的大纲"
             }
           }
         ],
@@ -174,9 +174,9 @@
   },
   "active": "ff08e767450588d2",
   "lastOpenFiles": [
-    "back-end/85.All in AI/RAG工程.md",
-    "back-end/85.All in AI/Open Claw.md",
     "back-end/85.All in AI/Agent Skills.md",
+    "back-end/85.All in AI/Open Claw.md",
+    "back-end/85.All in AI/RAG工程.md",
     "(references/REFERENCE.md).md",
     "(references",
     "back-end/01.Java/Java各版本进展.md",

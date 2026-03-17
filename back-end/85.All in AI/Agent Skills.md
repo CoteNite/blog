@@ -156,7 +156,7 @@ assets文件夹下包含的是一系列的静态资源，包含
 
 以cursor为例，我们只需要在项目的根目录下放置.agents文件夹，并在下方放置我们的agentSkills即可正常使用我们的AgentSkills
 
-以上述的agent-skills-creator为例子，我们将其放置到项目根目录下的./agents文件夹下，然后对cursor进行提问，就能发现cursor正在尝试使用这个agent skills
+以上述的agent-skills-creator为例子，我们将其放置到项目根目录下的./agents/skills文件夹下，然后对cursor进行提问，就能发现cursor正在尝试使用这个agent skills
 
 
 
