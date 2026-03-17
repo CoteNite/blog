@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "aboutMe/aboutMe.md",
+                "file": "back-end/85.All in AI/Agent Skills.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "aboutMe"
+              "title": "Agent Skills"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "aboutMe/aboutMe.md",
+                "file": "back-end/85.All in AI/Agent Skills.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "aboutMe 的大纲"
+              "title": "Agent Skills 的大纲"
             }
           }
         ],
@@ -172,10 +172,11 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "ff08e767450588d2",
+  "active": "2bb3882304465ad5",
   "lastOpenFiles": [
-    "back-end/85.All in AI/Agent Skills.md",
     "back-end/85.All in AI/Open Claw.md",
+    "aboutMe/aboutMe.md",
+    "back-end/85.All in AI/Agent Skills.md",
     "back-end/85.All in AI/RAG工程.md",
     "(references/REFERENCE.md).md",
     "(references",
@@ -204,7 +205,6 @@
     "story/杂文，随笔/我心目中的幸福.md",
     "story/杂文，随笔/可恨的人是怎么形成的.md",
     "story/现在范围长期要做的事/2026-1-5.md",
-    "basic/jsp/JSP.md",
     "story/现在范围长期要做的事",
     "back-end/后端补全计划",
     "basic/jsp",
