@@ -4,8 +4,9 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide } from 'vue'
+import Snow from './Snow.vue'
 
-const { isDark } = useData()
+const { isDark, frontmatter } = useData()
 
 const enableTransitions = () =>
     'startViewTransition' in document &&
@@ -45,6 +46,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   <DefaultTheme.Layout>
     <!-- 这里可以插入其他插槽组件 -->
   </DefaultTheme.Layout>
+  <Snow v-if="frontmatter.layout === 'home'" />
 </template>
 
 <style>
