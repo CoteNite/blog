@@ -146,7 +146,7 @@ assets文件夹下包含的是一系列的静态资源，包含
 
 ## skill-creator
 
-[authropics官方出品的用于创建Skills的Skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator)
+[anthropics官方出品的用于创建Skills的Skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator)
 
 我们可以使用这个工具快速的让AI帮我们创建Skills
 
