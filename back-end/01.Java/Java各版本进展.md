@@ -440,5 +440,8 @@ public class MultiPatternSwitchExample {
 
 由于JEP 491的实现，JDK现在推荐我们在没有特殊情况下优先使用synchronize关键字对代码块上锁（就如同平台线程并发一样），这样减小了使用虚拟线程带来的心智负担
 
+## JDK26
+
+
 
 
