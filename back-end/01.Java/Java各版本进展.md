@@ -469,3 +469,11 @@ var request = HttpRequest.newBuilder(URI.create("https://openjdk.org/"))
                          .version(HttpClient.Version.HTTP_3)
                          .GET().build();
 ```
+
+如果不指定版本，在请求中或客户端选择 HTTP/3 作为首选版本后，你以常规方式发送请求。如果目标服务器不支持 HTTP/3，那么请求默认会透明地降级为 HTTP/2 甚至 HTTP/1.1，视情况而定。
+
+### [**JEP 522：G1 GC：通过减少同步提升吞吐量**](https://openjdk.org/jeps/522)
+
+该JEP通过减少应用线程与垃圾回收（GC）线程之间的同步开销，显著提升G1收集器在运行时的吞吐量
+
+在过去的版本中，
