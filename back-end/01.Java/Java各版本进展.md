@@ -481,4 +481,4 @@ var request = HttpRequest.newBuilder(URI.create("https://openjdk.org/"))
 - 卡表：本身是一个字节数组，每一个字节代表了一快内存，当java代码修改了一个对象的引用字段时，JVM会在卡表中将这个位置标记为“脏”
 - 写屏障：在每一次修改引用时插入一小段指令，复制更新卡表
 
-JEP522引入了shuang
+JEP522引入了双卡表机制，
