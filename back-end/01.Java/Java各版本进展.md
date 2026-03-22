@@ -489,8 +489,21 @@ JEP522引入了双卡表机制，让应用线程和GC线程各自独立使用一
 
 JEP500对这一行为进行了过渡，这说明我们并非让final真的无法用反射修改，而是在开发者尝试使用反射修改final字段时，Java默认发出警告
 
-在未来的版本中，这一行为可能会变成抛出异常，这也意味着Final将会真正的bianchengFinal
+为了给开发者适应的时间，JEP 500 提供了新的命令行参数来控制这种行为：
 
+- **`--illegal-final-field-mutation`**：控制非法修改发生时的反应。
+    - `allow`：允许修改，不提示。
+    - `warn`（JDK 26 默认）：允许修改，但打印警告。
+    - `debug`：允许修改，但打印详细堆栈。
+    - `deny`：禁止修改，抛出 `IllegalAccessException`。
+- **`--enable-final-field-mutation=<module>`**：明确授权某个模块可以修改 `final` 字段，从而消除警告。
 
+在未来的版本中，这一行为可能会变成抛出异常，这也意味着Final将会真正的变成Final
+
+### [**JEP 504：移除 Applet API**](https://openjdk.org/jeps/504)
+
+是时候该向AppletAPI告别了，Java Applet是90年代和2000年初最火的JavaAPI之一，它允许让浏览器运行Java程序，但随着近年来JS，HTML5，CSS3甚至WebAssembly的兴起，Applet已经完成了他的历史使命
+
+现在所有的主流浏览器早已停止了对Java插件的支持，AppletAPI也在Java9时期被标记为废弃，并于Java11时期将`appletviewer`移除，进而让开发者没有办法运行AppletAPI
 
 
