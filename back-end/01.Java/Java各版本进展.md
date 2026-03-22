@@ -502,14 +502,15 @@ JEP500对这一行为进行了过渡，这说明我们并非让final真的无法
 
 ### [**JEP 504：移除 Applet API**](https://openjdk.org/jeps/504)
 
-**是时候该向AppletAPI告别了**
+**是时候向 Applet API 彻底告别了。**
 
-Java Applet是90年代和2000年初最火的JavaAPI之一，它允许让浏览器运行Java程序，但随着近年来JS，HTML5，CSS3甚至WebAssembly的兴起，Applet已经完成了他的历史使命
+Java Applet曾是90年代和2000年初最火的JavaAPI之一，它成功的让浏览器可以运行Java程序，为Java程序在网页开发中占据了一席之地。但随着 HTML5、现代JavaScript生态以及 WebAssembly 的崛起，Applet似乎已经完成了它的历史使命。
 
-现在所有的主流浏览器早已停止了对Java插件的支持，AppletAPI也在Java9时期被标记为废弃，并于Java11时期将`appletviewer`移除，进而让开发者没有办法运行AppletAPI
+随着主流浏览器相继停止对NPAPI插件的支持，Applet实际上已处于“脑死亡”状态。Java 9 将其标记为废弃（Deprecated），Java 11 移除了 `appletviewer` 工具。如今在 JDK 26 中，JEP 504 将正式把相关代码从标准库中剥离。
 
-如今，是时候该正式的和Applet API告别了，这个为Java做出了重大贡献的API如今已经成为了JDK中的累赘部分，或许是时候该让他成为历史了
+虽然这一天的到来并不令人意外，但它依然标志着一个时代的落幕。这个为 Java 早期普及立下汗马功劳的 API，终于要告别 JDK 的舞台，正式进入Java的历史。
 
-**Goodbye Applet**
+**再见，Applet。感谢你曾经带来的无限可能。**
 
+### [**JEP 530：模式、实例与交换中的原始类型（第四次预览）**](https://openjdk.org/jeps/530)
 
