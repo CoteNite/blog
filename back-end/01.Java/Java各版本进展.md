@@ -444,4 +444,9 @@ public class MultiPatternSwitchExample {
 
 ### Project Leyden相关
 
-Project Leyden的使命远没有结束，
+Project Leyden的使命远没有结束，正是启动速度和性能问题才让Go在近年来不断取代Java在服务端的地位，Java还在负重向前
+
+#### [JEP 516：任意GC的提前时间对象缓存](https://openjdk.org/jeps/516)
+
+
+
