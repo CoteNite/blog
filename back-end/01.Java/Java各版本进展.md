@@ -450,7 +450,7 @@ Project Leyden的使命远没有结束，正是启动速度和性能问题才让
 
 JEP516在原有的基础上增强了HotSpotJVM的AOT（提前编译）缓存，使其能够与所有的垃圾收集器（重点在于低延迟的ZGC）无缝配合使用
 
-ZGC得益于其[优秀的设计](https://tech.meituan.com/2020/08/06/new-zgc-practice-in-meituan.html)，其GC回收时间可以压缩在10ms以内，因此成为了众多开发者的GC选择，但是目前的AOT却不能兼容ZGC，这是因为ZGC的对象引用格式与其他的垃圾收集器有着很大的差异
+ZGC得益于其[优秀的设计](https://tech.meituan.com/2020/08/06/new-zgc-practice-in-meituan.html)（这里主要指ZGC的染色指针技术），其GC回收时间可以压缩在10ms以内，因此成为了众多开发者的GC选择，但是目前的AOT却不能兼容ZGC，这是因为ZGC的对象引用格式与其他的垃圾收集器有着很大的差异
 
 在JEP516中，不在将对象的引用固化为特定的GC内存地址，而是采用逻辑索引的方式与对象进行关联，逻辑索引的好处在于与GC无关
 
