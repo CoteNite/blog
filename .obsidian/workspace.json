@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "bfb7ab862adffd87",
+        "id": "d025b168155abaa7",
         "type": "tabs",
         "children": [
           {
-            "id": "ff08e767450588d2",
+            "id": "4faedc43bb60e664",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "back-end/01.Java/Java各版本进展.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Java各版本进展"
+              "title": "新标签页"
             }
           }
         ]
@@ -142,13 +138,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/01.Java/Java各版本进展.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java各版本进展 的大纲"
+              "title": "大纲"
             }
           }
         ],
@@ -172,15 +167,17 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "ff08e767450588d2",
+  "active": "9884943ad5bd65e9",
   "lastOpenFiles": [
+    "node_modules/d3/README.md",
+    "back-end/02.JVM与JVM语言/JVM与内存管理.md",
+    "back-end/01.Java/Java各版本进展.md",
     "back-end/85.All in AI/Agent Skills.md",
     "back-end/85.All in AI/Open Claw.md",
     "aboutMe/aboutMe.md",
     "back-end/85.All in AI/RAG工程.md",
     "(references/REFERENCE.md).md",
     "(references",
-    "back-end/01.Java/Java各版本进展.md",
     "front-end/KMP/3.Kotlin Multiplatform Compose简单教程.md",
     "front-end/KMP/1.Kotlin MutiPlatform.md",
     "story/奇怪的东西/RK键盘快捷键.md",
@@ -203,8 +200,6 @@
     "story/杂文，随笔/但行好事，莫问前程.md",
     "story/杂文，随笔/性压抑与自卑.md",
     "story/杂文，随笔/我心目中的幸福.md",
-    "story/杂文，随笔/可恨的人是怎么形成的.md",
-    "story/现在范围长期要做的事/2026-1-5.md",
     "story/现在范围长期要做的事",
     "back-end/后端补全计划",
     "basic/jsp",
