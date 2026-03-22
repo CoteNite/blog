@@ -483,6 +483,8 @@ var request = HttpRequest.newBuilder(URI.create("https://openjdk.org/"))
 
 JEP522引入了双卡表机制，让应用线程和GC线程各自独立使用一个卡表，进而优化了写屏障的同步逻辑
 
-### [**JEP 500：准备进入最终难度**](https://openjdk.org/jeps/500)
+### [**JEP 500：让Final真的Final**](https://openjdk.org/jeps/500)
+
+
 
 
