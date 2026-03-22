@@ -448,5 +448,7 @@ Project Leyden的使命远没有结束，正是启动速度和性能问题才让
 
 #### [JEP 516：任意GC的提前时间对象缓存](https://openjdk.org/jeps/516)
 
+JEP516在原有的基础上增强了HotSpotJVM的AOT（提前编译）缓存，使其能够与所有的垃圾收集器（重点在于低延迟的ZGC）无缝配合使用
+
 
 
