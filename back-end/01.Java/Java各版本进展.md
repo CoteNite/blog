@@ -483,7 +483,13 @@ var request = HttpRequest.newBuilder(URI.create("https://openjdk.org/"))
 
 JEP522引入了双卡表机制，让应用线程和GC线程各自独立使用一个卡表，进而优化了写屏障的同步逻辑
 
-### [**JEP 500：让Final真的Final**](https://openjdk.org/jeps/500)
+### [**JEP 500：准备让Final真的Final**](https://openjdk.org/jeps/500)
+
+在目前的Java版本中，虽然final关键字在语义上可以可以让变量“不可变”，但开发者仍然可以使用反射的形式绕开这一限制
+
+JEP500对这一行为进行了过渡，这说明我们并非让final真的无法用反射修改，而是在开发者尝试使用反射修改final字段时，Java默认发出警告
+
+在未来的版本中，这一行为可能会变成抛出异常，这也意味着Final将会真正的bianchengFinal
 
 
 
