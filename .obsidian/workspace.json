@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/85.All in AI/SSE.md",
+                "file": "back-end/85.All in AI/SSE与Token上下文.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SSE"
+              "title": "SSE与Token上下文"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/85.All in AI/SSE.md",
+                "file": "back-end/85.All in AI/SSE与Token上下文.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "SSE 的大纲"
+              "title": "SSE与Token上下文 的大纲"
             }
           }
         ],
@@ -175,7 +175,7 @@
   "active": "6e593e538679eff9",
   "lastOpenFiles": [
     "back-end/01.Java/Java各版本进展.md",
-    "back-end/85.All in AI/SSE.md",
+    "back-end/85.All in AI/SSE与Token上下文.md",
     "back-end/02.JVM与JVM语言/JVM与内存管理.md",
     "node_modules/d3/README.md",
     "back-end/85.All in AI/Agent Skills.md",
