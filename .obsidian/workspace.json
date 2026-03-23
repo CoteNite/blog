@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/01.Java/Java各版本进展.md",
+                "file": "back-end/85.All in AI/SSE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Java各版本进展"
+              "title": "SSE"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/01.Java/Java各版本进展.md",
+                "file": "back-end/85.All in AI/SSE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Java各版本进展 的大纲"
+              "title": "SSE 的大纲"
             }
           }
         ],
@@ -175,6 +175,7 @@
   "active": "6e593e538679eff9",
   "lastOpenFiles": [
     "back-end/01.Java/Java各版本进展.md",
+    "back-end/85.All in AI/SSE.md",
     "back-end/02.JVM与JVM语言/JVM与内存管理.md",
     "node_modules/d3/README.md",
     "back-end/85.All in AI/Agent Skills.md",
@@ -204,7 +205,6 @@
     "story/杂文，随笔/愿每个人都被善待.md",
     "story/杂文，随笔/但行好事，莫问前程.md",
     "story/杂文，随笔/性压抑与自卑.md",
-    "story/杂文，随笔/我心目中的幸福.md",
     "story/现在范围长期要做的事",
     "back-end/后端补全计划",
     "basic/jsp",
