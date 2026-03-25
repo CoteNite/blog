@@ -111,3 +111,8 @@ Agent可以从多个Extension中选择一个或多个符合当前用户需求的
 
 ### Functions
 
+Functions是一系列的自我完备的函数/工具，和我们自己写的函数一样，只是这次将函数的调用者从软件开发者转变为了模型，我们可以设置一系列的Functions，然后让Agent决定在何时使用何种Functions
+
+Functions与Extensions的区别在于模型只输出函数名和参数信息，但不会执行函数，函数由客户端进行执行，与之相对的是Extensions则是在服务提供商的服务器上进行执行
+
+![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20260325184629.png)
