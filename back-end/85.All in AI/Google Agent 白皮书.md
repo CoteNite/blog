@@ -148,7 +148,6 @@ DataStorage类似于一个大图书馆，它可以给大模型提供许多的知
 
 下图就是一个ReAct和Rag结合的Agent示例
 
-![Uploading file...8v09r]()
+![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20260325185732.png)
 
-
-
+## 通过针对性学习来提升
