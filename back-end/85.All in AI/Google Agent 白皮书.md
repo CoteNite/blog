@@ -152,3 +152,11 @@ DataStorage类似于一个大图书馆，它可以给大模型提供许多的知
 
 ## 通过针对性学习来提升
 
+所谓针对式的学习就是让模型拥有一些特定的技能，这种需求一般通过以下几种方式实现：
+
+- In-context learning：基于上下文进行学习，还是使用通用模型，但在推理的时候为模型提供提示词工具和示例，使模型能够即时学习如何为特定的任务使用这些工具
+	案例：ReAct
+- Retrieval-based in-context learning 
+- Fine-tuning based learning
+
+
