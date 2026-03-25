@@ -156,7 +156,11 @@ DataStorage类似于一个大图书馆，它可以给大模型提供许多的知
 
 - In-context learning：基于上下文进行学习，还是使用通用模型，但在推理的时候为模型提供提示词工具和示例，使模型能够即时学习如何为特定的任务使用这些工具
 	案例：ReAct
-- Retrieval-based in-context learning 
-- Fine-tuning based learning
+- Retrieval-based in-context learning：基于检索的上下文学习，通过外部存储中检索相关信息，工具和示例动态填充模型的提示词
+	案例：RAG
+- Fine-tuning based learning：基于微调的学习，用大量的特定示例对模型进行训练（微调/精调），然后用微调过的模型进行推理，进而让大模型拥有之前没有的知识
+
+
+
 
 
