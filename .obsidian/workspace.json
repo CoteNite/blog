@@ -11,14 +11,10 @@
             "id": "6e593e538679eff9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "back-end/85.All in AI/Google Agent 白皮书.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Google Agent 白皮书"
+              "title": "新标签页"
             }
           }
         ]
@@ -142,13 +138,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/85.All in AI/Google Agent 白皮书.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Google Agent 白皮书 的大纲"
+              "title": "大纲"
             }
           }
         ],
