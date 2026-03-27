@@ -81,4 +81,36 @@ curl https://api.openai.com/v1/chat/completions \
 
 ### 工厂模式实现策略的加载
 
-在AgentX中，我们使用了工厂模式对Token的使用策略进行了计算，所有的代码通过TokenDomainService进行计算，再统一通过TokenOverflowStrategyFactory根据
+在AgentX中，我们使用了工厂模式对Token的使用策略进行了计算，所有的代码通过TokenDomainService进行计算，再统一通过TokenOverflowStrategyFactory根据配置的策略进行选择
+
+```kotlin
+@Service  
+class TokenDomainService(  
+    private val strategyFactory: TokenOverflowStrategyFactory  
+) {  
+  
+    fun processMessages(messages: List<TokenMessage>, config: TokenOverflowConfig): TokenProcessResult =  
+        strategyFactory.createStrategy(config).process(messages, config)  
+}
+
+@Service  
+class TokenOverflowStrategyFactory {  
+  
+    fun createStrategy(config: TokenOverflowConfig?): TokenOverflowStrategy =  
+        config?.let { createStrategy(it.strategyType, it) } ?: NoTokenOverflowStrategy()  
+  
+    fun createStrategy(strategyType: TokenOverflowStrategyEnum?, config: TokenOverflowConfig): TokenOverflowStrategy =  
+        when (strategyType ?: TokenOverflowStrategyEnum.NONE) {  
+            TokenOverflowStrategyEnum.SLIDING_WINDOW -> SlidingWindowTokenOverflowStrategy(config)  
+            TokenOverflowStrategyEnum.SUMMARIZE -> SummarizeTokenOverflowStrategy(config)  
+            TokenOverflowStrategyEnum.NONE -> NoTokenOverflowStrategy(config)  
+        }  
+  
+    fun createStrategy(strategyName: String?, config: TokenOverflowConfig): TokenOverflowStrategy =  
+        createStrategy(TokenOverflowStrategyEnum.fromString(strategyName), config)  
+}
+
+
+```
+
+每一次chat都会经过TokenDomainService中的`process`方法，然后
