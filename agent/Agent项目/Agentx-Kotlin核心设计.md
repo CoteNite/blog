@@ -117,3 +117,4 @@ class TokenOverflowStrategyFactory {
 
 ## Context和Message的区别
 
+为了更好的用户体验，我们会在对话到达一定的量的时候将指定条数的内容传递给大模型，并让其生成总结，这个总结的内容是不可以存放到message里面的，因为message表中的内容是要给用户看的，因此我们会另开yi'zhang'biao
