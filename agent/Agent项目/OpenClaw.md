@@ -1,4 +1,4 @@
-# Open Claw
+# OpenClaw
 
 [Hello-Claw](https://datawhalechina.github.io/hello-claw/)
 

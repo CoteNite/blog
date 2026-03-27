@@ -11,10 +11,14 @@
             "id": "6e593e538679eff9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "agent/Agent项目/Agentx-Kotlin核心设计.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "Agentx-Kotlin核心设计"
             }
           }
         ]
@@ -138,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "agent/Agent项目/Agentx-Kotlin核心设计.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "Agentx-Kotlin核心设计 的大纲"
             }
           }
         ],
@@ -169,6 +174,8 @@
   },
   "active": "6e593e538679eff9",
   "lastOpenFiles": [
+    "agent/0.前言.md",
+    "agent/Agent项目/OpenClaw.md",
     "back-end/85.All in AI/RAG工程.md",
     "back-end/85.All in AI/Google Agent 白皮书.md",
     "back-end/85.All in AI/Open Claw.md",
@@ -198,8 +205,6 @@
     "story/杂文，随笔/自卑的爱与不可及的幸福.md",
     "story/诗（这东西真的是诗吗）",
     "public/未命名",
-    "story/杂文，随笔/愿每个人都被善待.md",
-    "story/杂文，随笔/但行好事，莫问前程.md",
     "story/现在范围长期要做的事",
     "back-end/后端补全计划",
     "basic/jsp",

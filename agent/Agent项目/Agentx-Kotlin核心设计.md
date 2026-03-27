@@ -79,3 +79,6 @@ curl https://api.openai.com/v1/chat/completions \
 	    `最大Token数`：总Token上限，默认为所用LLM的上下文限制
 
 
+### 工厂模式实现策略的加载
+
+在AgentX中，我们使用了工厂模式对Token的使用策略进行了计算，所有的代码通过TokenDomainService进行计算，再统一通过TokenOverflowStrategyFactory根据
