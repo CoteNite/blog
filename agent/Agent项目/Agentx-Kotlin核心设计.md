@@ -113,4 +113,7 @@ class TokenOverflowStrategyFactory {
 
 ```
 
-每一次chat都会经过TokenDomainService中的`process`方法，然后
+每一次chat都会经过TokenDomainService中的`process`方法，然后将计算的结果保存到Context里面
+
+## Context和Message的区别
+
