@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/82.协程与响应式编程/3.Flow.md",
+                "file": "agent/Agent技术/MCP技术.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3.Flow"
+              "title": "MCP技术"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/82.协程与响应式编程/3.Flow.md",
+                "file": "agent/Agent技术/MCP技术.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "3.Flow 的大纲"
+              "title": "MCP技术 的大纲"
             }
           }
         ],
@@ -174,6 +174,8 @@
   },
   "active": "6e593e538679eff9",
   "lastOpenFiles": [
+    "back-end/82.协程与响应式编程/3.Flow.md",
+    "agent/Agent技术/MCP技术.md",
     "agent/Agent项目/Agentx-Kotlin核心设计.md",
     "agent/0.前言.md",
     "agent/Agent项目/OpenClaw.md",
@@ -201,8 +203,6 @@
     "story/喜欢の东西",
     "story/小说/李代桃僵/病.md",
     "story/小说/来世.md",
-    "story/小说/1.前言.md",
-    "story/小说/牵丝戏.md",
     "story/诗（这东西真的是诗吗）",
     "public/未命名",
     "story/现在范围长期要做的事",
