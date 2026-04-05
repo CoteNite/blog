@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "om/Windows环境下某端口被占用但无法直接查询的问题.md",
+                "file": "agent/大模型基础/Google Agent 白皮书.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Windows环境下某端口被占用但无法直接查询的问题"
+              "title": "Google Agent 白皮书"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "om/Windows环境下某端口被占用但无法直接查询的问题.md",
+                "file": "agent/大模型基础/Google Agent 白皮书.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Windows环境下某端口被占用但无法直接查询的问题 的大纲"
+              "title": "Google Agent 白皮书 的大纲"
             }
           }
         ],
@@ -174,8 +174,10 @@
   },
   "active": "6e593e538679eff9",
   "lastOpenFiles": [
-    "agent/Agent技术/MCP技术.md",
+    "agent/Agent技术/Agent Skills.md",
+    "agent/Agent技术/RAG工程.md",
     "om/Windows环境下某端口被占用但无法直接查询的问题.md",
+    "agent/Agent技术/MCP技术.md",
     "back-end/82.协程与响应式编程/3.Flow.md",
     "agent/Agent项目/Agentx-Kotlin核心设计.md",
     "agent/0.前言.md",
@@ -200,7 +202,6 @@
     "story/喜欢の东西/音乐.md",
     "story/喜欢の东西/书籍.md",
     "拉康派精神分析临床导论.epub",
-    "story/小说/李代桃僵/钟时悟.md",
     "story/喜欢の东西",
     "story/诗（这东西真的是诗吗）",
     "public/未命名",
