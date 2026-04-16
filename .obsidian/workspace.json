@@ -35,7 +35,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9884943ad5bd65e9",
+            "id": "acf432584bfa4eef",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -172,7 +172,7 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "6e593e538679eff9",
+  "active": "acf432584bfa4eef",
   "lastOpenFiles": [
     "agent/大模型基础/Google Agent 白皮书.md",
     "agent/大模型基础/大模型演变.md",
