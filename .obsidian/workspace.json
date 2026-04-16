@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286.5
+    "width": 279.5
   },
   "right": {
     "id": "24c0fe5a82e56c4b",
@@ -172,7 +172,7 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "acf432584bfa4eef",
+  "active": "6e593e538679eff9",
   "lastOpenFiles": [
     "agent/大模型基础/Google Agent 白皮书.md",
     "agent/大模型基础/大模型演变.md",
