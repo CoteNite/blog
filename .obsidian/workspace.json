@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agent/Agent技术/AGENTS.md.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AGENTS.md"
+              "title": "README"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "agent/Agent技术/AGENTS.md.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "AGENTS.md 的大纲"
+              "title": "README 的大纲"
             }
           }
         ],
@@ -174,8 +174,12 @@
   },
   "active": "e3d8fe53ab2c46c4",
   "lastOpenFiles": [
-    "agent/Agent项目/Agentx-Kotlin核心设计.md",
+    "index.md",
+    "README.md",
     "agent/Agent技术/AGENTS.md.md",
+    "新建 Microsoft Visio Drawing.vsdx",
+    "新建文件夹",
+    "agent/Agent项目/Agentx-Kotlin核心设计.md",
     "om/Playwright-CLI教程.md",
     "om/常用命令行.md",
     "agent/Agent技术/RAG工程.md",
@@ -199,8 +203,6 @@
     "back-end/85.All in AI/Google Agent 白皮书.md",
     "back-end/85.All in AI/Open Claw.md",
     "back-end/85.All in AI/Agentx-Kotlin核心设计.md",
-    "back-end/85.All in AI/Agent Skills.md",
-    "back-end/01.Java/Java各版本进展.md",
     "(references",
     "拉康派精神分析临床导论.epub",
     "story/喜欢の东西",
@@ -209,8 +211,6 @@
     "story/现在范围长期要做的事",
     "back-end/后端补全计划",
     "basic/jsp",
-    "basic/py",
-    "back-end/81.高并发/d",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif",
     "public/header1.png",
