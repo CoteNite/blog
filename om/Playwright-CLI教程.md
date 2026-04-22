@@ -1,4 +1,4 @@
-# Playwright-cli 交互式浏览器自动化教程
+# Playwright-cli 教程
 
 ## 简介与安装
 

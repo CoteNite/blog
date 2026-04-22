@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agent/Agent技术/AGENTS.md.md",
+                "file": "om/Playwright-CLI教程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "AGENTS.md"
+              "title": "Playwright-CLI教程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "agent/Agent技术/AGENTS.md.md",
+                "file": "om/Playwright-CLI教程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "AGENTS.md 的大纲"
+              "title": "Playwright-CLI教程 的大纲"
             }
           }
         ],
@@ -174,9 +174,9 @@
   },
   "active": "e3d8fe53ab2c46c4",
   "lastOpenFiles": [
+    "agent/Agent技术/AGENTS.md.md",
     "agent/Agent技术/Agent Skills.md",
     "README.md",
-    "agent/Agent技术/AGENTS.md.md",
     "index.md",
     "新建 Microsoft Visio Drawing.vsdx",
     "新建文件夹",
