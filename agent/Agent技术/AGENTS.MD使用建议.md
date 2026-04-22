@@ -1,4 +1,4 @@
-# AGENTS.md
+# AGENTS.md使用建议
 
 [AGENTS.md官方文档](https://agents.md/)
 
