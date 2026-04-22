@@ -32,5 +32,8 @@ AI对于一些想法有自己的实现方式，他会尝试这个指令，只有
 
 这个时候，如果我们能提前告诉Agent：在执行xx操作下必须使用xx skills，那么Agent就会使用这个Skills了
 
-## 实践指南
+## AGENT.md 与 Skills
 
+vercel对skills进行了评估，他们将Next.js封装成了Skills，试图让Agent使用skills来生成正确的代码，但是代码通过率只有53%，这可以说是十分的不尽人意了
+
+这一点在OPENAI的wen
