@@ -3,8 +3,8 @@
   "enabledCssSnippets": [],
   "cssTheme": "",
   "textFontFamily": "JetBrains Maple Mono",
-  "interfaceFontFamily": "",
-  "monospaceFontFamily": "JetBrains Mono Medium",
+  "interfaceFontFamily": "JetBrains Maple Mono",
+  "monospaceFontFamily": "JetBrains Maple Mono",
   "baseFontSizeAction": true,
-  "baseFontSize": 15
+  "baseFontSize": 16
 }
