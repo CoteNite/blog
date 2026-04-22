@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "agent/Agent技术/AGENTS.md.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "AGENTS.md"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "agent/Agent技术/AGENTS.md.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大纲"
+              "title": "AGENTS.md 的大纲"
             }
           }
         ],
@@ -174,8 +174,8 @@
   },
   "active": "e3d8fe53ab2c46c4",
   "lastOpenFiles": [
-    "index.md",
     "README.md",
+    "index.md",
     "agent/Agent技术/AGENTS.md.md",
     "新建 Microsoft Visio Drawing.vsdx",
     "新建文件夹",
