@@ -1,20 +1,20 @@
 # AGENTS.md
 
-[AGENT.md官方文档](https://agents.md/)
+[AGENTS.md官方文档](https://agents.md/)
 
-[vercel在AGENT.md上的实践](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals)
+[vercel在AGENTS.md上的实践](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals)
 
 AGENTS.md是OpenAI和Google联合退出的一个新标准，其核心作用是为Agent提供一种可预测的方式来理解和操作项目
 
 AGENTS.md可以理解为是给AI看到README文件，其核心价值是让AI更好的理解当前的项目或是使用当前项目
 
-## 为什么需要AGENT.md
+## 为什么需要AGENTS.md
 
 ### 统一的数据管理
 
 在VibeCoding盛行的时代，我们的每一个AI IDE都会添加上一个.xxx的目录来存放自己需要的东西在项目的根目录下，比如cursor是.cursor，kiro是.kiro，这会极大程度的污染我们的根目录，我们迫切的需要一个统一的标准来放置给agent的信息
 
-AGENT.md就是这个愿景下产生的工具，其核心是实现了对项目的README文件，将整个项目的结构，我希望如何开发，等一系列数据都告诉了Agent
+AGENTS.md就是这个愿景下产生的工具，其核心是实现了对项目的README文件，将整个项目的结构，我希望如何开发，等一系列数据都告诉了Agent
 
 ### 可预测的流程
 
@@ -32,13 +32,13 @@ AI对于一些想法有自己的实现方式，他会尝试这个指令，只有
 
 这个时候，如果我们能提前告诉Agent：在执行xx操作下必须使用xx skills，那么Agent就会使用这个Skills了
 
-## AGENT.md 与 Skills
+## AGENTS.md 与 Skills
 
 vercel对skills进行了评估，他们将Next.js封装成了Skills，试图让Agent使用skills来生成正确的代码，但是代码通过率只有53%，这可以说是十分的不尽人意了
 
 这一点在[OPENAI的博客](https://developers.openai.com/blog/eval-skills)中也有提出
 
-vercel在AGENT.md中直接写出要使用技能
+vercel在AGENTS.md中直接写出要使用技能
 
 ```text
 在编写代码之前，首先探索项目结构，然后调用nextjs-doc技能进行文档编写。
@@ -55,13 +55,13 @@ vercel在AGENT.md中直接写出要使用技能
 
 vercel指出：在一次评估（“ `使用缓存”` 指令测试）中，“先调用”方法写出了正确的 `page.tsx`，但完全遗漏了所需的 `next.config.ts` 更改。“先探索”的做法同时实现了两者。
 
-**反直觉的是:** vercel在测试中发现，使用AGENT.md直接指出文档的目录，并告诉AGENT一切知识优先使用我们项目中检索到的，效果优秀于在AGENT.md中指出使用skills
+**反直觉的是:** vercel在测试中发现，使用AGENTS.md直接指出文档的目录，并告诉AGENT一切知识优先使用我们项目中检索到的，效果优秀于在AGENTS.md中指出使用skills
 
 这种看似“愚蠢”的方法（静态标记文件）表现优于更复杂的基于技能的检索，即使我们微调了技能触发器。
 
 vercel将其理解为一下原因：
 
-1. 没有决策点：即时你在AGENT.md中明确指出了要使用XXX.skills，仍然会出现生成 Tool Call决定执行函数，等待执行skills并获取skills中的数据，最后将返回的结果和当前的任务结合的
-
-
+1. 没有决策点：即时你在AGENTS.md中明确指出了要使用XXX.skills，仍然会出现生成 Tool Call决定执行函数，等待执行skills并获取skills中的数据，最后将返回的结果和当前的任务结合的过程
+2. 稳定的可用性：skills是异步加载的，只有被调用才会加载，而AGENTS.md内容在系统提示中，每回合都有。
+3. 可观测的顺序：技能决定了是先探索项目在读文档，而被动语境下则避免了这一点
 
