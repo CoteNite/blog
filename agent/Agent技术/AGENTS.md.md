@@ -77,3 +77,4 @@ vercel将其理解为一下原因：
 2. **WHY**: 设计决策的背景。
 3. **HOW**: 如何运行、测试、验证。
 
+[一个优秀的AGENTS.md的设计参考](https://github.com/NeuralNine/youtube-tutorials/blob/main/AgentsMD/AGENTS.md)
