@@ -282,7 +282,7 @@ playwright-cli delete-data
 
 ---
 
-## 6. 存储管理
+## 存储管理
 
 ### Storage State（完整状态）
 
@@ -381,7 +381,7 @@ playwright-cli sessionstorage-clear
 
 ---
 
-## 7. 网络拦截与Mock
+## 网络拦截与Mock
 
 ### 基础路由命令
 
@@ -463,7 +463,7 @@ playwright-cli run-code "async page => {
 
 ---
 
-## 8. 多标签页管理
+## 多标签页管理
 
 ```bash
 # 列出所有标签页
@@ -494,7 +494,7 @@ playwright-cli close
 
 ---
 
-## 9. 浏览器会话管理
+## 浏览器会话管理
 
 ### 命名会话
 
@@ -580,7 +580,7 @@ playwright-cli open --browser=msedge
 
 ---
 
-## 10. 自定义代码执行
+## 自定义代码执行
 
 `run-code` 命令允许执行任意 Playwright 代码，处理 CLI 未覆盖的高级场景。
 
@@ -700,7 +700,7 @@ playwright-cli run-code "async page => {
 
 ---
 
-## 11. 测试代码生成
+## 测试代码生成
 
 Playwright-cli 的一个强大功能是自动生成测试代码。
 
@@ -749,7 +749,7 @@ test('login flow', async ({ page }) => {
 
 ---
 
-## 12. 调试与追踪
+## 调试与追踪
 
 ### 控制台输出
 
@@ -806,7 +806,7 @@ playwright-cli attach tw-abcdef
 
 ---
 
-## 13. 视频录制
+## 视频录制
 
 ### 基础录制
 
@@ -865,7 +865,7 @@ async page => {
 
 ---
 
-## 14. 最佳实践
+## 最佳实践
 
 ### 1. 语义化命名会话
 
