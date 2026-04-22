@@ -38,3 +38,12 @@ vercel对skills进行了评估，他们将Next.js封装成了Skills，试图让A
 
 这一点在[OPENAI的博客](https://developers.openai.com/blog/eval-skills)中也有提出
 
+vercel在AGENT.md中直接写出要使用技能
+
+```text
+在编写代码之前，首先探索项目结构，然后调用nextjs-doc技能进行文档编写。
+```
+
+这时我们发现skills的触发率直接打到95%，代码通过率直逼79%
+
+同时，vercel还给了我们一个措辞du
