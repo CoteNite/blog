@@ -1,5 +1,9 @@
 # AGENTS.md
 
+[AGENT.md官方文档](https://agents.md/)
+
+[vercel在AGENT.md上的实践](https://vercel.com/blog/agents-md-outperforms-skills-in-our-agent-evals)
+
 AGENTS.md是OpenAI和Google联合退出的一个新标准，其核心作用是为Agent提供一种可预测的方式来理解和操作项目
 
 AGENTS.md可以理解为是给AI看到README文件，其核心价值是让AI更好的理解当前的项目或是使用当前项目
