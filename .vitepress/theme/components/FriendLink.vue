@@ -22,6 +22,13 @@ const friends = [
     link: 'https://chillward.github.io/',
     tags: ['铁铁'],
   },
+   {
+    name: '🐟',
+    desc: '还是那只🐟',
+    avatar:'',
+    link: 'http://laoyu.online/',
+    tags: ['给你牢完了兄弟'],
+  },
   // 在此处继续追加友链对象，格式如下：
   // {
   //   name: '博客名称',

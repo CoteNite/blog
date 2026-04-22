@@ -30,8 +30,7 @@ AI对于一些想法有自己的实现方式，他会尝试这个指令，只有
 
 另一个案例是skills的使用，众所周知skills采取的是按需加载的方式，Agent会在对话的开始将skill的名字和描述交给AI，但是AI很可能会觉得你的要求并不需要使用这个skills（即时你觉得是需要的），那么AI就会放弃使用Skills而自己进行操作
 
-这个时候，如果我们能提前告诉Agent：在执行xx操作下必须使用xxskills，那么Agent就会使用这个Skills了
+这个时候，如果我们能提前告诉Agent：在执行xx操作下必须使用xx skills，那么Agent就会使用这个Skills了
 
-
-
+## 实践指南
 
