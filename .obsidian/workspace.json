@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agent/Agent Harness/2.对话循环.md",
+                "file": "om/Windows环境下某端口被占用但无法直接查询的问题.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2.对话循环"
+              "title": "Windows环境下某端口被占用但无法直接查询的问题"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "agent/Agent Harness/2.对话循环.md",
+                "file": "om/Windows环境下某端口被占用但无法直接查询的问题.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2.对话循环 的大纲"
+              "title": "Windows环境下某端口被占用但无法直接查询的问题 的大纲"
             }
           }
         ],
@@ -174,8 +174,8 @@
   },
   "active": "e3d8fe53ab2c46c4",
   "lastOpenFiles": [
-    "agent/Agent Harness/1.Agent Harness 与 Claude Code.md",
     "agent/Agent Harness/2.对话循环.md",
+    "agent/Agent Harness/1.Agent Harness 与 Claude Code.md",
     "om/Windows环境下某端口被占用但无法直接查询的问题.md",
     "agent/Agent Harness",
     "agent/Agent技术/AGENTS.MD使用建议.md",
