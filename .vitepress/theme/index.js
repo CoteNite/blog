@@ -12,19 +12,22 @@ import FriendLink from "./components/FriendLink.vue"
 import AboutMe from "./components/AboutMe.vue";
 import SnowWrapper from './components/SnowWrapper.vue'
 import "vitepress-markdown-timeline/dist/theme/index.css";
-import MermaidZoom from './components/MermaidZoom.vue'
 import mediumZoom from 'medium-zoom';
 import { onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import { h } from "vue";
 import mermaid from "mermaid";
+import 'vitepress-plugin-mermaid-pan-zoom/dist/style.css'
 
 export default {
     extends: DefaultTheme,
     setup() {
+        onMounted(async () => {
+            const { useMermaidPanZoom } = await import('vitepress-plugin-mermaid-pan-zoom')
+            useMermaidPanZoom()
+        })
         onMounted(() => {
             mermaid.initialize({ startOnLoad: false })
-            mediumZoom('.mermaid svg', { background: 'var(--vp-c-bg)' });
         })
         const route = useRoute();
         const initZoom = () => {
@@ -48,7 +51,6 @@ export default {
         app.component('ArticleMetadata', ArticleMetadata)
         app.component('FriendLink', FriendLink)
         app.component('AboutMe', AboutMe)
-		app.component('MermaidZoom', MermaidZoom)
     },
     Layout() {
         return h(DefaultTheme.Layout, null, {

@@ -172,8 +172,9 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "2bb3882304465ad5",
+  "active": "e3d8fe53ab2c46c4",
   "lastOpenFiles": [
+    "_tmp_15232_c6726f483f54e1e0801edee9ffc1ad2a",
     "agent/Agent Harness/2.对话循环.md",
     "agent/大模型基础/大模型原理.md",
     "om/Windows环境下某端口被占用但无法直接查询的问题.md",
@@ -203,7 +204,6 @@
     "agent/Agent技术/MCP技术.md",
     "agent/0.前言.md",
     "agent/Agent项目/OpenClaw.md",
-    "back-end/85.All in AI/RAG工程.md",
     "(references",
     "拉康派精神分析临床导论.epub",
     "story/喜欢の东西",

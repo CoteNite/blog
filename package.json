@@ -5,6 +5,7 @@
     "mermaid": "^11.6.0",
     "vitepress": "^1.5.0",
     "vitepress-plugin-mermaid": "^2.0.17",
+    "vitepress-plugin-mermaid-pan-zoom": "^1.0.2",
     "vitepress-sidebar": "^1.30.2"
   },
   "scripts": {
