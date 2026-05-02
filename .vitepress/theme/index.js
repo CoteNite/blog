@@ -12,6 +12,7 @@ import FriendLink from "./components/FriendLink.vue"
 import AboutMe from "./components/AboutMe.vue";
 import SnowWrapper from './components/SnowWrapper.vue'
 import "vitepress-markdown-timeline/dist/theme/index.css";
+import MermaidZoom from './components/MermaidZoom.vue'
 import mediumZoom from 'medium-zoom';
 import { onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
@@ -47,6 +48,7 @@ export default {
         app.component('ArticleMetadata', ArticleMetadata)
         app.component('FriendLink', FriendLink)
         app.component('AboutMe', AboutMe)
+		app.component('MermaidZoom', MermaidZoom)
     },
     Layout() {
         return h(DefaultTheme.Layout, null, {
