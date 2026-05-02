@@ -82,11 +82,15 @@ const baseVitePressConfig = {
   },
   markdown: {
     config: (md) => {
-      // 在这里全局应用 markdown-it 插件
       md.use(timeline);
-      md.use(mathjax3);
+      // 修改这里：传入 MathJax 的配置对象
+      md.use(mathjax3, {
+        // 禁用交互式菜单和辅助功能，这通常能去掉多余的 UI 元素
+        options: {
+          enableMenu: false, // 禁用右键菜单和相关的交互按钮
+        },
+      });
 
-      // 你的自定义 heading_close 规则，并保留原始规则
       const originalHeadingCloseRule = md.renderer.rules.heading_close;
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
         let htmlResult = originalHeadingCloseRule
