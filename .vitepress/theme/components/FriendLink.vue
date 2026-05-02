@@ -29,6 +29,13 @@ const friends = [
     link: 'http://laoyu.online/',
     tags: ['给你牢完了兄弟'],
   },
+  {
+    name: 'ting is a dev',
+    desc: '汀哥😭😭😭',
+    avatar:'https://ting.is-a.dev/static/icon.png',
+    link: 'https://ting.is-a.dev/',
+    tags: ['汀哥你是我滴神'],
+  },
   // 在此处继续追加友链对象，格式如下：
   // {
   //   name: '博客名称',
