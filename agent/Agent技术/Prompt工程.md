@@ -372,4 +372,13 @@ SGLang 和 Outlines（Python 库）都支持高效的约束解码。这在 Agent
 
 ## ReAct
 
-ReAct（Yao et al.,2022）
+ReAct（Yao et al.,2022）是一个将推理和行为与大模型结合的范例，ReAct提示大模型为认为生成口头推理轨迹和操作，这使得系统执行动态推理来创建、维护和调整操作计划，同时还支持与外部环境(例如，Wikipedia)的交互，以将额外信息合并到推理中
+
+![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20260504214723.png)
+
+图片来源于Yao et al.2022
+
+我们会发现模型在思考的过程中多次的调用工具，最后生成结果，从本质上讲，ReAct就是让LLM通过外界工具提供的知识支持推理，进而确认下一步检索的目标
+
+
+
