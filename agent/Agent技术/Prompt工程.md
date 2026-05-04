@@ -358,6 +358,18 @@ System Prompt的设计原则：
 
 ## Structured Output——格式化输出
 
-结构化输出的意义是让AIbi
+结构化输出的意义是让AI必须按照我们希望的格式回答内容，这样可以简化我们后续对AI回复的内容的处理
 
+在OpenAI或其他API中提供的`response_format:{type:"json_object"}`参数，会强制模型输出合法的JSON，在Prompt中表述JSON Schema，模型会按照 Schema 填充数据
 
+### Constrained Decoding
+
+更可靠的结构化输出方案是约束解码（Constrained Decoding），即在生成的过程中，根据预定义的语法（如JSON Schema，正则表达式），动态的限制每一步可选的Token集合
+
+例如，当前已生成 `{"name": "`，根据 JSON 语法，下一个 token 只能是字符串内容（不能是 `{` 或数字）。通过将不合法的 token 的概率设为 0，确保输出始终符合语法约束。
+
+SGLang 和 Outlines（Python 库）都支持高效的约束解码。这在 Agent 开发中至关重要——Agent 的工具调用需要严格的 JSON 格式参数，任何格式错误都会导致调用失败。
+
+## ReAct
+
+ReAct（Yao et al.,2022）
