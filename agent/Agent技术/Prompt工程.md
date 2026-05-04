@@ -219,6 +219,42 @@ Self-Consitency在数学和逻辑推理任务上通常比单次 CoT 提升 5-15%
 
 ## 链式Prompt
 
-链式Prompt采用的是fen'zi
+链式Prompt采用的是分治思想，他提出将一个大的问题拆分为多个小的问题，每个问题用来解决一些难点，最后汇总来解决原本的问题
 
+例如，LLM 的一个常见用途是根据大型文本文档回答问题。想要更好阅读大文本文档，可以设计两个不同的提示，第一个提示负责提取相关引文以回答问题，第二个提示则以引文和原始文档为输入来回答给定的问题。换句话说，可以创建两个不同的提示来执行根据文档回答问题的任务
 
+我们设计的两个问题应该是有前后关系的，前一个问题的回答会作为新的知识被模型用于解决下一个问题
+
+一个常见的案例
+
+提示 1:
+
+```
+你是一个很有帮助的助手。你的任务是根据文档回答问题。第一步是从文档中提取与问题相关的引文，由####分隔。请使用<quotes></quotes>输出引文列表。如果没有找到相关引文，请回应“未找到相关引文！”。####{{文档}}####
+```
+
+这是整个提示的截图，包括通过 `user` 角色传递的问题。
+
+![Prompt Chaining Part 1](https://www.promptingguide.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprompt-chaining-1.4bdd376c.png&w=1920&q=75)
+
+提示 1 的输出：
+
+```
+<quotes>- Chain-of-thought (CoT) prompting[27]- Generated knowledge prompting[37]- Least-to-most prompting[38]- Self-consistency decoding[39]- Complexity-based prompting[41]- Self-refine[42]- Tree-of-thought prompting[43]- Maieutic prompting[45]- Directional-stimulus prompting[46]- Textual inversion and embeddings[59]- Using gradient descent to search for prompts[61][62][63][64]- Prompt injection[65][66][67]</quotes>
+```
+
+在第一个提示中返回的引文现在可以用作下面第二个提示的输入。您可以对这些引文进行清理，比如移除引用标志。可以在提示链中新建另一个提示来移除或使用这些引用标志，但现在您可以忽略这些。然后，第二个提示接收由第一个提示提取的相关引文，并根据文档和这些提取的引文生成一个有帮助的回答。第二个提示可以是以下内容：
+
+提示 2：
+
+```
+根据从文档中提取的相关引文（由<quotes></quotes>分隔）和原始文档（由####分隔），请构建对问题的回答。请确保答案准确、语气友好且有帮助。####{{文档}}####<quotes>- Chain-of-thought (CoT) prompting[27]- Generated knowledge prompting[37]- Least-to-most prompting[38]- Self-consistency decoding[39]- Complexity-based prompting[41]- Self-refine[42]- Tree-of-thought prompting[43]- Maieutic prompting[45]- Directional-stimulus prompting[46]- Textual inversion and embeddings[59]- Using gradient descent to search for prompts[61][62][63][64]- Prompt injection[65][66][67]</quotes>
+```
+
+提示 2 的输出：
+
+```
+文档中提到的提示技术包括：1. Chain-of-thought (CoT) prompting[27]2. Generated knowledge prompting[37]3. Least-to-most prompting[38]4. Self-consistency decoding[39]5. Complexity-based prompting[41]6. Self-refine[42]7. Tree-of-thought prompting[43]8. Maieutic prompting[45]9. Directional-stimulus prompting[46]10. Textual inversion and embeddings[59]11. Using gradient descent to search for prompts[61][62][63][64]12. Prompt injection[65][66][67]每一种技术都采用独特的策略来增强或明确与大型语言模型的互动，以产生期望的结果。
+```
+
+如您所见，简化并创建提示链是一种有用的提示方法，其中响应需要经过多个操作或转换。作为练习，您可以自由设计一个提示，它会在将响应作为最终回应发送给应用程序用户之前，移除响应中的引用标志（例如，`[27]`）。
