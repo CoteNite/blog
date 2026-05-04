@@ -230,17 +230,30 @@ Self-Consitency在数学和逻辑推理任务上通常比单次 CoT 提升 5-15%
 提示 1:
 
 ```
-你是一个很有帮助的助手。你的任务是根据文档回答问题。第一步是从文档中提取与问题相关的引文，由####分隔。请使用<quotes></quotes>输出引文列表。如果没有找到相关引文，请回应“未找到相关引文！”。####{{文档}}####
+你是一个很有帮助的助手。你的任务是根据文档回答问题。第一步是从文档中提取与问题相关的引文，由####分隔。请使用<quotes></quotes>输出引文列表。如果没有找到相关引文，请回应“未找到相关引文！”。
+
+####
+{{文档}}
+####
 ```
-
-这是整个提示的截图，包括通过 `user` 角色传递的问题。
-
-![Prompt Chaining Part 1](https://www.promptingguide.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprompt-chaining-1.4bdd376c.png&w=1920&q=75)
 
 提示 1 的输出：
 
 ```
-<quotes>- Chain-of-thought (CoT) prompting[27]- Generated knowledge prompting[37]- Least-to-most prompting[38]- Self-consistency decoding[39]- Complexity-based prompting[41]- Self-refine[42]- Tree-of-thought prompting[43]- Maieutic prompting[45]- Directional-stimulus prompting[46]- Textual inversion and embeddings[59]- Using gradient descent to search for prompts[61][62][63][64]- Prompt injection[65][66][67]</quotes>
+<quotes>
+- Chain-of-thought (CoT) prompting[27]
+- Generated knowledge prompting[37]
+- Least-to-most prompting[38]
+- Self-consistency decoding[39]
+- Complexity-based prompting[41]
+- Self-refine[42]
+- Tree-of-thought prompting[43]
+- Maieutic prompting[45]
+- Directional-stimulus prompting[46]
+- Textual inversion and embeddings[59]
+- Using gradient descent to search for prompts[61][62][63][64]
+- Prompt injection[65][66][67]
+</quotes>
 ```
 
 在第一个提示中返回的引文现在可以用作下面第二个提示的输入。您可以对这些引文进行清理，比如移除引用标志。可以在提示链中新建另一个提示来移除或使用这些引用标志，但现在您可以忽略这些。然后，第二个提示接收由第一个提示提取的相关引文，并根据文档和这些提取的引文生成一个有帮助的回答。第二个提示可以是以下内容：
@@ -248,13 +261,51 @@ Self-Consitency在数学和逻辑推理任务上通常比单次 CoT 提升 5-15%
 提示 2：
 
 ```
-根据从文档中提取的相关引文（由<quotes></quotes>分隔）和原始文档（由####分隔），请构建对问题的回答。请确保答案准确、语气友好且有帮助。####{{文档}}####<quotes>- Chain-of-thought (CoT) prompting[27]- Generated knowledge prompting[37]- Least-to-most prompting[38]- Self-consistency decoding[39]- Complexity-based prompting[41]- Self-refine[42]- Tree-of-thought prompting[43]- Maieutic prompting[45]- Directional-stimulus prompting[46]- Textual inversion and embeddings[59]- Using gradient descent to search for prompts[61][62][63][64]- Prompt injection[65][66][67]</quotes>
+根据从文档中提取的相关引文（由<quotes></quotes>分隔）和原始文档（由####分隔），请构建对问题的回答。请确保答案准确、语气友好且有帮助。
+
+####
+{{文档}}
+####
+
+<quotes>
+- Chain-of-thought (CoT) prompting[27]
+- Generated knowledge prompting[37]
+- Least-to-most prompting[38]
+- Self-consistency decoding[39]
+- Complexity-based prompting[41]
+- Self-refine[42]
+- Tree-of-thought prompting[43]
+- Maieutic prompting[45]
+- Directional-stimulus prompting[46]
+- Textual inversion and embeddings[59]
+- Using gradient descent to search for prompts[61][62][63][64]
+- Prompt injection[65][66][67]
+</quotes>
 ```
 
 提示 2 的输出：
 
 ```
-文档中提到的提示技术包括：1. Chain-of-thought (CoT) prompting[27]2. Generated knowledge prompting[37]3. Least-to-most prompting[38]4. Self-consistency decoding[39]5. Complexity-based prompting[41]6. Self-refine[42]7. Tree-of-thought prompting[43]8. Maieutic prompting[45]9. Directional-stimulus prompting[46]10. Textual inversion and embeddings[59]11. Using gradient descent to search for prompts[61][62][63][64]12. Prompt injection[65][66][67]每一种技术都采用独特的策略来增强或明确与大型语言模型的互动，以产生期望的结果。
+文档中提到的提示技术包括：
+
+1. Chain-of-thought (CoT) prompting[27]
+2. Generated knowledge prompting[37]
+3. Least-to-most prompting[38]
+4. Self-consistency decoding[39]
+5. Complexity-based prompting[41]
+6. Self-refine[42]
+7. Tree-of-thought prompting[43]
+8. Maieutic prompting[45]
+9. Directional-stimulus prompting[46]
+10. Textual inversion and embeddings[59]
+11. Using gradient descent to search for prompts[61][62][63][64]
+12. Prompt injection[65][66][67]
+
+每一种技术都采用独特的策略来增强或明确与大型语言模型的互动，以产生期望的结果。
 ```
 
-如您所见，简化并创建提示链是一种有用的提示方法，其中响应需要经过多个操作或转换。作为练习，您可以自由设计一个提示，它会在将响应作为最终回应发送给应用程序用户之前，移除响应中的引用标志（例如，`[27]`）。
+简化并创建提示链是一种有用的提示方法，其中响应需要经过多个操作或转换
+
+## ToT——思维树
+
+CoT
