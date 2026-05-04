@@ -1,5 +1,12 @@
 # Prompt工程
 
+[汀哥的笔记](https://ting.is-a.dev/LLM/Agent%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/01-Prompt-%E5%B7%A5%E7%A8%8B%E2%80%94%E2%80%94%E4%BB%8E%E9%9B%B6%E6%A0%B7%E6%9C%AC%E5%88%B0%E6%80%9D%E7%BB%B4%E9%93%BE)
+
+[Prompt工程指南](https://www.promptingguide.ai/zh)
+
+特别鸣谢各位论文的作者
+
+
 总所周知，大模型的核心能力是next token prediction，即给定上文，推断出下一个token，而Prompt就是我们这里的上文
 
 Prompt功能之所以有效，是因为LLM在实际生产中出现了一个惊人的能力————In-Context Learing（ICL，上下文学习）
