@@ -45,5 +45,16 @@ graph TD
 
 ## 文档解析
 
-知识库是讲
+我们的原始文件：PDF，Word，HTML等，要先被解析后才可以存到我们的知识库中，这里的解析方式有很多，OCR，直接输入或者大模型解析等等
 
+|     文档类型     | 解析难度 |            主要工具            |     常见问题      |
+| :----------: | :--: | :------------------------: | :-----------: |
+| Markdown/纯文本 |  低   |            直接读取            |      几乎无      |
+|     HTML     | 低-中  | BeautifulSoup, trafilatura | 噪音（导航栏/广告/脚本） |
+| Word (.docx) |  中   |    python-docx, mammoth    |   样式丢失，嵌入图片   |
+|   PDF（可搜索）   | 中-高  |  PyMuPDF, pdfminer, pypdf  |   多栏、表格、公式    |
+|   PDF（扫描件）   |  高   | OCR: Tesseract, PaddleOCR  |   识别精度、布局分析   |
+|  PowerPoint  |  中   |        python-pptx         |   文本框顺序，图表    |
+|  Excel/CSV   |  中   |           pandas           |    表格结构化处理    |
+
+## 结构化和fei
