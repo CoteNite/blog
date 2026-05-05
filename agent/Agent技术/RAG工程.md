@@ -43,3 +43,6 @@ graph TD
     class EMBED,QEMBED,LLM model
 ```
 
+## 文档解析
+
+知识库是讲
