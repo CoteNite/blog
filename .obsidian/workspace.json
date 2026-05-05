@@ -176,6 +176,9 @@
   "lastOpenFiles": [
     "agent/Agent技术/Prompt工程.md",
     "agent/Agent技术/RAG工程.md",
+    "agent/Agent技术/MCP技术.md",
+    "agent/Agent技术/AGENTS.MD使用建议.md",
+    "agent/Agent技术/RAG工程——Java实践.md",
     "README.md",
     "agent/大模型基础/大模型原理.md",
     "node_modules/mermaid/LICENSE",
@@ -214,9 +217,6 @@
     "node_modules/vitepress/template/index.md",
     "node_modules/vitepress/template/markdown-examples.md",
     "node_modules/vitepress/template/api-examples.md",
-    "node_modules/markdown-it-mermaid/node_modules/mermaid/src/diagrams/gantt/exGantt.md",
-    "node_modules/medium-zoom/CHANGELOG.md",
-    "agent/Agent Harness/2.对话循环.md",
     "public/pictures/explain-1.png",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif"
