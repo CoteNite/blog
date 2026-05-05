@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agent/Agent技术/Prompt工程.md",
+                "file": "agent/Agent技术/RAG工程.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prompt工程"
+              "title": "RAG工程"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "agent/Agent技术/Prompt工程.md",
+                "file": "agent/Agent技术/RAG工程.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Prompt工程 的大纲"
+              "title": "RAG工程 的大纲"
             }
           }
         ],
