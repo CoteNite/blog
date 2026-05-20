@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agent/Agent技术/RAG工程.md",
+                "file": "agent/大模型基础/大模型原理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RAG工程"
+              "title": "大模型原理"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "agent/Agent技术/RAG工程.md",
+                "file": "agent/大模型基础/大模型原理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "RAG工程 的大纲"
+              "title": "大模型原理 的大纲"
             }
           }
         ],
@@ -174,13 +174,15 @@
   },
   "active": "e3d8fe53ab2c46c4",
   "lastOpenFiles": [
-    "agent/Agent技术/Prompt工程.md",
+    "agent/大模型基础/大模型演变.md",
+    "agent/大模型基础/大模型原理.md",
     "agent/Agent技术/RAG工程.md",
-    "agent/Agent技术/MCP技术.md",
+    "agent/Agent技术/Prompt工程.md",
+    "agent/Agent技术/Agent Skills.md",
     "agent/Agent技术/AGENTS.MD使用建议.md",
+    "agent/Agent技术/MCP技术.md",
     "agent/Agent技术/RAG工程——Java实践.md",
     "README.md",
-    "agent/大模型基础/大模型原理.md",
     "node_modules/mermaid/LICENSE",
     "node_modules/shiki/dist/langs/zig.d.mts",
     "node_modules/shiki/dist/langs/zenscript.d.mts",
@@ -215,8 +217,6 @@
     "node_modules/vitepress-plugin-rss/README.md",
     "node_modules/vitepress-plugin-mermaid-pan-zoom/README.md",
     "node_modules/vitepress/template/index.md",
-    "node_modules/vitepress/template/markdown-examples.md",
-    "node_modules/vitepress/template/api-examples.md",
     "public/pictures/explain-1.png",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif"
