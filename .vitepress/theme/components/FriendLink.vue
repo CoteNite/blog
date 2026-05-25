@@ -36,6 +36,13 @@ const friends = [
     link: 'https://ting.is-a.dev/',
     tags: ['汀哥你是我滴神'],
   },
+  {
+    name: 'xf_blog',
+    desc: '立志用 cloudflare workers，GitHub pages 和 vercel 做出整个互联网的up（虽然不会成功',
+    avatar:'https://github.com/xfcnl/xfcnl.github.io/blob/main/image/MEITU_20260128_220225596.jpg?raw=true',
+    link: 'https://xfcnl.github.io',
+    tags: ['我啥都是'],
+  },
   // 在此处继续追加友链对象，格式如下：
   // {
   //   name: '博客名称',
