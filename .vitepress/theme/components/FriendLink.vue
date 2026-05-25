@@ -58,7 +58,7 @@ const friends = [
   <div class="fl-page">
     <div class="fl-header">
       <h1 class="fl-title">友情链接</h1>
-      <p class="fl-subtitle">我喜欢这块小板板，我和我爱的人都在这里</p>
+      <p class="fl-subtitle">我喜欢这块小板板：D</p>
     </div>
 
     <div class="fl-grid">
