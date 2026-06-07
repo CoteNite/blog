@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/3.设计模式相关/面向对象的六大基本原则.md",
+                "file": "back-end/3.设计模式相关/1.1设计模式的UML图.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "面向对象的六大基本原则"
+              "title": "1.1设计模式的UML图"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/3.设计模式相关/面向对象的六大基本原则.md",
+                "file": "back-end/3.设计模式相关/1.1设计模式的UML图.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "面向对象的六大基本原则 的大纲"
+              "title": "1.1设计模式的UML图 的大纲"
             }
           }
         ],
@@ -175,8 +175,11 @@
   "active": "e3d8fe53ab2c46c4",
   "lastOpenFiles": [
     "back-end/3.设计模式相关/1.前言.md",
-    "back-end/3.设计模式相关/面向对象的六大基本原则.md",
+    "back-end/3.设计模式相关/1.1设计模式的UML图.md",
     "back-end/3.设计模式相关/4.创建型设计模式.md",
+    "back-end/3.设计模式相关/3.设计模式——结构型.md",
+    "back-end/3.设计模式相关/面向对象的六大基本原则.md",
+    "back-end/3.设计模式相关/2.设计模式——创建型.md",
     "om/Windows环境下某端口被占用但无法直接查询的问题.md",
     "om/Playwright-CLI教程.md",
     "om/Nginx——必备代理服务器.md",
@@ -214,9 +217,6 @@
     "node_modules/svg-pan-zoom/demo/pathway.svg",
     "node_modules/svg-pan-zoom/svg-pan-zoom-logo.svg",
     "node_modules/svg-pan-zoom/svg-pan-zoom-logo.png",
-    "node_modules/svg-pan-zoom/README.md",
-    "node_modules/svg-pan-zoom/ISSUE_TEMPLATE.md",
-    "node_modules/vitepress-sidebar/README.md",
     "public/pictures/explain-1.png",
     "public/pictures/nilu.gif",
     "public/pictures/niluRun.gif"
