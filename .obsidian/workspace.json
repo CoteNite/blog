@@ -172,8 +172,9 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "e3d8fe53ab2c46c4",
+  "active": "acf432584bfa4eef",
   "lastOpenFiles": [
+    "interview/未命名",
     "back-end/3.设计模式相关/4.创建型设计模式.md",
     "back-end/3.设计模式相关/常见设计模式之间的区别.md",
     "back-end/3.设计模式相关/2.设计模式——创建型.md",
@@ -209,7 +210,6 @@
     "node_modules/markdown-it-mermaid/node_modules/d3/CONTRIBUTING.md",
     "node_modules/@babel/helper-validator-identifier/README.md",
     "node_modules/@pkgjs/parseargs/README.md",
-    "node_modules/@pkgjs/parseargs/CHANGELOG.md",
     "node_modules/svg-pan-zoom/tests/assets/tiger.svg",
     "node_modules/svg-pan-zoom/src/media/reset.svg",
     "node_modules/svg-pan-zoom/demo/Tux.svg",
