@@ -238,6 +238,17 @@ class LiteflowDemoApplicationTests(){
 }
 ```
 
+在SpringBoot环境中，我们需要使用@Resource注解引入FlowExecutor类来执行我们的chain（特别注意，这个Bean没法直接用@Autowired引入）
+
+FlowExecutor是我们的chain执行器，其中的execute2Resp就是执行chain所必须的方法，特需要我们传入至少3个参数：
+
+- chain的名字，类型为String
+- 初始传入到chain中的值，类型为Object
+- 上下文，作为最后一个参数，本质为一个可变参数，因此可以传入多个，类型为Class，也就是具体类的反射
+
+这里的每个字段的含义后面都会讲解，这里我们优先关注FlowExecutor
+
+
 ## 上下文
 
 我们先来看一下
