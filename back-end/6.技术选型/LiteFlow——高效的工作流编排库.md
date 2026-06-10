@@ -16,7 +16,7 @@ LiteFlow旨在简化工作流的实现复杂度，这里我们需要先了解工
 
 [去官网导入最新的依赖](https://liteflow.cc/pages/9bf6be/)
 
-
+然后简单的配置一下yaml文件，这里主要是让Spring知道我们的XML文件在resource文件下的哪个位置
 ## 节点的实现
 
 在LiteFlow中，所有的节点全部继承自NodeComponent类，这个抽象类中存在必须要实现的方法process，这个方法中定义了节点在当前处应该如何执行
@@ -37,4 +37,6 @@ class BCmp : NodeComponent(){
 
 值得一提的是，LiteflowComponent注解继承自Component，这也就表明我们的节点本质就是一个Component
 
+根据节点类型的不同LiteFlow实现了多种不同的节点类，我们都可以通过继承来实现我们需要的节点，具体内容参考[文档](https://liteflow.cc/pages/8486fb/)
 
+另外，我们还可以使用[声明式组件](https://liteflow.cc/pages/46f0fa/)的方式来定义节点，官网提到这种方式的出现是为了解决Java只能单继承的问题，即节点实现占用了唯一的继承位置
