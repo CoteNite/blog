@@ -43,7 +43,7 @@ class BCmp : NodeComponent(){
 
 声明式组件取消了使用继承来实现节点，而是使用注解来实现，但是方法级的节点声明有违开闭原则，因此若非必要不推荐使用方法级的节点声明
 
-类级别的
+类级别的节点声明会在后续将上下文时有大作用
 
 ## EL规则
 
@@ -309,5 +309,34 @@ public class YourCmp extends NodeComponent {
 
 不过很明显的是，上面这种写法有违迪米特法则，因此LiteFlow引入了上下文参数注入的方式来解决这一问题
 
-上下文参数注入目前只支持声明式组件，这里依然推荐[类级别式声明](https://liteflow.cc/pages/18f548/)
+上下文参数注入目前只支持声明式组件，这里推荐[类级别式声明](https://liteflow.cc/pages/18f548/)
 
+一个普通的类级别声明式组件一般长这样：
+
+```kotlin
+@LiteflowComponent("a")
+public class ACmp{
+  
+	@LiteflowMethod(LiteFlowMethodEnum.PROCESS, nodeType = NodeTypeEnum.COMMON)
+	public void processAcmp(NodeComponent bindCmp) {
+	    YourContext context = bindCmp.getContextBean(YourContext.class);
+	    //从context中取到业务数据进行处理
+	    User user = context.getUser();
+	}
+}
+```
+
+我们一般是从bindCmp中获取的ContextBean，而为了实现解耦，我们实际可以通过上下文参数注入来直接获取想要的上下文字段
+
+```kotlin
+@LiteflowComponent("a")
+public class CmpConfig {
+
+    @LiteflowMethod(value = LiteFlowMethodEnum.PROCESS, nodeType = NodeTypeEnum.COMMON)
+    public void processA(NodeComponent bindCmp,@LiteflowFact("user") User user) {
+        user.setName("jack");
+    }
+}
+```
+
+我们只需要给入参加上@LiteflowFact注解即可自动
