@@ -264,9 +264,10 @@ liteflow.main-executor-class=com.yomahub.liteflow.thread.LiteFlowDefaultMainExec
 liteflow.enable-virtual-thread=false
 ```
 
-FlowExecutor中执行chain的默认方法是flowExecutor.execute2Resp，其[返回的Response中含有整个链路最终执行的状态](https://liteflow.cc/pages/9f653d/)
+FlowExecutor中执行chain的默认方法是flowExecutor.execute2Resp，其[返回的LiteflowResponse中含有整个链路最终执行的状态](https://liteflow.cc/pages/9f653d/)
 
-如果我们想要动态的观察链执行的结果，则可以使用flowExecutor.execute2Future
-## 上下文
+如果我们想要动态的观察链执行的结果，则可以使用flowExecutor.execute2Future方法，传入参数与execute2Resp一致，但其返回值会转变为Future类，Future类内部封装一个LiteflowResponse，我们可以使用熟悉的多线程方式操控Future，flowExecutor.execute2Future方法也为异步方法
 
-我们先来看一下
+## 初始参数
+
+FlowExecutor.execute2Resp的第二个参数为初始参数，这个参数是你在外部想要传送给链的值，这个值可以通过NodeComponent中封装的` getRequestData()`来获取
