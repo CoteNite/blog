@@ -12,6 +12,29 @@ LiteFlow旨在简化工作流的实现复杂度，这里我们需要先了解工
 
 在LiteFlow种，我们将上图中的节点定义为Node，图的整体结构则由XML进行编排，最终在代码中通过FlowExecutor来进行链的调用
 
+## 基本配置
+
+[去官网导入最新的依赖](https://liteflow.cc/pages/9bf6be/)
+
+
 ## 节点的实现
 
-在LiteFlow中，所有的节点全部继承自
+在LiteFlow中，所有的节点全部继承自NodeComponent类，这个抽象类中存在必须要实现的方法process，这个方法中定义了节点在当前处应该如何执行
+
+在SpringBoot环境下，我们需要使用LiteFlowComponent注解来将其注册为SpringBean，只有注册为SpringBean才可以让我们的Spring来托管我们的节点，同时方便的使用Spring的任务管理
+
+```kotlin
+import com.yomahub.liteflow.annotation.LiteflowComponent  
+import com.yomahub.liteflow.core.NodeComponent  
+  
+@LiteflowComponent("b")  //这里的b是节点的名字，必须要定义
+class BCmp : NodeComponent(){  
+    override fun process() {  
+        println("This is B CMP")  
+    }  
+}
+```
+
+值得一提的是，LiteflowComponent注解继承自Component，这也就表明我们的节点本质就是一个Component
+
+
