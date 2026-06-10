@@ -45,5 +45,18 @@ class BCmp : NodeComponent(){
 
 ## EL规则
 
-EL规则是LiteFlow用于实现图整体编排的方法，
+EL规则是LiteFlow用于实现图整体编排的方法，其核心作用是将节点链接为一个完整的图，在LiteFlow中，EL规则一般是由XML来进行实现
 
+```xml
+<chain name="chain1">  
+    THEN(s1)  
+</chain>
+```
+
+其中name是chain的名字，而s1则是节点的名字，Liteflow中存在大量自定义的EL语法，这里可以自行浏览[官网中的内容](https://liteflow.cc/pages/dc5df7/)
+
+### 编排复杂图
+
+![image.png](https://raw.githubusercontent.com/CoteNite/Blog_img/master/blogImg/20260610212858.png)
+
+上图我们就可以使用EL规则来实现，但是该图过于复杂，使用
