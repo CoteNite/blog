@@ -389,4 +389,5 @@ public class ACmp extends NodeComponent {
 
 ## 脚本语言
 
-LiteFlow支持使用脚本语言来实现节点的声明，这一功能是为了实现链的热更新，我们可以引入Nacos来支持LiteFlow，在Nacos的加持下，我们的EL表达式的文件是可以写在Nacos的配置文件中的，而Nacos的配置wen'jian'c
+LiteFlow支持使用脚本语言来实现节点的声明，这一功能是为了实现链的热更新，我们可以引入Nacos来支持LiteFlow，在Nacos的加持下，我们的EL表达式的文件是可以写在Nacos的配置文件中的，而Nacos的配置文件支持热重载，进而我们就可以实现链的热重载
+
