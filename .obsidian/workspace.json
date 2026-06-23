@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c4d1443fd38139ec",
+        "id": "5b0f2ff53c08fecb",
         "type": "tabs",
         "children": [
           {
-            "id": "e3d8fe53ab2c46c4",
+            "id": "78562f2978ea43fb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -172,10 +172,10 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "e3d8fe53ab2c46c4",
+  "active": "78562f2978ea43fb",
   "lastOpenFiles": [
-    "agent/大模型基础/大模型接口.md",
     "front-end/Android开发/基础知识.md",
+    "agent/大模型基础/大模型接口.md",
     "front-end/Android开发",
     "agent/Agent技术/AGENTS.MD使用建议.md",
     "back-end/7.DDD/17.读模型的设计.md",
