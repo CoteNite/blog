@@ -1,3 +1,3 @@
 # WebSocket与STOMP
 
-WebSocket是用于解决服务端和客户端双向通信的问题，其本身基于TCP协议
+WebSocket是用于解决服务端和客户端双向通信的问题，其本身基于TCP协议，实现了长连接的功能，其在握手阶段
