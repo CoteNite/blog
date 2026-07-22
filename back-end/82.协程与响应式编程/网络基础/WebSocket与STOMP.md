@@ -18,4 +18,5 @@ WebSocket结合STOMP就实现了一个消息队列，服务端和客户端都可
 
 ## SpringBoot实现WebSocket和STOMP
 
-SpringBoot做了极其方便的STOMP正回家二
+SpringBoot做了极其方便的STOMP整合，我们可以通过熟悉的Controller模式与SimpMessagingTemplate实现消息的发送
+
