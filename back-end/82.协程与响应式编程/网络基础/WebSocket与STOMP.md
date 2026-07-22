@@ -18,4 +18,4 @@ WebSocket结合STOMP就实现了一个消息队列，服务端和客户端都可
 
 ## SpringBoot实现WebSocket和STOMP
 
-在SpringBoot种
+SpringBoot做了极其方便的STOMP正回家二
