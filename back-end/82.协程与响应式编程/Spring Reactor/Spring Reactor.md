@@ -34,4 +34,5 @@ Reactor引入了两个核心的类`Flux`和`Mono`，一个Flux对象表示含有
 
 Flux可以释放出0到N个元素的异步序列，可通过onNext方法接受一个数据，使用onComplete告知发布者终止发布，使用onError让基于报错
 
-Mono则只能传出一个数据，所以他没有
+Mono则只能传出一个数据，所以他没有onNext方法，OnError和OnComplete则都有，他能提供的操作符属于Flux的子集，同时可以通过一些操作符将Mono转换为Flux或是另一个Mono
+
