@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "back-end/82.协程与响应式编程/Spring Reactor/Spring Reactor.md",
+                "file": "back-end/82.协程与响应式编程/网络基础/WebSocket与STOMP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spring Reactor"
+              "title": "WebSocket与STOMP"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "back-end/82.协程与响应式编程/Spring Reactor/Spring Reactor.md",
+                "file": "back-end/82.协程与响应式编程/网络基础/WebSocket与STOMP.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Spring Reactor 的大纲"
+              "title": "WebSocket与STOMP 的大纲"
             }
           }
         ],
@@ -174,9 +174,11 @@
   },
   "active": "78562f2978ea43fb",
   "lastOpenFiles": [
-    "story/小说/李代桃僵/钟时悟.md",
-    "back-end/82.协程与响应式编程/Spring Reactor/Spring Reactor.md",
     "back-end/82.协程与响应式编程/Kotlin Coroutines/1.Kotlinの协程.md",
+    "back-end/82.协程与响应式编程/网络基础/WebSocket与STOMP.md",
+    "back-end/82.协程与响应式编程/网络基础",
+    "back-end/82.协程与响应式编程/Spring Reactor/Spring Reactor.md",
+    "story/小说/李代桃僵/钟时悟.md",
     "back-end/82.协程与响应式编程/Kotlin Coroutines/3.Flow.md",
     "back-end/82.协程与响应式编程/Kotlin Coroutines",
     "back-end/82.协程与响应式编程/Spring Reactor",
@@ -202,14 +204,12 @@
     "back-end/3.设计模式相关/3.设计模式——结构型.md",
     "back-end/3.设计模式相关/4.创建型设计模式.md",
     "back-end/3.设计模式相关/面向对象的六大基本原则.md",
-    "back-end/3.设计模式相关/常见设计模式之间的区别.md",
     "interview/未命名",
     "node_modules/mermaid/LICENSE",
     "node_modules/shiki/dist/langs/zig.d.mts",
     "node_modules/shiki/dist/langs/zenscript.d.mts",
     "node_modules/shiki/dist/langs/tsv.d.mts",
     "node_modules/shiki/dist/langs/tsp.d.mts",
-    "node_modules/shiki/dist/langs/toml.d.mts",
     "node_modules/svg-pan-zoom/tests/assets/tiger.svg",
     "node_modules/svg-pan-zoom/src/media/reset.svg",
     "node_modules/svg-pan-zoom/demo/Tux.svg",
