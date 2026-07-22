@@ -20,4 +20,51 @@ WebSocket结合STOMP就实现了一个消息队列，服务端和客户端都可
 
 SpringBoot做了极其方便的STOMP整合，我们可以通过熟悉的Controller模式与SimpMessagingTemplate实现消息的发送
 
-我们可以直接使用SimpMessagingTemplate
+我们可以直接使用SimpMessagingTemplate来向指定的Topic中发送消息，例如
+
+```java
+messagingTemplate.convertAndSend("/topic/public",  
+        ChatMessage.of(ChatMessage.Type.JOIN, username, username + " 加入了聊天室"));
+
+package cn.cotenite.stomp.model;  
+  
+import java.time.LocalTime;  
+import java.time.format.DateTimeFormatter;  
+  
+/**  
+ * 聊天消息体。STOMP 支持消息体自动序列化/反序列化（JSON），  
+ * 客户端发 JSON 帧体，服务端直接拿到 Java 对象，这是相比原生 WebSocket 的一大优势。  
+ */  
+@Data
+public class ChatMessage {  
+  
+    public enum Type {  
+        CHAT,       // 公共频道消息  
+        PRIVATE,    // 私聊消息  
+        JOIN,       // 加入通知  
+        LEAVE,      // 离开通知  
+        TYPING      // 正在输入  
+    }  
+  
+    private Type type;  
+    private String sender;  
+    private String recipient;  
+    private String content;  
+    private String time;  
+  
+    public ChatMessage() {  
+    }  
+  
+    public static ChatMessage of(Type type, String sender, String content) {  
+        ChatMessage message = new ChatMessage();  
+        message.setType(type);  
+        message.setSender(sender);  
+        message.setContent(content);  
+        message.setTime(LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm:ss")));  
+        return message;  
+    }  
+
+}
+```
+
+当服务端和客户端建立连接后Spring就会维护一个topic和地址的哈希表，这样用户就不用担心发送消息给谁的问题，直接操作topic即可
