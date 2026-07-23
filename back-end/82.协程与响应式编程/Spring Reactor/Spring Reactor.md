@@ -40,7 +40,44 @@ subscribe操作后会返回一个Disposable类，我们可以调用Disposable的
 
 ## BaseSubscriber
 
-一般我们的Subscribe方法中接受的是一个Lambda表达式，但是
+一般我们的Subscribe方法中接受的是一个Lambda表达式，但是如果有一些深度定制的需求就需要使用Subscriber了。
+
+Reactor提供了名为BaseSubscribe的类用于编写Subscriber，这里需要格外注意的是，**Subscriber**实际上是单一用途的，这意味着一个Subscriber示例如果订阅了第二个Publisher，那么就会取消对第一个Publisher的订阅
+
+现在我们可以实现其中的一个。我们称之为 `SampleSubscriber`。下面的例子显示了如何将其附加到 `Flux`：
+
+```java
+SampleSubscriber<Integer> ss = new SampleSubscriber<Integer>();
+Flux<Integer> ints = Flux.range(1, 4);
+ints.subscribe(i -> System.out.println(i),
+    error -> System.err.println("Error " + error),
+    () -> {System.out.println("Done");},
+    s -> s.request(10));
+ints.subscribe(ss);
+```
+
+下面的例子显示了 `SampleSubscriber` 作为 `BaseSubscriber` 的简约实现的样子：
+
+```java
+package io.projectreactor.samples;
+
+import org.reactivestreams.Subscription;
+
+import reactor.core.publisher.BaseSubscriber;
+
+public class SampleSubscriber<T> extends BaseSubscriber<T> {
+
+	public void hookOnSubscribe(Subscription subscription) {
+		System.out.println("Subscribed");
+		request(1);
+	}
+
+	public void hookOnNext(T value) {
+		System.out.println(value);
+		request(1);
+	}
+}
+```
 
 ## 背压
 
