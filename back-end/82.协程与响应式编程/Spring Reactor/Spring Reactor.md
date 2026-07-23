@@ -79,6 +79,7 @@ public class SampleSubscriber<T> extends BaseSubscriber<T> {
 }
 ```
 
+BaseSubscribe预留了hookOnNext，hookOnSubscribe，hookOnComplete，hookOnError，hookOnCancel，hookFinally等钩子，用于我们根据自己的需要去进行定制
 ## 背压
 
 在Reactor中实现背压，需要向上游发送一个request，请求的上限为Long.MAX_VALUE，表示无限制的请求
