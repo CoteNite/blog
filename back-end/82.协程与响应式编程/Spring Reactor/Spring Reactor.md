@@ -38,4 +38,30 @@ Mono则只能传出一个数据，所以他没有onNext方法，OnError和OnComp
 
 subscribe操作后会返回一个Disposable类，我们可以调用Disposable的dispose方法取消订阅
 
-在Reactor
+## BaseSubscriber
+
+一般我们的Subscribe方法中接受的是一个Lambda表达式，但是
+
+## 背压
+
+在Reactor中实现背压，需要向上游发送一个request，请求的上限为Long.MAX_VALUE，表示无限制的请求
+
+如果我们希望之定义背压，则需要使用重写了`hookOnSubscribe`方法的`BaseSubscriber`来`subscribe`
+
+```java
+Flux.range(1, 10)
+    .doOnRequest(r -> System.out.println("request of " + r))
+    .subscribe(new BaseSubscriber<Integer>() {
+
+      @Override
+      public void hookOnSubscribe(Subscription subscription) {
+        request(1);
+      }
+
+      @Override
+      public void hookOnNext(Integer integer) {
+        System.out.println("Cancelling after having received " + integer);
+        cancel();
+      }
+    });
+```
