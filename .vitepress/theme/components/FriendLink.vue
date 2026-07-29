@@ -24,9 +24,9 @@ const friends = [
   },
    {
     name: '🐟',
-    desc: '还是那只🐟',
+    desc: '臭🐟',
     avatar:'',
-    link: 'http://laoyu.online/',
+    link: 'https://blog.laoyu.online/',
     tags: ['给你牢完了兄弟'],
   },
   {
