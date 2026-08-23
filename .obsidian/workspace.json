@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/小说/李代桃僵/钟时悟.md",
+                "file": "agent/大模型面试/大模型面试总结.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "钟时悟"
+              "title": "大模型面试总结"
             }
           }
         ]
@@ -175,19 +175,21 @@
   },
   "active": "78562f2978ea43fb",
   "lastOpenFiles": [
+    "agent/大模型基础/大模型接口.md",
+    "agent/大模型面试/大模型面试总结.md",
+    "agent/大模型面试",
+    "story/小说/李代桃僵/钟时悟.md",
     "story/小说/李代桃僵/病.md",
     "back-end/82.协程与响应式编程/Spring Reactor/Spring Reactor.md",
     "back-end/82.协程与响应式编程/网络基础/WebSocket与STOMP.md",
     "back-end/后端补全计划/PgSQL.md",
     "back-end/82.协程与响应式编程/Kotlin Coroutines/1.Kotlinの协程.md",
     "back-end/82.协程与响应式编程/网络基础",
-    "story/小说/李代桃僵/钟时悟.md",
     "back-end/82.协程与响应式编程/Kotlin Coroutines/3.Flow.md",
     "back-end/82.协程与响应式编程/Kotlin Coroutines",
     "back-end/82.协程与响应式编程/Spring Reactor",
     "back-end/82.协程与响应式编程/Kotlin Coroutines/4.Channel.md",
     "front-end/Android开发/基础知识.md",
-    "agent/大模型基础/大模型接口.md",
     "front-end/Android开发",
     "agent/Agent技术/AGENTS.MD使用建议.md",
     "back-end/7.DDD/17.读模型的设计.md",
@@ -204,13 +206,11 @@
     "back-end/3.设计模式相关/1.设计模式的UML图.md",
     "back-end/3.设计模式相关/2.设计模式——创建型.md",
     "back-end/3.设计模式相关/1.前言.md",
-    "back-end/3.设计模式相关/3.设计模式——结构型.md",
     "interview/未命名",
     "node_modules/mermaid/LICENSE",
     "node_modules/shiki/dist/langs/zig.d.mts",
     "node_modules/shiki/dist/langs/zenscript.d.mts",
     "node_modules/shiki/dist/langs/tsv.d.mts",
-    "node_modules/shiki/dist/langs/tsp.d.mts",
     "node_modules/svg-pan-zoom/tests/assets/tiger.svg",
     "node_modules/svg-pan-zoom/src/media/reset.svg",
     "node_modules/svg-pan-zoom/demo/Tux.svg",
