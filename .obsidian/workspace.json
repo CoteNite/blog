@@ -35,7 +35,8 @@
               "title": "大模型原理"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -187,10 +188,10 @@
       "workspaces:管理工作区布局": false
     }
   },
-  "active": "78562f2978ea43fb",
+  "active": "fdae1bd3a24b46af",
   "lastOpenFiles": [
-    "agent/大模型基础/大模型原理.md",
     "agent/大模型面试/大模型面试总结.md",
+    "agent/大模型基础/大模型原理.md",
     "agent/大模型基础/大模型接口.md",
     "agent/大模型面试",
     "story/小说/李代桃僵/钟时悟.md",
