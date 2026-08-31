@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/小说/李代桃僵/病.md",
+                "file": "story/小说/如宝石般易碎的.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "病"
+              "title": "如宝石般易碎的"
             }
           },
           {
@@ -189,6 +189,9 @@
   },
   "active": "78562f2978ea43fb",
   "lastOpenFiles": [
+    "story/小说/牵丝戏.md",
+    "story/小说/来世.md",
+    "story/小说/李代桃僵/病.md",
     "story/现在范围长期要做的事/2026-1-5.md",
     "story/小说/李代桃僵/钟时悟.md",
     "agent/大模型面试/大模型API面试总结.md",
@@ -196,7 +199,6 @@
     "agent/大模型基础/大模型原理.md",
     "agent/大模型基础/大模型接口.md",
     "agent/大模型面试",
-    "story/小说/李代桃僵/病.md",
     "back-end/82.协程与响应式编程/Spring Reactor/Spring Reactor.md",
     "back-end/82.协程与响应式编程/网络基础/WebSocket与STOMP.md",
     "back-end/后端补全计划/PgSQL.md",
@@ -218,8 +220,6 @@
     "back-end/7.DDD/13.一些概念与实践.md",
     "back-end/7.DDD/12.DDD与六边形架构.md",
     "back-end/7.DDD/11.DDD与CQRS.md",
-    "back-end/7.DDD/10.DDD，MVC，大泥鳅，微服务.md",
-    "back-end/6.技术选型/LiteFlow——高效的工作流编排库.md",
     "interview/未命名",
     "node_modules/mermaid/LICENSE",
     "node_modules/shiki/dist/langs/zig.d.mts",
