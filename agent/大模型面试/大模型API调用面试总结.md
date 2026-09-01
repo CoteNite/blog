@@ -17,3 +17,25 @@ SSE是现在主流的Agent流式返回方案，即客户端向服务端发起一
 
 SSE的媒体类型是`text/event-stream`，消息格式是一份UTF-8文本事件流。每个事件由若干行字段组成，事件之间用**空行**分隔；实际换行可以是 `\n` 或 `\r\n`，所以事件分隔常见写法是`\n\n` 或 `\r\n\r\n`。
 
+## Nginx
+
+有时候Nginx开启了响应缓冲区会导致SSE积攒，这时候我们需要对Nginx的内容进行改动，保证我们的SSE可以正常使用
+
+```conf
+location /api/ {
+    proxy_pass http://backend;
+    proxy_buffering off;
+    proxy_cache off;
+    proxy_read_timeout 300s;
+    proxy_set_header Connection "";
+    add_header Cache-Control no-cache;
+}
+```
+
+## 中断处理
+
+流式调用一般会有几种中断的情况：用户取消，超时，连接中断，客户端重连。对于不同的中断情况我们有不同的关注点和处理方式
+
+### 用户取消
+
+该中断不属于错误，因此前端不应该有错误警告，同时后端应该及时钟爱u你对g
