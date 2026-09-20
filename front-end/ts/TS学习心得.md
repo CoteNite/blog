@@ -166,4 +166,6 @@ const c:string=a
 ```
 
 - unkown:ts的顶类，用于表示任意值，不允许直接进行任何属性调用或方法操作，必须先经过类型收窄（如 `typeof`、`instanceof` 或断言）转换为具体类型后才能使用，也正因如此unkown会更加安全
+- never：ts的底类，表示永远不可能发生的事情，比如必然抛出异常的函数或者存在死循环的函数
+- void：表示一个函数没有返回值，不等价于undefined，undefined表示空值，void表示明确的无返回值
 - 
