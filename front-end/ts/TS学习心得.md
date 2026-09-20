@@ -110,3 +110,35 @@ export { someVar } from './foo';
 export { someVar as aDifferentName } from './foo';
 ```
 
+### 模块搜索机制
+
+当我们导入一个文件，类似：
+
+```ts
+import foo from './foo';
+```
+
+当foo表示的是一个文件夹的时候，往往会先去找该文件夹下的index.ts文件,这也是为什么我们会常常在一个目录中看到index.ts这种命名的原因
+
+具体的搜索顺序如下:
+
+- **第一步：尝试直接当作文件匹配**
+    - TS 检查硬盘上是否存在 `foo.ts`、`foo.d.ts` 或 `foo.js`。
+
+- **第二步：尝试当作文件夹，找默认索引文件（Index）**
+    
+    - 如果 `foo` 是个文件夹，TS 会去找 `foo/index.ts`、`foo/index.d.ts` 或 `foo/index.js`。
+        
+    - 如果有，匹配成功！（“欢呼！”）
+        
+- **第三步：尝试当作文件夹，读取 `package.json` 的 `types` 声明**
+    
+    - 如果 `foo` 是个文件夹且里面有 `package.json`，TS 会优先看里面有没有配置 `"types"`（或 `"typings"`）字段，例如：`"types": "dist/index.d.ts"`。
+        
+    - 如果这个指定的声明文件存在，匹配成功！（“欢呼！”）
+        
+- **第四步：尝试当作文件夹，读取 `package.json` 的 `main` 入口**
+    
+    - 如果没有 `types` 字段，TS 会退而求其次读取 `"main"` 字段（如 `"main": "lib/index.js"`），并尝试推导其对应的 `.d.ts` 或 `.js` 文件。
+        
+    - 如果存在，匹配成功！（“欢呼！”）
