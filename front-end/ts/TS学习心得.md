@@ -135,5 +135,21 @@ import foo from './foo';
 
 declare关键字用于为ts编译器声明一个已存在的实体,他相当于告诉编译器:"这个变量/函数/类/模块在运行环境中已经有了（例如由 `<script>` 标签导入、宿主环境注入或由原生 JS 库提供），你只需要对我做静态类型检查，**不要为它生成任何 JavaScript 代码**。",declare关键字会在转变为js代码的时候完全擦除
 
-对于declare关键字,我们一般会将其运用到一个.d.ts文件中,.d.ts文件是ts的类型声明文件,用于在不改变现有JavaScript 逻辑的前提下，为 JS 代码或资源提供静态类型描述与代码补全,.d.ts文件只会有类型空间的内容,用于向ts声明一些ts文件识别不了的js内容
+对于declare关键字,我们一般会将其运用到一个.d.ts文件中,.d.ts文件是ts的类型声明文件,用于在不改变现有JavaScript 逻辑的前提下，为 JS 代码或资源提供静态类型描述与代码补全,.d.ts文件只会有类型空间的内容,用于向ts声明一些ts文件识别不了的js内容,**在 `.d.ts` 文件中**：绝大部分顶层声明（如 `const`、`function`、`class`）都**隐式带有 `declare`**，因此可以省略不写 `declare`
 
+除了上面的功能外.declare用时候还承担为原生的 `window` 或 `ProcessEnv` 等扩展自定义属性的功能,这得益于ts的merge功能
+
+```ts
+declare global {
+  interface Window {
+    __INITIAL_DATA__: any;
+  }
+}
+
+// 此时给 window 给赋值不会再报错
+window.__INITIAL_DATA__ = { user: 'Alice' };
+```
+
+除此之外,ts还允许一个特殊的global.d.ts文件,用于声明一个全局可用的类型文件
+
+**IMPORTANT:** .d.ts文件只适合yong
