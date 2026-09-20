@@ -152,4 +152,6 @@ window.__INITIAL_DATA__ = { user: 'Alice' };
 
 除此之外,ts还允许一个特殊的global.d.ts文件,用于声明一个全局可用的类型文件
 
-**IMPORTANT:** .d.ts文件只适合yong
+**IMPORTANT:** .d.ts文件只适合用来沟通js和ts,为js代码补全类型空间,不适合用来声明类型,如果只是想要声明类型,那应该直接创建一个types.ts文件而不是types.d.ts文件
+
+
