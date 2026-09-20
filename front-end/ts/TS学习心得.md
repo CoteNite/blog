@@ -30,4 +30,83 @@ const FooConst = Foo; //报错
 
 在一个ts文件中写下的代码会放在全局命名空间中，代码中的变量和函数可以被另一个文件直接使用，这样无疑是十分危险的
 
-为了解决这个问题，ts继承了js的import和export关键字，ts编译器会搜索一个文件，当文件中出现了import或者export，他就会将这个文件视为一个模块，这样他内部的代码就只会出现在其自身的文件模块中
+为了解决这个问题，ts继承了js的import和export关键字，ts编译器会搜索一个文件，当文件中出现了import或者export，他就会将这个文件视为一个模块，这样他内部的代码就只会出现在其自身的文件模块中，外部模块只能使用其export出的内容
+
+这里有一些导入导出相关的语法
+
+- 使用 `export` 关键字导出一个变量或类型
+
+```
+// foo.ts
+export const someVar = 123;
+export type someType = {
+  foo: string;
+};
+```
+
+- `export` 的写法除了上面这种，还有另外一种：
+
+```ts
+// foo.ts
+const someVar = 123;
+type someType = {
+  type: string;
+};
+
+export { someVar, someType };
+```
+
+- 你也可以用重命名变量的方式导出：
+
+```ts
+// foo.ts
+const someVar = 123;
+export { someVar as aDifferentName };
+```
+
+- 使用 `import` 关键字导入一个变量或者是一个类型：
+
+```ts
+// bar.ts
+import { someVar, someType } from './foo';
+```
+
+- 通过重命名的方式导入变量或者类型：
+
+```ts
+// bar.ts
+import { someVar as aDifferentName } from './foo';
+```
+
+- 除了指定加载某个输出值，还可以使用整体加载，即用星号（*）指定一个对象，所有输出值都加载在这个对象上面：
+
+```ts
+// bar.ts
+import * as foo from './foo';
+// 你可以使用 `foo.someVar` 和 `foo.someType` 以及其他任何从 `foo` 导出的变量或者类型
+```
+
+- 只导入模块：
+
+```ts
+import 'core-js'; // 一个普通的 polyfill 库
+```
+
+- 从其他模块导入后整体导出：
+
+```ts
+export * from './foo';
+```
+
+- 从其他模块导入后，部分导出：
+
+```ts
+export { someVar } from './foo';
+```
+
+- 通过重命名，部分导出从另一个模块导入的项目：
+
+```ts
+export { someVar as aDifferentName } from './foo';
+```
+
