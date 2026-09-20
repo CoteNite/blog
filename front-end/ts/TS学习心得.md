@@ -154,4 +154,6 @@ window.__INITIAL_DATA__ = { user: 'Alice' };
 
 **IMPORTANT:** .d.ts文件只适合用来沟通js和ts,为js代码补全类型空间,不适合用来声明类型,如果只是想要声明类型,那应该直接创建一个types.ts文件而不是types.d.ts文件
 
+## TS中的特殊类型
 
+除了常见的类型外，ts提供了五个特殊类型：any，null，undefined，never
