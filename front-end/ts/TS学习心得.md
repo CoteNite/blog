@@ -156,4 +156,13 @@ window.__INITIAL_DATA__ = { user: 'Alice' };
 
 ## TS中的特殊类型
 
-除了常见的类型外，ts提供了五个特殊类型：any，null，undefined，never
+除了常见的类型外，ts提供了六个特殊类型：any，null，undefined，never，void，unkown
+
+- any：ts给类型系统流的后门，用于兼容所有的类型，任何的值都可以赋值给any，any可以赋值给除了never以外的所有值
+
+```ts
+const a:any=1  
+const c:string=a
+```
+
+- 
