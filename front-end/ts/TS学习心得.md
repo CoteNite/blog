@@ -158,11 +158,12 @@ window.__INITIAL_DATA__ = { user: 'Alice' };
 
 除了常见的类型外，ts提供了六个特殊类型：any，null，undefined，never，void，unkown
 
-- any：ts给类型系统流的后门，用于兼容所有的类型，任何的值都可以赋值给any，any可以赋值给除了never以外的所有值
+- any：ts给类型系统流的后门，用于兼容所有的类型，任何的值都可以赋值给any，any可以赋值给除了never以外的所有值，可以调用任何方法（虽然没有IDE会丧失智能提示功能）（本质是ts不再对any类型的参数进行类型检验）
 
 ```ts
 const a:any=1  
 const c:string=a
 ```
 
+- unkown:ts的顶类，用于表示任意值，不允许直接进行任何属性调用或方法操作，必须先经过类型收窄（如 `typeof`、`instanceof` 或断言）转换为具体类型后才能使用，也正因如此unkown会更加安全
 - 
