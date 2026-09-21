@@ -204,4 +204,9 @@ var Tristate;
 })(Tristate || (Tristate = {}));
 ```
 
-js代码中通过Tristatep['False']=0的方式将Tristate的False对象设置为了0，同时外部又将Tristate[0]='Flase'，因此enum中使用Tri
+js代码中通过Tristatep['False']=0的方式将Tristate的False对象设置为了0，同时外部又将Tristate[0]='Flase'，因此enum中使用Tristate[0] === 'False'，Tristate['False'] === 0 Tristate.False === 0 这种做法我们可以认为枚举将他和数值做了映射
+
+
+
+
+
