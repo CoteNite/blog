@@ -183,3 +183,23 @@ const c:string=a
 | **宽松相等 `==`**              | `null == undefined` $\rightarrow$ **`true`**   | `null == undefined` $\rightarrow$ **`true`**   |
 | **严格相等 `===`**             | `null === undefined` $\rightarrow$ **`false`** | `null === undefined` $\rightarrow$ **`false`** |
 
+## 枚举
+
+ts为js添加了枚举语法，我们来看一个ts的枚举案例以及其转译为js后的代码
+
+```ts
+enum Tristate {
+  False,
+  True,
+  Unknown
+}
+```
+
+```js
+var Tristate;
+(function(Tristate) {
+  Tristate[(Tristate['False'] = 0)] = 'False';
+  Tristate[(Tristate['True'] = 1)] = 'True';
+  Tristate[(Tristate['Unknown'] = 2)] = 'Unknown';
+})(Tristate || (Tristate = {}));
+```
