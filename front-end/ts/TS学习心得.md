@@ -263,3 +263,7 @@ const lie = Tristate.False;
 ```ts
 let lie = 0;
 ```
+
+## const、readonly、as const
+
+在ts中存在这三个特别的组合
