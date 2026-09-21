@@ -203,3 +203,5 @@ var Tristate;
   Tristate[(Tristate['Unknown'] = 2)] = 'Unknown';
 })(Tristate || (Tristate = {}));
 ```
+
+js代码中通过Tristatep['False']=0的方式将Tristate的False对象设置为了0，同时外部又将Tristate[0]='Flase'，因此enum中使用Tri
