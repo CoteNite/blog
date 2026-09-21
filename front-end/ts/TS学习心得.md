@@ -305,4 +305,12 @@ iTakeFoo(foo);
 
 由于ts采取的是鸭子类型，且readonly在编译为js的时候会被完全擦除，这就导致我们将这个带有readonly修饰的类传递给一个没有readonly修饰的鸭子类型，我们发现是可以修改的，如果想要使用运行时也不被修改，则应该使用Object.freeze方法
 
-as const则与上方的二者不同，as const是将一个参数类型缩短为其字面量
+as const则与上方的二者不同，as const是将一个参数类型缩短为其字面量，一个例子如下：
+
+```ts
+const constObj = {
+  role: "admin",
+  tags: [1, 2]
+} as const;
+// 类型: { readonly role: "admin"; readonly tags: readonly [1, 2]; }
+```
