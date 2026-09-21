@@ -206,6 +206,25 @@ var Tristate;
 
 js代码中通过Tristatep['False']=0的方式将Tristate的False对象设置为了0，同时外部又将Tristate[0]='Flase'，因此enum中使用Tristate[0] === 'False'，Tristate['False'] === 0 Tristate.False === 0 这种做法我们可以认为枚举将他和数值做了映射
 
+在ts中，我们只允许enum的key映射为number或者string，针对string的映射，其对应的js如下
+
+```ts
+enum UserRoleEnum {
+  ADMIN = '系统管理员',
+  EDITOR = '内容编辑',
+  VIEWER = '普通观察员',
+}
+```
+
+
+```js
+var UserRoleEnum;
+(function (UserRoleEnum) {
+    UserRoleEnum["ADMIN"] = "系统管理员";
+    UserRoleEnum["EDITOR"] = "内容编辑";
+    UserRoleEnum["VIEWER"] = "普通观察员";
+})(UserRoleEnum || (UserRoleEnum = {}));
+```
 ### 常量枚举
 
 对于
