@@ -266,4 +266,41 @@ let lie = 0;
 
 ## const、readonly、as const
 
-在ts中存在这三个特别的组合
+在ts中存在这三个特别的关键字，我们细说一下他们的区别
+
+- const：用于变量，表示当前变量不能被重新赋值
+- readonly：用于属性，表示当前属性不可以被重新赋值
+
+这里探讨一种特殊情况
+
+```ts
+const foo: {
+  readonly bar: number;
+} = {
+  bar: 123
+};
+
+function iMutateFoo(foo: { bar: number }) {
+  foo.bar = 456;
+}
+
+iMutateFoo(foo);
+console.log(foo.bar); // 456
+
+
+interface Foo {
+  readonly bar: number;
+}
+
+let foo: Foo = {
+  bar: 123
+};
+
+function iTakeFoo(foo: Foo) {
+  foo.bar = 456; // Error: bar 属性只读
+}
+
+iTakeFoo(foo);
+```
+
+由于ts采取的是鸭子类型，且readonly在编译为js的时候会被完全擦除，这就导致我们将这个带有readonlycan
