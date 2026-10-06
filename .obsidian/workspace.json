@@ -161,6 +161,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "karpathywiki:摄入当前文件": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "spreadsheets:New Spreadsheet": false,
       "switcher:打开快速切换": false,
@@ -175,6 +176,12 @@
   },
   "active": "78562f2978ea43fb",
   "lastOpenFiles": [
+    "wiki/schema/config.md",
+    "wiki/schema",
+    "wiki/sources",
+    "wiki/concepts",
+    "wiki/entities",
+    "wiki",
     "front-end/ts/TS学习心得.md",
     "story/小说/巴拉莱卡.md",
     "front-end/ts/tsconfig配置.md",
@@ -205,12 +212,6 @@
     "back-end/7.DDD/17.读模型的设计.md",
     "back-end/7.DDD/20.DDD在项目中的应用与结构的划分.md",
     "back-end/7.DDD/19.事件溯源——时间回溯魔法.md",
-    "back-end/7.DDD/16.风暴建模.md",
-    "interview/未命名",
-    "node_modules/mermaid/LICENSE",
-    "node_modules/shiki/dist/langs/zig.d.mts",
-    "node_modules/shiki/dist/langs/zenscript.d.mts",
-    "node_modules/shiki/dist/langs/tsv.d.mts",
     "node_modules/svg-pan-zoom/tests/assets/tiger.svg",
     "node_modules/svg-pan-zoom/src/media/reset.svg",
     "node_modules/svg-pan-zoom/demo/Tux.svg",

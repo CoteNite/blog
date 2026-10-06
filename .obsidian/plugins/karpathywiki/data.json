@@ -1,0 +1,31 @@
+{
+  "provider": "custom",
+  "apiKey": "sk-aTeuXin5LJNE07iOFJCxGeH1bgxNYui63IFdCZRiJVOaOEle",
+  "baseUrl": "https://huablog.org/v1",
+  "model": "deepseek-v4.1-flash",
+  "wikiFolder": "wiki",
+  "language": "zh",
+  "wikiLanguage": "zh",
+  "useCustomWikiLanguage": false,
+  "availableModels": [
+    "deepseek-v4-flash",
+    "deepseek-v4.1-flash",
+    "deepseek-v4.1-flash-expires-on-0910"
+  ],
+  "useCustomModel": false,
+  "maxConversationHistory": 30,
+  "queryHistory": [],
+  "enableSchema": true,
+  "extractionGranularity": "standard",
+  "autoWatchSources": false,
+  "autoWatchMode": "notify",
+  "autoWatchDebounceMs": 5000,
+  "watchedFolders": [],
+  "periodicLint": "off",
+  "startupCheck": true,
+  "pageGenerationConcurrency": 3,
+  "batchDelayMs": 500,
+  "lastOfferedQueryHash": "",
+  "llmReady": true,
+  "maxTokensPerCall": 0
+}
