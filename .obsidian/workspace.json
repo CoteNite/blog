@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "story/小说/巴拉莱卡.md",
+                "file": "wiki/schema/config.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "巴拉莱卡"
+              "title": "config"
             }
           }
         ]
@@ -176,6 +176,7 @@
   },
   "active": "78562f2978ea43fb",
   "lastOpenFiles": [
+    "story/小说/巴拉莱卡.md",
     "wiki/schema/config.md",
     "wiki/schema",
     "wiki/sources",
@@ -183,7 +184,6 @@
     "wiki/entities",
     "wiki",
     "front-end/ts/TS学习心得.md",
-    "story/小说/巴拉莱卡.md",
     "front-end/ts/tsconfig配置.md",
     "agent/大模型面试/大模型API调用面试总结.md",
     "agent/大模型基础/大模型原理.md",
