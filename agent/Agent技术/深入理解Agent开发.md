@@ -21,7 +21,7 @@
 
 这种形式来自22年的两篇经典论文[ReAct](https://arxiv.org/abs/2210.03629)和[Chain-of-Thought](https://arxiv.org/abs/2201.11903)，在早年些年（23年左右），这些功能往往需要智能体实现，而现在已经被LLM内化了
 
-## Loop
+### Loop
 
-
+Agent的核心是一个死循环，这个循环又被叫做Loop，最小的实现方式就是根据da
 
