@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/schema/config.md",
+                "file": "om/2.git提交规范.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "config"
+              "title": "2.git提交规范"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wiki/schema/config.md",
+                "file": "om/2.git提交规范.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "config 的大纲"
+              "title": "2.git提交规范 的大纲"
             }
           }
         ],
