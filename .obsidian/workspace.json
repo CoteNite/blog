@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "agent/Agent技术/深入理解Agent开发.md",
+                "file": "back-end/02.JVM与JVM语言/JVM与内存管理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "深入理解Agent开发"
+              "title": "JVM与内存管理"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "agent/Agent技术/深入理解Agent开发.md",
+                "file": "back-end/02.JVM与JVM语言/JVM与内存管理.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "深入理解Agent开发 的大纲"
+              "title": "JVM与内存管理 的大纲"
             }
           }
         ],
@@ -175,8 +175,8 @@
   },
   "active": "19a2b202ab25f0fe",
   "lastOpenFiles": [
-    "om/2.git提交规范.md",
     "agent/Agent技术/深入理解Agent开发.md",
+    "om/2.git提交规范.md",
     "wiki/schema/config.md",
     "story/小说/巴拉莱卡.md",
     "wiki/schema",
